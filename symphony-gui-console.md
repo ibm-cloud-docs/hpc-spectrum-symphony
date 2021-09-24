@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-25"
+lastupdated: "2021-09-24"
 
 keywords: 
 
@@ -48,5 +48,5 @@ Before you can access the Spectrum Symphony cluster management console, you need
 2. This ssh command will log you into the primary management host and initialize a Spectrum Symphony command-line environment.
 {:note .note}
 
-Further information on how to use Symphony UI can be found at [Accessing the cluster management console](https://www.ibm.com/docs/en/spectrum-symphony/7.3.1?topic=cluster-accessing-management-console#accessing_PMC).
+Further information on how to use Symphony UI can be found at [Accessing the cluster management console](/docs/en/spectrum-symphony/7.3.1?topic=cluster-accessing-management-console#accessing_PMC).
 
