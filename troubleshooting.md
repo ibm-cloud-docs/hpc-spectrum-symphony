@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-09-15"
+lastupdated: "2021-09-24"
 
 keywords: 
 
@@ -182,7 +182,7 @@ You need to destroy your existing resources and try applying the change again. Y
 {: troubleshoot}
 {: support}
 
-The `symA` requestor may release a compute node virtual machine while the workload is still in progress. This will happen when the property `return_idle_only` is set to true and the immediate return policy `symA` is unable to get the allocation for this host, and therefore assumes it has no allocation. This issue happens if there are only a few tasks remaining for the monitored applications. For more information please refer to [Updating idle time before worker nodes are removed](https://test.cloud.ibm.com/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-update-idle-time&interface=api).
+The `symA` requestor may release a compute node virtual machine while the workload is still in progress. This will happen when the property `return_idle_only` is set to true and the immediate return policy `symA` is unable to get the allocation for this host, and therefore assumes it has no allocation. This issue happens if there are only a few tasks remaining for the monitored applications. For more information please refer to [Updating idle time before worker nodes are removed](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-update-idle-time&interface=api).
 
 
 ## Incorrect provider configuration values do not result in an error
