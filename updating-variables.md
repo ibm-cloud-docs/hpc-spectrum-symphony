@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-09-16"
+lastupdated: "2021-09-24"
 
 keywords: 
 
@@ -24,13 +24,13 @@ subcollection: hpc-spectrum-symphony
 # Updating variables with Schematics API
 {: #update-variables}
 
-1. To update variables by using the {{site.data.keyword.bplong}} Python APIs, create two Python files, and provide a name of your choice for those files, following these links for example: [schematics_variables_update.py](https://test.cloud.ibm.com/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-update-variables#example-request-update-variables) and [schematics_env_class.py](https://test.cloud.ibm.com/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-update-variables#example-request-update-variables-file).
+1. To update variables by using the {{site.data.keyword.bplong}} Python APIs, create two Python files, and provide a name of your choice for those files, following these links for example: [schematics_variables_update.py](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-update-variables#example-request-update-variables) and [schematics_env_class.py](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-update-variables#example-request-update-variables-file).
 
 2. Copy and paste the `schematics_variables_update.py` and `schematics_env_class.py` Python example code requests to the respective Python files. Click below for code examples:
 
-    [schematics_variables_update.py](https://test.cloud.ibm.com/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-update-variables#example-request-update-variables)
+    [schematics_variables_update.py](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-update-variables#example-request-update-variables)
 
-    [schematics_env_class.py](https://test.cloud.ibm.com/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-update-variables#example-request-update-variables-file)
+    [schematics_env_class.py](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-update-variables#example-request-update-variables-file)
 
 3. Copy and paste the [`config.json` template file](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-update-variables#template-file) to a JSON file, for example `config.json`.
 4. Change the following parameters as part of the request:
