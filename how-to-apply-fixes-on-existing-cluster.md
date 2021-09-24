@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-27"
+lastupdated: "2021-09-24"
 
 keywords: 
 
@@ -51,7 +51,7 @@ Use the egoinstallfixes command only on Linux hosts; to manage fixes on Windows,
 
 ## Procedure
 
-1. Use the egoinstallfixes command to install or roll back interim fixes for your IBM Spectrum Symphony installation on a Linux host. For command syntax and option details, see [egoinstallfixes](https://www.ibm.com/docs/en/SSZUMP_7.3.1/reference_sym/egoinstallfixes.html#reference_p3w_4dm_bdb).
+1. Use the egoinstallfixes command to install or roll back interim fixes for your IBM Spectrum Symphony installation on a Linux host. For command syntax and option details, see [egoinstallfixes](/docs/en/SSZUMP_7.3.1/reference_sym/egoinstallfixes.html#reference_p3w_4dm_bdb).
 
     a. To run the egoinstallfixes command, your Linux host must include the ed Linux line-oriented text editor.
 
@@ -67,9 +67,9 @@ Use the egoinstallfixes command only on Linux hosts; to manage fixes on Windows,
 
         ``ssh -t abc123 /opt/ibm/spectrumcomputing/3.9/install/egoinstallfixes -f /home/egoadmin/cluster.env sym-version_x86_64_build123456.tar.gz``
 
-2. After you run the ``egoinstallfixes`` command to successfully install fixes on your local Linux host, use the ``pversions`` command to query whether your fixes are installed on that host. For command syntax and option details, see  [pversions for Linux](https://www.ibm.com/docs/en/SSZUMP_7.3.1/reference_sym/pversions_linux.html#pversions_linux).
+2. After you run the ``egoinstallfixes`` command to successfully install fixes on your local Linux host, use the ``pversions`` command to query whether your fixes are installed on that host. For command syntax and option details, see  [pversions for Linux](/docs/en/SSZUMP_7.3.1/reference_sym/pversions_linux.html#pversions_linux).
 
-3. To view the installed and active components on your entire cluster, use the **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) System & Services > Software Components > Installed and Active Software Components** page within the cluster management console. For more information, see [Determining installed and active software components](https://www.ibm.com/docs/en/SSZUMP_7.3.1/install_grid_sym/host_installed_active_software.html#task_gjr_j5n_bbb).
+3. To view the installed and active components on your entire cluster, use the **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) System & Services > Software Components > Installed and Active Software Components** page within the cluster management console. For more information, see [Determining installed and active software components](/docs/en/SSZUMP_7.3.1/install_grid_sym/host_installed_active_software.html#task_gjr_j5n_bbb).
 
-For more background information see [Installing and configuring IBM Spectrum Symphony](https://www.ibm.com/docs/en/SSZUMP_7.3.1/sym_kc/sym_kc_installing_overview.html). {:note .note}
+For more background information see [Installing and configuring IBM Spectrum Symphony](/docs/en/SSZUMP_7.3.1/sym_kc/sym_kc_installing_overview.html). {:note .note}
 
