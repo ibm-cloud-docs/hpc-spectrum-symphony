@@ -30,19 +30,19 @@ subcollection: hpc-spectrum-symphony
 
 Cluster nodes deployed with this offering include IBM Spectrum Symphony 7.3.1 Advanced Edition. 
 
-See the following for a summary of the features associated with each edition: [IBM Spectrum Symphony editions](https://www.ibm.com/docs/en/spectrum-symphony/7.3.1?topic=foundations-spectrum-symphony-editions).
+See the following for a summary of the features associated with each edition: [IBM Spectrum Symphony editions](/docs/en/spectrum-symphony/7.3.1?topic=foundations-spectrum-symphony-editions).
 
 ## What locations are available for deploying VPC resources?
 {: #locations-vpc-resources}
 {: faq}
 
-Available regions and zones for deploying VPC resources, and a mapping of those to city locations and data centers can be found in [Locations for resource deployment](https://test.cloud.ibm.com/docs/overview?topic=overview-locations){: external}.
+Available regions and zones for deploying VPC resources, and a mapping of those to city locations and data centers can be found in [Locations for resource deployment](/docs/overview?topic=overview-locations){: external}.
 
 ## What permissions do I need in order to create a cluster using the offering?
 {: #permissions-cluster-offering}
 {: faq}
 
-Instructions for setting the appropriate permissions for IBM Cloud services that are used by the offering to create a cluster can be found in [Granting user permissions for VPC resources, Managing user access for Schematics, Assigning access to Secrets Manager](https://test.cloud.ibm.com/docs/vpc?topic=vpc-managing-user-permissions-for-vpc-resources&locale=en).
+Instructions for setting the appropriate permissions for IBM Cloud services that are used by the offering to create a cluster can be found in [Granting user permissions for VPC resources, Managing user access for Schematics, Assigning access to Secrets Manager](/docs/vpc?topic=vpc-managing-user-permissions-for-vpc-resources&locale=en).
 
 
 ## How do I SSH among nodes?
@@ -76,7 +76,7 @@ You can even remove `-A` by adding "ForwardAgent yes" to `.ssh/config`.
 {: #worker-nodes}
 {: faq}
 
-Prior to deploying a cluster, it is important to ensure that the VPC resource quota settings are appropriate for the size of the cluster that you would like to create (see [Quotas and service limits](https://test.cloud.ibm.com/docs/vpc?topic=vpc-quotas)).
+Prior to deploying a cluster, it is important to ensure that the VPC resource quota settings are appropriate for the size of the cluster that you would like to create (see [Quotas and service limits](/docs/vpc?topic=vpc-quotas)).
 
 The maximum number of worker nodes that are supported for the deployment value worker_node_max_count is 500 (see [Deployment values](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-deployment-values))). The `worker_node_min_count` variable specifies the number of worker nodes that are provisioned at the time that the cluster is created, which will exist throughout the life of the cluster. The delta between those two variables specifies the maximum number of worker nodes that can either be created or destroyed by the Symphony Host Factory auto-scaling feature.
 
