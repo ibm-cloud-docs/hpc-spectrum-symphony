@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-09-13"
+lastupdated: "2021-09-24"
 
 keywords: 
 
@@ -84,5 +84,5 @@ The changes take effect automatically. There is no need to restart the HostFacto
       ``$egosh service start HostFactory``
 
 For more information on this topic please reference 
- [Dynamically updating host factory configuration](https://www.ibm.com/docs/en/spectrum-symphony/7.3.1?topic=bursting-dynamically-updating-host-factory-configuration) topic.
+ [Dynamically updating host factory configuration](/docs/en/spectrum-symphony/7.3.1?topic=bursting-dynamically-updating-host-factory-configuration) topic.
 
