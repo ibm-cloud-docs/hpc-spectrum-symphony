@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-26"
+lastupdated: "2021-09-24"
 
 keywords: 
 
@@ -24,7 +24,7 @@ subcollection: hpc-spectrum-symphony
 
 The idle time behavior for Symphony host factory is controlled by three properties that are defined in the ``symAreq_policy_configuration.json`` file:
 
- For more information on this file configuration please reference the [symAreq_policy_config.json reference](https://www.ibm.com/docs/en/spectrum-symphony/7.3.1?topic=reference-symareq-policy-configjson).
+ For more information on this file configuration please reference the [symAreq_policy_config.json reference](/docs/en/spectrum-symphony/7.3.1?topic=reference-symareq-policy-configjson).
  {:note .note}
 
 - ***billing_interval*** has a default value of 60, defines what the interval is in minutes where cloud resources are metered. For IBM Cloud we use VPC hourly VSIs.
