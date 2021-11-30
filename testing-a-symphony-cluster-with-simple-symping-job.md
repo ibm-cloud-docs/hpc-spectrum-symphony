@@ -37,4 +37,4 @@ For settings, authorization, and configuration information, see [Symping: the IB
 
 The cluster management console allows cluster and consumer administrators to test that the cluster configuration is correct by running test work. It also provides information on the cluster's workload performance.
 
-For implementing testing procedure, see [Testing the cluster with Symping](/docs/en/SSZUMP_7.3.1/help/admin/symping_using.html).
+For accessing the cluster management console to implement testing procedure, see [Accessing the cluster management console](https://www.ibm.com/docs/en/spectrum-symphony/7.3.1?topic=cluster-accessing-management-console#accessing_PMC).
