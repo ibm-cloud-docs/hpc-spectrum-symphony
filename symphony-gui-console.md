@@ -37,7 +37,7 @@ Before you can access the Spectrum Symphony cluster management console, you need
 
     where ``LOGIN_NODE_PUBLIC_IP`` needs to be replaced with the respective IP address of the Login Node and ``MANAGE_NODE_PRIVATE_IP`` needs to be replaced with the IP address of the management node that is running the **WEBGUI** service.
 
-2. After starting the above SSH session, when you open the site https://localhost:8443 on your local web browser, it will connect to the Symphony management node.
+2. After starting the above SSH session, when you open the designated localhost site on your local web browser, it will connect to the Symphony management node.
 
 ## Further considerations
 {: further-considerations}
