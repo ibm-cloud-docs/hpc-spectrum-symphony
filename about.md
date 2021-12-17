@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-09-24"
+lastupdated: "2021-12-17"
 
 keywords: 
 
@@ -22,8 +22,12 @@ subcollection: hpc-spectrum-symphony
 # About IBM Spectrum Symphony
 {: #about-spectrum-symphony}
 
+Important! This offering deploys an environment that includes IBM Spectrum Symphony, which makes use of Apache Log4j. See the following bulletin for information on implementing mitigations for the [Log4Shell vulnerability](https://www.ibm.com/blogs/psirt/an-update-on-the-apache-log4j-cve-2021-44228-vulnerability/) (CVE-2021-44228): [IBM Spectrum Symphony Log4J Security Bulletin](https://www.ibm.com/support/pages/node/6526756).
+
 IBM Spectrum Symphony allows you to deploy high-performance computing (HPC) clusters by using IBM Spectrum Symphony as HPC scheduling software. This offering uses open source Terraform-based automation to provision and configure {{site.data.keyword.cloud_notm}} resources. With simple steps to define configuration properties and use automated deployment, you can build your own HPC clusters in minutes. IBM Spectrum Symphony also enables configuration for auto-scaling, so IBM Spectrum Symphony clusters can automatically add and remove worker nodes based on workload specifications. This allows you to take full advantage of consumption-based pricing and pay for cloud resources only when they are needed. 
 {: shortdesc}
+
+IBM Spectrum Symphony offers the option of a public virtual machine, or virtual machines that are deployed on dedicated hosts, for static compute nodes only. The management nodes and dynamic compute nodes leverage public virtual machines only. The dedicated host option allows customers to have machines assigned just for their workloads and avoids issues like a noisy neighbor. The deployment properties allow customers to between 'pack' and 'spread' to either pack a dedicated host to full capacity before spilling to another instance or spread the VSIs evenly across all dedicated hosts. 
 
 The offering supports the bring-your-own-license (BYOL) model for IBM Spectrum Symphony to deploy an HPC cluster on {{site.data.keyword.cloud_notm}}. Make sure that you have sufficient software licenses to deploy the required capacity on the {{site.data.keyword.cloud_notm}} cluster. For evaluation purposes, {{site.data.keyword.cloud_notm}} does enable limited access. Contact your {{site.data.keyword.cloud_notm}} sales or support team for evaluation licenses.
 

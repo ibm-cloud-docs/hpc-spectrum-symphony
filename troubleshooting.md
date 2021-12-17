@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-09-24"
+lastupdated: "2021-12-14"
 
 keywords: 
 
@@ -139,7 +139,7 @@ Deprovision the existing resource and try again.
 
 While using a custom image, Schematics isn't able to provision the cluster, and you are seeing one of the following error messages:
 
-* `The arugment "image" is required, but no definition was found.`
+* `The argument "image" is required, but no definition was found.`
 * `Unknown variable. There is no variable named "image_id".`
 {: tsSymptoms}
 
@@ -177,6 +177,25 @@ After reconfiguring the volume profile, capacity, or IOPS, your workspace needs 
 You need to destroy your existing resources and try applying the change again. Your data on the storage node will be deleted if you destroy your existing resources.
 {: tsResolve}
 
+## Why am I receiving an error with the provided ssh_key_name value?
+{: #troubleshoot-topic-12}
+{: troubleshoot}
+{: support}
+
+### What’s happening
+You are receiving the following error when you try to generate or apply a plan on Schematics workspace:
+
+``failed due to "Error: No SSH Key found with name <KEY_NAME>".``
+
+### Why it’s happening
+Terraform could not find the given ssh key names provided by you.
+
+How to fix it
+
+1. Check whether the given ssh key is present in the current region where the cluster is being provisioned. If the given ssh key is not present, create the ssh key in the current region.
+2. While configuring multiple ssh keys, ensure that there is no white spaces added before or after the ssh key names.
+3. If you are using multiple ssh keys, check whether a comma(,) is used a delimiter between the ssh keys and that there is no white space added before or after the ssh key.
+
 ## Worker nodes are released when workload is in progress
 {: #troubleshoot-topic-10}
 {: troubleshoot}
@@ -191,3 +210,10 @@ The `symA` requestor may release a compute node virtual machine while the worklo
 {: support}
 
 When updating the IBM Cloud provider configuration from the Symphony GUI, at **Menu icon ![Menu icon](../../icons/icon_hamburger.svg)Resources->Cloud->Configuration**, the values set in the configuration are not validated. If there are invalid values in the configuration, the virtual machine provisioning will fail. If a failure happens, check the host factory logs on the host running the HostFactory service in `/opt/ibm/spectrumcomputing/hostfactory/log for more information`.
+
+## Limitation of available profiles for dedicated hosts
+{: #troubleshoot-topic-12}
+{: troubleshoot}
+{: support}
+
+Our offering automatically selects instance profiles for dedicated hosts to be the same prefix (for example, bx2 and cx2) as ones for worker instances (`worker_node_instance_type`). However, available instance prefixes can be limited, depending on your target region. So, if you use dedicated hosts, please check `ibmcloud target -r {region_name}` and `ibmcloud is dedicated-host-profiles` to see if your `worker_node_instance_type` has the available prefix for your target region.

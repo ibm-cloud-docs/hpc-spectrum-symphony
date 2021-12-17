@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-09-24"
+lastupdated: "2021-12-15"
 
 keywords: 
 
@@ -79,6 +79,8 @@ You can even remove `-A` by adding "ForwardAgent yes" to `.ssh/config`.
 Prior to deploying a cluster, it is important to ensure that the VPC resource quota settings are appropriate for the size of the cluster that you would like to create (see [Quotas and service limits](/docs/vpc?topic=vpc-quotas)).
 
 The maximum number of worker nodes that are supported for the deployment value worker_node_max_count is 500 (see [Deployment values](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-deployment-values))). The `worker_node_min_count` variable specifies the number of worker nodes that are provisioned at the time that the cluster is created, which will exist throughout the life of the cluster. The delta between those two variables specifies the maximum number of worker nodes that can either be created or destroyed by the Symphony Host Factory auto-scaling feature.
+
+When creating or deleting a cluster with a large number of worker nodes, you may encounter VPC resource provisioning or deletion failures. In those cases, running the Schematics apply or destroy operation again may result in the remaining resources being successfully provisioned or deleted. If you continue to see errors, see [Getting help and support](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-getting-help-and-support).
 
 ## Why are there two different resource group parameters that can be specified in the IBM Cloud catalog tile?
 {: #resource-group-parameters}
