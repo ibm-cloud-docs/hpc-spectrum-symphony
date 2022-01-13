@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-12-17"
+  years: 2021, 2022
+lastupdated: "2022-01-13"
 
 keywords: 
 
@@ -21,8 +21,6 @@ subcollection: hpc-spectrum-symphony
 
 # About IBM Spectrum Symphony
 {: #about-spectrum-symphony}
-
-Important! This offering deploys an environment that includes IBM Spectrum Symphony, which makes use of Apache Log4j. See the following bulletin for information on implementing mitigations for the [Log4Shell vulnerability](https://www.ibm.com/blogs/psirt/an-update-on-the-apache-log4j-cve-2021-44228-vulnerability/) (CVE-2021-44228): [IBM Spectrum Symphony Log4J Security Bulletin](https://www.ibm.com/support/pages/node/6526756).
 
 IBM Spectrum Symphony allows you to deploy high-performance computing (HPC) clusters by using IBM Spectrum Symphony as HPC scheduling software. This offering uses open source Terraform-based automation to provision and configure {{site.data.keyword.cloud_notm}} resources. With simple steps to define configuration properties and use automated deployment, you can build your own HPC clusters in minutes. IBM Spectrum Symphony also enables configuration for auto-scaling, so IBM Spectrum Symphony clusters can automatically add and remove worker nodes based on workload specifications. This allows you to take full advantage of consumption-based pricing and pay for cloud resources only when they are needed. 
 {: shortdesc}
