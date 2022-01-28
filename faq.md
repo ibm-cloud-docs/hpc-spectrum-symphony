@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-12-15"
+  years: 2021, 2022
+lastupdated: "2022-01-26"
 
 keywords: 
 
@@ -24,7 +24,6 @@ subcollection: hpc-spectrum-symphony
 {: #spectrum-symphony-faqs}
 
 ## What Spectrum Symphony version is used in cluster nodes deployed with this offering?
-
 {: #my-faq-packages}
 {: faq}
 
@@ -87,3 +86,13 @@ When creating or deleting a cluster with a large number of worker nodes, you may
 {: faq}
 
 The first resource group parameter entry in the **Configure your workspace** section in the IBM Cloud catalog applies to the resource group where the Schematics workspace is provisioned on your IBM Cloud account. The value for this parameter can be different than the one used for the second entry in the **Parameters with default values** section in the catalog. The second entry applies to the resource group where VPC resources are provisioned. As specified in the description for this second `resource_group` parameter, note that only the default resource group is supported for use of the Symphony Host Factory auto-scaling feature.
+
+## Can I use the Spectrum Symphony Host Factory feature for auto scaling on any cluster deployed with this offering?
+{: #host-factory-auto-scaling}
+{: faq}
+
+No, the use of Host Factory to provision and delete compute nodes is not supported in the following cases:
+
+* Provisioning and deleting compute nodes on dedicated hosts. Only static compute nodes can be deployed on dedicated hosts.
+* When using a resource group other than Default.
+* When using Spectrum Scale for shared storage in the cluster.
