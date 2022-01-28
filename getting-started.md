@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-09-24"
+  years: 2021, 2022
+lastupdated: "2022-01-19"
 
 keywords: 
 
@@ -51,13 +51,13 @@ Create an SHH key in your {{site.data.keyword.cloud_notm}} account. This is your
 {: #create-custom-image}
 {: step}
 
-Create a custom image with your OS/Symphony and required application binary files. For more information, see [Planning for custom images](/docs/vpc?topic=vpc-planning-custom-images). {{site.data.keyword.cloud_notm}} provides a pre-built image with CentOS and RHEL to help you get started quickly. The image names are `hpcc-sym731-cent77-aug3121-v3` and `hpcc-sym731-rhel77-aug3121-v3`, respectively. In addition to the base operating system software, the images also include the nfs-utils software package. This package is required in order to mount the shared NFS storage used by the cluster nodes.
+Create a custom image with your operating system, Spectrum Symphony, Spectrum Scale (if you use that for storage), and required application binary files. For more information, see [Planning for custom images](/docs/vpc?topic=vpc-planning-custom-images). {{site.data.keyword.cloud_notm}} provides a pre-built image for your HPC cluster compute nodes to help you get started quickly. In addition to the base operating system software, the images include the NFS and Spectrum Scale software packages that are required to configure the shared storage that is used by the cluster compute nodes.
 
-## Gather Symphony entitlement information
-{: #gather-symphony-entitlement-information}
+## Gather Spectrum software entitlement information
+{: #gather-spectrum-entitlement-information}
 {: step}
 
-The offering uses BYOL (Bring your own licenses) for Spectrum Symphony when you deploy an HPC cluster on {{site.data.keyword.cloud_notm}}. For production clusters, work with your business owners or license management team to make sure that your organization has procured enough licenses to deploy the HPC cluster by using IBM Spectrum Symphony. Failure to comply with licenses for production use of software is a violation of the [IBM International Program License Agreement](https://www.ibm.com/software/passportadvantage/programlicense.html){: external}.
+The offering uses the Bring Your Own License (BYOL) model for Spectrum software when you deploy an HPC cluster on {{site.data.keyword.cloud_notm}}. This applies to IBM Spectrum Symphony in all cases and to IBM Spectrum Scale if you decide to use that for the HPC cluster storage instead of just NFS. For production clusters, work with your business owners or license management team to make sure that your organization has procured enough licenses to deploy the HPC cluster using the Spectrum software. Failure to comply with licenses for production use of software is a violation of the [IBM International Program License Agreement](https://www.ibm.com/software/passportadvantage/programlicense.html){: external}.
 
 ## Next steps
 {: #getting-started-next-steps}
