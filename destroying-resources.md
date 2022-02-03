@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-09-24"
+  years: 2021, 2022
+lastupdated: "2022-02-03"
 
 keywords: 
 
@@ -26,16 +26,16 @@ subcollection: hpc-spectrum-symphony
 # Destroying resources
 {: #deleting-resources}
 
-If you don't need the Spectrum Symphony cluster and want to destroy all of its associated VPC resources, you can remove them from your {{site.data.keyword.cloud}} account.
+If you don't need the {{site.data.keyword.symphony_short}} cluster and want to destroy all of its associated VPC resources, you can remove them from your {{site.data.keyword.cloud}} account.
 
-Before you perform the actions to destroy the resources, you must first ensure that no worker nodes created by the IBM Spectrum Symphony auto scaling feature still exist. The total number of worker nodes in the cluster should be equal to the value you specified for `worker_node_min_count`.
+Before you perform the actions to destroy the resources, you must first ensure that no worker nodes created by the {{site.data.keyword.symphony_full_notm}} auto scaling feature still exist. The total number of worker nodes in the cluster should be equal to the value you specified for `worker_node_min_count`.
 {: important}
 
 ## Destroying resources using the UI
 {: #destroy-resources-ui}
 {: ui}
 
-1. In the {{site.data.keyword.cloud_notm}} console on the **Schematics > Workspaces** page, select **Actions > Destroy** to delete all of the related VPC resources that were deployed as part of that workspace.
+1. In the {{site.data.keyword.cloud_notm}} console on the **{{site.data.keyword.bpshort}} > Workspaces** page, select **Actions > Destroy** to delete all of the related VPC resources that were deployed as part of that workspace.
 2. If you select the option to destroy resources, decide whether you want to destroy all of them. This action cannot be undone. 
 3. Confirm the action by entering the workspace name in the text box and click **Destroy**.
 
