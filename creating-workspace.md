@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-10-14"
+  years: 2021, 2022
+lastupdated: "2022-02-03"
 
 keywords: 
 
@@ -34,14 +34,14 @@ With {{site.data.keyword.bplong}} workspaces, you can manage the Terraform-based
 {: ui}
 
 1. Log in to the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog){: external} by using your unique credentials.
-2. In the _Software_ section, select **Compute** and then select the **IBM Spectrum Symphony** tile. 
+2. In the _Software_ section, select **Compute** and then select the **{{site.data.keyword.symphony_full_notm}}** tile. 
 3. In the _Configure your workspace_ section:
     * Specify the **Name** for your {{site.data.keyword.bpshort}} workspace
     * Select a **Resource group**
     * Define any **Tags** that you want to associate with the resources provisioned through the offering. The tags can later be used to query the resources in the {{site.data.keyword.cloud_notm}} console.
 4. In the _Set the deployment values_ section, specify the values for the three required properties: `api_key`, `ssh_key_name`, and `symphony_license_confirmation`.
 5. Expand the _Parameters with default values_ section, and review it to determine whether you need to override any of the default values provided for the configuration properties.
-6. Review and accept the **IBM Spectrum Symphony** license terms and conditions in the order summary.
+6. Review and accept the **{{site.data.keyword.symphony_full_notm}}** license terms and conditions in the order summary.
 7. Click **Install**. The {{site.data.keyword.bpshort}} workspace is created with the name you specified. You can see the list of workspaces in _View the existing installations_. If the workspace creation is successful, the _Apply Plan_ action is started to trigger the deployment of the respective {{site.data.keyword.vpc_short}} resources in your {{site.data.keyword.cloud_notm}} account that are linked with the `api_key`. 
 8. You can also review the status of your deployment process by identifying the workspace name in the _View the existing installations_ section. When you click a record in _View the existing installations_ section, you are taken to the {{site.data.keyword.bpshort}} workspace view. 
 

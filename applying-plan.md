@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-09-24"
+  years: 2021, 2022
+lastupdated: "2022-02-03"
 
 keywords: 
 
@@ -26,7 +26,7 @@ subcollection: hpc-spectrum-symphony
 # Applying a plan
 {: #applying-plan}
 
-When you apply a plan, the {{site.data.keyword.cloud}} resources are deployed to build a IBM Spectrum Symphony cluster instance on your {{site.data.keyword.cloud_notm}} account with your specific choice of configuration properties. 
+When you apply a plan, the {{site.data.keyword.cloud}} resources are deployed to build a {{site.data.keyword.symphony_full_notm}} cluster instance on your {{site.data.keyword.cloud_notm}} account with your specific choice of configuration properties. 
 
 ## Applying a plan using the UI
 {: #apply-plan-ui}
