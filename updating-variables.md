@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-01-27"
+lastupdated: "2022-02-02"
 
 keywords: 
 
@@ -44,7 +44,7 @@ subcollection: hpc-spectrum-symphony
 {
   "name": "Schematic Dev Workspace",
   "type": [
-    "terraform_v0.13.7"
+    "terraform_v0.14"
   ],
   "location": "us-south",
   "description": "Schematic Dev Workspace",
