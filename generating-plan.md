@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-09-24"
+  years: 2021, 2022
+lastupdated: "2022-02-03"
 
 keywords: 
 
@@ -40,7 +40,7 @@ After you've created your workspace, you need to generate a plan to validate all
 {: #next-steps-generate-ui}
 {: ui}
 
-After you've successfully generated a plan, you can begin [Applying a plan](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-applying-plan&interface=ui#apply-plan-ui) to deploy your {{site.data.keyword.cloud_notm}} resources to build a IBM Spectrum Symphony cluster instance.
+After you've successfully generated a plan, you can begin [Applying a plan](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-applying-plan&interface=ui#apply-plan-ui) to deploy your {{site.data.keyword.cloud_notm}} resources to build a {{site.data.keyword.symphony_full_notm} cluster instance.
 
 ## Generating a plan using the CLI
 {: #generate-plan-cli}

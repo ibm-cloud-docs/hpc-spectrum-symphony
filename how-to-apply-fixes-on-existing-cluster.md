@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-09-24"
+  years: 2021, 2022
+lastupdated: "2022-02-03"
 
 keywords: 
 
@@ -26,19 +26,19 @@ subcollection: hpc-spectrum-symphony
 # Installing interim fixes from IBM Fix Central on Linux hosts
 {: #installing-interim-fixes}
 
-After you install or upgrade IBM&reg; Spectrum Symphony on Linux&reg;, use [IBM Fix Central](https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=IBM%20Spectrum%20Computing&product=ibm/Other+software/IBM+Spectrum+Symphony&release=All&platform=All&function=all) to download any interim fixes that are recommended for IBM Spectrum Symphony on Linux. You can install and manage interim fixes using the ``egoinstallfixes`` and ``pversions`` commands.
+After you install or upgrade {{site.data.keyword.IBM}}; {{site.data.keyword.symphony_short}} on Linux&reg;, use [IBM Fix Central](https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=IBM%20Spectrum%20Computing&product=ibm/Other+software/IBM+Spectrum+Symphony&release=All&platform=All&function=all) to download any interim fixes that are recommended for {{site.data.keyword.symphony_full_notm}} on Linux. You can install and manage interim fixes using the ``egoinstallfixes`` and ``pversions`` commands.
 
 ## About this task
 {: #about-this-task}
 
-Interim fixes for IBM Spectrum Symphony are available on [IBM Fix Central](https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=IBM%20Spectrum%20Computing&product=ibm/Other+software/IBM+Spectrum+Symphony&release=All&platform=All&function=all) or by contacting your IBM Support representative. Typically, you download these interim fixes, then use the ``egoinstallfixes`` command to install and manage those fixes on Linux hosts in your cluster. The ``egoinstallfixes`` command enables you to complete the following tasks:
+Interim fixes for {{site.data.keyword.symphony_full_notm}} are available on [IBM Fix Central](https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=IBM%20Spectrum%20Computing&product=ibm/Other+software/IBM+Spectrum+Symphony&release=All&platform=All&function=all) or by contacting your IBM Support representative. Typically, you download these interim fixes, then use the ``egoinstallfixes`` command to install and manage those fixes on Linux hosts in your cluster. The ``egoinstallfixes`` command enables you to complete the following tasks:
 
 - Install fixes, which includes
     -  checking the system, backing up the current files
     
-    -  deleting any files that the IBM Spectrum Symphony cluster no longer requires (these files may have been installed with IBM Spectrum Symphony, or applied during an IBM Spectrum Symphony fix)
+    -  deleting any files that the {{site.data.keyword.symphony_full_notm}} cluster no longer requires (these files may have been installed with {{site.data.keyword.symphony_full_notm}}, or applied during an {{site.data.keyword.symphony_full_notm}} fix)
     
-    - installing the specified fix packages on your existing IBM Spectrum Symphony cluster.
+    - installing the specified fix packages on your existing {{site.data.keyword.symphony_full_notm}} cluster.
 
     -Additionally, if the command detects a pre-script or post-script file within the fix package, it runs the scripts as necessary. These scripts can contain custom actions to be completed before or after applying the fix.
 
@@ -51,7 +51,7 @@ Use the egoinstallfixes command only on Linux hosts; to manage fixes on Windows,
 
 ## Procedure
 
-1. Use the egoinstallfixes command to install or roll back interim fixes for your IBM Spectrum Symphony installation on a Linux host. For command syntax and option details, see [egoinstallfixes](/docs/en/SSZUMP_7.3.1/reference_sym/egoinstallfixes.html#reference_p3w_4dm_bdb).
+1. Use the egoinstallfixes command to install or roll back interim fixes for your {{site.data.keyword.symphony_full_notm}} installation on a Linux host. For command syntax and option details, see [egoinstallfixes](/docs/en/SSZUMP_7.3.1/reference_sym/egoinstallfixes.html#reference_p3w_4dm_bdb).
 
     a. To run the egoinstallfixes command, your Linux host must include the ed Linux line-oriented text editor.
 

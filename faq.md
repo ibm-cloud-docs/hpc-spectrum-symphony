@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-01-26"
+lastupdated: "2022-02-03"
 
 keywords: 
 
@@ -27,7 +27,7 @@ subcollection: hpc-spectrum-symphony
 {: #my-faq-packages}
 {: faq}
 
-Cluster nodes deployed with this offering include IBM Spectrum Symphony 7.3.1 Advanced Edition. 
+Cluster nodes deployed with this offering include {{site.data.keyword.symphony_full_notm}} 7.3.1 Advanced Edition. 
 
 See the following for a summary of the features associated with each edition: [IBM Spectrum Symphony editions](/docs/en/spectrum-symphony/7.3.1?topic=foundations-spectrum-symphony-editions).
 
@@ -41,7 +41,7 @@ Available regions and zones for deploying VPC resources, and a mapping of those 
 {: #permissions-cluster-offering}
 {: faq}
 
-Instructions for setting the appropriate permissions for IBM Cloud services that are used by the offering to create a cluster can be found in [Granting user permissions for VPC resources, Managing user access for Schematics, Assigning access to Secrets Manager](/docs/vpc?topic=vpc-managing-user-permissions-for-vpc-resources&locale=en).
+Instructions for setting the appropriate permissions for {{site.data.keyword.Bluemix_notm}} services that are used by the offering to create a cluster can be found in [Granting user permissions for VPC resources, Managing user access for Schematics, Assigning access to Secrets Manager](/docs/vpc?topic=vpc-managing-user-permissions-for-vpc-resources&locale=en).
 
 
 ## How do I SSH among nodes?
@@ -85,7 +85,7 @@ When creating or deleting a cluster with a large number of worker nodes, you may
 {: #resource-group-parameters}
 {: faq}
 
-The first resource group parameter entry in the **Configure your workspace** section in the IBM Cloud catalog applies to the resource group where the Schematics workspace is provisioned on your IBM Cloud account. The value for this parameter can be different than the one used for the second entry in the **Parameters with default values** section in the catalog. The second entry applies to the resource group where VPC resources are provisioned. As specified in the description for this second `resource_group` parameter, note that only the default resource group is supported for use of the Symphony Host Factory auto-scaling feature.
+The first resource group parameter entry in the **Configure your workspace** section in the {{site.data.keyword.Bluemix_notm}} catalog applies to the resource group where the Schematics workspace is provisioned on your {{site.data.keyword.Bluemix_notm}} account. The value for this parameter can be different than the one used for the second entry in the **Parameters with default values** section in the catalog. The second entry applies to the resource group where VPC resources are provisioned. As specified in the description for this second `resource_group` parameter, note that only the default resource group is supported for use of the Symphony Host Factory auto-scaling feature.
 
 ## Can I use the Spectrum Symphony Host Factory feature for auto scaling on any cluster deployed with this offering?
 {: #host-factory-auto-scaling}

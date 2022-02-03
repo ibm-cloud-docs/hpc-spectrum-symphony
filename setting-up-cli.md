@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-09-24"
+  years: 2021, 2022
+lastupdated: "2022-02-03"
 
 keywords: 
 
@@ -23,7 +23,7 @@ subcollection: hpc-spectrum-symphony
 # Setting up the IBM Cloud Schematics CLI
 {: #setting-up-cli}
 
-Before you begin using the {{site.data.keyword.bplong}} CLI to deploy IBM Spectrum Symphony, review and complete the following prerequisites: 
+Before you begin using the {{site.data.keyword.bplong}} CLI to deploy {{site.data.keyword.symphony_full_notm}}, review and complete the following prerequisites: 
 
 1. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
 2. Log in to the {{site.data.keyword.cloud_notm}} CLI with your IBMid. If you have multiple accounts, you are prompted to select which account to use. If you do not specify a region with the `-r` flag, you must also select a region.
