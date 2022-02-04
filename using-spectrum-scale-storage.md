@@ -86,4 +86,4 @@ Complete the following steps to check the Spectrum Scale file system:
     ```
     {: codeblock}
 
-7. Create a file on the mountpoint path, for example, `/gpfs/fs1`, and verify on the other compute notes that the file can be accessed.
+7. Create a file on the mountpoint path, for example, `/gpfs/fs1`, and verify on the other compute nodes that the file can be accessed.
