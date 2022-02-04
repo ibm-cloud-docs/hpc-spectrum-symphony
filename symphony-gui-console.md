@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-12-07"
+  years: 2021, 2022
+lastupdated: "2022-02-03"
 
 keywords: 
 
@@ -29,7 +29,7 @@ subcollection: hpc-spectrum-symphony
 ## Configure an SSH tunnel to the cluster to allow access
 {: #configuring-an-SSH-tunnel-to-the-cluster}
 
-Before you can access the Spectrum Symphony cluster management console, you need to configure an SSH tunnel to the cluster to allow access to the management console through a local browser instance. You can do this by configuring port forwarding on your local browser host. 
+Before you can access the {{site.data.keyword.symphony_short}} cluster management console, you need to configure an SSH tunnel to the cluster to allow access to the management console through a local browser instance. You can do this by configuring port forwarding on your local browser host. 
 
 1. Run the following command to create the SSH tunnel:
 
@@ -46,7 +46,7 @@ Before you can access the Spectrum Symphony cluster management console, you need
 1. You get an SSL self-signed certificate warning with your browser the first time that you access this URL. 
 {:note .note}
 
-2. This SSH command will log you into the primary management host and initialize a Spectrum Symphony command-line environment.
+2. This SSH command will log you into the primary management host and initialize a {{site.data.keyword.symphony_short}} command-line environment.
 {:note .note}
 
 Further information on how to use Symphony UI can be found at [Accessing the cluster management console](https://www.ibm.com/docs/en/spectrum-symphony/7.3.1?topic=cluster-accessing-management-console#accessing_PMC).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-24"
+lastupdated: "2022-02-04"
 
 keywords: 
 
@@ -22,12 +22,12 @@ subcollection: hpc-spectrum-symphony
 # Using Spectrum Scale storage
 {: #using-spectrum-scale-storage}
 
-IBM Spectrum Scale is a cluster file system that provides simultaneous access to a single file system from multiple compute nodes. In the IBM Spectrum Symphony offering, Spectrum Scale provides applications running in static compute cluster nodes with high-performance access to a shared data space. For more technical information, see the [IBM Spectrum Scale](https://www.ibm.com/docs/en/spectrum-scale/5.1.2){: external} product documentation. 
+IBM Spectrum Scale is a cluster file system that provides simultaneous access to a single file system from multiple compute nodes. In the {{site.data.keyword.symphony_full_notm}} offering, Spectrum Scale provides applications running in static compute cluster nodes with high-performance access to a shared data space. For more technical information, see the [IBM Spectrum Scale](https://www.ibm.com/docs/en/spectrum-scale/5.1.2){: external} product documentation. 
 {: shortdesc}
 
-The IBM Spectrum Symphony offering leverages [{{site.data.keyword.vpc_short}} virtual server instance profiles](/docs/vpc?topic=vpc-profiles&interface=ui) provisioned with [instance storage](/docs/vpc?topic=vpc-instance-storage) for the Spectrum Scale storage nodes. By virtue of being on instance storage, this storage option can be used for scratch data use cases. When a storage node virtual server instance is rebooted, the data is preserved. However, when the instance is deleted, the instance storage data is lost. There is no automatic replication to persistant storage, for example, {{site.data.keyword.cos_full_notm}}, that is provided in the current implementation but you can add it on your own if required.
+The {{site.data.keyword.symphony_full_notm}} offering leverages [{{site.data.keyword.vpc_short}} virtual server instance profiles](/docs/vpc?topic=vpc-profiles&interface=ui) provisioned with [instance storage](/docs/vpc?topic=vpc-instance-storage) for the Spectrum Scale storage nodes. By virtue of being on instance storage, this storage option can be used for scratch data use cases. When a storage node virtual server instance is rebooted, the data is preserved. However, when the instance is deleted, the instance storage data is lost. There is no automatic replication to persistant storage, for example, {{site.data.keyword.cos_full_notm}}, that is provided in the current implementation but you can add it on your own if required.
 
-![Architecture diagram](images/hpccluster_sym_scale_architecture.svg){:caption="Figure 1. Architecture diagram of an IBM Spectrum Symphony cluster using IBM Spectrum Scale storage on IBM Cloud" caption-side="bottom"}
+![Architecture diagram](images/hpccluster_sym_scale_architecture.svg){:caption="Figure 1. Architecture diagram of an {{site.data.keyword.symphony_full_notm}} cluster using IBM Spectrum Scale storage on IBM Cloud" caption-side="bottom"}
 
 ## Before you begin
 {: #before-you-begin}

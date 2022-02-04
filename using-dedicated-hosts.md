@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-12-07"
+  years: 2021, 2022
+lastupdated: "2022-02-04"
 
 keywords: 
 
@@ -54,7 +54,7 @@ worker_node_instance_type = cx2-48x96
 dedicated_host_enabled    = true
 dedicated_host_placement  = spread``
 
-With the above variables, ten cx2-48x96 instances are provisioned as static compute nodes on four dedicated hosts with cx2-host-152x304. The dedicated host profile is automatically selected. You can see provisioned dedicated hosts with ibmcloud CLI or Web Console UI for IBM Cloud.
+With the above variables, ten cx2-48x96 instances are provisioned as static compute nodes on four dedicated hosts with cx2-host-152x304. The dedicated host profile is automatically selected. You can see provisioned dedicated hosts with ibmcloud CLI or Web Console UI for {{site.data.keyword.Bluemix_notm}}.
 
 ## Dedicated host for VPC
 {: #how-to-configure}

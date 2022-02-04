@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-09-24"
+  years: 2021, 2022
+lastupdated: "2022-02-04"
 
 keywords: 
 
@@ -27,7 +27,7 @@ The idle time behavior for Symphony host factory is controlled by three properti
  For more information on this file configuration please reference the [symAreq_policy_config.json reference](/docs/en/spectrum-symphony/7.3.1?topic=reference-symareq-policy-configjson).
  {:note .note}
 
-- ***billing_interval*** has a default value of 60, defines what the interval is in minutes where cloud resources are metered. For IBM Cloud we use VPC hourly VSIs.
+- ***billing_interval*** has a default value of 60, defines what the interval is in minutes where cloud resources are metered. For {{site.data.keyword.Bluemix_notm}} we use VPC hourly VSIs.
 
 - ***return_interval*** has a default value of 10, defines the time before it hits the next counter of billing interval where the worker can be released from cluster. The Symphony ``symA`` requestor constantly monitors the cluster capacity and workload requirements, and if it detects that unnecessary cores are present in the cluster it can release workers from the cluster and adjust the workloads to optimally utilize the existing compute resources.
 

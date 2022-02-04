@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-12-14"
+  years: 2021, 2022
+lastupdated: "2022-02-04"
 
 keywords: 
 
@@ -32,7 +32,7 @@ subcollection: hpc-spectrum-symphony
 {: troubleshoot}
 {: support}
 
-Schematics isn't able to clone the private GitHub repository, and you are seeing the following error message: `Failed to clone git repository, repository not found (check url, also check the scope 'repo' of the personal access token if SCHEMATICSGITTOKEN is used)`
+{{site.data.keyword.bpshort}} isn't able to clone the private GitHub repository, and you are seeing the following error message: `Failed to clone git repository, repository not found (check url, also check the scope 'repo' of the personal access token if SCHEMATICSGITTOKEN is used)`
 {: tsSymptoms}
 
 You didn't provide the correct GitHub token, or you didn't provide a GitHub token altogether.
@@ -46,7 +46,7 @@ Provide a [GitHub token](https://docs.github.com/en/github/authenticating-to-git
 {: troubleshoot}
 {: support}
 
-Schematics isn't able to clone the public GitHub repository, and you are seeing one of the following error messages:
+{{site.data.keyword.bpshort}} isn't able to clone the public GitHub repository, and you are seeing one of the following error messages:
 
 * `Fatal, could not download repo, Failed to clone git repository, authentication required (or the git url is incorrect). Problems found with the Repository. Please Rectify and Retry`
 * `Template error: Failed to clone git repository, authentication required (or the git url is incorrect)`
@@ -63,13 +63,13 @@ Do not provide a GitHub token, and check to see whether the GitHub token was pro
 {: troubleshoot}
 {: support}
 
-Schematics isn't able to create a workspace, and you are seeing the following error message: `You don't have the required to create a workspace in any resource groups. You must be assigned the manager role on the Schematics service in at least one resource group. Contact your account administrator for access.`
+{{site.data.keyword.bpshort}} isn't able to create a workspace, and you are seeing the following error message: `You don't have the required to create a workspace in any resource groups. You must be assigned the manager role on the Schematics service in at least one resource group. Contact your account administrator for access.`
 {: tsSymptoms}
 
-You don't have the required access to create a workspace in any resource groups. You must be assigned the manager role on the Schematics service in at least one resource group.
+You don't have the required access to create a workspace in any resource groups. You must be assigned the manager role on the {{site.data.keyword.bpshort}} service in at least one resource group.
 {: tsCauses}
 
-Contact your account administrator and get assigned with the manager role on the Schematics service in at least one resource group.
+Contact your account administrator and get assigned with the manager role on the {{site.data.keyword.bpshort}} service in at least one resource group.
 {: tsResolve}
 
 ## Why is IBM Cloud Schematics not able to provision the cluster and fails with an error message for the `symphony_license_confirmation` variable?
@@ -77,7 +77,7 @@ Contact your account administrator and get assigned with the manager role on the
 {: troubleshoot}
 {: support}
 
-Schematics isn't able to provision the cluster, and you are seeing the following error message: `Error: Invalid value for variable "symphony_license_confirmation"`
+{{site.data.keyword.bpshort}} isn't able to provision the cluster, and you are seeing the following error message: `Error: Invalid value for variable "symphony_license_confirmation"`
 {: tsSymptoms}
 
 You entered a value other than "true" for the property `symphony_license_confirmation`.
@@ -98,7 +98,7 @@ After you agree to one of the two conditions, update the property value to "true
 {: troubleshoot}
 {: support}
 
-Schematics isn't able to provision the cluster, and you are seeing the following error message: `Request is not authorized. Check your user permissions and authorizations and try again.`
+{{site.data.keyword.bpshort}} isn't able to provision the cluster, and you are seeing the following error message: `Request is not authorized. Check your user permissions and authorizations and try again.`
 {: tsSymptoms}
 
 You don't have the required access to get any VPC resources provisioned. 
@@ -112,7 +112,7 @@ Contact your account administrator and get all of the required accesses. For mor
 {: troubleshoot}
 {: support}
 
-Schematics isn't able to provision the cluster, and you are seeing the following example error message:
+{{site.data.keyword.bpshort}} isn't able to provision the cluster, and you are seeing the following example error message:
 {: tsSymptoms}
 
 ```
@@ -137,7 +137,7 @@ Deprovision the existing resource and try again.
 {: troubleshoot}
 {: support}
 
-While using a custom image, Schematics isn't able to provision the cluster, and you are seeing one of the following error messages:
+While using a custom image, {{site.data.keyword.bpshort}} isn't able to provision the cluster, and you are seeing one of the following error messages:
 
 * `The argument "image" is required, but no definition was found.`
 * `Unknown variable. There is no variable named "image_id".`
@@ -183,7 +183,7 @@ You need to destroy your existing resources and try applying the change again. Y
 {: support}
 
 ### What’s happening
-You are receiving the following error when you try to generate or apply a plan on Schematics workspace:
+You are receiving the following error when you try to generate or apply a plan on {{site.data.keyword.bpshort}} workspace:
 
 ``failed due to "Error: No SSH Key found with name <KEY_NAME>".``
 
@@ -209,7 +209,7 @@ The `symA` requestor may release a compute node virtual machine while the worklo
 {: troubleshoot}
 {: support}
 
-When updating the IBM Cloud provider configuration from the Symphony GUI, at **Menu icon ![Menu icon](../../icons/icon_hamburger.svg)Resources->Cloud->Configuration**, the values set in the configuration are not validated. If there are invalid values in the configuration, the virtual machine provisioning will fail. If a failure happens, check the host factory logs on the host running the HostFactory service in `/opt/ibm/spectrumcomputing/hostfactory/log for more information`.
+When updating the {{site.data.keyword.Bluemix_notm}} provider configuration from the Symphony GUI, at **Menu icon ![Menu icon](../../icons/icon_hamburger.svg)Resources->Cloud->Configuration**, the values set in the configuration are not validated. If there are invalid values in the configuration, the virtual machine provisioning will fail. If a failure happens, check the host factory logs on the host running the HostFactory service in `/opt/ibm/spectrumcomputing/hostfactory/log for more information`.
 
 ## Limitation of available profiles for dedicated hosts
 {: #troubleshoot-topic-12}
