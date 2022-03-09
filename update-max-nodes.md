@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-04"
+lastupdated: "2022-03-09"
 
 keywords: 
 
@@ -16,7 +16,7 @@ subcollection: hpc-spectrum-symphony
 {:external: target="_blank" .external}
 {:pre: .pre}
 {:tip: .tip}
-{:note .note}
+{:note: .note}
 {:important: .important}
 
 # Updating maximum number of worker nodes
@@ -25,20 +25,20 @@ subcollection: hpc-spectrum-symphony
 ## Making updates to the Symphony configuration using the GUI
 {: #update-max-worker-nodes-gui}
 
-You can make updates to Symphony configuration using the GUI console or through CLI.
+You can make updates to your Symphony configuration by using the GUI console or through the CLI.
 
 ### Configuration updates using Symphony GUI console
 {: #update-max-worker-nodes-symphony-gui-console}
 
-Please reference the topic [Symphony GUI console](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-gui-console&interface=ui) for more information on how to use Symphony GUI console. 
+For more information on how to use the Symphony GUI console, see [Symphony GUI console](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-gui-console&interface=ui).
 
-Once you login to console please follow these steps to update the maximum number of worker nodes:
+After you login to the console, complete the following steps to update the maximum number of worker nodes:
 
 1. From the cluster management console, click **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) Resources > Cloud > Configuration.**
 
 2. In the Cloud Configuration page, update the HostFactory service configuration, your cloud provider's host template, or both. If your updates do not include optional parameters, the parameters default values are used.
 
-3. To update the cloud provider's host template definition, select ``ibmcloudgen2inst`` from the Provider list and edit your existing template definition in the Templates text box.
+3. To update the cloud provider's host template definition, select ``ibmcloudgen2inst`` from the provider list and edit your existing template definition in the templates text box.
 
 4. Modify the values for following:
 
@@ -57,12 +57,11 @@ The changes take effect automatically. There is no need to restart the HostFacto
 ### Configuration updates using Symphony CLI
 {: #update-max-worker-nodes-symphony-cli}
 
-1. Find and edit the following file on your management node. Replace ***CLUSTER*** value with the name of your cluster. The default value is ***HPCCluster***. 
-``/data/<CLUSTER>/sym731/hostfactory/conf/providers/ibmcloudgen2inst/ibmcloudgen2instprov_templates.json``
+1. Find and edit the following file on your management node. Replace ***CLUSTER*** value with the name of your cluster. The default value is ***HPCCluster***: `/data/<CLUSTER>/sym731/hostfactory/conf/providers/ibmcloudgen2inst/ibmcloudgen2instprov_templates.json`
 
 2.  Modify the values for following:
 
-    a. ***maxNumber*** property will update the maximum number of worker node.
+    a. ***maxNumber*** property will update the maximum number of worker nodes.
 
      
     b. ***imageId*** changes the ID of the custom image.
@@ -79,10 +78,15 @@ The changes take effect automatically. There is no need to restart the HostFacto
 
 4. Restart the HostFactory service by using the following commands:
 
-      ``$egosh service stop HostFactory``
-      
-      ``$egosh service start HostFactory``
+    ```
+    egosh service stop HostFactory
+    ```
+    {: pre}
+    
+    ```
+    egosh service start HostFactory
+    ```
+    {: pre}
 
-For more information on this topic please reference 
- [Dynamically updating host factory configuration](/docs/en/spectrum-symphony/7.3.1?topic=bursting-dynamically-updating-host-factory-configuration) topic.
+For more information, see [Dynamically updating host factory configuration](https://www.ibm.com/docs/en/spectrum-symphony/7.3.1?topic=bursting-dynamically-updating-host-factory-configuration){: external}.
 

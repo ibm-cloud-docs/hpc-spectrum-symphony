@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-03"
+lastupdated: "2022-03-09"
 
 keywords: 
 
@@ -16,7 +16,7 @@ subcollection: hpc-spectrum-symphony
 {:external: target="_blank" .external}
 {:pre: .pre}
 {:tip: .tip}
-{:note .note}
+{:note: .note}
 {:important: .important}
 {:ui: .ph data-hd-interface='ui'}
 {:cli: .ph data-hd-interface='cli'}
@@ -76,7 +76,7 @@ You can monitor the log files to view the deletion progress of your workspace.
 
     * **Note**: If you want to destroy the resources as well as delete the workspace, then set the `destroy_resources` parameter value to `True`. In this case, the resources are deleted first, and then the workspace is deleted. 
     
-    * **Note**: If you want to delete the workspace but not the resources, then remove the `destroy_resources` parameter completely or set the `destroy_resources` parameter to `False`. If resources are already deleted, and if the `destroy_resources` parameter value is set to `True`, then the **RESOURCE DELETE** action will be in **FAILED** state.
+    * **Note**: If you want to delete the workspace but not the resources, then remove the `destroy_resources` parameter completely or set the `destroy_resources` parameter to `False`. If resources are already deleted, and if the `destroy_resources` parameter value is set to `True`, then the **RESOURCE DELETE** action is in a **FAILED** state.
 
 5. Run the Python script by using `python3 <python-file-name>` to delete the workspace.
 6. You get the status `Started Deleting Schematic Workspace` and `Completed Deleting Schematic Workspace` in response if the parameters passed as part of the request are valid. You should be able to see that the workspace is deleted in the {{site.data.keyword.bpshort}} that you created. If you don’t get a successful response, the error response contains the errors that you need to resolve. Resolve those errors and run the script until you are able to get a valid response and the workspace is deleted.

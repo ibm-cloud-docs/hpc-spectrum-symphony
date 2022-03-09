@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-03"
+lastupdated: "2022-03-09"
 
 keywords: 
 
@@ -16,7 +16,7 @@ subcollection: hpc-spectrum-symphony
 {:external: target="_blank" .external}
 {:pre: .pre}
 {:tip: .tip}
-{:note .note}
+{:note: .note}
 {:important: .important}
 {:ui: .ph data-hd-interface='ui'}
 {:cli: .ph data-hd-interface='cli'}
@@ -64,7 +64,7 @@ ibmcloud schematics logs --id <WORKSPACE_ID>
 {: #next-steps-generate-plan-cli}
 {: cli}
 
-After you've successfully generated a plan, you can begin [Applying a plan](/docs/ibm-spectrum-symphony?topic=ibm-spectrum-symphony-applying-plan#apply-plan-cli) to deploy your {{site.data.keyword.cloud_notm}} resources to build a IBM Spectrum Symphony cluster instance.
+After you've successfully generated a plan, you can begin [Applying a plan](/docs/ibm-spectrum-symphony?topic=ibm-spectrum-symphony-applying-plan#apply-plan-cli) to deploy your {{site.data.keyword.cloud_notm}} resources to build a {{site.data.keyword.symphony_full_notm}} cluster instance.
 
 ## Generating a plan using the API
 {: #generate-plan-api}
@@ -152,4 +152,4 @@ INFO:root:Completed Generating Schematic Plan
 {: #next-steps-generate-plan-api}
 {: api}
 
-After you've successfully generated a plan, you can begin [Applying a plan](/docs/ibm-spectrum-symphony?topic=ibm-spectrum-symphony-applying-plan#apply-plan-api) to deploy your {{site.data.keyword.cloud_notm}} resources to build a IBM Spectrum Symphony cluster instance.
+After you've successfully generated a plan, you can begin [Applying a plan](/docs/ibm-spectrum-symphony?topic=ibm-spectrum-symphony-applying-plan#apply-plan-api) to deploy your {{site.data.keyword.cloud_notm}} resources to build a {{site.data.keyword.symphony_full_notm}} cluster instance.

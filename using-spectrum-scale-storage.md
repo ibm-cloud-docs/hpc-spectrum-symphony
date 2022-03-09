@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-04"
+lastupdated: "2022-03-09"
 
 keywords: 
 
@@ -16,16 +16,16 @@ subcollection: hpc-spectrum-symphony
 {:external: target="_blank" .external}
 {:pre: .pre}
 {:tip: .tip}
-{:note .note}
+{:note: .note}
 {:important: .important}
 
 # Using Spectrum Scale storage
 {: #using-spectrum-scale-storage}
 
-IBM Spectrum Scale is a cluster file system that provides simultaneous access to a single file system from multiple compute nodes. In the {{site.data.keyword.symphony_full_notm}} offering, Spectrum Scale provides applications running in static compute cluster nodes with high-performance access to a shared data space. For more technical information, see the [IBM Spectrum Scale](https://www.ibm.com/docs/en/spectrum-scale/5.1.2){: external} product documentation. 
+{{site.data.keyword.scale_full_notm}} is a cluster file system that provides simultaneous access to a single file system from multiple compute nodes. In the {{site.data.keyword.symphony_full_notm}} offering, {{site.data.keyword.scale_short}} provides applications running in static compute cluster nodes with high-performance access to a shared data space. For more technical information, see the [IBM Spectrum Scale](https://www.ibm.com/docs/en/spectrum-scale/5.1.2){: external} product documentation. 
 {: shortdesc}
 
-The {{site.data.keyword.symphony_full_notm}} offering leverages [{{site.data.keyword.vpc_short}} virtual server instance profiles](/docs/vpc?topic=vpc-profiles&interface=ui) provisioned with [instance storage](/docs/vpc?topic=vpc-instance-storage) for the Spectrum Scale storage nodes. By virtue of being on instance storage, this storage option can be used for scratch data use cases. When a storage node virtual server instance is rebooted, the data is preserved. However, when the instance is deleted, the instance storage data is lost. There is no automatic replication to persistant storage, for example, {{site.data.keyword.cos_full_notm}}, that is provided in the current implementation but you can add it on your own if required.
+The {{site.data.keyword.symphony_full_notm}} offering uses [{{site.data.keyword.vpc_short}} virtual server instance profiles](/docs/vpc?topic=vpc-profiles&interface=ui) provisioned with [instance storage](/docs/vpc?topic=vpc-instance-storage) for the Spectrum Scale storage nodes. By virtue of being on instance storage, this storage option can be used for scratch data use cases. When a storage node virtual server instance is rebooted, the data is preserved. However, when the instance is deleted, the instance storage data is lost. There is no automatic replication to persistent storage, for example, {{site.data.keyword.cos_full_notm}}, that is provided in the current implementation but you can add it on your own if required.
 
 ![Architecture diagram](images/hpccluster_sym_scale_architecture.svg){:caption="Figure 1. Architecture diagram of an {{site.data.keyword.symphony_full_notm}} cluster using IBM Spectrum Scale storage on IBM Cloud" caption-side="bottom"}
 
@@ -37,12 +37,12 @@ Before you begin, make sure to complete the steps for [Getting started with IBM 
 ## Configuring Spectrum Scale storage
 {: #configure-spectrum-scale-storage}
 
-To configure and use Spectrum Scale storage, the `spectrum_scale_enabled` [deployment value](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-deployment-values) must be set to "true". The remaining Spectrum Scale storage parameters ("scale_xx") must be appropriately set to deploy the desired storage cluster configuration. 
+To configure and use {{site.data.keyword.scale_short}} storage, the `spectrum_scale_enabled` [deployment value](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-deployment-values) must be set to "true". The remaining Spectrum Scale storage parameters ("scale_xx") must be set to deploy the wanted storage cluster configuration. 
 
 ## Checking the Spectrum Scale file system
 {: #check-spectrum-scale-file-system}
 
-Complete the following steps to check the Spectrum Scale file system:
+Complete the following steps to check the {{site.data.keyword.scale_short}} file system:
 
 1. Log in to a Scale storage node by using SSH. Details are available in the logs output with the following `spectrum_scale_storage_ssh_command`: 
 
@@ -65,7 +65,7 @@ Complete the following steps to check the Spectrum Scale file system:
     ```
     {: codeblock}
 
-4. Display the file sever details. This command can be used to validate file block size (node size in bytes):
+4. Display the file server details. This command can be used to validate file block size (node size in bytes):
 
     ```
     /usr/lpp/mmfs/bin/mmlsfs fs1
@@ -79,11 +79,11 @@ Complete the following steps to check the Spectrum Scale file system:
     ```
     {: codeblock}
 
-6. Display the gpfs cluster setup on the compute nodes, which includes the primary, secondary, management, and worker nodes:
+6. Display the gpfs cluster setup on the compute nodes, which include the primary, secondary, management, and worker nodes:
 
     ```
     /usr/lpp/mmfs/bin/mmlscluster
     ```
     {: codeblock}
 
-7. Create a file on the mountpoint path, for example, `/gpfs/fs1`, and verify on the other compute nodes that the file can be accessed.
+7. Create a file on the mount point path, for example, `/gpfs/fs1`, and verify on the other compute nodes that the file can be accessed.

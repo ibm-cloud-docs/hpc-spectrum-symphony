@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-04"
+lastupdated: "2022-03-09"
 
 keywords: 
 
@@ -16,7 +16,7 @@ subcollection: hpc-spectrum-symphony
 {:external: target="_blank" .external}
 {:pre: .pre}
 {:tip: .tip}
-{:note .note}
+{:note: .note}
 {:important: .important}
 {:ui: .ph data-hd-interface='ui'}
 {:cli: .ph data-hd-interface='cli'}
@@ -30,7 +30,7 @@ The cluster management console allows cluster and consumer administrators to tes
 
 Use this tool to test your cluster configuration. Running this tool is often the last step in installation to make sure you have configured your cluster properly.
 
-For settings, authorization, and configuration information, see [Symping: the IBM Spectrum Symphony testing tool](https://www.ibm.com/docs/en/spectrum-symphony/7.3.1?topic=workload-symping-spectrum-symphony-testing-tool).
+For settings, authorization, and configuration information, see [Symping: the IBM Spectrum Symphony testing tool](https://www.ibm.com/docs/en/spectrum-symphony/7.3.1?topic=workload-symping-spectrum-symphony-testing-tool){: external}.
 
 ## Testing the cluster with Symping:
 {: #symping-testing}

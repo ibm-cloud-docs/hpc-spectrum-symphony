@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-04"
+lastupdated: "2022-03-09"
 
 keywords: 
 
@@ -21,7 +21,7 @@ subcollection: hpc-spectrum-symphony
 {:external: target="_blank" .external}
 {:pre: .pre}
 {:tip: .tip}
-{:note .note}
+{:note: .note}
 {:important: .important}
 
 # Troubleshooting
@@ -85,8 +85,8 @@ You entered a value other than "true" for the property `symphony_license_confirm
 
 The property `symphony_license_confirmation` only accepts "true" as a valid value. A "true" value indicates that you have agreed to one of the following two conditions:
 
-  1. If you are deploying a production cluster, you have confirmed with your business team that you have enough licenses to deploy the {{site.data.keyword.spectrum_full_notm}} on {{site.data.keyword.cloud_notm}} and that these licenses are covered for use under the International Program License Agreement (IPLA).
-  2. You are deploying an evaluation cluster with {{site.data.keyword.spectrum_full_notm}} on {{site.data.keyword.cloud_notm}} and agree to abide by the International License Agreement for Evaluation of Program (ILAE).
+1. If you are deploying a production cluster, you have confirmed with your business team that you have enough licenses to deploy the {{site.data.keyword.spectrum_full_notm}} on {{site.data.keyword.cloud_notm}} and that these licenses are covered for use under the International Program License Agreement (IPLA).
+2. You are deploying an evaluation cluster with {{site.data.keyword.spectrum_full_notm}} on {{site.data.keyword.cloud_notm}} and agree to abide by the International License Agreement for Evaluation of Program (ILAE).
 
 IBM terms of software use for both IPLA and ILAE can be found [here](https://www-03.ibm.com/software/sla/sladb.nsf/sla/bla){: external}.
 
@@ -182,26 +182,23 @@ You need to destroy your existing resources and try applying the change again. Y
 {: troubleshoot}
 {: support}
 
-### What’s happening
-You are receiving the following error when you try to generate or apply a plan on {{site.data.keyword.bpshort}} workspace:
+You are receiving the following error when you try to generate or apply a plan on {{site.data.keyword.bpshort}} workspace: `failed due to "Error: No SSH Key found with name <KEY_NAME>".`
+{: tsSymptoms}
 
-``failed due to "Error: No SSH Key found with name <KEY_NAME>".``
-
-### Why it’s happening
-Terraform could not find the given ssh key names provided by you.
-
-How to fix it
+Terraform could not find the given SSH key names that are provided by you.
+{: tsCauses}
 
 1. Check whether the given ssh key is present in the current region where the cluster is being provisioned. If the given ssh key is not present, create the ssh key in the current region.
 2. While configuring multiple ssh keys, ensure that there is no white spaces added before or after the ssh key names.
-3. If you are using multiple ssh keys, check whether a comma(,) is used a delimiter between the ssh keys and that there is no white space added before or after the ssh key.
+3. If you are using multiple ssh keys, check whether a comma(,) is used a delimiter between the SSH keys and that there is no white space added before or after the SSH key.
+{: tsResolve}
 
 ## Worker nodes are released when workload is in progress
 {: #troubleshoot-topic-10}
 {: troubleshoot}
 {: support}
 
-The `symA` requestor may release a compute node virtual machine while the workload is still in progress. This will happen when the property `return_idle_only` is set to true and the immediate return policy `symA` is unable to get the allocation for this host, and therefore assumes it has no allocation. This issue happens if there are only a few tasks remaining for the monitored applications. For more information please refer to [Updating idle time before worker nodes are removed](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-update-idle-time&interface=api).
+The `symA` requester might release a compute node virtual machine while the workload is still in progress. This happens when the property `return_idle_only` is set to true and the immediate return policy `symA` is unable to get the allocation for this host, and therefore assumes it has no allocation. This issue happens if there are only a few tasks remaining for the monitored applications. For more information, see [Updating idle time before worker nodes are removed](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-update-idle-time&interface=api).
 
 
 ## Incorrect provider configuration values do not result in an error
@@ -216,4 +213,4 @@ When updating the {{site.data.keyword.Bluemix_notm}} provider configuration from
 {: troubleshoot}
 {: support}
 
-Our offering automatically selects instance profiles for dedicated hosts to be the same prefix (for example, bx2 and cx2) as ones for worker instances (`worker_node_instance_type`). However, available instance prefixes can be limited, depending on your target region. So, if you use dedicated hosts, please check `ibmcloud target -r {region_name}` and `ibmcloud is dedicated-host-profiles` to see if your `worker_node_instance_type` has the available prefix for your target region.
+Our offering automatically selects instance profiles for dedicated hosts to be the same prefix (for example, bx2 and cx2) as ones for worker instances (`worker_node_instance_type`). However, available instance prefixes can be limited, depending on your target region. If you use dedicated hosts, check `ibmcloud target -r {region_name}` and `ibmcloud is dedicated-host-profiles` to see whether your `worker_node_instance_type` has the available prefix for your target region.
