@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-09"
+lastupdated: "2022-04-06"
 
 keywords: 
 
@@ -32,8 +32,8 @@ After you've created your workspace, you need to generate a plan to validate all
 {: #generate-plan-ui}
 {: ui}
 
-1. In the {{site.data.keyword.cloud}} console, after the workspace is created, you can review the properties and the variables that are associated with that workspace by using the _Settings_ tab. Make sure to update the following required parameters: `api_key`, `ssh_key_name`, `sym_license_confirmation`, and `zone`. 
-2. After you review all of the values and make any applicable changes, and click **Generate plan**. 
+1. In the {{site.data.keyword.cloud}} console, after the workspace is created, you can review the properties and the variables that are associated with that workspace by using the _Settings_ tab. Make sure to update the following required parameters: `api_key`, `ssh_key_name`, `sym_license_confirmation`, and `zone`.
+2. After you review all of the values and make any applicable changes, click **Generate plan**. 
 3. When you click **Generate plan**, a new log is generated that can be viewed in the Jobs tab by clicking **Jobs**. 
 4. Review the log file for any errors, fix the properties, and regenerate the plan by clicking **Generate plan** again.
 
@@ -41,7 +41,7 @@ After you've created your workspace, you need to generate a plan to validate all
 {: #next-steps-generate-ui}
 {: ui}
 
-After you've successfully generated a plan, you can begin [Applying a plan](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-applying-plan&interface=ui#apply-plan-ui) to deploy your {{site.data.keyword.cloud_notm}} resources to build a {{site.data.keyword.symphony_full_notm} cluster instance.
+After you've successfully generated a plan, you can begin [Applying a plan](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-applying-plan&interface=ui#apply-plan-ui) to deploy your {{site.data.keyword.cloud_notm}} resources to build a {{site.data.keyword.symphony_full_notm}} cluster instance.
 
 ## Generating a plan using the CLI
 {: #generate-plan-cli}
@@ -77,7 +77,7 @@ After you've successfully generated a plan, you can begin [Applying a plan](/doc
   * Replace your {{site.data.keyword.cloud_notm}} API key to the `authenticator = IAMAuthenticator('<ibm-api-key>')` variable.
   * Change the API endpoint to the endpoint mentioned in [API endpoints](https://cloud.ibm.com/apidocs/schematics?code=python#api-endpoints){: external} according to the location you want your {{site.data.keyword.bpshort}} workspace to reside, for example, `schematics_service.set_service_url('https://us.schematics.cloud.ibm.com')`.
 4. Inside the `schematics_service.plan_workspace_command` function, provide the following parameters:
-  * Provide the workspace ID that you created in the [Create a workspace](/docs/ibm-spectrum-symphony?topic=ibm-spectrum-symphony-creating-workspace) task or from the {{site.data.keyword.cloud_notm}} console for {{site.data.keyword.bpshort}}, for example, `us-south.workspace.Terraform-Schematics-Python-Workspace.b3bbc9f5`.
+  * Provide the workspace ID that you created in the [Create a workspace](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-creating-workspace&interface=api) task or from the {{site.data.keyword.cloud_notm}} console for {{site.data.keyword.bpshort}}, for example, `us-south.workspace.Terraform-Schematics-Python-Workspace.b3bbc9f5`.
   * Export your {{site.data.keyword.cloud_notm}} API key by using the following command:
   
     ```
@@ -95,7 +95,7 @@ After you've successfully generated a plan, you can begin [Applying a plan](/doc
 5. Make sure to update the following required parameters: `api_key`, `ssh_key_name`, `sym_license_confirmation`, and `zone`.
 6. Run the Python script by using `python3 <python-file-name>` to generate a plan in the {{site.data.keyword.cloud_notm}}.
 7. You get an activity ID in the response if the parameters passed as part of the request are valid. You should be able to see the plan generating in the {{site.data.keyword.bpshort}} workspace that you created in the {{site.data.keyword.cloud_notm}} console. If you don’t get a successful response, the error response contains the errors that you need to resolve. Resolve those errors and run the script until you are able to get a valid response and generate a plan.
-8. If you want to check the logs of the action, see [Retrieving action logs with {{site.data.keyword.bpshort}} API](/docs/ibm-spectrum-symphony?topic=ibm-spectrum-symphony-retrieve-action-logs) to retrieve the logs. The response contains the status of the action, and it appears in either a `COMPLETED` or `FAILED` state.
+8. If you want to check the logs of the action, see [Retrieving action logs with {{site.data.keyword.bpshort}} API](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-retrieve-action-logs) to retrieve the logs. The response contains the status of the action, and it appears in either a `COMPLETED` or `FAILED` state.
 
 ### Example Python request
 {: #example-request-generate}
