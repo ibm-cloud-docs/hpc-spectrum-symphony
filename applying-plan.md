@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-03"
+lastupdated: "2022-04-06"
 
 keywords: 
 
@@ -67,19 +67,19 @@ ibmcloud schematics logs --id <WORKSPACE_ID>
 ```
 {: screen}
 
-After the plan is successfully applied, it generates an `sshcommand` in the _Outputs_ section in the Terraform code. You can use this command to log in to the IBM Spectrum Symphony cluster. If you specified IP addresses for `ssh_allowed_ips` property only, those IP address machines would be able to use this SSH command.
+After the plan is successfully applied, it generates an `sshcommand` in the _Outputs_ section in the Terraform code. You can use this command to log in to the {{site.data.keyword.symphony_full_notm}} cluster. If you specified IP addresses for `ssh_allowed_ips` property only, those IP address machines would be able to use this SSH command.
 
 ## Applying a plan using the API
 {: #apply-plan-api}
 {: api}
 
 1. To apply a plan by using the {{site.data.keyword.bplong_notm}} Python APIs, create a Python file and provide a name of your choice, for example, `schematics_apply_plan.py`.
-2. Copy and paste the [Apply a plan using {{site.data.keyword.bpshort}} Python API](/docs/ibm-spectrum-symphony?topic=ibm-spectrum-symphony-applying-plan#example-request-apply) example request to your Python file.
+2. Copy and paste the [Apply a plan using {{site.data.keyword.bpshort}} Python API](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-applying-plan&interface=api#example-request-apply) example request to your Python file.
 3. Change the following parameters as part of the request:
   * Replace your {{site.data.keyword.cloud_notm}} API key to the `authenticator = IAMAuthenticator('<ibm-api-key>')` variable.
   * Change the API endpoint to the endpoint mentioned in [API endpoints](https://cloud.ibm.com/apidocs/schematics?code=python#api-endpoints){: external} according to the location that you want your {{site.data.keyword.bpshort}} workspace to reside, for example, `schematics_service.set_service_url('https://us.schematics.cloud.ibm.com')`.
 4. Inside the `schematics_service.apply_workspace_command` function, provide the following parameters:
-  * Provide the workspace ID that you generated in the [Creating a workspace](/docs/ibm-spectrum-symphony?topic=ibm-spectrum-symphony-creating-workspace) task, for example, `us-south.workspace.Terraform-Schematics-Python-Workspace.b3bbc9f5`.
+  * Provide the workspace ID that you generated in the [Creating a workspace](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-creating-workspace) task, for example, `us-south.workspace.Terraform-Schematics-Python-Workspace.b3bbc9f5`.
   * Export your {{site.data.keyword.cloud_notm}} API key by using the following command:
   
     ```
@@ -96,7 +96,7 @@ After the plan is successfully applied, it generates an `sshcommand` in the _Out
 
 5. Run the Python script by using `python3 <python-file-name>` to apply a plan in the {{site.data.keyword.cloud_notm}}.
 6. You get an activity ID in response if the parameters passed as part of the request are valid. You should see the plan being applied in the {{site.data.keyword.bpshort}} workspace that you created in the {{site.data.keyword.cloud_notm}} console. If you don’t get a successful response, the error response contains the errors that you need to resolve. Resolve those errors and run the script until you are able to get a valid response and apply a plan.
-7. If you want to check the logs of the action, see [Retrieving action logs with {{site.data.keyword.bpshort}} API](/docs/ibm-spectrum-symphony?topic=ibm-spectrum-symphony-retrieve-action-logs) to retrieve the logs. The response contains the status of the action, and it appears in either a `COMPLETED` or `FAILED` state.
+7. If you want to check the logs of the action, see [Retrieving action logs with {{site.data.keyword.bpshort}} API](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-retrieve-action-logs) to retrieve the logs. The response contains the status of the action, and it appears in either a `COMPLETED` or `FAILED` state.
 
 ### Example Python request
 {: #example-request-apply}
