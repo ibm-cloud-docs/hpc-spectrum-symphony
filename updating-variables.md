@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-04"
+lastupdated: "2022-04-06"
 
 keywords: 
 
@@ -24,18 +24,12 @@ subcollection: hpc-spectrum-symphony
 # Updating variables with Schematics API
 {: #update-variables}
 
-1. To update variables by using the {{site.data.keyword.bplong}} Python APIs, create two Python files, and provide a name of your choice for those files, following these links for example: [schematics_variables_update.py](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-update-variables#example-request-update-variables) and [schematics_env_class.py](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-update-variables#example-request-update-variables-file).
-
-2. Copy and paste the `schematics_variables_update.py` and `schematics_env_class.py` Python example code requests to the respective Python files. Click below for code examples:
-
-    [schematics_variables_update.py](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-update-variables#example-request-update-variables)
-
-    [schematics_env_class.py](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-update-variables#example-request-update-variables-file)
-
+1. To update variables by using the {{site.data.keyword.bplong}} Python APIs, create two Python files, and provide a name of your choice for those files, for example, `schematics_variables_update.py` and `schematics_env_class.py`.
+2. Copy and paste the [`schematics_variables_update.py`](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-update-variables#example-request-update-variables) and [`schematics_env_class.py`](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-update-variables#example-request-update-variables-file) Python example code requests to the respective Python files.
 3. Copy and paste the [`config.json` template file](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-update-variables#template-file) to a JSON file, for example `config.json`.
 4. Change the following parameters as part of the request:
-  * Provide the `workspace ID w_id` generated in both the following functions: `schematic_obj.get_workspace(w_id="<w_id>)` and `schematic_obj.update_variables(w_id="<wi_id>")`.
-5. Make sure to update the required parameters, such as `api_key`, `ls_entitlement`, `symphony_entitlement`, `ssh_key_name`, `cluster_prefix` in the `config.json` file.
+    * Provide the `workspace ID w_id` generated in both the following functions: `schematic_obj.get_workspace(w_id="<w_id>)` and `schematic_obj.update_variables(w_id="<wi_id>")`.
+5. Make sure to update the required parameters, such as `api_key`, `ssh_key_name`, `sym_license_confirmation`, and `zone` in the `config.json` file.
 6. Run the Python script by using python3 to update the variables in the {{site.data.keyword.bpshort}} workspace in the {{site.data.keyword.cloud_notm}}.
 
 **Note**: The following parameters might not be required in `config.json` as the {{site.data.keyword.bpshort}} update variables API uses the `workspace ID w_id` to update the variables against that workspace.
