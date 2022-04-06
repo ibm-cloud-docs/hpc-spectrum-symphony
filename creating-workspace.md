@@ -55,7 +55,7 @@ After you've successfully created a workspace, you can begin [Generating a plan]
 {: #before-you-begin-creating-cli}
 {: cli}
 
-Before you get started, make sure that you've completed the prerequisites found in [Setting up the {{site.data.keyword.bplong_notm}} CLI](/docs/ibm-spectrum-symphony?topic=ibm-spectrum-symphony-setting-up-cli). 
+Before you get started, make sure that you've completed the prerequisites found in [Setting up the {{site.data.keyword.bplong_notm}} CLI](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-setting-up-cli&interface=cli). 
 
 ## Creating a workspace using the CLI
 {: #create-workspace-cli}
@@ -114,19 +114,19 @@ ibmcloud schematics workspace update --id WORKSPACE_ID --file FILE_NAME [--githu
 ```
 {: pre}
 
-To provision or modify {{site.data.keyword.cloud_notm}} resources, you can run the command `ibmcloud schematics plan` command. For more information, see the [{{site.data.keyword.bplong_notm}} CLI](/docs/ibm-spectrum-symphony?topic=schematics-schematics-cli-reference#schematics-plan) reference.
+To provision or modify {{site.data.keyword.cloud_notm}} resources, you can run the command `ibmcloud schematics plan` command. For more information, see the [{{site.data.keyword.bplong_notm}} CLI](/docs/hpc-spectrum-symphony?topic=schematics-schematics-cli-reference#schematics-plan) reference.
 
 ## Next steps
 {: #next-steps-create-cli}
 {: cli}
 
-After you've successfully created a workspace, you can begin [Generating a plan](//docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-generate-plan&interface=cli) to validate all of the configuration properties. 
+After you've successfully created a workspace, you can begin [Generating a plan](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-generate-plan&interface=cli) to validate all of the configuration properties. 
 
 ## Before you begin
 {: #before-you-begin-creating-api}
 {: api}
 
-Before you get started, make sure that you've completed the prerequisites found in [Setting up the {{site.data.keyword.bplong_notm}} API](/docs/ibm-spectrum-symphony?topic=ibm-spectrum-symphony-setting-up-api).
+Before you get started, make sure that you've completed the prerequisites found in [Setting up the {{site.data.keyword.bplong_notm}} API](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-setting-up-api&interface=api).
 
 ## Creating a workspace using the API
 {: #create-workspace-api}
@@ -320,4 +320,4 @@ INFO:root:Completed Creating Schematic Workspace
 {: #next-steps-create-api}
 {: api}
 
-After you've successfully created a workspace, you can begin [Generating a plan](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-generate-plan&interface=api) to validate all of the configuration properties. 
+After you've successfully created a workspace, you can begin [Generating a plan](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-generate-plan&interface=api) to validate all of the configuration properties.
