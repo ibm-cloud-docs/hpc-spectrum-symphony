@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-06"
+lastupdated: "2022-04-11"
 
 keywords: 
 
@@ -196,15 +196,15 @@ template_source_data_request_model['type'] = 'terraform_v0.14.11'
 template_source_data_request_model['variablestore'] = [
 {
 "name": "ssh_key_name",
-"value": "lsf-bcc-key",
+"value": "sym-hpcc-key",
 },
 {
-"name": "lsf_license_confirmation",
+"name": "sym_license_confirmation",
 "value": "true"
 }]
 
 template_repo_request_model = {}
-template_repo_request_model['url'] = 'https://github.com/IBM-Cloud/hpc-cluster-lsf'
+template_repo_request_model['url'] = 'https://github.com/IBM-Cloud/hpc-cluster-symphony'
 
 logging.info("Started Creating Schematic Workspace")
 
@@ -263,9 +263,9 @@ INFO:root:Completed Creating Schematic Workspace
 "locked": false
 },
 "template_repo": {
-"url": "https://github.com/IBM-Cloud/hpc-cluster-lsf",
+"url": "https://github.com/IBM-Cloud/hpc-cluster-symphony",
 "commit_id": "",
-"full_url": "https://github.com/IBM-Cloud/hpc-cluster-lsf",
+"full_url": "https://github.com/IBM-Cloud/hpc-cluster-symphony",
 "has_uploadedgitrepotar": false
 },
 "template_data": [
@@ -280,12 +280,12 @@ INFO:root:Completed Creating Schematic Workspace
 {
 "name": "ssh_key_name",
 "secure": false,
-"value": "lsf-bcc-key",
+"value": "sym-hpcc-key",
 "type": "",
 "description": ""
 },
 {
-"name": "lsf_license_confirmation",
+"name": "sym_license_confirmation",
 "secure": false,
 "value": "true",
 "type": "",
