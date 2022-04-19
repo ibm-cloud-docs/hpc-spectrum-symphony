@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-09"
+lastupdated: "2022-04-19"
 
 keywords: 
 
@@ -178,7 +178,7 @@ You need to destroy your existing resources and try applying the change again. Y
 {: tsResolve}
 
 ## Why am I receiving an error with the provided ssh_key_name value?
-{: #troubleshoot-topic-12}
+{: #troubleshoot-topic-10}
 {: troubleshoot}
 {: support}
 
@@ -193,8 +193,22 @@ Terraform could not find the given SSH key names that are provided by you.
 3. If you are using multiple ssh keys, check whether a comma(,) is used a delimiter between the SSH keys and that there is no white space added before or after the SSH key.
 {: tsResolve}
 
+## Why am I getting an error when I try to run the Spectrum Symphony VaR simulation?
+{: #troubleshoot-topic-11}
+{: troubleshoot}
+{: support}
+
+You are getting a `Failed to Login` error when you try to run the [{{site.data.keyword.symphony_short}} Value at Risk (VaR) simulation](https://www.ibm.com/docs/en/spectrum-symphony/7.3.1?topic=started-sample-value-risk-var-simulation){: external}.
+{: tsSymptoms}
+
+It is possible that you are hitting a limitation with the VaR simulation, which requires that the cluster prefix be no longer than 10 characters and that the Symphony primary host hostname is fewer than 20 characters.
+{: tsCauses}
+
+Ensure that your cluster prefix is no longer than 10 characters.
+{: tsResolve}
+
 ## Worker nodes are released when workload is in progress
-{: #troubleshoot-topic-10}
+{: #troubleshoot-topic-12}
 {: troubleshoot}
 {: support}
 
@@ -202,14 +216,14 @@ The `symA` requester might release a compute node virtual machine while the work
 
 
 ## Incorrect provider configuration values do not result in an error
-{: #troubleshoot-topic-11}
+{: #troubleshoot-topic-13}
 {: troubleshoot}
 {: support}
 
 When updating the {{site.data.keyword.Bluemix_notm}} provider configuration from the Symphony GUI, at **Menu icon ![Menu icon](../../icons/icon_hamburger.svg)Resources->Cloud->Configuration**, the values set in the configuration are not validated. If there are invalid values in the configuration, the virtual machine provisioning will fail. If a failure happens, check the host factory logs on the host running the HostFactory service in `/opt/ibm/spectrumcomputing/hostfactory/log for more information`.
 
 ## Limitation of available profiles for dedicated hosts
-{: #troubleshoot-topic-12}
+{: #troubleshoot-topic-14}
 {: troubleshoot}
 {: support}
 
