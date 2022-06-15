@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-09"
+lastupdated: "2022-06-15"
 
 keywords: 
 
@@ -29,7 +29,7 @@ The following deployment values can be used to configure the {{site.data.keyword
 | ----- | ----------- | --------------- | ------------ |
 | `api_key` | This is the {{site.data.keyword.Bluemix_notm}} API key for the {{site.data.keyword.Bluemix_notm}} account where the {{site.data.keyword.symphony_full_notm}} cluster needs to be deployed. For more information on how to create an API key, see [Managing user API keys](/docs/account?topic=account-userapikey). | Yes | None |
 | `ssh_key_name` | Comma-separated list of names of the SSH key that is configured in your {{site.data.keyword.Bluemix_notm}} account and is used to establish a connection to the Symphony master node. Ensure that the SSH key is present in the same resource group and region where the cluster is being provisioned. If you do not have an SSH key in your {{site.data.keyword.Bluemix_notm}} account, create one by using the instructions that are given at [SSH keys](/docs/vpc?topic=vpc-ssh-keys). | Yes | None |
-| `symphony_cluster_confirmation` | If you have confirmed the availability of the {{site.data.keyword.symphony_full_notm}} license for a production cluster on {{site.data.keyword.Bluemix_notm}} or if you are deploying a nonproduction cluster, enter `true`. **Note:** Failure to comply with licenses for production use of software is a violation of the [IBM International Program License Agreement](https://www.ibm.com/software/passportadvantage/programlicense.html){: external} | Yes | None |
+| `sym_license_confirmation` | If you have confirmed the availability of the {{site.data.keyword.symphony_full_notm}} license for a production cluster on {{site.data.keyword.Bluemix_notm}} or if you are deploying a nonproduction cluster, enter `true`. **Note:** Failure to comply with licenses for production use of software is a violation of the [IBM International Program License Agreement](https://www.ibm.com/software/passportadvantage/programlicense.html){: external} | Yes | None |
 | `cluster_id` | Unique ID of the cluster used by Symphony for configuration of resources. This must be up to 39 alphanumeric characters including the underscore (_), the hyphen (-), and the period (.). Other special characters and spaces are not allowed. Do not use the name of any host or user as the name of your cluster. You cannot change it after installation. | No | `HPCCluster` |
 | `cluster_prefix` | Prefix that is used to name the {{site.data.keyword.symphony_full_notm}} cluster and {{site.data.keyword.Bluemix_notm}} resources that are provisioned to build the {{site.data.keyword.symphony_full_notm}} cluster instance. You cannot create more than one instance of the Symphony cluster with the same name. Make sure that the name is unique. | No | `spectrum-symphony` |
 | `dedicated_host_enabled` | Set to true to use dedicated hosts for compute hosts (default: false). Note that Symphony still dynamically provisions compute hosts at public VSIs and dedicated hosts are used only for static compute hosts that are provisioned at the time the cluster is created. The number of dedicated hosts and the profile names for dedicated hosts are calculated from worker_node_min_count and dedicated_host_type_name. | No | false |
