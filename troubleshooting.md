@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-19"
+lastupdated: "2022-06-30"
 
 keywords: 
 
@@ -227,4 +227,21 @@ When updating the {{site.data.keyword.Bluemix_notm}} provider configuration from
 {: troubleshoot}
 {: support}
 
-Our offering automatically selects instance profiles for dedicated hosts to be the same prefix (for example, bx2 and cx2) as ones for worker instances (`worker_node_instance_type`). However, available instance prefixes can be limited, depending on your target region. If you use dedicated hosts, check `ibmcloud target -r {region_name}` and `ibmcloud is dedicated-host-profiles` to see whether your `worker_node_instance_type` has the available prefix for your target region.
+The offering automatically selects instance profiles for dedicated hosts to be the same prefix (for example, bx2 and cx2) as ones for worker instances (`worker_node_instance_type`). However, available instance prefixes can be limited, depending on your target region. If you use dedicated hosts, check `ibmcloud target -r {region_name}` and `ibmcloud is dedicated-host-profiles` to see whether your `worker_node_instance_type` has the available prefix for your target region.
+
+## Why do I see resource errors due to authentication or timeout issues?
+{: #troubleshoot-topic-15}
+{: troubleshoot}
+{: support}
+
+You are receiving the following error messages during the creation of any specific resource:
+
+* `Error: An error occurred while performing the ‘authenticate’ step: Post “https://iam.cloud.ibm.com/identity/token”: context deadline exceeded (Client.Timeout exceeded while awaiting headers)`
+* `Error: timeout while waiting for state to become 'done, ' (last state: 'provisioning', timeout: 10m0s)`
+{: tsSymptoms}
+
+While {{site.data.keyword.bpshort}} deploys the infrastructure resources, it authenticates with {{site.data.keyword.cloud_notm}} through API calls. If there are too many requests through the API to the cloud environment, {{site.data.keyword.bpshort}} won't be able to authenticate and could error out with the authentication error.
+{: tsCauses}
+
+To fix either issue (resource failing due to authentication error or the timeout error), destroy the resources from the {{site.data.keyword.bpshort}} workspace and retry deploying the resources. 
+{: tsResolve}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-09"
+lastupdated: "2022-06-30"
 
 keywords: 
 
@@ -23,13 +23,13 @@ subcollection: hpc-spectrum-symphony
 # FAQs
 {: #spectrum-symphony-faqs}
 
-## What Spectrum Symphony version is used in cluster nodes deployed with this offering?
+## What Spectrum Symphony and Spectrum Scale versions are used in cluster nodes deployed with this offering?
 {: #my-faq-packages}
 {: faq}
 
-Cluster nodes that are deployed with this offering include {{site.data.keyword.symphony_full_notm}} 7.3.1 Advanced Edition. 
+Cluster nodes that are deployed with this offering include {{site.data.keyword.symphony_full_notm}} 7.3.1 Advanced Edition. See the following for a summary of the features associated with each edition: [{{site.data.keyword.symphony_full_notm}} editions](https://www.ibm.com/docs/en/spectrum-symphony/7.3.1?topic=foundations-spectrum-symphony-editions){: external}.
 
-See the following for a summary of the features associated with each edition: [IBM Spectrum Symphony editions](https://www.ibm.com/docs/en/spectrum-symphony/7.3.1?topic=foundations-spectrum-symphony-editions){: external}.
+If the cluster uses {{site.data.keyword.scale_short}} storage, the storage nodes include {{site.data.keyword.scale_full_notm}} 5.1.3.1 software. For more information, see the [{{site.data.keyword.scale_full_notm}}](https://www.ibm.com/docs/en/spectrum-scale/5.1.3){: external} product documentation.
 
 ## What locations are available for deploying VPC resources?
 {: #locations-vpc-resources}
@@ -94,5 +94,4 @@ The first resource group parameter entry in the **Configure your workspace** sec
 No, the use of Host Factory to provision and delete compute nodes is not supported in the following cases:
 
 * Provisioning and deleting compute nodes on dedicated hosts. Only static compute nodes can be deployed on dedicated hosts.
-* When using a resource group other than Default.
 * When using Spectrum Scale for shared storage in the cluster.
