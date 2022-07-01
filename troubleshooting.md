@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-06-30"
+lastupdated: "2022-07-01"
 
 keywords: 
 
@@ -244,4 +244,25 @@ While {{site.data.keyword.bpshort}} deploys the infrastructure resources, it aut
 {: tsCauses}
 
 To fix either issue (resource failing due to authentication error or the timeout error), destroy the resources from the {{site.data.keyword.bpshort}} workspace and retry deploying the resources. 
+{: tsResolve}
+
+## Why does cluster creation fail with SSH issues?
+{: #troubleshoot-topic-16}
+{: troubleshoot}
+{: support}
+
+You are receiving the following error messages when the Ansible provisioner tries to set up the {{site.data.keyword.scale_short}} function on the worker and storage node resources:
+
+* `msg": "Failed to connect to the host via ssh, Connection closed by UNKNOWN port 65535", "unreachable": true}`
+* `Error: Failed to connect to the host via ssh: Connection timed out during banner exchange", "unreachable`
+{: tsSymptoms}
+
+While {{site.data.keyword.bpshort}} deploys the infrastructure resources, the automation code is configured with a few Ansible playbooks, which are required to set up the {{site.data.keyword.scale_short}} function on the virtual server instance nodes with the help fo the Ansible provisioner. When the Ansible provisioner tries to SSH to these nodes to se the {{site.data.keyword.scale_short}} feature, the nodes go to an `unreachable` state. 
+{: tsCauses}
+
+To fix the issue, you can:
+
+1. Try to destroy the resources from the workspace and deploy again.
+2. If this issue is observed on all of the deployments, raise a support issue with the {{site.data.keyword.cloud_notm}} support team to investigate if there is an infrastructure issue. 
+3. If there are no issues with the infrastructure, report this issue to the automation team who can investigate further.
 {: tsResolve}
