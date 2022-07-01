@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-06-30"
+lastupdated: "2022-07-01"
 
 keywords: 
 
@@ -95,3 +95,9 @@ No, the use of Host Factory to provision and delete compute nodes is not support
 
 * Provisioning and deleting compute nodes on dedicated hosts. Only static compute nodes can be deployed on dedicated hosts.
 * When using Spectrum Scale for shared storage in the cluster.
+
+## Why can't I disable hyper threading?
+{: #disable-hyper-threading}
+{: faq}
+
+Hyper threading is used on Intel&reg; microprocessors, which allows a single microprocessor to act like two separate processors to the operating system. With the latest release of {{site.data.keyword.scale_short}} that's accessible by {{site.data.keyword.symphony_short}} compute nodes, the automation code uses the RHEL 8.4 custom image version (see [Release notes](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-release-notes#hpc-spectrum-symphony-jun3022)). An issue with that image version has been identified that impacts being able to disable hyper threading. When the issue is resolved, there will be an update to this feature.
