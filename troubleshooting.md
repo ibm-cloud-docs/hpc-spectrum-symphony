@@ -188,9 +188,9 @@ You are receiving the following error when you try to generate or apply a plan o
 Terraform could not find the given SSH key names that are provided by you.
 {: tsCauses}
 
-1. Check whether the given ssh key is present in the current region where the cluster is being provisioned. If the given ssh key is not present, create the ssh key in the current region.
-2. While configuring multiple ssh keys, ensure that there is no white spaces added before or after the ssh key names.
-3. If you are using multiple ssh keys, check whether a comma(,) is used a delimiter between the SSH keys and that there is no white space added before or after the SSH key.
+1. Check whether the given SSH key is present in the current region where the cluster is being provisioned. If the given SSH key is not present, create the SSH key in the current region.
+2. While configuring multiple SSH keys, ensure that there is no white space added before or after the SSH key names.
+3. If you are using multiple SSH keys, check whether a comma (,) is used as a delimiter between the SSH keys and that there is no white space added before or after the SSH key.
 {: tsResolve}
 
 ## Why am I getting an error when I try to run the Spectrum Symphony VaR simulation?
