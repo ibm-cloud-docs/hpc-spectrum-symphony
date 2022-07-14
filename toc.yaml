@@ -38,11 +38,7 @@ toc:
           - update-max-nodes.md
           - update-idle-time.md
       - using-dedicated-hosts.md
-      - topicgroup:
-          label: Using IBM Spectrum Scale
-          topics:
-          - using-spectrum-scale-storage.md
-          - /hpc-spectrum-scale/hpc-spectrum-scale-access-gui
+      - using-spectrum-scale-storage.md
   - navgroup:
       id: reference
       topics:
