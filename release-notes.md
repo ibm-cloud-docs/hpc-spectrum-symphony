@@ -3,7 +3,7 @@
 copyright:
   years: 2022
 
-lastupdated: "2022-06-30"
+lastupdated: "2022-08-12"
 
 keywords: IBM Spectrum Symphony release notes
 
@@ -22,6 +22,16 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.symphony_full}} that are grouped by date.
 {: shortdesc}
+
+## August 2022
+{: #hpc-spectrum-symphony-aug22}
+
+### 11 August 2022
+{: #hpc-spectrum-symphony-aug1122}
+{: release-note}
+
+Bug fix
+:   Code fixes were applied related to an Ansible version 2.10 upgrade.
 
 ## June 2022
 {: #hpc-spectrum-symphony-jun22}
