@@ -3,7 +3,7 @@
 copyright:
   years: 2022
 
-lastupdated: "2022-08-12"
+lastupdated: "2022-10-03"
 
 keywords: IBM Spectrum Symphony release notes
 
@@ -22,6 +22,19 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.symphony_full}} that are grouped by date.
 {: shortdesc}
+
+## September 2022
+{: #hpc-spectrum-symphony-sept22}
+
+### 23 September 2022
+{: #hpc-spectrum-symphony-sept2322}
+{: release-note}
+
+Bug fix
+:   Code fixes were applied to address an issue that was seen in regions where instance storage profiles are not available even though {{site.data.keyword.scale_short}} is not selected as the storage option.
+
+Updated RHEL stock image
+:   Made an update to use a RHEL 8.6 stock image instead of a RHEL 8.2 stock image for the login node and the NFS storage node.
 
 ## August 2022
 {: #hpc-spectrum-symphony-aug22}
