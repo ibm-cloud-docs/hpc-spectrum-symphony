@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-10"
+lastupdated: "2022-10-27"
 
 keywords: 
 
@@ -113,3 +113,15 @@ The mappings can be found in the `image-map.tf` file and the `scale-image-map.tf
 {: faq}
 
 Hyper threading is used on Intel&reg; microprocessors, which allows a single microprocessor to act like two separate processors to the operating system. With the latest release of {{site.data.keyword.scale_short}} that's accessible by {{site.data.keyword.symphony_short}} compute nodes, the automation code uses the RHEL 8.4 custom image version (see [Release notes](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-release-notes#hpc-spectrum-symphony-jun3022)). An issue with that image version has been identified that impacts being able to disable hyper threading. When the issue is resolved, there will be an update to this feature.
+
+## Why does the `egosh` command not work if tried immediately after Schematics provisions the cluster?
+{: #egosh-command-not-working}
+{: faq}
+
+This is expected behavior. Even after the {{site.data.keyword.bpshort}} web console shows that the cluster is successfully provisioned, there are still some tasks that run in the background for several minutes. Allow a few minutes (typically 2 minutes is sufficient) after the cluster gets provisioned for `egosh` to be available.
+
+## Why does cluster creation using dedicated hosts fail sometimes with the error `status of dedicated host is failed`?
+{: #cluster-creation-dedicated-hosts-fails}
+{: faq}
+
+In some regions, dedicated hosts have a limitation on the number of virtual server instances that can be placed on them at one time. You can try to provision the cluster with a smaller number of virtual server instances to overcome this.
