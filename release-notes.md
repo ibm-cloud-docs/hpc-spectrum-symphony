@@ -3,7 +3,7 @@
 copyright:
   years: 2022
 
-lastupdated: "2022-10-03"
+lastupdated: "2022-10-27"
 
 keywords: IBM Spectrum Symphony release notes
 
@@ -22,6 +22,16 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.symphony_full}} that are grouped by date.
 {: shortdesc}
+
+## October 2022
+{: #hpc-spectrum-symphony-oct22}
+
+### 27 October 2022
+{: #hpc-spectrum-symphony-oct2722}
+{: release-note}
+
+Windows&reg; support
+:   You can now deploy Windows&reg; worker nodes in your {{site.data.keyword.symphony_full_notm}} cluster.
 
 ## September 2022
 {: #hpc-spectrum-symphony-sept22}
