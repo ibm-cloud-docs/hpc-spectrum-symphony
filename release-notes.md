@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2022
+  years: 2022, 2023
 
-lastupdated: "2022-10-27"
+lastupdated: "2023-01-27"
 
 keywords: IBM Spectrum Symphony release notes
 
@@ -22,6 +22,24 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.symphony_full}} that are grouped by date.
 {: shortdesc}
+
+## January 2023
+{: #hpc-spectrum-symphony-jan23}
+
+### 27 January 2023
+{: #hpc-spectrum-symphonyjan2723}
+
+Bare metal server support for worker nodes
+:   You now have the option to use bare metal servers instead of virtual server instances for your cluster worker nodes.
+
+Updated RHEL 8.4 custom images
+:   New RHEL 8.4 custom images that are used for deploying the compute nodes and {{site.data.keyword.scale_short}} storage nodes replace images that are provided in the previous release. The new images include several miscellaneous fixes.
+
+Allow CIDR block specification
+:   You now have the option to either accept the default CIDR block or specify the CIDR block for the compute and storage cluster private subnet. This is helpful to avoid overlapping IP addresses, for example, if you are using a hybrid cloud environment.
+
+Added valid {{site.data.keyword.symphony_short}} license check
+:   The solution now checks for a valid license that is associated with `ibm_customer_number`, which has been added as a required variable.
 
 ## October 2022
 {: #hpc-spectrum-symphony-oct22}

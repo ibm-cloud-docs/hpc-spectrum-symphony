@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-04-11"
+  years: 2021, 2023
+lastupdated: "2023-01-27"
 
 keywords: 
 
@@ -39,7 +39,7 @@ With {{site.data.keyword.bplong}} workspaces, you can manage the Terraform-based
     * Specify the **Name** for your {{site.data.keyword.bpshort}} workspace
     * Select a **Resource group**
     * Define any **Tags** that you want to associate with the resources provisioned through the offering. The tags can later be used to query the resources in the {{site.data.keyword.cloud_notm}} console.
-4. In the _Set the deployment values_ section, specify the values for the required properties: `api_key`, `ssh_key_name`, `sym_license_confirmation`, and `zone`.
+4. In the _Set the deployment values_ section, specify the values for the required properties: `api_key`, `ssh_key_name`, `ibm_customer_number`, and `zone`.
 5. Expand the _Optional deployment values_ section, and review it to determine whether you need to override any of the default values provided for the configuration properties.
 6. Review and accept the **{{site.data.keyword.symphony_full_notm}}** license terms and conditions in the order summary.
 7. Click **Install**. The {{site.data.keyword.bpshort}} workspace is created with the name you specified. You can see the list of workspaces in _View the existing installations_. If the workspace creation is successful, the _Apply Plan_ action is started to trigger the deployment of the respective {{site.data.keyword.vpc_short}} resources in your {{site.data.keyword.cloud_notm}} account that are linked with the `api_key`. 
@@ -199,7 +199,7 @@ template_source_data_request_model['variablestore'] = [
 "value": "sym-hpcc-key",
 },
 {
-"name": "sym_license_confirmation",
+"name": "ibm_customer_number",
 "value": "true"
 }]
 
@@ -285,7 +285,7 @@ INFO:root:Completed Creating Schematic Workspace
 "description": ""
 },
 {
-"name": "sym_license_confirmation",
+"name": "ibm_customer_number",
 "secure": false,
 "value": "true",
 "type": "",
