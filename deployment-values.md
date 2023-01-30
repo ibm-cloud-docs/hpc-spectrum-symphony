@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-01-27"
+lastupdated: "2023-01-30"
 
 keywords: 
 
@@ -58,7 +58,7 @@ The following deployment values can be used to configure the {{site.data.keyword
 | `volume_profile` | Name of the block storage volume type to be used for NFS instance. For possible options, see [Block storage profiles](/docs/vpc?topic=vpc-block-storage-profiles). | No | `general_purpose` |
 | `vpc_cidr_block` | {{site.data.keyword.vpc_short}} address prefixes that are needed for VPC creation. Since the solution supports only a single availability zone, provide one CIDR address prefix for VPC creation. For more information, see [Bring your own subnet](/docs/vpc?topic=vpc-configuring-address-prefixes). | No | "10.241.0.0/18" |
 | `vpc_cluster_login_private_subnets_cidr_blocks` | The CIDR block that's required for the creation of the login cluster private subnet. Modify the CIDR block if it has already been reserved or used for other applications within the VPC or conflicts with any on-premises CIDR blocks if you are using a hybrid environment. Provide only one CIDR block for the creation of the login subnet. Since the login subnet is used only for the creation of the login virtual server instance, provide a CIDR range of /28. | No | "10.241.4.0/28" |
-| `vpc_cluster_private_subnets_cidr_blocks` | The CIDR block that's required for the creation of the compute and storage cluster private subnet. Modify the CIDR block if it has already been reserved or used for other applications within the VPC or conflicts with any on-premises CIDR blocks if you are using a hybrid environment. Provide only one CIDR block for the creation of the compute and storage subnet. If you would like for the CIDR block to be created automatically based on the maximum number of management, storage, and worker nodes, then leave this value blank. | No | "10.241.0.0/22" |
+| `vpc_cluster_private_subnets_cidr_blocks` | The CIDR block that's required for the creation of the compute and storage cluster private subnet. Modify the CIDR block if it has already been reserved or used for other applications within the VPC or conflicts with any on-premises CIDR blocks if you are using a hybrid environment. Provide only one CIDR block for the creation of the compute and storage subnet. Make sure to select a CIDR block size that accommodates the maximum number of management, storage, and both static and dynamic worker nodes that you expect to have in your cluster. For more information on CIDR block size selection, see [Choosing IP ranges for your VPC](/vpc?topic=vpc-choosing-ip-ranges-for-your-vpc). | No | "10.241.0.0/22" |
 | `vpc_name` | Name of an existing VPC in which the cluster resources are deployed. If no value is given, then a new VPC is provisioned for the cluster. [Learn more](/docs/vpc?topic=vpc-creating-vpc-resources-with-cli-and-api). | No | `_NOT_SET_` |
 | `vpn_enabled` |  Set the value as true to deploy a VPN gateway for VPC in the cluster.| No | false |
 | `vpn_peer_address` |  The peer public IP address to which the VPN is connected.| No | `_NOT_SET_`  |
