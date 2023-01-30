@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-01-27"
+lastupdated: "2023-01-30"
 
 keywords: 
 
@@ -161,6 +161,9 @@ Before you get started, make sure that you've completed the prerequisites found 
 {: #example-request-create}
 {: api}
 
+The Python request is a generic example. Versioning and deployment values are subject to change due to frequent code updates.
+{: note}
+
 ```python
 
 # Create a Schematics workspace using Python API
@@ -227,7 +230,7 @@ print(json.dumps(workspace_response, indent = 2))
 {: #example-response-create}
 {: api}
 
-The following Python response is a generic example for reference.
+The Python response is a generic example. Versioning and deployment values are subject to change due to frequent code updates.
 {: note}
 
 ```python
