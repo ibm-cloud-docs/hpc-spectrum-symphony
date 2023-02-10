@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-03-09"
+  years: 2021, 2023
+lastupdated: "2023-02-10"
 
 keywords: 
 
@@ -29,7 +29,7 @@ subcollection: hpc-spectrum-symphony
 
 In addition, {{site.data.keyword.symphony_full_notm}} provides two shared storage options for you to manage your application data: NFS on block storage or Spectrum Scale. The Spectrum Scale option specifically works with static compute nodes only and allows you to deploy a high-performance file system with your HPC cluster.
 
-The offering supports the Bring Your Own License (BYOL) model for {{site.data.keyword.symphony_full_notm}} and IBM Spectrum Scale to deploy an HPC cluster on {{site.data.keyword.cloud_notm}}. Make sure that you have sufficient software licenses to deploy the required capacity on the {{site.data.keyword.cloud_notm}} cluster. For evaluation purposes, {{site.data.keyword.cloud_notm}} does enable limited access. Contact your {{site.data.keyword.cloud_notm}} sales or support team for evaluation licenses.
+The offering supports the Bring Your Own License (BYOL) model for [{{site.data.keyword.symphony_full_notm}}](https://www.ibm.com/products/analytics-workload-management){: external} and [{{site.data.keyword.scale_full_notm}}](https://www.ibm.com/products/spectrum-scale/pricing){: external} to deploy an HPC cluster on {{site.data.keyword.cloud_notm}}. Make sure that you have sufficient software licenses to deploy the required capacity on the {{site.data.keyword.cloud_notm}} cluster. For evaluation purposes, {{site.data.keyword.cloud_notm}} does enable limited access. Contact your {{site.data.keyword.cloud_notm}} sales or support team for evaluation licenses.
 
 {{site.data.keyword.symphony_full_notm}} allows use of three interfaces: UI, API, and CLI. One UI option is the [{{site.data.keyword.cloud_notm}} catalog tile](https://cloud.ibm.com/catalog/content/terraform-1627942334-78300480-b376-4185-9812-b7ae00d82765-global){: external}. [Schematics](https://www.ibm.com/cloud/schematics){: external} also offers a UI, as well as API and CLI interfaces, and the Terraform-based automation code for use with {{site.data.keyword.bpshort}} is available in this [public GitHub repository](https://github.com/IBM-Cloud/hpc-cluster-symphony){: external}.
 
