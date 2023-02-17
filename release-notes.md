@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2023
 
-lastupdated: "2023-01-27"
+lastupdated: "2023-02-16"
 
 keywords: IBM Spectrum Symphony release notes
 
@@ -23,11 +23,22 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.symphony_full}} that are grouped by date.
 {: shortdesc}
 
+## February 2023
+{: #hpc-spectrum-symphony-feb23}
+
+### 16 February 2023
+{: #hpc-spectrum-symphony-feb1623}
+{: release-note}
+
+Bug fix
+:   Code fixes were applied to address an issue when creating new subnets with custom CIDR in an existing VPC range.
+
 ## January 2023
 {: #hpc-spectrum-symphony-jan23}
 
 ### 27 January 2023
 {: #hpc-spectrum-symphonyjan2723}
+{: release-note}
 
 Bare metal server support for worker nodes
 :   You now have the option to use bare metal servers instead of virtual server instances for your cluster worker nodes.
