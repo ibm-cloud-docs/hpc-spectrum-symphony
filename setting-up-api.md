@@ -35,4 +35,4 @@ Before you begin using the {{site.data.keyword.bplong}} API to deploy {{site.dat
 ## Next steps
 {: #next-steps-api}
 
-After you've reviewed and completed the prerequisites for setting up the API, you are ready to [Create a workspace](/docs/ibm-spectrum-symphony?topic=ibm-spectrum-symphony-creating-workspace#before-you-begin-creating-api).
+After you've reviewed and completed the prerequisites for setting up the API, you are ready to [Create a workspace](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-creating-workspace&interface=api).
