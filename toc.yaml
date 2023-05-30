@@ -63,6 +63,12 @@ toc:
   - navgroup:
       id: help
       topics: 
-      - faq-symphony.md
-      - troubleshooting-symphony.md
+      - topicgroup:
+           label: FAQs
+           topics:
+           - faq-symphony.md
+      - topicgroup:
+           label: Troubleshooting
+           topics:
+            - troubleshooting-symphony.md
       - getting-help.md
