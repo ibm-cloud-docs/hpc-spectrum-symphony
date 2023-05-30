@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-01-27"
+lastupdated: "2023-05-30"
 
 keywords: 
 
@@ -47,11 +47,19 @@ Generate an API key for your {{site.data.keyword.cloud_notm}} account where the 
 
 Create an SHH key in your {{site.data.keyword.cloud_notm}} account. This is your SSH key that you will use to access the Symphony cluster. For more information, see [Managing SSH keys](/docs/vpc?topic=vpc-managing-ssh-keys).
 
-## Create custom image
+## Create custom image(s)
 {: #create-custom-image}
 {: step}
 
-Create a custom image with your operating system, {{site.data.keyword.symphony_short}}, Spectrum Scale (if you use that for storage), and required application binary files. For more information, see [Planning for custom images](/docs/vpc?topic=vpc-planning-custom-images). {{site.data.keyword.cloud_notm}} provides a pre-built image for your HPC cluster compute nodes to help you get started quickly. In addition to the base operating system software, the images include the NFS and Spectrum Scale software packages that are required to configure the shared storage that is used by the cluster compute nodes.
+The offering provides a default set of images that you can use for the nodes within your HPC cluster. However, if you would prefer to use your own custom images, documentation and scripts are provided to help you create them.
+
+**Worker Image**: The default image that is specified in `image_name` acts as the worker image. This image is used to create the Symphony cluster nodes: management, management-candidates, and workers.
+
+If you prefer to create the worker custom image with your own settings and configurations, follow the instructions that are provided [here](https://github.com/IBM-Cloud/hpc-cluster-symphony/tree/main/custom_image/worker#readme){: external}.
+
+**Storage Image**: If you intend to use {{site.data.keyword.scale_short}} as shared storage for the cluster, the default image specified in `scale_storage_image_name` acts as the storage image. This image is used to create the {{site.data.keyword.scale_short}} storage cluster nodes. In addition to the base operating system, the image also includes the required {{site.data.keyword.scale_short}} software packages.
+
+If you prefer to create the storage custom image with your own settings and configurations, follow the instructions that are provided [here](https://github.com/IBM-Cloud/hpc-cluster-symphony/tree/main/custom_image/storage#readme){: external}.
 
 ## Gather Spectrum software entitlement information
 {: #gather-spectrum-entitlement-information}
