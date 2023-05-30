@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2023
 
-lastupdated: "2023-02-16"
+lastupdated: "2023-05-30"
 
 keywords: IBM Spectrum Symphony release notes
 
@@ -22,6 +22,34 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.symphony_full}} that are grouped by date.
 {: shortdesc}
+
+## May 2023
+{: #hpc-spectrum-symphony-may23}
+
+## 30 May 2023
+{: #hpc-spectrum-symphony-may3023}
+{: release-note}
+
+Persistent storage type support when using {{site.data.keyword.scale_full_notm}} storage
+:   You now have the option to use bare metal servers to deploy persistent storage for {{site.data.keyword.scale_short}} storage nodes.
+
+Updated {{site.data.keyword.symphony_short}} and {{site.data.keyword.scale_short}} custom images
+:   {{site.data.keyword.symphony_short}} and {{site.data.keyword.scale_short}} custom images were updated to use RHEL 8.6 instead of RHEL 8.4.
+
+Custom image support
+:   Documentation and scripts to make it easier for users to create and use their own custom images for {{site.data.keyword.symphony_short}} worker and {{site.data.keyword.scale_short}} storage nodes are now included in the solution.
+
+{{site.data.keyword.symphony_short}} version update
+:   {{site.data.keyword.symphony_short}} product version was updated from 7.3.1 to 7.3.2.
+
+{{site.data.keyword.scale_short}} version update
+:   {{site.data.keyword.scale_short}} product version was updated from 5.1.5.1 to 5.1.7.0.
+
+Support automated public gateway creation when one is not associated with the subnets of an existing VPC
+:   When you choose to use an existing VPC, the automation associates the public gateway with all of the subnets if it is already part of the VPC. If the public gateway is not part of the VPC, then it creates a new public gateway and associates it with all subnets to allow internet access from the cluster nodes.
+
+DNS functionality support
+:   Introduced use of DNS custom resolver for name resolution in place of static hostname to IP address mapping.
 
 ## February 2023
 {: #hpc-spectrum-symphony-feb23}
