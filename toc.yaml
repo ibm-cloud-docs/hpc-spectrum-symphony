@@ -15,6 +15,10 @@ toc:
       - about.md
       - deployment-values.md
       - release-notes.md
+  - navgroup:
+      id: tutorial
+      topics:
+      - integrate-openldap-tutorial.md
   - navgroup: 
       id: howto
       topics:
