@@ -43,6 +43,13 @@ toc:
           topics: 
           - using-spectrum-scale-storage.md
           - accessing-gui.md
+      - topicgroup:
+          label: Using Symphony multiclusters
+          topics:
+          - smc-schematics-config-tutorial.md
+          - smc-connect-smc-cluster-and-lone-symphony.md
+          - smc-setting-up-smcp-service-lone-symphony-cluster.md
+          - smc-access-gui.md
   - navgroup:
       id: reference
       topics:
@@ -67,8 +74,10 @@ toc:
            label: FAQs
            topics:
            - faq-symphony.md
+           - faq-smc.md
       - topicgroup:
            label: Troubleshooting
            topics:
             - troubleshooting-symphony.md
+            - troubleshooting-smc.md
       - getting-help.md
