@@ -109,11 +109,11 @@ SMC supports combination of single smc_zone as ["us-east-1"] or double smc_zone 
 
     Parameters that have default values that you might or might not need to update:
 
-    | Name    | Description | 
-    |----------|-------------|
+    | Name    | Description | Type  |  Default |
+    |----------|-------------|-----|--------|
     |cluster_prefix value| The specific cluster prefix for your Lone cluster.| string | "hpcc-smc" |
     |cluster_id| ID of the cluster used by Symphony Multi Cluster for configuration of resources. The ID must be up to 39 alphanumeric characters, including the underscore (\_), the hyphen (-), and the period (.). Other special characters and spaces are not allowed. Do not use the name of any host or user as the name of your cluster. You cannot change it after installation.|string | "HPCMultiCluster" |
-    |bastion_host_instance_type| Specify the virtual server instance profile type name to be used to create the bastion node for the Symphony Multi Cluster. For more information, see [VPC Profiles](https://cloud.ibm.com/docs/vpc?topic=vpc-profiles).|
+    |bastion_host_instance_type| Specify the virtual server instance profile type name to be used to create the bastion node for the Symphony Multi Cluster. For more information, see [VPC Profiles](https://cloud.ibm.com/docs/vpc?topic=vpc-profiles).| string  | bx2-2x8  |
     |cluster_prefix | Prefix that is used to name the Symphony Multi cluster and IBM Cloud resources that are provisioned to build the Symphony Multi cluster instance. You cannot create more than one instance of the Symphony Multi cluster with the same name. Make sure that the name is unique. Enter a prefix name, such as `my-hpcc`.|string | "hpcc-smc"|
     |dns_domain | IBM Cloud DNS Services domain name to be used for the Symphony Multi Cluster host.| string | "smc.ibmhpc.com" | 
     |login_cidr_block | IBM Cloud VPC address prefixes that are needed for VPC creation. For more information, see [Bring your own subnet](https://cloud.ibm.com/docs/vpc?topic=vpc-configuring-address-prefixes).|  list(string) | "10.10.4.0/28" | 
