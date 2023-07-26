@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-08-09"
+  years: 2022, 2023
+lastupdated: "2023-07-26"
 
 keywords: 
 
@@ -62,12 +62,12 @@ This solution's automation always uses the same IP addresses, so there might be 
 1. Open a new command line terminal.
 2. Run the following command to access the storage cluster:
 
-    ```
-    ssh -L 22443:localhost:443 root@{STORAGE_NODE_IP_ADDRESS} root@{FLOATING_IP_ADDRESS}
+    ```shell
+    ssh -L 22443:localhost:443 -J root@{FLOATING_IP_ADDRESS} root@{STORAGE_NODE_IP_ADDRESS}
     ```
     {: pre}
 
-    where `STORAGE_NODE_IP_ADDRESS` needs to be replaced with the storage IP address associated with `<prefix>-scale-storage-0`, which you gathered earlier, and `FLOATING_IP_ADDRESS` needs to be replaced with the floating IP address that you identified.
+    where `FLOATING_IP_ADDRESS` needs to be replaced with the floating IP address that you identified, and `STORAGE_NODE_IP_ADDRESS` needs to be replaced with the storage IP address associated with `<prefix>-scale-storage-0`, which you gathered earlier.
 3. Open a browser on the local machine, and run https://localhost:22443. You will get an SSL self-assigned certificate warning with your browser the first time that you access this URL.
 4. Enter your login credentials that you set up when you created your workspace to access the Spectrum Scale GUI.
 
@@ -77,11 +77,11 @@ This solution's automation always uses the same IP addresses, so there might be 
 1. Open a new command line terminal.
 2. Run the following command to access the compute cluster:
 
-    ```
-    ssh -L 21443:localhost:443 root@{COMPUTE_NODE_IP_ADDRESS} root@{FLOATING_IP_ADDRESS}
+    ```shell
+    ssh -L 21443:localhost:443 -J root@{FLOATING_IP_ADDRESS} root@{COMPUTE_NODE_IP_ADDRESS}
     ```
     {: pre}
 
-    where `COMPUTE_NODE_IP_ADDRESS` needs to be replaced with the storage IP address associated with `<prefix>-primary-0`, which you gathered earlier, and `FLOATING_IP_ADDRESS` needs to be replaced with the floating IP address that you identified.
+    where `FLOATING_IP_ADDRESS` needs to be replaced with the floating IP address that you identified, and `COMPUTE_NODE_IP_ADDRESS` needs to be replaced with the storage IP address associated with `<prefix>-primary-0`, which you gathered earlier.
 3. Open a browser on the local machine, and run https://localhost:21443. You will get an SSL self-assigned certificate warning with your browser the first time that you access this URL.
 4. Enter your login credentials that you set up when you created your workspace to access the {{site.data.keyword.scale_short}} GUI.
