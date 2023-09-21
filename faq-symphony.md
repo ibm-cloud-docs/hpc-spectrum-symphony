@@ -29,7 +29,7 @@ subcollection: hpc-spectrum-symphony
 
 The Terraform-based templates can be found in this public [GitHub repository](https://github.com/IBM-Cloud/hpc-cluster-symphony){: external}.
 
-## What Spectrum Symphony and Spectrum Scale versions are used in cluster nodes deployed with this offering?
+## What Spectrum Symphony and Storage Scale versions are used in cluster nodes deployed with this offering?
 {: #my-faq-packages}
 {: faq}
 
@@ -126,7 +126,7 @@ This is expected behavior. Even after the {{site.data.keyword.bpshort}} web cons
 
 In some regions, dedicated hosts have a limitation on the number of virtual server instances that can be placed on them at one time. You can try to provision the cluster with a smaller number of virtual server instances to overcome this.
 
-## Why does Spectrum Scale not allow use of the default value of 0.0.0.0/0 for security group creation?
+## Why does Storage Scale not allow use of the default value of 0.0.0.0/0 for security group creation?
 {: #security-group-default-value}
 {: faq}
 

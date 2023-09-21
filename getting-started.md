@@ -65,7 +65,7 @@ If you prefer to create the storage custom image with your own settings and conf
 {: #gather-spectrum-entitlement-information}
 {: step}
 
-The offering uses the Bring Your Own License (BYOL) model for Spectrum software when you deploy an HPC cluster on {{site.data.keyword.cloud_notm}}. This applies to {{site.data.keyword.symphony_full_notm}} in all cases and to IBM Spectrum Scale if you decide to use that for the HPC cluster storage instead of just NFS. Work with your business owners or license management team to make sure that your organization has procured enough licenses to deploy the HPC cluster using the Spectrum software. Failure to comply with licenses for production use of software is a violation of the [IBM International Program License Agreement](https://www.ibm.com/software/passportadvantage/programlicense.html){: external}.
+The offering uses the Bring Your Own License (BYOL) model for Spectrum software when you deploy an HPC cluster on {{site.data.keyword.cloud_notm}}. This applies to {{site.data.keyword.symphony_full_notm}} in all cases and to IBM Storage Scale if you decide to use that for the HPC cluster storage instead of just NFS. Work with your business owners or license management team to make sure that your organization has procured enough licenses to deploy the HPC cluster using the Spectrum software. Failure to comply with licenses for production use of software is a violation of the [IBM International Program License Agreement](https://www.ibm.com/software/passportadvantage/programlicense.html){: external}.
 
 ## Next steps
 {: #getting-started-next-steps}

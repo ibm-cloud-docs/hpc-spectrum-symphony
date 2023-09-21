@@ -29,7 +29,7 @@ subcollection: hpc-spectrum-symphony
 
 The Terraform-based templates can be found in this public [GitHub repository](https://github.com/IBM-Cloud/hpc-cluster-symphony){: external}.
 
-## What Spectrum Symphony and Spectrum Scale versions are used in cluster nodes deployed with this offering?
+## What Spectrum Symphony and Storage Scale versions are used in cluster nodes deployed with this offering?
 {: #my-faq-packages}
 {: faq}
 
@@ -100,7 +100,7 @@ The first resource group parameter entry in the **Configure your workspace** sec
 No, the use of Host Factory to provision and delete compute nodes is not supported in the following cases:
 
 * Provisioning and deleting compute nodes on dedicated hosts. Only static compute nodes can be deployed on dedicated hosts.
-* When using Spectrum Scale for shared storage in the cluster.
+* When using Storage Scale for shared storage in the cluster.
 
 ## Where can I find the custom image name to image ID mappings for each cloud region?
 {: #custom-image-name-mappings}
