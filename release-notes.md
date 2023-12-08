@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2023
 
-lastupdated: "2023-05-30"
+lastupdated: "2023-05-31"
 
 keywords: IBM Spectrum Symphony release notes
 
@@ -23,6 +23,25 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.symphony_full}} that are grouped by date.
 {: shortdesc}
 
+## Dec 2023
+{: #hpc-spectrum-symphony-dec23}
+
+### 7 Dec 2023
+{: #hpc-spectrum-symphony-dec0523}
+{: release-note}
+
+Support for Symphony 7.3.2 Build601711 fix patch.
+:   The IBM Spectrum Symphony 7.3.2 Fix 601711 offering is available for 64-bit Linux x86 is a mandatory fix that contains various fixes and enhancements, and includes Fix 601349 released in November 2022.
+
+Spectrum Scale version has been updated from 5.1.7.0 to 5.1.9.0.
+:   Storage Scale product version was updated from 5.1.7.0 to 5.1.9.0.
+
+Updated Spectrum Symphony and Storage Scale custom images
+:   Spectrum Symphony and Storage Scale custom images were updated to use RHEL 8.8 instead of RHEL 8.6.
+
+Update Spectrum Symphony windows worker image 
+:   Spectrum Symphony windows worker image to Symphony 7.3.2 and also have Build601711 fix patch. 
+
 ## May 2023
 {: #hpc-spectrum-symphony-may23}
 
@@ -32,6 +51,9 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 Spectrum multicluster (SMC) support
 :   The initial release of Spectrum multicluster (SMC), which connects multiple {{site.data.keyword.symphony_full_notm}} clusters into a federation cluster, is now available. You can use SMC to redirect {{site.data.keyword.symphony_full_notm}} sessions to non-busy clusters, deploy and manage service packages, and monitor workload and resources.
+
+Documentation enhancement: Integrating OpenLDAP with {{site.data.keyword.symphony_full_notm}}
+:   The newly added [Integrating OpenLDAP with {{site.data.keyword.symphony_full_notm}}](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-integrate-openldap-spectrum-symphony) tutorial walks you through the steps involved in configuring {{site.data.keyword.symphony_full_notm}} to use OpenLDAP as the primary directory service for user authentication. 
 
 ## 30 May 2023
 {: #hpc-spectrum-symphony-may3023}
@@ -123,8 +145,9 @@ Bug fix
 ## June 2022
 {: #hpc-spectrum-symphony-jun22}
 
-## 30 June 2022
+### 30 June 2022
 {: #hpc-spectrum-symphony-jun3022}
+{: release-note}
 
 Security update and enhancements
 :   This release provides fixes for the Polkit Local Privilege Escalation Vulnerability (CVE-2021-4034) and for the Spring Framework Vulnerability (CVE-2022-22965) within the RHEL 8.4 based custom image accessible by the solution. This release also removes the earlier Polkit mitigation implemented through changes to the post-provisioning scripts. The RHEL 8.4 custom image replaces the RHEL 8.2 image that was provided in the previous release. In addition, changes in the code now allow creation of compute nodes in the cluster by Host Factory on VPC resource groups other than the default group. And, security group rules have been added to provide more secure access to the cluster by allowing SSH from only specific nodes.
@@ -172,3 +195,5 @@ Dedicated hosts and additional improvements
 
 Introducing {{site.data.keyword.symphony_full_notm}} for HPC workloads
 :   You can now use {{site.data.keyword.symphony_full_notm}} as a workload manager with automated deployment of HPC clusters. The clusters are configured for auto scaling and use the cluster compute node configuration that you select.
+
+
