@@ -54,6 +54,7 @@ toc:
           - smc-connect-smc-cluster-and-lone-symphony.md
           - smc-setting-up-smcp-service-lone-symphony-cluster.md
           - smc-access-gui.md
+      - rolling-upgrade.md
   - navgroup:
       id: reference
       topics:
