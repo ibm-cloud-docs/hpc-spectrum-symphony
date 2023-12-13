@@ -70,17 +70,17 @@ The administrator can find the procedure to perform the rolling upgrade [here](
 
 After completion, the cluster will use the configuration from the original cluster. In addition, the following can be done:
 
-If applicable, upgrade host factory configuration.
+*  If applicable, upgrade host factory configuration.
 
-Validate cluster is functioning correctly.
+*  Validate cluster is functioning correctly.
 
-If applicable, update any IBM Spectrum Symphony applications to work with the new version.
+*  If applicable, update any IBM Spectrum Symphony applications to work with the new version.
 
-If applicable, update log retrieval configuration.
+*  If applicable, update log retrieval configuration.
 
-The administrator can find additional information around post upgrade, here.
+The administrator can find additional information around post upgrade, [here](https://www.ibm.com/docs/en/spectrum-symphony/7.3.2?topic=upgrade-after-rolling).
 
 ## Additional Considerations
 {: #add-considerations}
 
-In some circumstances, rollback may be required. The administrator can find the procedure to perform a rollback for Linux [here](https://www.ibm.com/docs/en/spectrum-symphony/7.3.2?topic=upgrade-rolling-back-linux). IBM Spectrum Symphony troubleshootting guide can be found [here](https://www.ibm.com/docs/en/spectrum-symphony/7.3.2?topic=upgrade-troubleshooting-your-rolling).
+In some circumstances, rollback may be required. The administrator can find the procedure to perform a rollback for Linux [here](https://www.ibm.com/docs/en/spectrum-symphony/7.3.2?topic=upgrade-rolling-back-linux). IBM Spectrum Symphony troubleshooting guide can be found [here](https://www.ibm.com/docs/en/spectrum-symphony/7.3.2?topic=upgrade-troubleshooting-your-rolling).
