@@ -421,8 +421,8 @@ If you installed the samba package to share directories and printers, enable and
 	AD-CLIENT
 	POCDOMAIN 
     ```
-    Additional resources
-    * If you do not want to use the deprecated RC4 ciphers, you can enable the AES encryption type in AD. 
+
+    If you do not want to use the deprecated RC4 ciphers, you can enable the AES encryption type in AD. 
 
 ### To provide root user permissions to Active Directory (AD) users
 {: #provide-root-permission}
