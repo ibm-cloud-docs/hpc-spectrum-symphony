@@ -357,9 +357,7 @@ To enable Samba to query domain user and group information, the winbind service 
 
 If you installed the samba package to share directories and printers, enable and start the smb service:
 
-    ```
     # systemctl enable --now smb
-    ```
 
 ### Verification steps
 {: #verification-steps}
