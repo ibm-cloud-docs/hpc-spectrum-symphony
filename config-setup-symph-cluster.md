@@ -355,7 +355,8 @@ Verify that the winbind service is running. For example:
 To enable Samba to query domain user and group information, the winbind service must be running before you start smb. 
 {: important}
 
-11. If you installed the samba package to share directories and printers, enable and start the smb service:
+If you installed the samba package to share directories and printers, enable and start the smb service:
+
     ```
     # systemctl enable --now smb
     ```
