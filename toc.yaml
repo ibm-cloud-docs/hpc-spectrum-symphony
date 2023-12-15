@@ -19,6 +19,7 @@ toc:
       id: tutorial
       topics:
       - integrate-openldap-tutorial.md
+      - config-setup-symph-cluster.md
   - navgroup: 
       id: howto
       topics:
