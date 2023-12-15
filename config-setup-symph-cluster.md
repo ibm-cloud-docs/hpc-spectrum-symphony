@@ -261,13 +261,13 @@ Join a Symphony Cluster node that is hosted on RHEL 8.4 OS to an AD domain using
     addc1.POCDomain.local is the AD server FQDN name
     {: note}
 
-3.  Update the DNS entries in /etc/resolv.conf file using:  
+3.  Update the DNS entries in `/etc/resolv.conf` file using:  
 
     ```
     sudo nmcli connection modify "System eth0" ipv4.dns "10.243.0.41" ipv4.ignore-auto-dns yes
     ```
 
-    This command not only updates the DNS entries in the /etc/resolv.conf file but also ensures that the DNS entries are not auto-updated to cloud-based DNS servers
+    This command not only updates the DNS entries in the `/etc/resolv.conf` file but also ensures that the DNS entries are not auto-updated to cloud-based DNS servers
 
 4.  Confirm the changes in the DNS file:
 
@@ -306,7 +306,6 @@ Join a Symphony Cluster node that is hosted on RHEL 8.4 OS to an AD domain using
 
     After you run this command, it updates the crypto policies and asks to reboot the machine.
 
-
 7.  Back up the existing /etc/samba/smb.conf Samba configuration file: 
 
     `# mv /etc/samba/smb.conf /etc/samba/smb.conf.bak`
@@ -331,9 +330,9 @@ Join a Symphony Cluster node that is hosted on RHEL 8.4 OS to an AD domain using
     enable_only = winbind
     }
 
-11. Verify that the winbind service is running. For example:
+Verify that the winbind service is running. For example:
 
-    ```
+    
     #systemctl status winbind
     [root@amit-rhel84 ~]# systemctl status winbind
     winbind.service - Samba Winbind Daemon
@@ -352,7 +351,7 @@ Join a Symphony Cluster node that is hosted on RHEL 8.4 OS to an AD domain using
            ├─4894 /usr/sbin/winbindd --foreground --no-process-group
            ├─4924 /usr/sbin/winbindd --foreground --no-process-group
            └─5997 /usr/sbin/winbindd --foreground --no-process-group Important
-    ```
+    
 
 ### Verification steps
 {: #verification-steps}
