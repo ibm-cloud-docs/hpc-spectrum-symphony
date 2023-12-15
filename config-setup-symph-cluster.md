@@ -330,9 +330,9 @@ Join a Symphony Cluster node that is hosted on RHEL 8.4 OS to an AD domain using
     enable_only = winbind
     }
 
-11. Verify that the winbind service is running. For example:
+Verify that the winbind service is running. For example:
 
-    ```
+    
     #systemctl status winbind
     [root@amit-rhel84 ~]# systemctl status winbind
     winbind.service - Samba Winbind Daemon
@@ -353,9 +353,9 @@ Join a Symphony Cluster node that is hosted on RHEL 8.4 OS to an AD domain using
            └─5997 /usr/sbin/winbindd --foreground --no-process-group
     
 To enable Samba to query domain user and group information, the winbind service must be running before you start smb. 
-    {: important}
+{: important}
 
-12. If you installed the samba package to share directories and printers, enable and start the smb service:
+11. If you installed the samba package to share directories and printers, enable and start the smb service:
     ```
     # systemctl enable --now smb
     ```
