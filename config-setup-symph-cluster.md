@@ -331,7 +331,7 @@ Join a Symphony Cluster node that is hosted on RHEL 8.4 OS to an AD domain using
     enable_only = winbind
     }
 
-    Verify that the winbind service is running. For example:
+11. Verify that the winbind service is running. For example:
 
     ```
     #systemctl status winbind
