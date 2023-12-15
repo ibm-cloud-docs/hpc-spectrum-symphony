@@ -233,7 +233,7 @@ To ensure compatibility, you have two options:
 
 For enabling RC4 support in RHEL, the steps differ depending on the RHEL version. It is recommended to refer to the official documentation for detailed instructions.
 
-### Joining Symphony cluster with Symphony cluster node
+### Joining Symphony Cluster Nodes to Active Directory Domain
 {: #procedure-ad-samba}
  
 Samba Winbind is an alternative to the System Security Services Daemon (SSSD) for connecting a Red Hat Enterprise Linux (RHEL) system with Active Directory (AD). This section describes how to join an RHEL system to an AD domain by using realmd to configure Samba Winbind. 
@@ -330,9 +330,9 @@ Join a Symphony Cluster node that is hosted on RHEL 8.4 OS to an AD domain using
     enable_only = winbind
     }
 
-Verify that the winbind service is running. For example:
+11. Verify that the winbind service is running. For example:
 
-    
+    ```
     #systemctl status winbind
     [root@amit-rhel84 ~]# systemctl status winbind
     winbind.service - Samba Winbind Daemon
@@ -350,8 +350,15 @@ Verify that the winbind service is running. For example:
            ├─4893 /usr/sbin/winbindd --foreground --no-process-group
            ├─4894 /usr/sbin/winbindd --foreground --no-process-group
            ├─4924 /usr/sbin/winbindd --foreground --no-process-group
-           └─5997 /usr/sbin/winbindd --foreground --no-process-group Important
+           └─5997 /usr/sbin/winbindd --foreground --no-process-group
     
+To enable Samba to query domain user and group information, the winbind service must be running before you start smb. 
+    {: important}
+
+12. If you installed the samba package to share directories and printers, enable and start the smb service:
+    ```
+    # systemctl enable --now smb
+    ```
 
 ### Verification steps
 {: #verification-steps}
