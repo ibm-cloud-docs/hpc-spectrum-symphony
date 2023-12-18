@@ -233,7 +233,7 @@ To ensure compatibility, you have two options:
 
 For enabling RC4 support in RHEL, the steps differ depending on the RHEL version. It is recommended to refer to the official documentation for detailed instructions.
 
-### Joining Symphony cluster with Symphony cluster node
+### Joining Symphony Cluster Nodes to Active Directory Domain
 {: #procedure-ad-samba}
  
 Samba Winbind is an alternative to the System Security Services Daemon (SSSD) for connecting a Red Hat Enterprise Linux (RHEL) system with Active Directory (AD). This section describes how to join an RHEL system to an AD domain by using realmd to configure Samba Winbind. 
