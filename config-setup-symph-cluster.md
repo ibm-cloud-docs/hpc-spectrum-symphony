@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-12-15"
+lastupdated: "2023-12-18"
 
 keywords: 
 
@@ -233,7 +233,7 @@ To ensure compatibility, you have two options:
 
 For enabling RC4 support in RHEL, the steps differ depending on the RHEL version. It is recommended to refer to the official documentation for detailed instructions.
 
-### Joining Symphony Cluster Nodes to Active Directory Domain
+### Joining Symphony cluster with Symphony cluster node
 {: #procedure-ad-samba}
  
 Samba Winbind is an alternative to the System Security Services Daemon (SSSD) for connecting a Red Hat Enterprise Linux (RHEL) system with Active Directory (AD). This section describes how to join an RHEL system to an AD domain by using realmd to configure Samba Winbind. 
@@ -324,40 +324,44 @@ Join a Symphony Cluster node that is hosted on RHEL 8.4 OS to an AD domain using
 
 10.  Edit the `/etc/krb5.conf` file and add this section:
 
-    [plugins]
-    localauth = {
-    module = winbind:/usr/lib64/samba/krb5/winbind_krb5_localauth.so
-    enable_only = winbind
-    }
+        ```shell
+        [plugins]
+        localauth = {
+        module = winbind:/usr/lib64/samba/krb5/winbind_krb5_localauth.so
+        enable_only = winbind
+        }
+        ```
 
-Verify that the winbind service is running. For example:
+11.  Verify that the winbind service is running. For example:
 
-    
-    #systemctl status winbind
-    [root@amit-rhel84 ~]# systemctl status winbind
-    winbind.service - Samba Winbind Daemon
-    Loaded: loaded (/usr/lib/systemd/system/winbind.service; enabled; vendor preset: disabled)
-    Active: active (running) since Wed 2023-08-09 08:16:16 EDT; 1h 42min ago
-    Docs: man:winbindd(8)
+
+        ```
+        #systemctl status winbind
+        [root@amit-rhel84 ~]# systemctl status winbind
+        winbind.service - Samba Winbind Daemon
+        Loaded: loaded (/usr/lib/systemd/system/winbind.service; enabled; vendor preset: disabled)
+        Active: active (running) since Wed 2023-08-09 08:16:16 EDT; 1h 42min ago
+        Docs: man:winbindd(8)
           man:samba(7)
           man:smb.conf(5)
-    Main PID: 4889 (winbindd)
-    Status: "winbindd: ready to serve connections..."
-    Tasks: 5 (limit: 49264)
-    Memory: 10.9M
-    CGroup: /system.slice/winbind.service
-           ├─4889 /usr/sbin/winbindd --foreground --no-process-group
-           ├─4893 /usr/sbin/winbindd --foreground --no-process-group
-           ├─4894 /usr/sbin/winbindd --foreground --no-process-group
-           ├─4924 /usr/sbin/winbindd --foreground --no-process-group
-           └─5997 /usr/sbin/winbindd --foreground --no-process-group
-    
-To enable Samba to query domain user and group information, the winbind service must be running before you start smb. 
+        Main PID: 4889 (winbindd)
+        Status: "winbindd: ready to serve connections..."
+        Tasks: 5 (limit: 49264)
+        Memory: 10.9M
+        CGroup: /system.slice/winbind.service
+               ├─4889 /usr/sbin/winbindd --foreground --no-process-group
+               ├─4893 /usr/sbin/winbindd --foreground --no-process-group
+               ├─4894 /usr/sbin/winbindd --foreground --no-process-group
+               ├─4924 /usr/sbin/winbindd --foreground --no-process-group
+               └─5997 /usr/sbin/winbindd --foreground --no-process-group
+        ```
+
+To enable Samba to query domain user and group information, the winbind service must be running before you start smb.
 {: important}
 
 If you installed the samba package to share directories and printers, enable and start the smb service:
 
-    # systemctl enable --now smb
+`# systemctl enable --now smb`
 
 ### Verification steps
 {: #verification-steps}
@@ -421,8 +425,7 @@ If you installed the samba package to share directories and printers, enable and
 	AD-CLIENT
 	POCDOMAIN 
     ```
-
-    If you do not want to use the deprecated RC4 ciphers, you can enable the AES encryption type in AD. 
+**Additional resources** - If you do not want to use the deprecated RC4 ciphers, you can enable the AES encryption type in AD. 
 
 ### To provide root user permissions to Active Directory (AD) users
 {: #provide-root-permission}
