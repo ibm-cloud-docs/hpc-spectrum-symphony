@@ -44,8 +44,8 @@ toc:
           - update-idle-time.md
       - using-dedicated-hosts.md
       - topicgroup:
-          label: Using IBM Storage Scale
-          topics: 
+          label: Using IBM Spectrum Scale
+          topics:
           - using-spectrum-scale-storage.md
           - accessing-gui.md
       - topicgroup:
@@ -60,10 +60,14 @@ toc:
       id: reference
       topics:
       - topicgroup:
-          label: IBM Cloud Schematics CLI
-          topics:
-          - include: ../schematics/cli-reference.md
-          - include: ../schematics/cli-version-release.md
+           label: IBM Cloud Schematics CLI
+           topics:
+            - link:
+                label: IBM Cloud Schematics CLI
+                href: https://cloud.ibm.com/docs/schematics?topic=schematics-schematics-cli-reference
+            - link:
+                label: CLI version history
+                href: https://cloud.ibm.com/docs/schematics?topic=schematics-cli_version-releases
       - link:
           label: IBM Cloud Schematics API
           href: https://cloud.ibm.com/apidocs/schematics
@@ -87,3 +91,4 @@ toc:
             - troubleshooting-symphony.md
             - troubleshooting-smc.md
       - getting-help.md
+      
