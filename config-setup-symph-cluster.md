@@ -29,14 +29,14 @@ subcollection: spectrum-symphony
 ## Introduction
 {: #scale-ad-auth-intro}
 
-You can configure IBM Spectrum Symphony to use Active Directory (AD) server as the primary directory service for user authentication. The document outlines step-by-step procedures for installing and configuring Active Directory and DNS Server on a Windows Server 2019 using PowerShell. Additionally, it covers the process of connecting RHEL 8.4 OS-based Symphony Cluster node directly to AD by using Samba Winbind, to ensure encryption compatibility, and joining it to an Active Directory domain.
+You can configure IBM Spectrum Symphony to use Active Directory (AD) server as the primary directory service for user authentication. The document outlines step-by-step procedures for installing and configuring Active Directory and DNS Server on Windows Server 2019 using PowerShell. Additionally, it covers the process of connecting RHEL 8.4 OS-based Symphony Cluster node directly to AD by using Samba Winbind, to ensure encryption compatibility, and joining it to an Active Directory domain.
 
 The purpose of this documentation is to enable system administrators to seamlessly configure IBM Spectrum Symphony with Active Directory for user authentication, allowing for efficient user management and access control.
 
 ## General prerequisites
 {: #gen-prerequisites}
 
-Before you proceed with the configuration process, ensure that these prerequisites are met:
+Before you proceed with the configuration process, ensure that the prerequisites are met:
 
 1.	For Installing and Configuring Active Directory and DNS Server:
 	*  A Windows Server 2019 machine with administrative privileges.
@@ -220,7 +220,7 @@ Supported operating systems for direct integration include:
 *  Windows Server 2012 R2
 
 Windows Server 2019 and Windows Server 2022 do not introduce new functional levels and use the highest functional level of Windows Server 2016.
-{: note)
+{: note}
 
 ### Ensuring Support for Common Encryption Types in AD and RHEL
 {: #encryption-types-ad-rhel}
@@ -233,7 +233,7 @@ To ensure compatibility, you have two options:
 
 For enabling RC4 support in RHEL, the steps differ depending on the RHEL version. It is recommended to refer to the official documentation for detailed instructions.
 
-### Joining Symphony Cluster Nodes to Active Directory Domain
+### Joining Symphony cluster with Symphony cluster node
 {: #procedure-ad-samba}
  
 Samba Winbind is an alternative to the System Security Services Daemon (SSSD) for connecting a Red Hat Enterprise Linux (RHEL) system with Active Directory (AD). This section describes how to join an RHEL system to an AD domain by using realmd to configure Samba Winbind. 

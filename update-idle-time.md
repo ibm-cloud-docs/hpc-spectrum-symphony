@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-04"
+lastupdated: "2022-03-09"
 
 keywords: 
 
@@ -39,12 +39,12 @@ The file can be found in: `/data/<CLUSTER>/sym731/hostfactory/conf/requestors/sy
 
 You can make changes to the configuration file and restart the Symphony Host Factory service by using the following commands:
 
-```
+```sh
 egosh service stop HostFactory
 ```
 {: pre}
 
-```
+```sh
 egosh service start HostFactory
 ```
 {: pre}

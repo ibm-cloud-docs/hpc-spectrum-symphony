@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2022, 2023
+  years: 2022, 2023, 2024
 
-lastupdated: "2023-05-31"
+lastupdated: "2024-06-06"
 
 keywords: IBM Spectrum Symphony release notes
 
@@ -17,11 +17,30 @@ content-type: release-note
 {:external: target="_blank" .external}
 {:release-note: data-hd-content-type='release-note'}
 
-# Release notes for IBM Spectrum Symphony
+# Release notes
 {: #release-notes}
 
-Use these release notes to learn about the latest updates to {{site.data.keyword.symphony_full}} that are grouped by date.
+In this document you learn about the latest release updates to {{site.data.keyword.symphony_full}} that are grouped by date.
 {: shortdesc}
+
+## June 2024
+{: #hpc-spectrum-symphony-june24}
+
+### 12 June 2024
+{: #hpc-spectrum-symphony-june24}
+{: release-note}
+
+Support for Symphony 7.3.2 Build601860 fix patch.
+:   The {{site.data.keyword.symphony_full_notm}} 7.3.2 Fix 601860 offering is available for 64-bit Linux x86 and Windows platforms. This update addresses security vulnerabilities in {{site.data.keyword.symphony_full_notm}} and should be installed on top of your existing version 7.3.2 Fix 601711 installation. While it is not mandatory, but applying Fix 601860 is recommended for optimal security. You can also apply other fixes on top of {{site.data.keyword.symphony_full_notm}} 7.3.2 Fix 601711 without applying Fix 601860.
+
+Updated the Spectrum Scale version from 5.1.9.0 to 5.1.9.3.
+:   The Storage Scale product version was updated from 5.1.9.0 to 5.1.9.3.
+
+Updated Spectrum Symphony and Storage Scale custom images.
+:   Spectrum Symphony and Storage Scale custom images are RHEL 8.8.
+
+Updated Spectrum Symphony Windows worker image.
+:   Spectrum Symphony Windows worker image was updated to Symphony 7.3.2 and also have Build601860 fix patch.
 
 ## Dec 2023
 {: #hpc-spectrum-symphony-dec23}
@@ -34,7 +53,7 @@ Support for Symphony 7.3.2 Build601711 fix patch.
 :   The IBM Spectrum Symphony 7.3.2 Fix 601711 offering is available for 64-bit Linux x86 is a mandatory fix that contains various fixes and enhancements, and includes Fix 601349 released in November 2022.
 
 Spectrum Scale version has been updated from 5.1.7.0 to 5.1.9.0.
-:   Storage Scale product version was updated from 5.1.7.0 to 5.1.9.0.
+:   The Storage Scale product version was updated from 5.1.7.0 to 5.1.9.0.
 
 Updated Spectrum Symphony and Storage Scale custom images
 :   Spectrum Symphony and Storage Scale custom images were updated to use RHEL 8.8 instead of RHEL 8.6.
@@ -160,7 +179,7 @@ Security update and enhancements
 {: release-note}
 
 {{site.data.keyword.symphony_full_notm}} enhancements
-:   You now have the option to use {{site.data.keyword.scale_short}} for shared storage that's accessible by the {{site.data.keyword.symphony_short}} compute nodes. For more information, see [Using {{site.data.keyword.scale_short}} storage](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-using-spectrum-scale-storage). With the latest changes, RHEL 8.2 custom images take the place of RHEL 7.7 and CentOS 7.7 custom images with included optimizations for NFS. Additionally, the security vulnerability for Polkit Local Privilege Escalation Vulnerability (CVE-2021-4034) has been mitigated with changes to the post-provisioning scripts.
+:   You now have the option to use {{site.data.keyword.scale_short}} for shared storage that's accessible by the {{site.data.keyword.symphony_short}} compute nodes. For more information, see [Using {{site.data.keyword.scale_short}} storage](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-using-spectrum-scale-storage). With the latest changes, RHEL 8.2 custom images take the place of RHEL 7.7 and CentOS 7.7 custom images with included optimizations for NFS. Also, the security vulnerability for Polkit Local Privilege Escalation Vulnerability (CVE-2021-4034) has been mitigated with changes to the post-provisioning scripts.
 
 ### 13 January 2022
 {: #hpc-spectrum-symphony-jan1322}

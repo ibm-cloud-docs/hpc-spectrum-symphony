@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-09"
+lastupdated: "2022-02-01"
 
 keywords: 
 
@@ -22,7 +22,7 @@ subcollection: hpc-spectrum-symphony
 # Getting help and support
 {: #getting-help-and-support}
 
-If you have problems or questions when you are using the {{site.data.keyword.symphony_full}} offering on {{site.data.keyword.cloud}}, you can use the following options:
+If you have problems or questions when you are using the {{site.data.keyword.symphony_full_notm}} offering on {{site.data.keyword.Bluemix_notm}}, you can use the following options:
 
 * You can contact IBM Spectrum Computing Symphony online support at https://www.ibm.com/mysupport.
 * You can call IBM Support. For a list of country-based numbers, see https://www.ibm.com/planetwide.

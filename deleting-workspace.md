@@ -41,7 +41,7 @@ After you destroy all associated VPC resources, if you don't need the workspace 
 
 Run the following command to delete your workspace:
 
-```
+```sh
 ibmcloud schematics workspace delete --id <WORKSPACE_ID>
 ```
 {: pre}
@@ -62,14 +62,14 @@ You can monitor the log files to view the deletion progress of your workspace.
     * Provide the workspace ID that you generated in the [Creating a workspace](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-creating-workspace&interface=api) task, for example, `us-south.workspace.Terraform-Schematics-Python-Workspace.b3bbc9f5`.
     * Export your {{site.data.keyword.cloud_notm}} API key by using the following command:
         
-        ```
+        ```sh
         export IBMCLOUD_API_KEY =”<ibm-cloud-api-key>” 
         ```
         {: pre}
 
     * Run the following curl command to create a refresh token:
     
-        ```
+        ```sh
         curl -X POST "https://iam.cloud.ibm.com/identity/token" -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=urn:ibm:params:oauth:grant-type:apikey&apikey=$IBMCLOUD_API_KEY" -u bx:bx 
         ```
         {: pre}

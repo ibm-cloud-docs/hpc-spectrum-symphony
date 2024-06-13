@@ -65,7 +65,7 @@ The first step when using {{site.data.keyword.bpshort}} is to create a workspace
 
 Use the following CLI command to create a workspace with your `config.json` file. Make sure that the `config.json` file exists in the directory where you run the command.
 
-```
+```shell
 ibmcloud schematics workspace new -f hpc_workspace_config.json --github-token GITHUB_TOKEN
 ```
 {: pre}
@@ -79,14 +79,14 @@ The `--github-token` parameter is optional and only needed if you are using a pr
 
 You can list the workspaces in your account by using the following command:
 
-```
+```sh
 ibmcloud schematics workspace list
 ```
 {: pre}
 
 Example response with workspace details:
 
-```
+```text
 Name                     ID                                                Description           Status         Frozen
 spectrum-symphony-test   us-east.workspace.bcc-symphony-test.7cbc3f6b      Sample workspace      INACTIVE       False
 ```
@@ -98,7 +98,7 @@ spectrum-symphony-test   us-east.workspace.bcc-symphony-test.7cbc3f6b    
 
 You can retrieve the details of an existing workspace, including the values of all input variables, by running the following command:
 
-```
+```shell
 ibmcloud schematics workspace get --id WORKSPACE_ID [--output OUTPUT][--json]
 ```
 {: pre}
@@ -109,7 +109,7 @@ ibmcloud schematics workspace get --id WORKSPACE_ID [--output OUTPUT][--json]
 
 You can update the details for an existing workspace, such as the workspace name, variables, or source control URL by running the following command:
 
-```
+```shell
 ibmcloud schematics workspace update --id WORKSPACE_ID --file FILE_NAME [--github-token GITHUB_TOKEN]
 ```
 {: pre}
@@ -323,4 +323,4 @@ INFO:root:Completed Creating Schematic Workspace
 {: #next-steps-create-api}
 {: api}
 
-After you've successfully created a workspace, you can begin [Generating a plan](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-generate-plan&interface=api) to validate all of the configuration properties.
+After you've successfully created a workspace, you can begin [Generating a plan](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-generate-plan&interface=api) to validate all of the configuration properties. 

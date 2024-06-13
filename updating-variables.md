@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-01-27"
+lastupdated: "2023-01-26"
 
 keywords: 
 
@@ -34,7 +34,7 @@ subcollection: hpc-spectrum-symphony
 
 **Note**: The following parameters might not be required in `config.json` as the {{site.data.keyword.bpshort}} update variables API uses the `workspace ID w_id` to update the variables against that workspace.
 
-```
+```json
 {
   "name": "Schematic Dev Workspace",
   "type": [

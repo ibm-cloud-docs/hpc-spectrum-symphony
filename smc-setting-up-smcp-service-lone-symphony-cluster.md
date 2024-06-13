@@ -70,7 +70,7 @@ subcollection: hpc-spectrum-symphony
         </sc:ControlPolicy>
         <sc:AllocationSpecification>
             <ego:ConsumerID>/ManagementServices/EGOManagementServices</ego:ConsumerID>
-            <!--The ResourceType specifies a "compute element" identified by the URI used below-->
+            
         <sc:ResourceSpecification ResourceType="http://www.platform.com/ego/2005/05/schema/ce">
             <ego:ResourceGroupName>ManagementHosts</ego:ResourceGroupName>
             </sc:ResourceSpecification>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-03"
+lastupdated: "2022-02-01"
 
 keywords: 
 
@@ -16,7 +16,7 @@ subcollection: hpc-spectrum-symphony
 {:external: target="_blank" .external}
 {:pre: .pre}
 {:tip: .tip}
-{:note .note}
+{:note: .note}
 {:important: .important}
 
 # Managing data with Spectrum Symphony on IBM Cloud

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-03"
+lastupdated: "2022-02-01"
 
 keywords: 
 
@@ -16,7 +16,7 @@ subcollection: hpc-spectrum-symphony
 {:external: target="_blank" .external}
 {:pre: .pre}
 {:tip: .tip}
-{:note .note}
+{:note: .note}
 {:important: .important}
 
 # Adding compute profile types for auto scaling
@@ -26,7 +26,7 @@ Complete the following steps to add compute profile types when worker nodes are 
 
 1. Update the file `ibmcloudgen2_templates.json` in `$Symphony_ENDIR/resource_connector/ibmcloudgen2/conf`. A typical HPC cluster that is installed on {{site.data.keyword.cloud_notm}} would have this file in `/opt/ibm/symphony/conf/resource_connector/ibmcloudgen2/conf`. See the following sample content for an example:
 
-    ```
+    ```json
     {
     "templates": [
     {
@@ -56,7 +56,7 @@ Complete the following steps to add compute profile types when worker nodes are 
 2. Add a new template section to the templates list. Review the values for all of the properties to make sure that they map to the correct VPC configuration.
 3. Run the following command to restart the `mbatchd` process and apply the changes:
 
-    ```
+    ```lsf
     badmin mbdrestart
     ```
     {: pre}
@@ -64,7 +64,7 @@ Complete the following steps to add compute profile types when worker nodes are 
 4. When the template is added, you can use the `symphony.shared` file to map the new template to a specific job. The `symphony.shared` file is located in `$Symphony_ENVDIR` (same location as `symphony.conf`). In a typical installation, this would be found in the `/opt/ibm/symphony/conf` folder. Add _templateId_ as a resource in the resource section in the `symphony.shared` file. For example, **templateID String () () (template ID for the external hosts)**.
 5. Add the following section to `user_data.sh` to let the virtual machines add _templateId_ as `SYMPHONY_LOCAL_RESOURCES`.
 
-    ```
+    ```shell
     if [ -n "$template_id" ]; then
     sed -i "s/(SYMPHONY_LOCAL_RESOURCES=.)"/\1 [resourcemap $template_idtemplateID]"/" $SYMPHONY_CONF_FILE
     echo "update SYMPHONY_LOCAL_RESOURCES in $SYMPHONY_CONF_FILE successfully, add [resourcemap ${template_id}*templateID]" >> $logfile
@@ -75,7 +75,7 @@ Complete the following steps to add compute profile types when worker nodes are 
 
     The `user_data.sh` is specified by the `IBMCLOUDGEN2_PROVISION_FILE` variable in the `ibmcloudgen2_config.json` file. `ibmcloudgen2_config.json` is located in `/opt/ibm/symphony/conf/resource_connector/ibmcloudgen2/conf`. See the following sample file content for an example:
 
-    ```
+    ```json
     "IBMCLOUDGEN2_KEY_FILE": "/opt/ibm/symphony/conf/resource_connector/ibmcloudgen2/credentials",
     "IBMCLOUDGEN2_PROVISION_FILE": "/opt/ibm/symphony/conf/resource_connector/ibmcloudgen2/user_data.sh",
     "IBMCLOUDGEN2_MACHINE_PREFIX": "icgen2host",
@@ -85,7 +85,7 @@ Complete the following steps to add compute profile types when worker nodes are 
 
 6. You can submit the change by using the -R option. See the following example:
 
-    ```
+    ```lsf
     bsub -R “templateId=Template-2” sleep 1000
     ```
     {: pre}
