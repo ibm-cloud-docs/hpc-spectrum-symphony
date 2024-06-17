@@ -33,7 +33,7 @@ In this document you learn about the latest release updates to {{site.data.keywo
 Support for Symphony 7.3.2 build602064 fix patch.
 :   The {{site.data.keyword.symphony_full_notm}} 7.3.2 Fix 601860 offering is available for 64-bit Linux x86 and Windows platforms. This update addresses security vulnerabilities in {{site.data.keyword.symphony_full_notm}} and should be installed on top of your existing version 7.3.2 Fix 601711 installation. While it is not mandatory, but applying Fix 601860 is recommended for optimal security. You can also apply other fixes on top of {{site.data.keyword.symphony_full_notm}} 7.3.2 Fix 601711 without applying Fix 601860.
 
-Along with build602064 patch, 16 more patches are updated and they are available in [change log](https://github.ibm.com/workload-eng-services/hpc-cluster-symphony/blob/ap-symp-schematics/CHANGELOG.md) md file.
+Along with build602064 patch, 16 more patches are updated and they are available in [change log](https://github.com/IBM-Cloud/hpc-cluster-symphony/blob/master/CHANGELOG.md) md file.
 
 Updated the Spectrum Scale version from 5.1.9.0 to 5.1.9.3.
 :   The Storage Scale product version was updated from 5.1.9.0 to 5.1.9.3.
