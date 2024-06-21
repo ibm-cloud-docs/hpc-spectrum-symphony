@@ -26,8 +26,8 @@ In this document you learn about the latest release updates to {{site.data.keywo
 ## June 2024
 {: #hpc-spectrum-symphony-june24}
 
-### 22 June 2024
-{: #hpc-spectrum-symphony-june24}
+### 21 June 2024
+{: #hpc-spectrum-symphony-june2124}
 {: release-note}
 
 Support for Symphony 7.3.2 build601860 fix patch.
@@ -48,7 +48,7 @@ Updated Spectrum Symphony Windows worker image.
 {: #hpc-spectrum-symphony-dec23}
 
 ### 7 Dec 2023
-{: #hpc-spectrum-symphony-dec0523}
+{: #hpc-spectrum-symphony-dec0723}
 {: release-note}
 
 Support for Symphony 7.3.2 Build601711 fix patch.
