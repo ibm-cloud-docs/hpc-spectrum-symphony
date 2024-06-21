@@ -78,15 +78,17 @@ The changes take effect automatically. There is no need to restart the HostFacto
 
 4. Restart the HostFactory service by using the following commands:
 
-    ```
+    ```sh
     egosh service stop HostFactory
     ```
     {: pre}
     
-    ```
+    ```sh
     egosh service start HostFactory
     ```
     {: pre}
 
 For more information, see [Dynamically updating host factory configuration](https://www.ibm.com/docs/en/spectrum-symphony/7.3.1?topic=bursting-dynamically-updating-host-factory-configuration){: external}.
+
+
 

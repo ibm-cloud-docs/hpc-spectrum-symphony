@@ -30,6 +30,12 @@ IBM Spectrum Symphony
     Managing worker nodes
         update-max-nodes.md
         update-idle-time.md
+
+    using-dedicated-hosts.md
+
+    {:. topicgroup}
+    Configuring SMC to use with Symphony Spectrum
+        smc-schematics-config.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}

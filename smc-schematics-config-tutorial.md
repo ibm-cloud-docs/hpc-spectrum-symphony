@@ -109,7 +109,7 @@ SMC supports combination of single smc_zone as ["us-east-1"] or double smc_zone 
 
     Parameters that have default values that you might or might not need to update:
 
-    | Name    | Description | Type  |  Default |
+    | Name    | Description | Type  |  Default  |
     |----------|-------------|-----|--------|
     |cluster_prefix value| The specific cluster prefix for your Lone cluster.| string | "hpcc-smc" |
     |cluster_id| ID of the cluster used by Symphony Multi Cluster for configuration of resources. The ID must be up to 39 alphanumeric characters, including the underscore (\_), the hyphen (-), and the period (.). Other special characters and spaces are not allowed. Do not use the name of any host or user as the name of your cluster. You cannot change it after installation.|string | "HPCMultiCluster" |

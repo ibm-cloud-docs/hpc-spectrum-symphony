@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-05-30"
+  years: 2021, 2023, 2024
+lastupdated: "2024-06-21"
 
 keywords: 
 
@@ -24,7 +24,7 @@ subcollection: hpc-spectrum-symphony
 # Getting started with IBM Spectrum Symphony
 {: #getting-started-tutorial}
 
-{{site.data.keyword.IBM}} {{site.data.keyword.symphony_short}} enables customers to deploy HPC clusters that use {{site.data.keyword.symphony_full_notm}} as a scheduling software. The deployment is performed by using Terraform and {{site.data.keyword.bplong_notm}} as automation frameworks. The following steps outline the high-level flow of events that are performed:
+{{site.data.keyword.symphony_full}} enables customers to deploy HPC clusters that use {{site.data.keyword.symphony_full_notm}} as a scheduling software. The deployment is performed by using Terraform and {{site.data.keyword.bplong_notm}} as automation frameworks. The following steps outline the high-level flow of events that are performed:
 
 1. **Create a workspace** with the Terraform code from {{site.data.keyword.bplong_notm}}. This step defines the set of configuration properties that are used to perform the automation.
 2. **Generate a plan** to confirm whether the configuration properties are valid, so that when you run the Terraform code, all of the resources are provisioned correctly. If the validation fails, fix the configuration properties and try again.
@@ -65,7 +65,7 @@ If you prefer to create the storage custom image with your own settings and conf
 {: #gather-spectrum-entitlement-information}
 {: step}
 
-The offering uses the Bring Your Own License (BYOL) model for Spectrum software when you deploy an HPC cluster on {{site.data.keyword.cloud_notm}}. This applies to {{site.data.keyword.symphony_full_notm}} in all cases and to IBM Storage Scale if you decide to use that for the HPC cluster storage instead of just NFS. Work with your business owners or license management team to make sure that your organization has procured enough licenses to deploy the HPC cluster using the Spectrum software. Failure to comply with licenses for production use of software is a violation of the [IBM International Program License Agreement](https://www.ibm.com/software/passportadvantage/programlicense.html){: external}.
+The offering uses the Bring Your Own License (BYOL) model for Spectrum software when you deploy an HPC cluster on {{site.data.keyword.cloud_notm}}. This applies to {{site.data.keyword.symphony_full_notm}} in all cases and to IBM Spectrum Scale if you decide to use that for the HPC cluster storage instead of just NFS. Work with your business owners or license management team to make sure that your organization has procured enough licenses to deploy the HPC cluster using the Spectrum software. Failure to comply with licenses for production use of software is a violation of the [IBM International Program License Agreement](https://www.ibm.com/software/passportadvantage/programlicense.html){: external}.
 
 ## Next steps
 {: #getting-started-next-steps}

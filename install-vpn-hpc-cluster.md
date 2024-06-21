@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-09"
+lastupdated: "2022-03-04"
 
 keywords: 
 
@@ -24,7 +24,7 @@ subcollection: hpc-spectrum-symphony
 
 You can enable a VPN gateway to your HPC cluster. The following figure is an example of a VPN deployment.
 
-![Architecture diagram for VPN deployment](images/hpcc_vpn.png){:caption="Figure 1. VPN deployment example" caption-side="bottom"}
+![Architecture diagram for VPN deployment](images/hpcc_vpn.png){: caption="Figure 1. VPN deployment example" caption-side="bottom"}
 
 This example links a VPN gateway to the subnet for Symphony nodes. By doing this, local clients can directly access them with private IP addresses (for example, 192.168.3.236 to 10.244.0.21). This documentation gives a step-by-step guide to create the example deployment.
 
@@ -43,14 +43,13 @@ Set VPN deployment variables when you [create your workspace](/docs/hpc-spectrum
 
 [Apply a plan](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-applying-plan) to build your cluster with a VPN gateway. After a while, Schematics logs show you essential information to configure your local VPN environment. In CLI, run the following command to check your log files:
 
-```
+```sh
 ibmcloud schematics logs --id <WORKSPACE_ID>
 ```
-
 {: pre}
 
 **Example response:**
-```
+```text
  2021/09/21 06:04:49 Terraform apply | Outputs:
  2021/09/21 06:04:49 Terraform apply | 
  2021/09/21 06:04:49 Terraform apply | ssh_command = "ssh -J root@162.133.xxx.yy root@10.244.0.21"
@@ -61,10 +60,11 @@ ibmcloud schematics logs --id <WORKSPACE_ID>
 ```
 {: screen}
 
+
 Alternatively, you can use the {{site.data.keyword.cloud_notm}} console to check the log files. They show a line `vpn_config_info =...`, which contains the VPN public IP (`162.133.aaa.bbb`), the connected CIDR (`10.244.0.16/28`), and used UDP ports.
 
 ## Step 3. Configure your local VPN environment
 {: #step-3-configure-vpn-environment}
 
-Typical VPN configurations require a public IP address for the local VPN server, a local CIDR, preshared key, a peer IP address, and a peer CIDR. In the example above, you first need to configure your local VPN server with public IP address, local CIDR, and preshared key, which are identical to what you specified for `vpn_peer_address`, `vpn_peer_cidr`, and `vpn_preshared_key` at Step 1. Then, your local VPN configuration needs to add a peer IP address to be `162.133.aaa.bbb` and a peer CIDR to be `10.244.0.16/28` according to the output of Step 2. Finally, UDP ports 500 and 4500 must be accessible from the VPN gateway on IBM Cloud by configuring your local network devices (for example, routers). For more details on configuring your VPN, see [Connecting to your on-premises network](/docs/vpc?topic=vpc-vpn-onprem-example).
+Typical VPN configurations require a public IP address for the local VPN server, a local CIDR, preshared key, a peer IP address, and a peer CIDR. In the example, you first need to configure your local VPN server with public IP address, local CIDR, and preshared key, which is identical to what you specified for `vpn_peer_address`, `vpn_peer_cidr`, and `vpn_preshared_key` at Step 1. Then, your local VPN configuration needs to add a peer IP address to be `162.133.aaa.bbb` and a peer CIDR to be `10.244.0.16/28` according to the output of Step 2. Finally, UDP ports 500 and 4500 must be accessible from the VPN gateway on {{site.data.keyword.Bluemix_notm}} by configuring your local network devices (for example, routers). For more details on configuring your VPN, see [Connecting to your on-premises network](/docs/vpc?topic=vpc-vpn-onprem-example).
 

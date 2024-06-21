@@ -34,7 +34,7 @@ In the following tutorial, you learn how to integrate OpenLDAP with {{site.data.
 
 In the tutorial, you learn the steps that are involved in configuring {{site.data.keyword.symphony_full_notm}} to use OpenLDAP as the primary directory service for user authentication. You also learn about the benefits of integrating OpenLDAP with {{site.data.keyword.symphony_full_notm}}, such as centralized user management, improved security, and simplified user authentication.
 
-This tutorial covers configuring the OpenLDAP server on a RHEL 7.9 system.
+This tutorial covers configuring the OpenLDAP server on an RHEL 7.9 system.
 {: note}
 
 ## Architecture
@@ -78,7 +78,7 @@ To successfully integrate OpenLDAP with {{site.data.keyword.symphony_full_notm}}
 {: #configure-openldap-server}
 {: step}
 
-Make sure that you should have access to a RHEL 7.9 Linux&reg; system with root privileges.
+Make sure that you have access to an RHEL 7.9 Linux&reg; system with root privileges.
 {: important}
 
 1. Install the OpenLDAP server and client packages by running the following command:
@@ -262,7 +262,7 @@ Make sure that you should have access to a RHEL 7.9 Linux&reg; system with root 
     ```
     {: codeblock}
 
-14. To verify whether users have been created as mentioned in the previous steps, use the following command:
+14. To verify whether users were created, use this command:
 
     ```
     ldapsearch -x -LLL -b "ou=People,dc=ibmsymphony,dc=com" "(objectClass=posixAccount)" uid cn
@@ -271,7 +271,7 @@ Make sure that you should have access to a RHEL 7.9 Linux&reg; system with root 
 
 The OpenLDAP server is now configured and ready to use. You can add more users and groups by creating more LDIF files and by using the `ldapadd` command to import them into the directory.
 
-## Create a user group in OLDAP directory
+## Create a user group in the OLDAP directory
 {: #create-user-group}
 {: step}
 
@@ -358,7 +358,7 @@ Later on, you can use the `ldapmodify` command to add exiting users to these gro
 {: #configure-ldap-authentication}
 {: step}
 
-Next you need to configure the LDAP authentication for the client machines that are running RHEL 8.4/8.6 as the OS and OLDAP server as the authentication provider or identity provider. In this case, the OLDAP client is the Symphony cluster, so the following steps apply to the Symphony cluster nodes that are running on top of RHEL 8.4/8.6 Linux&reg; machines.
+Next, you need to configure the LDAP authentication for the client machines that are running RHEL 8.4/8.6 as the OS and OLDAP server as the authentication provider or identity provider. In this case, the OLDAP client is the Symphony cluster, so the following steps apply to the Symphony cluster nodes that are running on top of RHEL 8.4/8.6 Linux&reg; machines.
 
 In the following steps, make sure to replace the domain name in the `"dc=***,dc=***"` section with your own domain name.
 {: important}
@@ -462,7 +462,7 @@ In the following steps, make sure to replace the domain name in the `"dc=***,dc=
     ```
     {: codeblock}
 
-You have now configured SSSD to use LDAP for user authentication on your RHEL 8.4/8.6 system with the LDAP server "ibmlsf.com".
+SSSD is configured to use LDAP for user authentication on your RHEL 8.4/8.6 system with the LDAP server "ibmlsf.com".
 
 ## Configure Symphony cluster
 {: #configure-symphony-cluster}
@@ -666,4 +666,4 @@ In the example, the LDAP user “symphuser007” is able to log on to the Sympho
 ## Conclusion
 {: #conclusion}
 
-You have now successfully integrated OpenLDAP with {{site.data.keyword.symphony_full_notm}} to provide centralized authentication and directory services.
+OpenLDAP is integrated with {{site.data.keyword.symphony_full_notm}} to provide centralized authentication and directory services.

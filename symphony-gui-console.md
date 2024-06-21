@@ -41,7 +41,7 @@ Before you can access the {{site.data.keyword.symphony_short}} cluster managemen
 
 1. Run the following command to create the SSH tunnel:
 
-    ```
+    ```sh
     ssh -L 8443:localhost:8443 -J root@{LOGIN_NODE_PUBLIC_IP} root@{MANAGEMENT_NODE_PRIVATE_IP}
     ```
     {: codeblock}
@@ -50,7 +50,7 @@ Before you can access the {{site.data.keyword.symphony_short}} cluster managemen
 
 2. From the shell prompt on the management node, run the following commands to identify which node the WEBGUI is running on (use the {{site.data.keyword.cloud_notm}} console to get the IP address of that node):
 
-    ```
+    ```sh
     egosh user logon -u Admin -x Admin
     egosh service list -ll | grep WEBGUI
     ```
@@ -58,7 +58,7 @@ Before you can access the {{site.data.keyword.symphony_short}} cluster managemen
 
     **Example output**
 
-    ```
+    ```text
     [root@symphony-primary-0 ~]# egosh user logon -u Admin -x Admin
     Logged on successfully
     [root@symphony-primary-0 ~]# egosh service list -ll | grep WEBGUI
@@ -69,14 +69,14 @@ Before you can access the {{site.data.keyword.symphony_short}} cluster managemen
 
 3.  Run the following command to close the tunnel:
 
-    ```
+    ```sh
     control-D
     ```
     {: codeblock}
 
 4. Run the following command to reopen the tunnel:
 
-    ```
+    ```sh
     ssh -L 8443:localhost:8443 -J root@{LOGIN_NODE_PUBLIC_IP} root@{WEBGUI_NODE_PRIVATE_IP}
     ```
     {: codeblock}
@@ -88,4 +88,6 @@ Before you can access the {{site.data.keyword.symphony_short}} cluster managemen
 6. To access the GUI, enter the default login credentials: username is `Admin` and password is `Admin`.
 
 For more information on how to use the Symphony GUI, see [Accessing the cluster management console](https://www.ibm.com/docs/en/spectrum-symphony/7.3.1?topic=cluster-accessing-management-console#accessing_PMC){: external}.
+
+
 

@@ -45,7 +45,7 @@ Before you perform the actions to destroy the resources, you must first ensure t
 
 Run the following command to remove your VPC resources from your workspace:
 
-```
+```sh
 ibmcloud schematics destroy --id <WORKSPACE_ID>
 ```
 {: pre}
@@ -60,20 +60,20 @@ You can monitor the log files to view the deletion progress of all {{site.data.k
 1. To destroy resources by using the {{site.data.keyword.bplong_notm}} Python APIs, create a Python file and provide a name of your choice, for example, `schematics_destroy_resources.py`.
 2. Copy and paste the [Destroy resources using Schematics Python API](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-deleting-resources&interface=api#example-request-destroy) example request to your Python file.
 3. Change the following parameters as part of the request:
-  * Replace your {{site.data.keyword.cloud_notm}} key to the `authenticator = IAMAuthenticator('<ibm-api-key>')` variable.
-  * Change the API endpoint to the endpoint mentioned in [API endpoints](https://cloud.ibm.com/apidocs/schematics?code=python#api-endpoints){: external} according to the location that you want your {{site.data.keyword.bpshort}} workspace to reside, for example, `schematics_service.set_service_url('https://us.schematics.cloud.ibm.com')`.
+   * Replace your {{site.data.keyword.cloud_notm}} key to the `authenticator = IAMAuthenticator('<ibm-api-key>')` variable.
+   * Change the API endpoint to the endpoint mentioned in [API endpoints](https://cloud.ibm.com/apidocs/schematics?code=python#api-endpoints){: external} according to the location that you want your {{site.data.keyword.bpshort}} workspace to reside, for example, `schematics_service.set_service_url('https://us.schematics.cloud.ibm.com')`.
 4. Inside the `schematics_service.destroy_workspace_command` function, provide the following parameters:
-  * Provide the workspace ID that you generated in the [Creating a workspace](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-creating-workspace&interface=api) task, for example, `us-south.workspace.Terraform-Schematics-Python-Workspace.b3bbc9f5`.
-  * Export your {{site.data.keyword.cloud_notm}} API key by using the following command:
+   * Provide the workspace ID that you generated in the [Creating a workspace](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-creating-workspace&interface=api) task, for example, `us-south.workspace.Terraform-Schematics-Python-Workspace.b3bbc9f5`.
+   * Export your {{site.data.keyword.cloud_notm}} API key by using the following command:
   
-    ```
+    ```sh
     export IBMCLOUD_API_KEY =”<ibm-cloud-api-key>” 
     ```
     {: pre}
   
-  * Run the following curl command to create a refresh token:
+   * Run the following curl command to create a refresh token:
 
-    ```
+    ```sh
     curl -X POST "https://iam.cloud.ibm.com/identity/token" -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=urn:ibm:params:oauth:grant-type:apikey&apikey=$IBMCLOUD_API_KEY" -u bx:bx
     ```
     {: pre}

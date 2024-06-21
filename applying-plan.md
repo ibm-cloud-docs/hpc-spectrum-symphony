@@ -42,21 +42,21 @@ When you apply a plan, the {{site.data.keyword.cloud}} resources are deployed to
 
 Run the following command to apply a plan to your workspace:
 
-```
+```shell
 ibmcloud schematics apply --id <WORKSPACE_ID>
 ```
 {: pre}
 
 While the resources are being deployed, you can monitor the log files for errors or confirm that the action was completed successfully. This step can take some time based on how many virtual servers are being provisioned as part of your configuration file. Run the following command to monitor your log files:
 
-```
+```shell
 ibmcloud schematics logs --id <WORKSPACE_ID>
 ```
 {: pre}
 
 **Sample response:**
 
-```
+```terraform
 2021/04/05 09:44:54 Terraform apply | Apply complete! Resources: 14 added, 0 changed, 0 destroyed.
 2021/04/05 09:44:54 Terraform apply |
 2021/04/05 09:44:54 Terraform apply | Outputs:
@@ -76,20 +76,21 @@ After the plan is successfully applied, it generates an `sshcommand` in the _Out
 1. To apply a plan by using the {{site.data.keyword.bplong_notm}} Python APIs, create a Python file and provide a name of your choice, for example, `schematics_apply_plan.py`.
 2. Copy and paste the [Apply a plan using {{site.data.keyword.bpshort}} Python API](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-applying-plan&interface=api#example-request-apply) example request to your Python file.
 3. Change the following parameters as part of the request:
-  * Replace your {{site.data.keyword.cloud_notm}} API key to the `authenticator = IAMAuthenticator('<ibm-api-key>')` variable.
-  * Change the API endpoint to the endpoint mentioned in [API endpoints](https://cloud.ibm.com/apidocs/schematics?code=python#api-endpoints){: external} according to the location that you want your {{site.data.keyword.bpshort}} workspace to reside, for example, `schematics_service.set_service_url('https://us.schematics.cloud.ibm.com')`.
+   * Replace your {{site.data.keyword.cloud_notm}} API key to the `authenticator = IAMAuthenticator('<ibm-api-key>')` variable.
+   * Change the API endpoint to the endpoint mentioned in [API endpoints](https://cloud.ibm.com/apidocs/schematics?code=python#api-endpoints){: external} according to the location that you want your {{site.data.keyword.bpshort}} workspace to reside, for example, `schematics_service.set_service_url('https://us.schematics.cloud.ibm.com')`.
+
 4. Inside the `schematics_service.apply_workspace_command` function, provide the following parameters:
-  * Provide the workspace ID that you generated in the [Creating a workspace](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-creating-workspace) task, for example, `us-south.workspace.Terraform-Schematics-Python-Workspace.b3bbc9f5`.
-  * Export your {{site.data.keyword.cloud_notm}} API key by using the following command:
+   * Provide the workspace ID that you generated in the [Creating a workspace](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-creating-workspace) task, for example, `us-south.workspace.Terraform-Schematics-Python-Workspace.b3bbc9f5`.
+   * Export your {{site.data.keyword.cloud_notm}} API key by using the following command:
   
-    ```
+    ```shell
     export IBMCLOUD_API_KEY =”<ibm-cloud-api-key>”
     ```
     {: pre} 
     
-  * Run the following curl command to create a refresh token:
+   * Run the following curl command to create a refresh token:
 
-    ```
+    ```curl
     curl -X POST "https://iam.cloud.ibm.com/identity/token" -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=urn:ibm:params:oauth:grant-type:apikey&apikey=$IBMCLOUD_API_KEY" -u bx:bx
     ```
     {: pre}

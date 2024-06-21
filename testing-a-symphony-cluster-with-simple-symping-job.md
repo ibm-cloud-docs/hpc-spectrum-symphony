@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-09"
+lastupdated: "2022-03-04"
 
 keywords: 
 
@@ -30,12 +30,12 @@ The cluster management console allows cluster and consumer administrators to tes
 
 Use this tool to test your cluster configuration. Running this tool is often the last step in installation to make sure you have configured your cluster properly.
 
-For settings, authorization, and configuration information, see [Symping: the IBM Spectrum Symphony testing tool](https://www.ibm.com/docs/en/spectrum-symphony/7.3.1?topic=workload-symping-spectrum-symphony-testing-tool){: external}.
+For settings, authorization, and configuration information, see [Symping: the IBM Spectrum Symphony testing tool](https://www.ibm.com/docs/en/spectrum-symphony/7.3.2?topic=workload-symping-spectrum-symphony-testing-tool){: external}.
 
-## Testing the cluster with Symping:
+## Testing the cluster with Symping
 {: #symping-testing}
 
 The cluster management console allows cluster and consumer administrators to test that the cluster configuration is correct by running test work. It also provides information on the cluster's workload performance.
 
-For accessing the cluster management console to implement testing procedure, see [Accessing the cluster management console](https://www.ibm.com/docs/en/spectrum-symphony/7.3.1?topic=cluster-accessing-management-console#accessing_PMC).
+For accessing the cluster management console to implement testing procedure, see [Accessing the cluster management console](https://www.ibm.com/docs/en/spectrum-symphony/7.3.1?topic=cluster-accessing-management-console#accessing_PMC){: external}.
 

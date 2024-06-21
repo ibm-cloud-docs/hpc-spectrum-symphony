@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-05-30"
+lastupdated: "2023-05-17"
 
 keywords: 
 
@@ -29,13 +29,13 @@ subcollection: hpc-spectrum-symphony
 
 The Terraform-based templates can be found in this public [GitHub repository](https://github.com/IBM-Cloud/hpc-cluster-symphony){: external}.
 
-## What Spectrum Symphony and Storage Scale versions are used in cluster nodes deployed with this offering?
+## What Spectrum Symphony and Spectrum Scale versions are used in cluster nodes deployed with this offering?
 {: #my-faq-packages}
 {: faq}
 
 Cluster nodes that are deployed with this offering include {{site.data.keyword.symphony_full_notm}} 7.3.2 Advanced Edition. See the following for a summary of the features associated with each edition: [{{site.data.keyword.symphony_full_notm}} editions](https://www.ibm.com/docs/en/spectrum-symphony/7.3.1?topic=foundations-spectrum-symphony-editions){: external}.
 
-If the cluster uses {{site.data.keyword.scale_short}} storage, the storage nodes include {{site.data.keyword.scale_full_notm}} 5.1.7.0 software. For more information, see the [{{site.data.keyword.scale_full_notm}}](https://www.ibm.com/docs/en/spectrum-scale/5.1.3){: external} product documentation.
+If the cluster uses {{site.data.keyword.scale_short}} storage, the storage nodes include {{site.data.keyword.scale_full_notm}} 5.1.9.3 software. For more information, see the [{{site.data.keyword.scale_full_notm}}](https://www.ibm.com/docs/en/spectrum-scale/5.1.3){: external} product documentation.
 
 ## What locations are available for deploying VPC resources?
 {: #locations-vpc-resources}
@@ -126,7 +126,7 @@ This is expected behavior. Even after the {{site.data.keyword.bpshort}} web cons
 
 In some regions, dedicated hosts have a limitation on the number of virtual server instances that can be placed on them at one time. You can try to provision the cluster with a smaller number of virtual server instances to overcome this.
 
-## Why does Storage Scale not allow use of the default value of 0.0.0.0/0 for security group creation?
+## Why does Spectrum Scale not allow use of the default value of 0.0.0.0/0 for security group creation?
 {: #security-group-default-value}
 {: faq}
 
@@ -148,7 +148,7 @@ In the {{site.data.keyword.symphony_short}} offering, you can use {{site.data.ke
 {: #supported-operating-system-worker-nodes}
 {: faq}
 
-The solution supports custom images based on RHEL 8.6 for virtual server instance worker nodes, and it supports the use of the stock RHEL 8.6 VPC images for bare metal worker nodes. At this time, custom images are not supported for use with VPC bare metal servers.
+The solution supports custom images based on RHEL 8.8 for virtual server instance worker nodes, and it supports the use of the stock RHEL 8.8 VPC images for bare metal worker nodes. At this time, custom images are not supported for use with VPC bare metal servers.
 
 ## Can I use a custom resolver that is already associated with a VPC?
 {: #custom-resolver}
