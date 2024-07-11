@@ -54,7 +54,7 @@ worker_node_instance_type = cx2-48x96
 dedicated_host_enabled    = true
 dedicated_host_placement  = spread``
 
-With theses variables, ten cx2-48x96 instances are provisioned as static compute nodes on four dedicated hosts with cx2-host-152x304. The dedicated host profile is automatically selected. You can see provisioned dedicated hosts with ibmcloud CLI or Web Console UI for IBM Cloud.
+With theses variables, ten cx2-48x96 instances are provisioned as static compute nodes on four dedicated hosts with cx2-host-152x304. The dedicated host profile is automatically selected. You can see provisioned dedicated hosts with ibmcloud CLI or Web Console UI for {{site.data.keyword.cloud_notm}}.
 
 ## Dedicated host for VPC
 {: #how-to-configure}
