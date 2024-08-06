@@ -34,10 +34,10 @@ subcollection: hpc-spectrum-symphony
 {: toc-completion-time="1h"}
 {: toc-services="symphony, vpc"}
 
-The Spectrum multicluster feature in IBM Spectrum Symphony Advanced Edition is used to connect multiple IBM Spectrum Symphony clusters into a federation cluster. Using this feature, you can:
-*   Use workload placement to redirect IBM Spectrum Symphony sessions to nonbusy clusters. Redirecting sessions balances workloads so that tasks within one session can be dispatched to multiple clusters based on resource availability on each federation member cluster. 
+The Spectrum multicluster feature in {{site.data.keyword.symphony_full_notm}} Advanced Edition is used to connect multiple {{site.data.keyword.symphony_full_notm}} clusters into a federation cluster. Using this feature, you can:
+*   Use workload placement to redirect {{site.data.keyword.symphony_full_notm}} sessions to nonbusy clusters. Redirecting sessions balances workloads so that tasks within one session can be dispatched to multiple clusters based on resource availability on each federation member cluster. 
 *   Deploy and manage service packages from the multicluster management console across member clusters. 
-*   Monitor workload and resources, as this feature collects data from IBM Spectrum Symphony clusters and sends it to the IBM Spectrum Symphony multicluster primary cluster for aggregation and display.
+*   Monitor workload and resources, as this feature collects data from {{site.data.keyword.symphony_full_notm}} clusters and sends it to the {{site.data.keyword.symphony_full_notm}} multicluster primary cluster for aggregation and display.
 {: shortdesc}
 
 SMC supports multiple Operating Systems, but the solution here uses RHEL8.6.

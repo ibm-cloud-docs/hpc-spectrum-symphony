@@ -29,9 +29,9 @@ subcollection: spectrum-symphony
 ## Introduction
 {: #scale-ad-auth-intro}
 
-You can configure IBM Spectrum Symphony to use Active Directory (AD) server as the primary directory service for user authentication. The document outlines step-by-step procedures for installing and configuring Active Directory and DNS Server on Windows Server 2019 using PowerShell. Additionally, it covers the process of connecting RHEL 8.4 OS-based Symphony Cluster node directly to AD by using Samba Winbind, to ensure encryption compatibility, and joining it to an Active Directory domain.
+You can configure {{site.data.keyword.symphony_full_notm}} to use Active Directory (AD) server as the primary directory service for user authentication. The document outlines step-by-step procedures for installing and configuring Active Directory and DNS Server on Windows Server 2019 using PowerShell. Additionally, it covers the process of connecting RHEL 8.4 OS-based Symphony Cluster node directly to AD by using Samba Winbind, to ensure encryption compatibility, and joining it to an Active Directory domain.
 
-The purpose of this documentation is to enable system administrators to seamlessly configure IBM Spectrum Symphony with Active Directory for user authentication, allowing for efficient user management and access control.
+The purpose of this documentation is to enable system administrators to seamlessly configure {{site.data.keyword.symphony_full_notm}} with Active Directory for user authentication, allowing for efficient user management and access control.
 
 ## General prerequisites
 {: #gen-prerequisites}
@@ -453,7 +453,7 @@ To provide root user permissions to AD users of "POCDOMAIN.LOCAL" domain on a Li
 
 ## Step 4 - Configuring setup on the Symphony cluster side
 
-Following are the steps to configure Kerberos Authentication on Linux Hosts for IBM Spectrum Symphony Integration with Active Directory:
+Following are the steps to configure Kerberos Authentication on Linux Hosts for {{site.data.keyword.symphony_full_notm}} Integration with Active Directory:
 
 1. Shutdown the Cluster
 
@@ -512,7 +512,7 @@ Following are the steps to configure Kerberos Authentication on Linux Hosts for 
     
     KERBEROS_ADMIN=egoadmin
     The KERBEROS_ADMIN parameter specifies the Kerberos principal that maps to the user name of the built-in cluster administrator (Admin). 
-    In this configuration, it is set to "hpcegoadmin." This principal is significant for administrative tasks within the IBM Spectrum Symphony cluster and is used for authenticating as the cluster administrator.
+    In this configuration, it is set to "hpcegoadmin." This principal is significant for administrative tasks within the {{site.data.keyword.symphony_full_notm}} cluster and is used for authenticating as the cluster administrator.
     {: note}
 
 3. Apply Configuration to Compute and Client Hosts.
@@ -539,7 +539,7 @@ Following are the steps to configure Kerberos Authentication on Linux Hosts for 
 
 6. Add AD Users (If Required)
 
-    If the ENABLE_AD_USERS_MANAGE parameter in the `$EGO_CONFDIR/sec_ego_gsskrb.conf` file on Linux management hosts was set to 'N,' use the egosh user add command to add AD users to IBM Spectrum Symphony. Provide any random string as the password; it will not be used for user logon.
+    If the ENABLE_AD_USERS_MANAGE parameter in the `$EGO_CONFDIR/sec_ego_gsskrb.conf` file on Linux management hosts was set to 'N,' use the egosh user add command to add AD users to {{site.data.keyword.symphony_full_notm}}. Provide any random string as the password; it will not be used for user logon.
 
     ```
     #Example egosh user add –u ad1tester –x 111 
@@ -564,4 +564,4 @@ Following are the steps to configure Kerberos Authentication on Linux Hosts for 
     ```
 
 ## Conclusion
-This guide serves as a vital resource for system administrators looking to seamlessly integrate IBM Spectrum Symphony with Active Directory within the IBM Cloud environment. Addressing prerequisites and delivering step-by-step instructions, it ensures readiness for both Active Directory and RHEL systems deployed on IBM Virtual Servers. From installing Active Directory on Windows Server 2019 to configuring Kerberos authentication, the guide provides administrators with a reliable reference to achieve efficient user management and access control for IBM Spectrum Symphony within the IBM Cloud infrastructure.
+This guide serves as a vital resource for system administrators looking to seamlessly integrate {{site.data.keyword.symphony_full_notm}} with Active Directory within the {{site.data.keyword.cloud_notm}} environment. Addressing prerequisites and delivering step-by-step instructions, it ensures readiness for both Active Directory and RHEL systems deployed on IBM Virtual Servers. From installing Active Directory on Windows Server 2019 to configuring Kerberos authentication, the guide provides administrators with a reliable reference to achieve efficient user management and access control for {{site.data.keyword.symphony_full_notm}} within the {{site.data.keyword.cloud_notm}} infrastructure.
