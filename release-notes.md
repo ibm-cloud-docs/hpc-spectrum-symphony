@@ -33,12 +33,6 @@ In this document you learn about the latest release updates to {{site.data.keywo
 Support for Symphony 7.3.2 fix patches.
 :   The {{site.data.keyword.symphony_full_notm}} version 7.3.2 offering is available for 64-bit Linux x86 and Windows platforms. The patches installed are: Build602125, Build602100, Build602094, Build602071, Build602061, Build602068, Build602039.
 
-Spectrum Scale version is 5.1.9.3.
-:   The Storage Scale product version is 5.1.9.3.
-
-Updated Spectrum Symphony and Storage Scale custom images.
-:   Spectrum Symphony and Storage Scale custom images are RHEL 8.8.
-
 Updated Spectrum Symphony Windows worker image.
 :   Spectrum Symphony Windows worker image is updated to Symphony version 7.3.2 and also has Build602052 fix patch.
 
