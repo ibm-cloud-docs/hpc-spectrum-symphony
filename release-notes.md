@@ -34,7 +34,7 @@ Support for Symphony 7.3.2 fix patches.
 :   The {{site.data.keyword.symphony_full_notm}} version 7.3.2 offering is available for 64-bit Linux x86 and Windows platforms. The patches installed are: Build602125, Build602100, Build602094, Build602071, Build602061, Build602068, Build602039.
 
 Updated Spectrum Symphony Windows worker image.
-:   Spectrum Symphony Windows worker image is updated to Symphony version 7.3.2 and also has Build602052 fix patch.
+:   Spectrum Symphony Windows worker image is updated with Build602052 fix patch.
 
 ## June 2024
 {: #hpc-spectrum-symphony-june24}
