@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2024-09-04"
+lastupdated: "2024-09-05"
 
 keywords: IBM Spectrum Symphony release notes
 
@@ -26,8 +26,8 @@ In this document you learn about the latest release updates to {{site.data.keywo
 ## September 2024
 {: #hpc-spectrum-symphony-sep24}
 
-### 6 September 2024
-{: #hpc-spectrum-symphony-sep0624}
+### 5 September 2024
+{: #hpc-spectrum-symphony-sep0524}
 {: release-note}
 
 Support for Symphony 7.3.2 fix patches.
