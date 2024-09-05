@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-09-04"
+lastupdated: "2024-09-05"
 
 keywords: 
 
@@ -34,7 +34,7 @@ The following deployment values can be used to configure the {{site.data.keyword
 | `dedicated_host_placement` | Specify 'pack' or 'spread'. The 'pack' option deploys virtual server instances on one dedicated host until full before moving on to the next dedicated host. The 'spread' option deploys virtual server instances in round-robin fashion across all the dedicated hosts. The second option should result in a mostly even distribution of instances on the hosts, while the first option might result in one dedicated host being mostly empty. | No | spread |
 | `hyperthreading_enabled` | Setting this to true will enable hyper-threading in the worker nodes of the cluster (default). Otherwise, hyper-threading is disabled. | No | true |
 | `ibm_customer_number` | Comma-separated list of the IBM Customer Number(s) (ICN) that is used for the Bring Your Own License (BYOL) entitlement check. For more information on how to find your ICN, see [What is my IBM Customer Number (ICN)?](https://www.ibm.com/support/pages/what-my-ibm-customer-number-icn){: external}. | Yes | None |
-| `image_name` | Name of the custom image that you want to use to create virtual server instances in your {{site.data.keyword.Bluemix_notm}} account to deploy the {{site.data.keyword.symphony_full_notm}} cluster. By default, the automation uses a base image with additional software packages mentioned [here](/docs/hpc-spectrum-symphony#create-custom-image). If you would like to include your application-specific binary files, follow the instructions in [Planning for custom images](/docs/vpc?topic=vpc-planning-custom-images) to create your own custom image and use that to build the {{site.data.keyword.symphony_full_notm}} cluster through this offering. | No | `hpcc-symp732-scale5201-rhel88-v1` |
+| `image_name` | Name of the custom image that you want to use to create virtual server instances in your {{site.data.keyword.Bluemix_notm}} account to deploy the {{site.data.keyword.symphony_full_notm}} cluster. By default, the automation uses a base image with additional software packages mentioned [here](/docs/hpc-spectrum-symphony#create-custom-image). If you would like to include your application-specific binary files, follow the instructions in [Planning for custom images](/docs/vpc?topic=vpc-planning-custom-images) to create your own custom image and use that to build the {{site.data.keyword.symphony_full_notm}} cluster through this offering. | No | `hpcc-symp732-scale5201-rhel88-v2` |
 | `login_node_instance_type` | Specifies the virtual server instance profile type to be used to create the login node for the {{site.data.keyword.symphony_full_notm}} cluster. For choices on profile types, see [Instance profiles](/docs/vpc?topic=vpc-profiles). | No | bx2-2x8 |
 | `management_node_count` | Number of management nodes. This is the total number of primary, secondary, and management nodes. There is one primary, one secondary, and the rest of the nodes are management nodes. Enter a value in the range 1 - 10.| No | 3 |
 | `management_node_instance_type` | Specify the virtual server instance profile type to be used to create the management nodes for the {{site.data.keyword.symphony_full_notm}} cluster. For choices on profile types, see [Instance profiles](/docs/vpc?topic=vpc-profiles). | No | bx2-4x16 |
