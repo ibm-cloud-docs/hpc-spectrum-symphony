@@ -29,7 +29,7 @@ subcollection: spectrum-symphony
 ## Introduction
 {: #scale-ad-auth-intro}
 
-You can configure {{site.data.keyword.symphony_full_notm}} to use Active Directory (AD) server as the primary directory service for user authentication. The document outlines step-by-step procedures for installing and configuring Active Directory and DNS Server on Windows Server 2019 using PowerShell. Additionally, it covers the process of connecting RHEL 8.4 OS-based Symphony Cluster node directly to AD by using Samba Winbind, to ensure encryption compatibility, and joining it to an Active Directory domain.
+You can configure {{site.data.keyword.symphony_full_notm}} to use Active Directory (AD) server as the primary directory service for user authentication. The document outlines step-by-step procedures for installing and configuring Active Directory and DNS Server on Windows Server 2019 using PowerShell. Also, it covers the process of connecting RHEL 8.4 OS-based Symphony Cluster node directly to AD by using Samba Winbind to ensure encryption compatibility, and joining it to an Active Directory domain.
 
 The purpose of this documentation is to enable system administrators to seamlessly configure {{site.data.keyword.symphony_full_notm}} with Active Directory for user authentication, allowing for efficient user management and access control.
 
@@ -39,11 +39,11 @@ The purpose of this documentation is to enable system administrators to seamless
 Before you proceed with the configuration process, ensure that the prerequisites are met:
 
 1.	For Installing and Configuring Active Directory and DNS Server:
-	*  A Windows Server 2019 machine with administrative privileges.
+	*  A Windows Server 2019 system with administrative privileges.
 	*  Basic familiarity with PowerShell commands and Windows Server management.
 2.	For Connecting RHEL Systems Directly to AD using Samba Winbind:
 	*  An RHEL system capable of running Samba Winbind.
-	*  Familiarity with RHEL command line interface and system configuration.
+	*  Familiarity with RHEL command-line interface and system configuration.
 	*  Access to the Active Directory domain and appropriate permissions to join the domain.
 
 ## Network prerequisites
@@ -51,38 +51,37 @@ Before you proceed with the configuration process, ensure that the prerequisites
 
 Before you proceed with the configuration of IBM Storage Scale to use Active Directory and connecting RHEL systems to AD, ensure that the following network prerequisites are met:
 
-1.	**Network connectivity:** You need stable and reliable network connectivity between the Windows Server 2019 machine (where Active Directory and DNS are installed) and the RHEL systems that are joined to the domain. Verify that no network communication issues or firewalls are set up that block essential ports.
+1.	Network connectivity: You need stable and reliable network connectivity between the Windows Server 2019 system (where Active Directory and DNS are installed) and the RHEL systems that are joined to the domain. Verify that no network communication issues or firewalls are set up that block essential ports.
 
-2.	**Firewall rules:**  Review and update firewall rules to allow the necessary communication between the Windows Server 2019 machine, RHEL systems, and the domain controllers. Key ports that are used for AD communication include TCP/UDP 53 (DNS), TCP/UDP 88 (Kerberos), TCP 135 (RPC), TCP/UDP 389 (LDAP), TCP/UDP 445 (SMB), and TCP/UDP 636 (LDAPS).
+2.	Firewall rules: Review and update firewall rules to allow the necessary communication between the Windows Server 2019 system, RHEL systems, and the domain controllers. Key ports that are used for AD communication include TCP/UDP 53 (DNS), TCP/UDP 88 (Kerberos), TCP 135 (RPC), TCP/UDP 389 (LDAP), TCP/UDP 445 (SMB), and TCP/UDP 636 (LDAPS).
 
-3.	**Domain controller reachability:** Confirm that the RHEL systems can reach the Active Directory domain controllers without any connectivity issues. Use tools like "ping" or "nslookup" to verify the ability to resolve the domain controller's hostname and IP address from the RHEL systems.
+3.	Domain controller reachability: Confirm that the RHEL systems can reach the Active Directory domain controllers without any connectivity issues. Use tools like "ping" or "nslookup" to verify the ability to resolve the domain controller's hostname and IP address from the RHEL systems.
 
-4.	**Time synchronization:** Ensure that all systems that are participating in the Active Directory domain, including the Windows Server 2019 machine and RHEL systems, have their clocks synchronized with a reliable time source. Time synchronization is critical for proper authentication and Kerberos ticket validation.
+4.	Time synchronization: Ensure that all systems that are participating in the Active Directory domain, including the Windows Server 2019 system and RHEL systems, have their clocks that are synchronized with a reliable time source. Time synchronization is critical for proper authentication and Kerberos ticket validation.
 
-5.	**Domain DNS configuration:** The Active Directory domain must have properly configured DNS settings. The domain controller's IP address must be set as the primary DNS server on all systems (including the Windows Server 2019 machine and RHEL systems) that are part of the AD domain.
+5.	Domain DNS configuration: The Active Directory domain must be properly configured DNS settings. The domain controller's IP address must be set as the primary DNS server on all systems (including the Windows Server 2019 system and RHEL systems) that are part of the AD domain.
 
-6.	**DNS resolution:** Verify that both forward and reverse DNS resolutions are functioning correctly. The domain controller's hostname must be resolvable from the Windows Server 2019 machine and RHEL systems, and the Windows Server 2019 machine's hostname must be resolvable from the RHEL systems.
+6.	DNS resolution: Verify that both forward and reverse DNS resolutions are functioning correctly. The domain controller's hostname must be resolvable from the Windows Server 2019 system and RHEL systems, and the Windows Server 2019 system hostname must be resolvable from the RHEL systems.
 
-7.	**DNS domain name** Ensure that the DNS domain name of the Active Directory matches the domain name that is used during the configuration process. In this case, the domain name "POCDOMAIN.LOCAL" used for the Active Directory must be consistent throughout the configuration.
+7.	DNS domain name: Ensure that the DNS domain name of the Active Directory matches the domain name that is used during the configuration process. In this case, the domain name "POCDOMAIN.LOCAL" used for the Active Directory must be consistent throughout the configuration.
 
-8.	**Active Directory user account with administrative privileges:**  Ensure that an Active Directory user account with administrative privileges is available to be used during the configuration process. This account is used to promote the Windows Server 2019 machine as a domain controller and to join the RHEL systems to the AD domain.
-
+8.	Active Directory user account with administrative privileges: Ensure that an Active Directory user account with administrative privileges is available to be used during the configuration process. This account is used to promote the Windows Server 2019 system as a domain controller and to join the RHEL systems to the AD domain.
 
 ### Windows Server and Powershell
-{: #windows-server-powershell-prereq}   
+{: #windows-server-powershell-prereq}
 
 For this procedure you need:
-* A Windows Server 2019 machine with administrative privileges.
+* A Windows Server 2019 system with administrative privileges.
 * Basic familiarity with PowerShell commands and Windows Server management.
 
 ## Step 1 -  Installing and Configuring Active Directory and DNS Server on Windows Server 2019 using PowerShell
 {: #step-1-inst-conf-ad-dns}
 
-1.  Open PowerShell with Administrative Privileges:
+1. Open PowerShell with Administrative Privileges:
 
-    a.  Press the "Windows + X" keys on your keyboard to access the Power User menu.
+    a. Press the "Windows + X" keys on your keyboard to access the Power User menu.
 
-    b.  From the list, choose "Windows PowerShell (Admin)" to start an elevated PowerShell session with administrative privileges.
+    b. From the list, choose "Windows PowerShell (Admin)" to start an elevated PowerShell session with administrative privileges.
 
 2. Install the Active Directory Domain Services Role and DNS Server Role by running these PowerShell commands:
 
@@ -112,7 +111,7 @@ For this procedure you need:
 
    The server automatically restarts to complete the domain controller promotion process.
 
-4.  After the server restarts, log in using the domain administrator account that you created during the promotion process to verify Active Directory and DNS Configuration.
+4. After the server restarts, log in using the domain administrator account that you created during the promotion process to verify Active Directory and DNS Configuration.
 
 ### Verify Active Directory and DNS Configuration
 {: #verfy-dns-ad-config}
@@ -124,63 +123,63 @@ Verify that Active Directory and DNS are configured correctly by checking:
    Open "Server Manager", and in the "Dashboard", confirm "Active Directory Users and Computers" and "DNS" are listed under "Tools", indicating successful installation of the Active Directory and DNS management tools.
    
 2. Start **Active Directory Users and Computers** to manage user accounts, groups, and organizational units (OUs) within the domain.
-3. Access **DNS Manage**r to manage DNS zones and records for the domain.
-4. On a client machine within the same network, configure the DNS settings to point to the IP address of the newly promoted domain controller.
-5.  Attempt to join the client machine to the "POCDOMAIN.LOCAL" domain. A successful connection confirms proper DNS resolution and functional Active Directory domain services.
+3. Access DNS Manager to manage DNS zones and records for the domain.
+4. On a client system within the same network, configure the DNS settings to point to the IP address of the newly promoted domain controller.
+5.  Attempt to join the client system to the "POCDOMAIN.LOCAL" domain. A successful connection confirms proper DNS resolution and functional Active Directory domain services.
 
 ## Step 2 - Creating a user group and users in Active Directory for users that access the Symphony cluster
 {: #create-user-group-ad-symphony}
 
 Create a user group named "Symphony-group" and a user named "Symphonyuser01" in the Active Directory domain "pocdomain.local" using the Active Directory Users and Computers (ADUC) management tool on a Windows Server:
 
-Creating user groups and users in the "pocdomain.local" Active Directory domain requires administrative privileges within that domain. Ensure that you have the necessary permissions to create groups and users. Additionally, always set strong passwords and follow security best practices when you create user accounts and groups in Active Directory to maintain a secure network environment.
+Creating user groups and users in the "pocdomain.local" Active Directory domain requires administrative privileges within that domain. Ensure that you have the necessary permissions to create groups and users. Also, always set strong passwords and follow security best practices when you create user accounts and groups in Active Directory to maintain a secure network environment.
 {: note}
 
-1.  Open Active Directory Users and Computers:
+1. Open Active Directory Users and Computers:
 
-    a.  Log in to the Windows Server with administrative privileges.
+    a. Log in to the Windows Server with administrative privileges.
 
-    b.  Click **Start** and search for "Active Directory Users and Computers."
+    b. Click **Start** and search for "Active Directory Users and Computers."
 
-    c.  Start the "Active Directory Users and Computers" management console.
+    c. Start the "Active Directory Users and Computers" management console.
 
-2.  Create a User Group ***Symphony-group***:
+2. Create a User Group ***Symphony-group***:
 
     a. In the ADUC console, navigate to the Organizational Unit (OU) within the "pocdomain.local" domain where you want to create the user group.
 
     b. Right-click on the OU and select **New** and then **Group**.
 
-    c. In the ***New Object - Group*** dialog box, enter **Symphony-group** as the Group name.
+    c. In the New Object - Group dialog box, enter **Symphony-group** as the Group name.
 
     d. Choose the Group scope (for example, Global) and Group type (for example, Security).
 
     e. Click **OK** to create the ***Symphony-group*** user group.
 
-3.  Create a User ***Symphonyuser01***:
+3. Create a User ***Symphonyuser01***:
 
     a. In the ADUC console, navigate to the same or a different Organizational Unit (OU) within the "pocdomain.local" domain where you want to create the user "Symphonyuser01."
 
-    b. Right-click on the OU and select **New** and then **User**.
+    b. Right-click on the OU and select New and then User.
 
-    c. In the ***New Object - User*** dialog box, enter the required information for the new user **symphonyuser01*:
+    c. In the New Object - User dialog box, enter the required information for the new user **symphonyuser01*:
 
-      *  Full name: Enter the user's full name (for example, LSF User 01).
+      * Full name: Enter the user's full name (for example, LSF User 01).
 
-      *  User logon name: Enter the user's logon name (for example, Symphonyser01).
+      * User logon name: Enter the user's logon name (for example, Symphonyser01).
 
-      *  User Principal Name (UPN): The UPN is automatically generated based on the user logon name and the domain name (for example, Symphonyuser01@pocdomain.local).
+      * User Principal Name (UPN): The UPN is automatically generated based on the user logon name and the domain name (for example, Symphonyuser01@pocdomain.local).
 
-      *  Password: Set a secure password for the user account and choose whether the user must change the password on the first logon.
+      * Password: Set a secure password for the user account and choose whether the user must change the password on the first logon.
 
-      *  User cannot change password: Check this option if you want to prevent the user from changing their password.
+      * User cannot change the password: Check this option if you want to prevent the user from changing their password.
 
-      *  Password never expires: Check this option if you want the user's password to never expire.
+      * Password never expires: Check this option if you want the user's password to never expire.
 
-      *  Account is disabled: By default, the account is enabled. If you want to create the user account in a disabled state, clear this option.
+      * Account is disabled: By default, the account is enabled. If you want to create the user account in a disabled state, clear this option.
 
-    d.  Click **Next** to continue through any additional wizard steps.
+    d. Click **Next** to continue through any additional wizard steps.
 
-    e.  Review the information entered, and click **Finish** to create the new user "Symphonyuser01."
+    e. Review the information entered, and click **Finish** to create the new user "Symphonyuser01."
 
 4.  Add "Symphonyuser01" to "Symphony-group" User Group:
 
@@ -201,7 +200,7 @@ Creating user groups and users in the "pocdomain.local" Active Directory domain 
 ## Step 3 - Integrating Symphony Cluster running on RHEL 8.4 based Systems Directly to AD using Samba Winbind
 {: #scale-integrate-symph-cluster-ad-samba}
 
-### Overview of Direct Integration using Samba Winbind
+### Overview of Direct Integration by using Samba Winbind
 {: #integrate-symph-samba-intro}
 
 To connect an RHEL system to Active Directory (AD), two components are needed: Samba Winbind and realmd. Samba Winbind interacts with the AD identity and authentication source, while realmd detects available domains and configures the underlying RHEL system services.
@@ -240,7 +239,7 @@ Samba Winbind is an alternative to the System Security Services Daemon (SSSD) fo
 
 Join a Symphony Cluster node that is hosted on RHEL 8.4 OS to an AD domain using Samba Winbind and `realmd`:
 
-1.  Install and update the following packages: 
+1. Install and update the following packages: 
 
     ```
     # yum install realmd oddjob-mkhomedir oddjob samba-winbind-clients \
@@ -249,7 +248,7 @@ Join a Symphony Cluster node that is hosted on RHEL 8.4 OS to an AD domain using
     #yum update
     ```
 
-2.  Updating the /etc/hosts with adding AD domain IP and name.  For example:
+2. Updating the /etc/hosts with adding AD domain IP and name.  For example:
 
     ```
     [root@amit-rhel84 ~]# cat /etc/hosts
@@ -261,7 +260,7 @@ Join a Symphony Cluster node that is hosted on RHEL 8.4 OS to an AD domain using
     addc1.POCDomain.local is the AD server FQDN name
     {: note}
 
-3.  Update the DNS entries in `/etc/resolv.conf` file using:  
+3. Update the DNS entries in `/etc/resolv.conf` file using:  
 
     ```
     sudo nmcli connection modify "System eth0" ipv4.dns "10.243.0.41" ipv4.ignore-auto-dns yes
@@ -269,7 +268,7 @@ Join a Symphony Cluster node that is hosted on RHEL 8.4 OS to an AD domain using
 
     This command not only updates the DNS entries in the `/etc/resolv.conf` file but also ensures that the DNS entries are not auto-updated to cloud-based DNS servers
 
-4.  Confirm the changes in the DNS file:
+4. Confirm the changes in the DNS file:
 
     ```
     [root@amit-rhel84 ~]# cat /etc/resolv.conf
@@ -304,13 +303,13 @@ Join a Symphony Cluster node that is hosted on RHEL 8.4 OS to an AD domain using
 
     `# update-crypto-policies --set DEFAULT:AD-SUPPORT`
 
-    After you run this command, it updates the crypto policies and asks to reboot the machine.
+    After you run this command, it updates the crypto policies and asks to reboot the system.
 
 7.  Back up the existing /etc/samba/smb.conf Samba configuration file: 
 
     `# mv /etc/samba/smb.conf /etc/samba/smb.conf.bak`
 
-8.  Join the RHEL 8.x host to the Active Directory domain. As mentioned in the example, to join a domain named POCDOMAIN.LOCAL: 
+8.  Join the RHEL 8.x host to the Active Directory domain. As mentioned in the example to join a domain named POCDOMAIN.LOCAL: 
 
     `# realm join --membership-software=samba --client-software=winbind POCDOMAIN.LOCAL`
 
@@ -425,14 +424,14 @@ If you installed the samba package to share directories and printers, enable and
 	AD-CLIENT
 	POCDOMAIN 
     ```
-**Additional resources** - If you do not want to use the deprecated RC4 ciphers, you can enable the AES encryption type in AD. 
+Additional resources - If you do not want to use the deprecated RC4 ciphers, you can enable the AES encryption type in AD. 
 
 ### To provide root user permissions to Active Directory (AD) users
 {: #provide-root-permission}
 
-To provide root user permissions to AD users of "POCDOMAIN.LOCAL" domain on a Linux machine:
-1.  Open a terminal or connect to the Linux machine.
-2.  Edit the sudoers file using the visudo command:
+To provide root user permissions to AD users of "POCDOMAIN.LOCAL" domain on a Linux system:
+1.  Open a terminal or connect to the Linux system.
+2.  Edit the sudoers file by using the visudo command:
     `sudo visudo`
 3.  Locate the section in the sudoers file that configures user privileges:
 
@@ -457,14 +456,14 @@ Following are the steps to configure Kerberos Authentication on Linux Hosts for 
 
 1. Shutdown the Cluster
 
-    Log in to any management host in the cluster using the cluster administrator credentials.
+    Log in to any management host in the cluster by using the cluster administrator credentials.
 
     ```
     #Example 
     egosh user logon –u Admin –x Admin 
     ```
 
-    Execute the following commands to gracefully shut down the cluster:
+    Run the following commands to gracefully shut down the cluster:
 
     ```
     #Example 
@@ -507,7 +506,7 @@ Following are the steps to configure Kerberos Authentication on Linux Hosts for 
     ```
 
     KRB5_KTNAME=/etc/krb5.keytab
-    The KRB5_KTNAME parameter designates the absolute path to the keytab file. This file contains keys for the service principal used in Kerberos authentication. Here, the path is set to "/etc/krb5.keytab," ensuring that the necessary keys are retrieved for authentication.
+    The KRB5_KTNAME parameter designates the absolute path to the keytab file. This file contains keys for the service principal that is used in Kerberos authentication. Here, the path is set to "/etc/krb5.keytab," ensuring that the necessary keys are retrieved for authentication.
     {: note}
     
     KERBEROS_ADMIN=egoadmin
@@ -521,7 +520,7 @@ Following are the steps to configure Kerberos Authentication on Linux Hosts for 
 
 4. Start the Cluster and Enable Applications.
 
-    Once configurations are applied across hosts, start the cluster and enable applications using the following commands:
+    Once configurations are applied across hosts, start the cluster and enable applications by using the following commands:
 
     ```
     #Example 
@@ -530,7 +529,7 @@ Following are the steps to configure Kerberos Authentication on Linux Hosts for 
     ```
 5. Log on to Cluster Management Host.
 
-    From a management host in the POCDomain.local realm, log in as the Admin user using the egosh command line. Enter the password of the Kerberos principal defined in the KERBEROS_ADMIN parameter.
+    From a management host in the POCDomain.local realm, log in as the Admin user by using the egosh command-line. Enter the password of the Kerberos principal defined in the KERBEROS_ADMIN parameter.
 
     ```
     #Example 
@@ -547,7 +546,7 @@ Following are the steps to configure Kerberos Authentication on Linux Hosts for 
 
 7. Assign Roles to Users
 
-    Assign roles to the user accounts using the egosh user assignrole command. For example, to assign the consumer admin role to ad1tester and ad2tester:
+    Assign roles to the user accounts by using the egosh user assignrole command. For example, to assign the consumer admin role to ad1tester and ad2tester:
 
     ```
     #Example 
@@ -556,7 +555,7 @@ Following are the steps to configure Kerberos Authentication on Linux Hosts for 
 
 8. Login as an AD user
 
-    Log in as an AD user using the egosh command line. For example, to log in as ad1tester:
+    Log in as an AD user by using the egosh command line. For example, to log in as ad1tester:
 
     ```
     #Example 
@@ -564,4 +563,4 @@ Following are the steps to configure Kerberos Authentication on Linux Hosts for 
     ```
 
 ## Conclusion
-This guide serves as a vital resource for system administrators looking to seamlessly integrate {{site.data.keyword.symphony_full_notm}} with Active Directory within the {{site.data.keyword.cloud_notm}} environment. Addressing prerequisites and delivering step-by-step instructions, it ensures readiness for both Active Directory and RHEL systems deployed on IBM Virtual Servers. From installing Active Directory on Windows Server 2019 to configuring Kerberos authentication, the guide provides administrators with a reliable reference to achieve efficient user management and access control for {{site.data.keyword.symphony_full_notm}} within the {{site.data.keyword.cloud_notm}} infrastructure.
+This guide serves as a vital resource for system administrators looking to seamlessly integrate {{site.data.keyword.symphony_full_notm}} with Active Directory within the {{site.data.keyword.cloud_notm}} environment. Addressing prerequisites and delivering step-by-step instructions, it ensures readiness for both Active Directory and RHEL systems that are deployed on IBM Virtual Servers. From installing Active Directory on Windows Server 2019 to configuring Kerberos authentication, the guide provides administrators with a reliable reference to achieve efficient user management and access control for {{site.data.keyword.symphony_full_notm}} within the {{site.data.keyword.cloud_notm}} infrastructure.

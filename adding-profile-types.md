@@ -24,7 +24,7 @@ subcollection: hpc-spectrum-symphony
 
 Complete the following steps to add compute profile types when worker nodes are automatically added by the resource connector.
 
-1. Update the file `ibmcloudgen2_templates.json` in `$Symphony_ENDIR/resource_connector/ibmcloudgen2/conf`. A typical HPC cluster that is installed on {{site.data.keyword.cloud_notm}} would have this file in `/opt/ibm/symphony/conf/resource_connector/ibmcloudgen2/conf`. See the following sample content for an example:
+1. Update the file `ibmcloudgen2_templates.json` in `$Symphony_ENDIR/resource_connector/ibmcloudgen2/conf`. A typical HPC cluster that is installed on {{site.data.keyword.cloud_notm}} must have this file in `/opt/ibm/symphony/conf/resource_connector/ibmcloudgen2/conf`. See the following sample content for an example:
 
     ```json
     {
@@ -53,7 +53,7 @@ Complete the following steps to add compute profile types when worker nodes are 
     ```
     {: screen}
 
-2. Add a new template section to the templates list. Review the values for all of the properties to make sure that they map to the correct VPC configuration.
+2. Add a new template section to the templates list. Review the values for all the properties to make sure that they map to the correct VPC configuration.
 3. Run the following command to restart the `mbatchd` process and apply the changes:
 
     ```lsf
@@ -61,7 +61,7 @@ Complete the following steps to add compute profile types when worker nodes are 
     ```
     {: pre}
 
-4. When the template is added, you can use the `symphony.shared` file to map the new template to a specific job. The `symphony.shared` file is located in `$Symphony_ENVDIR` (same location as `symphony.conf`). In a typical installation, this would be found in the `/opt/ibm/symphony/conf` folder. Add _templateId_ as a resource in the resource section in the `symphony.shared` file. For example, **templateID String () () (template ID for the external hosts)**.
+4. When the template is added, you can use the `symphony.shared` file to map the new template to a specific job. The `symphony.shared` file is located in `$Symphony_ENVDIR` (same location as `symphony.conf`). In a typical installation, this is found in the `/opt/ibm/symphony/conf` folder. Add _templateId_ as a resource in the resource section in the `symphony.shared` file. For example, **templateID String () () (template ID for the external hosts)**.
 5. Add the following section to `user_data.sh` to let the virtual machines add _templateId_ as `SYMPHONY_LOCAL_RESOURCES`.
 
     ```shell
@@ -89,4 +89,3 @@ Complete the following steps to add compute profile types when worker nodes are 
     bsub -R “templateId=Template-2” sleep 1000
     ```
     {: pre}
-

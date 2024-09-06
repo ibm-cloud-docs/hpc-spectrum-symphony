@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2022, 2023, 2024
+  years: 2022, 2024
 
-lastupdated: "2024-06-21"
+lastupdated: "2024-09-06"
 
 keywords: IBM Spectrum Symphony release notes
 
@@ -22,6 +22,23 @@ content-type: release-note
 
 In this document you learn about the latest release updates to {{site.data.keyword.symphony_full}} that are grouped by date.
 {: shortdesc}
+
+## September 2024
+{: #hpc-spectrum-symphony-sep24}
+
+### 6 September 2024
+{: #hpc-spectrum-symphony-sep0624}
+{: release-note}
+
+Support for Symphony 7.3.2 fix patches.
+:   The {{site.data.keyword.symphony_full_notm}} version 7.3.2 offering is available for 64-bit Linux x86 and Windows platforms. The patches installed are: Build602125, Build602100, Build602094, Build602071, Build602061, Build602068, Build602039.
+
+Updated the Spectrum Scale version from 5.1.9.3 to 5.2.0.1.
+
+:  The Storage Scale product version was updated from 5.1.9.3 to 5.2.0.1.
+
+Updated Spectrum Symphony Windows worker image.
+:   Spectrum Symphony Windows worker image is updated with Build602052 fix patch.
 
 ## June 2024
 {: #hpc-spectrum-symphony-june24}
@@ -216,5 +233,3 @@ Dedicated hosts and additional improvements
 
 Introducing {{site.data.keyword.symphony_full_notm}} for HPC workloads
 :   You can now use {{site.data.keyword.symphony_full_notm}} as a workload manager with automated deployment of HPC clusters. The clusters are configured for auto scaling and use the cluster compute node configuration that you select.
-
-
