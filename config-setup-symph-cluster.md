@@ -139,7 +139,7 @@ Creating user groups and users in the "pocdomain.local" Active Directory domain 
 
     a. Log in to the Windows Server with administrative privileges.
 
-    b. Click **Start** and search for "Active Directory Users and Computers."
+    b. Click Start and search for "Active Directory Users and Computers."
 
     c. Start the "Active Directory Users and Computers" management console.
 
@@ -147,13 +147,13 @@ Creating user groups and users in the "pocdomain.local" Active Directory domain 
 
     a. In the ADUC console, navigate to the Organizational Unit (OU) within the "pocdomain.local" domain where you want to create the user group.
 
-    b. Right-click on the OU and select **New** and then **Group**.
+    b. Right-click on the OU and select New and then Group.
 
-    c. In the New Object - Group dialog box, enter **Symphony-group** as the Group name.
+    c. In the New Object - Group dialog box, enter Symphony-group as the Group name.
 
     d. Choose the Group scope (for example, Global) and Group type (for example, Security).
 
-    e. Click **OK** to create the ***Symphony-group*** user group.
+    e. Click OK to create the ***Symphony-group*** user group.
 
 3. Create a User ***Symphonyuser01***:
 
@@ -260,7 +260,7 @@ Join a Symphony Cluster node that is hosted on RHEL 8.4 OS to an AD domain using
     addc1.POCDomain.local is the AD server FQDN name
     {: note}
 
-3. Update the DNS entries in `/etc/resolv.conf` file using:  
+3. Update the DNS entries in `/etc/resolv.conf` file by using:
 
     ```
     sudo nmcli connection modify "System eth0" ipv4.dns "10.243.0.41" ipv4.ignore-auto-dns yes
