@@ -122,7 +122,7 @@ Verify that Active Directory and DNS are configured correctly by checking:
 
    Open "Server Manager", and in the "Dashboard", confirm "Active Directory Users and Computers" and "DNS" are listed under "Tools", indicating successful installation of the Active Directory and DNS management tools.
    
-2. Start **Active Directory Users and Computers** to manage user accounts, groups, and organizational units (OUs) within the domain.
+2. Start Active Directory Users and Computers to manage user accounts, groups, and organizational units (OUs) within the domain.
 3. Access DNS Manager to manage DNS zones and records for the domain.
 4. On a client system within the same network, configure the DNS settings to point to the IP address of the newly promoted domain controller.
 5.  Attempt to join the client system to the "POCDOMAIN.LOCAL" domain. A successful connection confirms proper DNS resolution and functional Active Directory domain services.
@@ -177,24 +177,24 @@ Creating user groups and users in the "pocdomain.local" Active Directory domain 
 
       * Account is disabled: By default, the account is enabled. If you want to create the user account in a disabled state, clear this option.
 
-    d. Click **Next** to continue through any additional wizard steps.
+    d. Click Next to continue through any additional wizard steps.
 
-    e. Review the information entered, and click **Finish** to create the new user "Symphonyuser01."
+    e. Review the information entered, and click Finish to create the new user "Symphonyuser01."
 
 4.  Add "Symphonyuser01" to "Symphony-group" User Group:
 
     a. In the ADUC console, locate the ***Symphony-group*** user group that you created earlier.
 
-    b. Right-click on the ***Symphony-group*** user group and select **Properties**.
-    c.  In the **Properties** dialog box, go to the **Members** tab.
+    b. Right-click on the ***Symphony-group*** user group and select Properties**.
+    c.  In the Properties dialog box, go to the **Members** tab.
 
-    d. Click **Add** and then enter ***Symphonyuser01*** in the **Enter the object names to select** field.
+    d. Click Add and then enter ***Symphonyuser01*** in the **Enter the object names to select** field.
 
-    e. Click **Check Names** to validate the username.
+    e. Click Check Names to validate the username.
 
-    f. Click **OK** to add "Symphonyuser01" to the "Symphony-group" user group.
+    f. Click OK to add "Symphonyuser01" to the "Symphony-group" user group.
 
-    g.  Click **Apply** and then **OK** to save the changes.
+    g.  Click Apply and then **OK** to save the changes.
 
 
 ## Step 3 - Integrating Symphony Cluster running on RHEL 8.4 based Systems Directly to AD using Samba Winbind
