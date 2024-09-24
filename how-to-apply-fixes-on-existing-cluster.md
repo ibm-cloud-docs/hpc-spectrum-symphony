@@ -26,19 +26,19 @@ subcollection: hpc-spectrum-symphony
 # Installing interim fixes from IBM Fix Central on Linux hosts
 {: #installing-interim-fixes}
 
-After you install or upgrade {{site.data.keyword.IBM}} {{site.data.keyword.symphony_short}} on Linux&reg;, use [IBM Fix Central](https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=IBM%20Spectrum%20Computing&product=ibm/Other+software/IBM+Spectrum+Symphony&release=All&platform=All&function=all){: external} to download any interim fixes that are recommended for {{site.data.keyword.symphony_full_notm}} on Linux. You can install and manage interim fixes using the ``egoinstallfixes`` and ``pversions`` commands.
+After you install or upgrade {{site.data.keyword.IBM}} {{site.data.keyword.symphony_short}} on Linux&reg;, use [IBM Fix Central](https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=IBM%20Spectrum%20Computing&product=ibm/Other+software/IBM+Spectrum+Symphony&release=All&platform=All&function=all){: external} to download any interim fixes that are recommended for {{site.data.keyword.symphony_full_notm}} on Linux. You can install and manage interim fixes by using the ``egoinstallfixes`` and ``pversions`` commands.
 {: shortdesc}
 
 Interim fixes for {{site.data.keyword.symphony_full_notm}} are available on [IBM Fix Central](https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=IBM%20Spectrum%20Computing&product=ibm/Other+software/IBM+Spectrum+Symphony&release=All&platform=All&function=all){: external} or by contacting your IBM Support representative. Typically, you download these interim fixes, then use the ``egoinstallfixes`` command to install and manage those fixes on Linux hosts in your cluster. The ``egoinstallfixes`` command enables you to complete the following tasks:
 
-- Install fixes, which includes
+- Install fixes, which include:
     -  checking the system, backing up the current files
     
     -  deleting any files that the {{site.data.keyword.symphony_full_notm}} cluster no longer requires (these files might have been installed with {{site.data.keyword.symphony_full_notm}}, or applied during an {{site.data.keyword.symphony_full_notm}} fix)
     
     - installing the specified fix packages on your existing {{site.data.keyword.symphony_full_notm}} cluster
 
-    - Additionally, if the command detects a pre-script or post-script file within the fix package, it runs the scripts as necessary. These scripts can contain custom actions to be completed before or after applying the fix.
+    - Also, if the command detects a pre-script or post-script file within the fix package, it runs the scripts as necessary. These scripts can contain custom actions to be completed before or after applying the fix.
 
 - Check fix packages, without installing them. This preliminary check determines whether your existing cluster is compatible with the fix you want to install, verifies that the user account has appropriate permissions, and lists files that are overwritten by and added by the fix.
 
@@ -72,4 +72,3 @@ Use the `egoinstallfixes` command only on Linux hosts; to manage fixes on Window
 
 For more background information, see [Installing and configuring IBM Spectrum Symphony](https://www.ibm.com/docs/en/spectrum-symphony/7.3.1?topic=installation-configuration){: external}. 
 {: note}
-

@@ -20,7 +20,7 @@ content-type: release-note
 # Release notes
 {: #release-notes}
 
-In this document you learn about the latest release updates to {{site.data.keyword.symphony_full}} that are grouped by date.
+The following new features and changes to {{site.data.keyword.symphony_full}} are available.
 {: shortdesc}
 
 ## September 2024
@@ -31,7 +31,7 @@ In this document you learn about the latest release updates to {{site.data.keywo
 {: release-note}
 
 Support for Symphony 7.3.2 fix patches.
-:   The {{site.data.keyword.symphony_full_notm}} version 7.3.2 offering is available for 64-bit Linux x86 and Windows platforms. The patches installed are: Build602125, Build602100, Build602094, Build602071, Build602061, Build602068, Build602039.
+:   The {{site.data.keyword.symphony_full_notm}} version 7.3.2 offering is available for 64-bit Linux x86 and Windows platforms. The patches installed that are: Build602125, Build602100, Build602094, Build602071, Build602061, Build602068, Build602039.
 
 Updated the Spectrum Scale version from 5.1.9.3 to 5.2.0.1.
 
@@ -50,7 +50,7 @@ Updated Spectrum Symphony Windows worker image.
 Support for Symphony 7.3.2 build601860 fix patch.
 :   The {{site.data.keyword.symphony_full_notm}} 7.3.2 Fix 601860 offering is available for 64-bit Linux x86 and Windows platforms. This update addresses security vulnerabilities in {{site.data.keyword.symphony_full_notm}} and should be installed on top of your existing version 7.3.2 Fix 601711 installation. While it is not mandatory, but applying Fix 601860 is recommended for optimal security. You can also apply other fixes on top of {{site.data.keyword.symphony_full_notm}} 7.3.2 Fix 601711 without applying Fix 601860.
 
-Along with build601860 patch, 16 more patches are updated and they are available in [change log](https://github.com/IBM-Cloud/hpc-cluster-symphony/blob/master/CHANGELOG.md) md file.
+Along with build601860 patch, 16 more patches are updated and they are available in the [change log](https://github.com/IBM-Cloud/hpc-cluster-symphony/blob/master/CHANGELOG.md) md file.
 
 Updated the Spectrum Scale version from 5.1.9.0 to 5.1.9.3.
 :   The Storage Scale product version was updated from 5.1.9.0 to 5.1.9.3.
@@ -59,7 +59,7 @@ Updated Spectrum Symphony and Storage Scale custom images.
 :   Spectrum Symphony and Storage Scale custom images are RHEL 8.8.
 
 Updated Spectrum Symphony Windows worker image.
-:   Spectrum Symphony Windows worker image was updated to Symphony 7.3.2 and also have Build601860 fix patch.
+:   Spectrum Symphony Windows worker image was updated to Symphony 7.3.2 and also has Build601860 fix patch.
 
 ## Dec 2023
 {: #hpc-spectrum-symphony-dec23}
@@ -91,7 +91,7 @@ Spectrum multicluster (SMC) support
 :   The initial release of Spectrum multicluster (SMC), which connects multiple {{site.data.keyword.symphony_full_notm}} clusters into a federation cluster, is now available. You can use SMC to redirect {{site.data.keyword.symphony_full_notm}} sessions to non-busy clusters, deploy and manage service packages, and monitor workload and resources.
 
 Documentation enhancement: Integrating OpenLDAP with {{site.data.keyword.symphony_full_notm}}
-:   The newly added [Integrating OpenLDAP with {{site.data.keyword.symphony_full_notm}}](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-integrate-openldap-spectrum-symphony) tutorial walks you through the steps involved in configuring {{site.data.keyword.symphony_full_notm}} to use OpenLDAP as the primary directory service for user authentication. 
+:   The newly added [Integrating OpenLDAP with {{site.data.keyword.symphony_full_notm}}](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-integrate-openldap-spectrum-symphony) tutorial walks you through the steps that are involved in configuring {{site.data.keyword.symphony_full_notm}} to use OpenLDAP as the primary directory service for user authentication. 
 
 ## 30 May 2023
 {: #hpc-spectrum-symphony-may3023}
@@ -113,7 +113,7 @@ Custom image support
 :   {{site.data.keyword.scale_short}} product version was updated from 5.1.5.1 to 5.1.7.0.
 
 Support automated public gateway creation when one is not associated with the subnets of an existing VPC
-:   When you choose to use an existing VPC, the automation associates the public gateway with all of the subnets if it is already part of the VPC. If the public gateway is not part of the VPC, then it creates a new public gateway and associates it with all subnets to allow internet access from the cluster nodes.
+:   When you choose to use an existing VPC, the automation associates the public gateway with all the subnets if it is already part of the VPC. If the public gateway is not part of the VPC, then it creates a new public gateway and associates it with all subnets to allow internet access from the cluster nodes.
 
 DNS functionality support
 :   Introduced use of DNS custom resolver for name resolution in place of static hostname to IP address mapping.

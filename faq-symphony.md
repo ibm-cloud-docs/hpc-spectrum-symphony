@@ -41,20 +41,19 @@ If the cluster uses {{site.data.keyword.scale_short}} storage, the storage nodes
 {: #locations-vpc-resources}
 {: faq}
 
-Available regions and zones for deploying VPC resources, and a mapping of those to city locations and data centers can be found in [Locations for resource deployment](/docs/overview?topic=overview-locations).
+Available regions and zones for deploying VPC resources and mapping them to city locations and data centers can be found in [Locations for resource deployment](/docs/overview?topic=overview-locations).
 
-## What permissions do I need in order to create a cluster using the offering?
+## What permissions are required in order to create a cluster using the offering?
 {: #permissions-cluster-offering}
 {: faq}
 
 Instructions for setting the appropriate permissions for {{site.data.keyword.cloud_notm}} services that are used by the offering to create a cluster can be found in [Granting user permissions for VPC resources](/docs/vpc?topic=vpc-managing-user-permissions-for-vpc-resources), [Managing user access for Schematics](/docs/schematics?topic=schematics-access), and [Assigning access to Secrets Manager](/docs/secrets-manager?topic=secrets-manager-assign-access).
 
-
-## How do I SSH among nodes?
+## How to use SSH among the nodes?
 {: #ssh-among-nodes}
 {: faq}
 
-All of the nodes in the HPC cluster have the same public key that you register at your cluster creation. You can use ssh-agent forwarding, which is a common technique to access remote nodes that have the same public key. It automates to securely forward private keys to remote nodes. Forwarded keys are deleted immediately after a session is closed.
+All the nodes in the HPC cluster have the same public key that you register at your cluster creation. You can use ssh-agent forwarding, which is a common technique to access remote nodes that have the same public key. It automates to securely forward private keys to remote nodes. Forwarded keys are deleted immediately after a session is closed.
 
 To securely forward private keys to remote nodes, you need to do `ssh-add` and `ssh -A`.
 
@@ -77,7 +76,7 @@ Host *
 
 You can even remove `-A` by adding "ForwardAgent yes" to `.ssh/config`.
 
-## How many worker nodes can I deploy in my Spectrum Symphony cluster through this offering?
+## How many worker nodes can be deployed in the Spectrum Symphony cluster through this offering?
 {: #worker-nodes}
 {: faq}
 
@@ -97,7 +96,7 @@ When creating or deleting a cluster with many worker nodes, you might encounter 
 {: #resource-group-parameters}
 {: faq}
 
-The first resource group parameter entry in the **Configure your workspace** section in the {{site.data.keyword.Bluemix_notm}} catalog applies to the resource group where the {{site.data.keyword.bpshort}} workspace is provisioned on your {{site.data.keyword.Bluemix_notm}} account. The value for this parameter can be different than the one used for the second entry in the **Parameters with default values** section in the catalog. The second entry applies to the resource group where VPC resources are provisioned. As specified in the description for this second `resource_group` parameter, note that only the default resource group is supported for use of the Symphony Host Factory auto-scaling feature.
+The first resource group parameter entry in the **Configure your workspace** section in the {{site.data.keyword.Bluemix_notm}} catalog applies to the resource group where the {{site.data.keyword.bpshort}} workspace is provisioned on your {{site.data.keyword.Bluemix_notm}} account. The value for this parameter can be different than the one used for the second entry in the **Parameters with default values** section in the catalog. The second entry applies to the resource group where VPC resources are provisioned. As specified in the description for this second `resource_group` parameter, only the default resource group is supported for use of the Symphony Host Factory auto-scaling feature.
 
 ## Can I use the Spectrum Symphony Host Factory feature for auto scaling on any cluster deployed with this offering?
 {: #host-factory-auto-scaling}
@@ -108,7 +107,7 @@ No, the use of Host Factory to provision and delete compute nodes is not support
 * Provisioning and deleting compute nodes on dedicated hosts. Only static compute nodes can be deployed on dedicated hosts.
 * When using {{site.data.keyword.scale_short}} for shared storage in the cluster.
 
-## Where can I find the custom image name to image ID mappings for each cloud region?
+## Where can you find the custom image name to image ID mappings for each cloud region?
 {: #custom-image-name-mappings}
 {: faq}
 
@@ -120,7 +119,7 @@ The mappings can be found in the `image-map.tf` file and the `scale-image-map.tf
 
 This is expected behavior. Even after the {{site.data.keyword.bpshort}} web console shows that the cluster is successfully provisioned, there are still some tasks that run in the background for several minutes. Allow a few minutes (typically 2 minutes is sufficient) after the cluster gets provisioned for `egosh` to be available.
 
-## Why does cluster creation using dedicated hosts fail sometimes with the error `status of dedicated host is failed`?
+## Why does cluster creation by using dedicated hosts fail sometimes with the error `status of dedicated host is failed`?
 {: #cluster-creation-dedicated-hosts-fails}
 {: faq}
 
@@ -132,7 +131,7 @@ In some regions, dedicated hosts have a limitation on the number of virtual serv
 
 For security reasons, {{site.data.keyword.scale_short}} does not allow you to provide a default value that would allow network traffice from any external device. Instead, you can provide the address of your user system (for example, by using https://ipv4.icanhazip.com/) or a range of multiple IP addresses. 
 
-## Does the Spectrum Symphony offering support multiple key pairs to establish SSH to all of the nodes?
+## Does the Spectrum Symphony offering support multiple key pairs to establish SSH to all the nodes?
 {: #multiple-key-pair-support}
 {: faq}
 
@@ -154,7 +153,7 @@ The solution supports custom images based on RHEL 8.8 for virtual server instanc
 {: #custom-resolver}
 {: faq}
 
-Yes, the solution supports the use of a custom resolver that is already associated to a VPC. If a VPC already has a custom resolver, the automation makes uses of it and the DNS service and associates the new DNS domain that is created from the solution for hostname resolution.
+Yes, the solution supports the use of a custom resolver that is already associated to a VPC. If a VPC already has a custom resolver, the automation uses of it and the DNS service and associates the new DNS domain that is created from the solution for hostname resolution.
 
 ## Can I associate a single VPC with multiple DNS zones that have the same name?
 {: #DNS-zone-names}
