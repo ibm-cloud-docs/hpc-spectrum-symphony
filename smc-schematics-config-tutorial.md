@@ -90,7 +90,7 @@ SMC supports combination of single smc_zone as ["us-east-1"] or double smc_zone 
 {: step}
 
 1. Go to the IBM Cloud Workspaces page and select the Workspace name that you created. The Schematics > Workspaces page opens on the Jobs tab that shows the job log.
-2. Go to the **Schematic Workspace Settings** tab, and in the variable section, click "burger icons" to enter the required values and update default parameters.
+2. Go to the Schematic Workspace Settings tab, and in the variable section, click "burger icons" to enter the required values and update default parameters.
 
     Parameters unique to your account and your deployment:
     
@@ -130,8 +130,8 @@ SMC supports combination of single smc_zone as ["us-east-1"] or double smc_zone 
 After you create your {{site.data.keyword.bpshort}} workspace and updated the configuration parameters, you need to generate a plan to validate all the configuration properties.
 
 1. Click Generate plan. 
-   When you click **Generate plan**, a new log is generated that can be viewed in the Jobs tab by clicking Jobs. 
-2. Review the log file for any errors, fix the properties, and regenerate the plan by clicking **Generate plan** again.
+   When you click Generate plan, a new log is generated that can be viewed in the Jobs tab by clicking Jobs. 
+2. Review the log file for any errors, fix the properties, and regenerate the plan by clicking Generate plan again.
 
 ## Apply a plan
 {: #smc-apply-plan-ui}

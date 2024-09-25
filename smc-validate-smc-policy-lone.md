@@ -38,9 +38,7 @@ subcollection: hpc-spectrum-symphony
     ```shell
     # export SMC_MASTER_CLUSTER_URL="master_list://hpc-smc-primary.smc.ibmhpc.com:17870 hpc-smc-secondary.smc.ibmhpc.com:17870 hpc-smc-secondary-candidate.smc.ibmhpc.com:17870"
     ```
-4.  Validate the SMC policy by running jobs. Scheduled jobs should follow the policy.
+4.  Validate the SMC policy by running jobs. Scheduled jobs must follow the policy.
     ```shell
     # symping
     ```
-
-

@@ -24,15 +24,15 @@ subcollection: hpc-spectrum-symphony
 {:note: .note}
 {:important: .important}
 
-# Symphony multicluster Troubleshooting
+# Symphony multicluster troubleshooting
 {: #smc-troubleshooting-spectrum-symphony}
 
-## What happens if a Lone symphony cluster won’t join with SMC while adding Lone symphony cluster with SMC ?
+## What happens if a Lone symphony cluster do not join with SMC while adding Lone symphony cluster with SMC?
 {: #smc-troubleshoot-topic-1}
 {: troubleshoot}
 {: support}
 
-You are getting status as ERROR, when trying to join Lone Symphony cluster with SMC.
+You are getting a status as error, when trying to join Lone Symphony cluster with SMC.
 {: tsSymptoms}
 
 ```text
@@ -44,26 +44,24 @@ lone       error      nonmember
 This error happens when:
 {: tsCauses}
 
-- The outbound connection configuration is unsuccessful
-- SMCP service may be down in lone symphony cluster
+- The outbound connection configuration is unsuccessful.
+- SMCP service may be down in lone symphony cluster.
 - The network communication between SMC and lone symphony cluster is not communicable.
-- The VEMKD port used is SMC may be not correct.
-
+- The VEMKD port used is SMC which may be not correct.
 
 To make the outbound connection: 
 {: tsResolve}
 
 - check whether in lone symphony cluster enabled outbound as `<ego:EnvironmentVariable name="SMC_PROXY_INBOUND_CONNECTION">Y</ego:EnvironmentVariable>` in SMCP.xml
-- If SMCP service is down in lone symphony cluster, execute command `egosh service start SMCP` to start SMCP service
-- If network connection not happening, check whether you added SMC cidr block in Lone symphony cluster security group vice versa.
+- If SMCP service is down in lone symphony cluster, run command `egosh service start SMCP` to start SMCP service
+- If network connection not happening, check whether you added SMC cidr block in Lone symphony cluster security group or vice versa.
 
-
-## How to resolve “End of file or no input: ‘Operation interrupted or timed out'“ when trying to add lone symphony cluster to smc?
+## How to resolve “End of file or no input: ‘Operation interrupted or timed out'“ when trying to add a lone symphony cluster to smc?
 {: #smc-troubleshoot-topic-2}
 {: troubleshoot}
 {: support}
 
-You see thius message:
+You see this message:
 {: tsSymptoms}
 
 ```text
@@ -71,10 +69,10 @@ You see thius message:
 End of file or no input: 'Operation interrupted or timed out'
 ```
 
-When you try to add a lone symphony cluster with SMC, because of a time out issue you get the warning message. The message is a warning and does not impact adding lone symphony cluster with SMC.
+When you try to add a lone symphony cluster with SMC, because of a time out issue you get the warning message. The message is a warning and does not impact adding a lone symphony cluster with SMC.
 {: tsCauses}
 
-This error won’t impact on adding a lone symphony cluster with SMC. Keep on addding other lone symphony clusters.
+This error will not impact on adding a lone symphony cluster with SMC. Keep on addding other lone symphony clusters.
 {: tsResolve}
 
 ## What happen after provisioning SMC cluster, immediately if you try to logon as egosh user in secondary nodes of SMC?
