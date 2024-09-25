@@ -35,6 +35,7 @@ subcollection: hpc-spectrum-symphony
 {: toc-services="symphony, vpc"}
 
 The Spectrum multicluster feature in {{site.data.keyword.symphony_full_notm}} Advanced Edition is used to connect multiple {{site.data.keyword.symphony_full_notm}} clusters into a federation cluster. Using this feature, you can:
+
 *   Use workload placement to redirect {{site.data.keyword.symphony_full_notm}} sessions to nonbusy clusters. Redirecting sessions balances workloads so that tasks within one session can be dispatched to multiple clusters based on resource availability on each federation member cluster. 
 *   Deploy and manage service packages from the multicluster management console across member clusters. 
 *   Monitor workload and resources, as this feature collects data from {{site.data.keyword.symphony_full_notm}} clusters and sends it to the {{site.data.keyword.symphony_full_notm}} multicluster primary cluster for aggregation and display.
@@ -42,25 +43,22 @@ The Spectrum multicluster feature in {{site.data.keyword.symphony_full_notm}} Ad
 
 SMC supports multiple Operating Systems, but the solution here uses RHEL8.6.
 
-
 Adding SMC involves:
 
 1.  Manually creating a {{site.data.keyword.bpshort}} workspace to define your Terraform environment.
 2.  Manually entering and changing the SMC-related parameters.
-3.  Generating a Terraform plan that varifies the parameter settings and shows the resources that the scripts will create.
+3.  Generating a Terraform plan that verifies the parameter settings and shows the resources that the scripts create.
 4.  Applying the generated plan to deploy the configured resources.
 
 ## Architecture diagram
 {: #smc-arch-diagram}
 
-
 ![Architecture diagram](images/SMC-arch-diagram-Multi-Region.drawio.svg){: caption="Figure 1. Architecture diagram zones and regions" caption-side="bottom"}
-
 
 ## Before you begin
 {: #smc-b4-begin}
 
-Before you begin set up SMC, you must:
+Before you set up the SMC, you must:
 
 Deploy 3 lone (symphony) clusters in different regions or zones. For more information about creating symphony clusters, see the [readme file](https://github.com/IBM-Cloud/hpc-cluster-symphony#readme).
 
@@ -74,36 +72,36 @@ SMC supports combination of single smc_zone as ["us-east-1"] or double smc_zone 
 {: #smc-create-workspace-ui}
 {: step}
 
-1. Go to Schematics, the {{site.data.keyword.cloud_notm}} [deployment manager](https://cloud.ibm.com/schematics){: external}, select **Workspaces**, and then select **Create workspace**.
+1. Go to Schematics, the {{site.data.keyword.cloud_notm}} [deployment manager](https://cloud.ibm.com/schematics){: external}, select Workspaces, and then select Create workspace.
 2. In the _Specify template_ section:
     * Provide the GitHub repository URL where your Terraform files are located. The SMC repository is provided in this public [GitHub repository](https://github.com/IBM-Cloud/hpc-cluster-symphony-smc){: external}.
     * Select a version of the Terraform engine that is greater than 1 to use in the {{site.data.keyword.bpshort}} workspace.
-    * Click **Next**.
+    * Click Next.
 3. In the _Workspace details_ section:
     * Specify the name for your {{site.data.keyword.bpshort}} workspace.
     * Define any tags that you want to associate with the resources provisioned through the offering. The tags can later be used to query the resources in the {{site.data.keyword.Bluemix_notm}} console.
     * Select a resource group.
     * Select a location. The location determines where the workspace actions are run.
     * Provide a description (optional) of the {{site.data.keyword.bpshort}} workspace.
-    * Click **Next** and then click **Create**. The {{site.data.keyword.bpshort}} workspace is created with the name that you specified. 
+    * Click Next and then click Create. The {{site.data.keyword.bpshort}} workspace is created with the name that you specified. 
 
 ## Updating SMC parameters
 {: #smc-update-parameters-ui}
 {: step}
 
-1. Go to the IBM Cloud Workspaces page and select the Workspace name that you created. The Schematics -> Workspaces page opens on the Jobs tab that shows the job log.
+1. Go to the IBM Cloud Workspaces page and select the Workspace name that you created. The Schematics > Workspaces page opens on the Jobs tab that shows the job log.
 2. Go to the **Schematic Workspace Settings** tab, and in the variable section, click "burger icons" to enter the required values and update default parameters.
 
     Parameters unique to your account and your deployment:
     
     | Name | Description | Type | Default |
     |------|-------------|-------|-------|
-    | lone_vpc_name | Name of an existing Lone Symphony VPC, lone_vpc_name and lone_vpc_region must be in same order. If no value is given, then need to add existing_lone_vpc manually with SMC transit_gateway. Note: lone_vpc_name supports a maximum of 3 existing_lone_vpc_name. For more information, see [VPC](https://cloud.ibm.com/docs/vpc).| list(string) | null |
-    |lone_vpc_region | Name of the IBM Cloud region where the existing Lone Symphony VPC, lone_vpc_name and lone_vpc_region must be in same order (Examples: us-east, us-south, etcand so on). Note: lone_vpc_region support maximum of 3 existing_lone_vpc_region. For more information, see [Region and data center locations for resource deployment](https://cloud.ibm.com/docs/overview?topic=overview-locations).| list(string) | null |
+    | lone_vpc_name | The name of an existing Lone Symphony VPC, lone_vpc_name and lone_vpc_region must be in the same order. If no value is given, then you need to add existing_lone_vpc manually with SMC transit_gateway. Note: lone_vpc_name supports a maximum of 3 existing_lone_vpc_name. For more information, see [VPC](https://cloud.ibm.com/docs/vpc).| list(string) | null |
+    |lone_vpc_region | The name of the IBM Cloud region where the existing Lone Symphony VPC, lone_vpc_name and lone_vpc_region must be in the same order (Examples: us-east, us-south, and so on). Note: lone_vpc_region support maximum of 3 existing_lone_vpc_region. For more information, see [Region and data center locations for resource deployment](https://cloud.ibm.com/docs/overview?topic=overview-locations).| list(string) | null |
     |ssh_key_name | Your {{site.data.keyword.Bluemix_notm}} SSH key name such as "smc-ssh-key" that is created in a specific region in {{site.data.keyword.Bluemix_notm}}. Mark it as sensitive to hide the SSH key in the {{site.data.keyword.Bluemix_notm}} console.|string | n/a |
     |api_key  | Your API key value. Mark it as sensitive to hide the API key in the {{site.data.keyword.Bluemix_notm}} console.| string | n/a |
-    |sym_license_confirmation| Confirm your use of IBM Symphony Multi Cluster licenses. When you select 'true', you agreed to one of two conditions. 1. You are using the software in production and confirm you have sufficient licenses to cover your use under the International Program License Agreement (IPLA). 2. You are evaluating the software and agree to abide by the International License Agreement for Evaluation of Programs (ILAE). NOTE: Failure to comply with licenses for production use of software is a violation of IBM International Program License Agreement. For more information, see[IBM International Program License Agreement](https://www.ibm.com/software/passportadvantage/programlicense.html).| string | n/a |
-    |smc_zone |IBM Cloud zone name within the selected region where the Symphony Multi Cluster resources are deployed. SMC supports combination of single smc_zone as ["us-east-1"] or double smc_zone as ["au-syd-3","eu-de-1"] or triple smc_zone as ["us-east-1","ca-tor-3","jp-tok-3"].| list(string) | n/a |
+    |sym_license_confirmation| Confirm your use of IBM Symphony Multi Cluster licenses. When you select 'true', you agreed to one of two conditions. 1. You are using the software in production and confirm you have sufficient licenses to cover your use under the International Program License Agreement (IPLA). 2. You are evaluating the software and agree to abide by the International License Agreement for Evaluation of Programs (ILAE). NOTE: Failure to comply with licenses for production use of software is a violation of the IBM International Program License Agreement. For more information, see[IBM International Program License Agreement](https://www.ibm.com/software/passportadvantage/programlicense.html).| string | n/a |
+    |smc_zone |IBM Cloud zone name within the selected region where the Symphony Multi Cluster resources are deployed. SMC supports a combination of single smc_zone as ["us-east-1"] or double smc_zone as ["au-syd-3","eu-de-1"] or triple smc_zone as ["us-east-1","ca-tor-3","jp-tok-3"].| list(string) | n/a |
     |remote_allowed_ips |Comma-separated list of IP addresses that can access the Symphony Multi Cluster instance through an SSH interface. For security purposes, provide the public IP addresses assigned to the devices that are authorized to establish SSH connections (for example, "169.45.117.34"). To fetch the IP address of the device, use https://ipv4.icanhazip.com/. |list(string) | n/a |
     {: caption}
 
@@ -121,7 +119,7 @@ SMC supports combination of single smc_zone as ["us-east-1"] or double smc_zone 
     | primary_cidr_block | IBM Cloud VPC address prefixes that are needed for VPC creation. Provide a CIDR address prefix for Primary VPC creation. For more information, see [Bring your own subnet](https://cloud.ibm.com/docs/vpc?topic=vpc-configuring-address-prefixes).| string  | "10.10.0.0/24"  |
     | secondary_cidr_block| IBM Cloud VPC address prefixes that are needed for VPC creation. Provide a CIDR address prefix for Secondary VPC creation. For more information, see [Bring your own subnet](https://cloud.ibm.com/docs/vpc?topic=vpc-configuring-add|
     | secondary_candidate_cidr_block | IBM Cloud VPC address prefixes that are needed for VPC creation. Provide a CIDR address prefix for Secondary Candidate VPC creation. For more information, see [Bring your own subnet](https://cloud.ibm.com/docs/vpc?topic=vpc-configuring-address-prefixes). | string | "10.30.0.0/24"	|
-    | smc_image_name | Name of the custom image that you want to use to create virtual server instances in your IBM Cloud account to deploy the IBM Symphony Multi Cluster. The default may or might not need to be changed, depending on your deployment. By default, the automation uses a base image with more software packages mentioned [here](https://cloud.ibm.com/docs/hpc-spectrum-symphony#create-custom-image). To include your application-specific binary files, see [Planning for custom images](https://cloud.ibm.com/docs/vpc?topic=vpc-planning-custom-images) to create a custom image and use that image to build the IBM Symphony cluster through this offering. | string | "hpcc-symphony732-rhel86-smc-v1" |
+    | smc_image_name | Name of the custom image that you want to use to create virtual server instances in your IBM Cloud account to deploy the IBM Symphony Multi Cluster. The default can or might not need to be changed, depending on your deployment. By default, the automation uses a base image with more software packages mentioned [here](https://cloud.ibm.com/docs/hpc-spectrum-symphony#create-custom-image). To include your application-specific binary files, see [Planning for custom images](https://cloud.ibm.com/docs/vpc?topic=vpc-planning-custom-images) to create a custom image and use that image to build the IBM Symphony cluster through this offering. | string | "hpcc-symphony732-rhel86-smc-v1" |
     | smc_host_instance_type| Specify the virtual server instance profile type name to be used to create the Symphony Multi Cluster host. For more information, see [VPC profiles](https://cloud.ibm.com/docs/vpc?topic=vpc-profiles). | string | "bx2-4x16" |
     {: caption}
 
@@ -129,10 +127,10 @@ SMC supports combination of single smc_zone as ["us-east-1"] or double smc_zone 
 {: #smc-generate-plan-ui}
 {: step}
 
-After you create your {{site.data.keyword.bpshort}} workspace and updated the configuration parameters, you need to generate a plan to validate all of the configuration properties.
+After you create your {{site.data.keyword.bpshort}} workspace and updated the configuration parameters, you need to generate a plan to validate all the configuration properties.
 
-1. Click **Generate plan**. 
-   When you click **Generate plan**, a new log is generated that can be viewed in the Jobs tab by clicking **Jobs**. 
+1. Click Generate plan. 
+   When you click **Generate plan**, a new log is generated that can be viewed in the Jobs tab by clicking Jobs. 
 2. Review the log file for any errors, fix the properties, and regenerate the plan by clicking **Generate plan** again.
 
 ## Apply a plan
@@ -141,9 +139,9 @@ After you create your {{site.data.keyword.bpshort}} workspace and updated the co
 
 When you apply a plan, the {{site.data.keyword.cloud}} SMC resources are deployed on your {{site.data.keyword.cloud_notm}} account with your specific choice of configuration properties. 
 
-1. After you generate a plan in the {{site.data.keyword.cloud_notm}} console, click **Apply plan**. This action generates a new log that can be viewed in the Jobs tab.
-2. Review the log file for any errors, fix the errors, and then click **Apply plan** again.
-3. After you successfully apply a plan, you can review all of the resources that are deployed under this workspace by clicking the _Resources_ tab. 
+1. After you generate a plan in the {{site.data.keyword.cloud_notm}} console, click Apply plan. This action generates a new log that can be viewed in the Jobs tab.
+2. Review the log file for any errors, fix the errors, and then click Apply plan again.
+3. After you successfully apply a plan, you can review all the resources that are deployed under this workspace by clicking the _Resources_ tab. 
 
 One of the last things shown in the log file after the Apply plan is an SSH key string:
 

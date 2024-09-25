@@ -61,15 +61,15 @@ Updated Spectrum Symphony and Storage Scale custom images.
 Updated Spectrum Symphony Windows worker image.
 :   Spectrum Symphony Windows worker image was updated to Symphony 7.3.2 and also has Build601860 fix patch.
 
-## Dec 2023
+## December 2023
 {: #hpc-spectrum-symphony-dec23}
 
-### 7 Dec 2023
+### 7 December 2023
 {: #hpc-spectrum-symphony-dec0723}
 {: release-note}
 
 Support for Symphony 7.3.2 Build601711 fix patch.
-:   The IBM Spectrum Symphony 7.3.2 Fix 601711 offering is available for 64-bit Linux x86 is a mandatory fix that contains various fixes and enhancements, and includes Fix 601349 released in November 2022.
+:   The IBM Spectrum Symphony 7.3.2 Fix 601711 offering available for 64-bit Linux x86 is a mandatory fix that contains various fixes and enhancements, and includes Fix 601349 released in November 2022.
 
 Spectrum Scale version has been updated from 5.1.7.0 to 5.1.9.0.
 :   The Storage Scale product version was updated from 5.1.7.0 to 5.1.9.0.
@@ -88,7 +88,7 @@ Update Spectrum Symphony windows worker image
 {: release-note}
 
 Spectrum multicluster (SMC) support
-:   The initial release of Spectrum multicluster (SMC), which connects multiple {{site.data.keyword.symphony_full_notm}} clusters into a federation cluster, is now available. You can use SMC to redirect {{site.data.keyword.symphony_full_notm}} sessions to non-busy clusters, deploy and manage service packages, and monitor workload and resources.
+:   The initial release of Spectrum multicluster (SMC), which connects multiple {{site.data.keyword.symphony_full_notm}} clusters into a federation cluster, is now available. You can use SMC to redirect {{site.data.keyword.symphony_full_notm}} sessions to nonbusy clusters, deploy and manage service packages, and monitor workload and resources.
 
 Documentation enhancement: Integrating OpenLDAP with {{site.data.keyword.symphony_full_notm}}
 :   The newly added [Integrating OpenLDAP with {{site.data.keyword.symphony_full_notm}}](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-integrate-openldap-spectrum-symphony) tutorial walks you through the steps that are involved in configuring {{site.data.keyword.symphony_full_notm}} to use OpenLDAP as the primary directory service for user authentication. 
@@ -168,7 +168,7 @@ Bug fix
 :   Code fixes were applied to address an issue that was seen in regions where instance storage profiles are not available even though {{site.data.keyword.scale_short}} is not selected as the storage option.
 
 Updated RHEL stock image
-:   Made an update to use a RHEL 8.6 stock image instead of a RHEL 8.2 stock image for the login node and the NFS storage node.
+:   Made an update to use an RHEL 8.6 stock image instead of an RHEL 8.2 stock image for the login node and the NFS storage node.
 
 ## August 2022
 {: #hpc-spectrum-symphony-aug22}
@@ -188,7 +188,7 @@ Bug fix
 {: release-note}
 
 Security update and enhancements
-:   This release provides fixes for the Polkit Local Privilege Escalation Vulnerability (CVE-2021-4034) and for the Spring Framework Vulnerability (CVE-2022-22965) within the RHEL 8.4 based custom image accessible by the solution. This release also removes the earlier Polkit mitigation implemented through changes to the post-provisioning scripts. The RHEL 8.4 custom image replaces the RHEL 8.2 image that was provided in the previous release. In addition, changes in the code now allow creation of compute nodes in the cluster by Host Factory on VPC resource groups other than the default group. And, security group rules have been added to provide more secure access to the cluster by allowing SSH from only specific nodes.
+:   This release provides fixes for the Polkit Local Privilege Escalation Vulnerability (CVE-2021-4034) and for the Spring Framework Vulnerability (CVE-2022-22965) within the RHEL 8.4 based custom image accessible by the solution. This release also removes the earlier Polkit mitigation that is implemented through changes to the post-provisioning scripts. The RHEL 8.4 custom image replaces the RHEL 8.2 image that was provided in the previous release. In addition, changes in the code now allow creation of compute nodes in the cluster by Host Factory on VPC resource groups other than the default group. And, security group rules have been added to provide more secure access to the cluster by allowing SSH from only specific nodes.
 
 ## January 2022
 {: #hpc-spectrum-symphony-jan22}
@@ -222,7 +222,7 @@ Security update
 {: release-note}
 
 Dedicated hosts and additional improvements
-:   You now have the option to use dedicated hosts for static worker nodes in addition to having an enhanced `ssh_command` output and hyperthreading by default. For more information, see [Using dedicated hosts](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-using-dedicated-hosts). Further improvements include an update of the stock images that are used for login and storage nodes to RHEL 8.2 and clean up of entitlement and location input properties. Parallelism is now supported in {{site.data.keyword.bpshort}} `destroy` operations to help overall performance, and due to a bug fix, you can now avoid the Terraform warning regarding interpolation.
+:   You now have the option to use dedicated hosts for static worker nodes in addition to having an enhanced `ssh_command` output and hyperthreading by default. For more information, see [Using dedicated hosts](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-using-dedicated-hosts). Further improvements include an update of the stock images that are used for login and storage nodes to RHEL 8.2 and clean up of entitlement and location input properties. Parallelism is now supported in {{site.data.keyword.bpshort}} `destroy` operations to help overall performance, and due to a bug fix, you can now avoid the Terraform warning regarding the interpolation.
 
 ## October 2021
 {: #hpc-spectrum-symphony-oct21}
