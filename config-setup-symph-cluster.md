@@ -451,6 +451,7 @@ To provide root user permissions to AD users of "POCDOMAIN.LOCAL" domain on a Li
 {: important}
 
 ## Step 4 - Configuring setup on the Symphony cluster side
+{: #configure-symphony-cluster-side}
 
 Following are the steps to configure Kerberos Authentication on Linux Hosts for {{site.data.keyword.symphony_full_notm}} Integration with Active Directory:
 
@@ -563,4 +564,6 @@ Following are the steps to configure Kerberos Authentication on Linux Hosts for 
     ```
 
 ## Conclusion
+{: #conclusion}
+
 This guide serves as a vital resource for system administrators looking to seamlessly integrate {{site.data.keyword.symphony_full_notm}} with Active Directory within the {{site.data.keyword.cloud_notm}} environment. Addressing prerequisites and delivering step-by-step instructions, it ensures readiness for both Active Directory and RHEL systems that are deployed on IBM Virtual Servers. From installing Active Directory on Windows Server 2019 to configuring Kerberos authentication, the guide provides administrators with a reliable reference to achieve efficient user management and access control for {{site.data.keyword.symphony_full_notm}} within the {{site.data.keyword.cloud_notm}} infrastructure.
