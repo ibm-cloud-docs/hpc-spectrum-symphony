@@ -27,7 +27,6 @@ subcollection: hpc-spectrum-symphony
 {:table: .aria-labeledby="caption"}
 {:step: data-tutorial-type='step'}
 
-
 # Adding Spectrum multicluster (SMC) to Spectrum Symphony 
 {: #smc-adding-to-symphony}
 {: toc-content-type="tutorial"}
@@ -119,7 +118,7 @@ SMC supports combination of single smc_zone as ["us-east-1"] or double smc_zone 
     | primary_cidr_block | IBM Cloud VPC address prefixes that are needed for VPC creation. Provide a CIDR address prefix for Primary VPC creation. For more information, see [Bring your own subnet](https://cloud.ibm.com/docs/vpc?topic=vpc-configuring-address-prefixes).| string  | "10.10.0.0/24"  |
     | secondary_cidr_block| IBM Cloud VPC address prefixes that are needed for VPC creation. Provide a CIDR address prefix for Secondary VPC creation. For more information, see [Bring your own subnet](https://cloud.ibm.com/docs/vpc?topic=vpc-configuring-add|
     | secondary_candidate_cidr_block | IBM Cloud VPC address prefixes that are needed for VPC creation. Provide a CIDR address prefix for Secondary Candidate VPC creation. For more information, see [Bring your own subnet](https://cloud.ibm.com/docs/vpc?topic=vpc-configuring-address-prefixes). | string | "10.30.0.0/24"	|
-    | smc_image_name | Name of the custom image that you want to use to create virtual server instances in your IBM Cloud account to deploy the IBM Symphony Multi Cluster. The default can or might not need to be changed, depending on your deployment. By default, the automation uses a base image with more software packages mentioned [here](https://cloud.ibm.com/docs/hpc-spectrum-symphony#create-custom-image). To include your application-specific binary files, see [Planning for custom images](https://cloud.ibm.com/docs/vpc?topic=vpc-planning-custom-images) to create a custom image and use that image to build the IBM Symphony cluster through this offering. | string | "hpcc-symphony732-rhel86-smc-v1" |
+    | smc_image_name | Name of the custom image that you want to use to create virtual server instances in your IBM Cloud account to deploy the IBM Symphony Multi Cluster. The default can or might not need to be changed, depending on your deployment. By default, the automation uses a base image with more software packages mentioned [here](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-getting-started-tutorial). To include your application-specific binary files, see [Planning for custom images](https://cloud.ibm.com/docs/vpc?topic=vpc-planning-custom-images) to create a custom image and use that image to build the IBM Symphony cluster through this offering. | string | "hpcc-symphony732-rhel86-smc-v1" |
     | smc_host_instance_type| Specify the virtual server instance profile type name to be used to create the Symphony Multi Cluster host. For more information, see [VPC profiles](https://cloud.ibm.com/docs/vpc?topic=vpc-profiles). | string | "bx2-4x16" |
     {: caption}
 
