@@ -55,11 +55,11 @@ The offering provides a default set of images that you can use for the nodes wit
 
 Worker Image: The default image that is specified in `image_name` acts as the worker image. This image is used to create the Symphony cluster nodes: management, management-candidates, and workers.
 
-If you prefer to create the worker custom image with your own settings and configurations, follow the instructions that are provided [here](https://github.com/IBM-Cloud/hpc-cluster-symphony/tree/main/custom_image/worker#readme){: external}.
+If you prefer to create the worker custom image with your own settings and configurations, follow the instructions that are provided [here](https://github.com/IBM-Cloud/hpc-cluster-symphony/blob/master/custom_image/worker/README.md){: external}.
 
 Storage Image: If you intend to use {{site.data.keyword.scale_short}} as shared storage for the cluster, the default image that is specified in `scale_storage_image_name` acts as the storage image. This image is used to create the {{site.data.keyword.scale_short}} storage cluster nodes. In addition to the base operating system, the image also includes the required {{site.data.keyword.scale_short}} software packages.
 
-If you prefer to create the storage custom image with your own settings and configurations, follow the instructions that are provided [here](https://github.com/IBM-Cloud/hpc-cluster-symphony/tree/main/custom_image/storage#readme){: external}.
+If you prefer to create the storage custom image with your own settings and configurations, follow the instructions that are provided [here](https://github.com/IBM-Cloud/hpc-cluster-symphony/blob/master/custom_image/storage/README.md){: external}.
 
 ## Gather Spectrum software entitlement information
 {: #gather-spectrum-entitlement-information}
