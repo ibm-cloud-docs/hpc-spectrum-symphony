@@ -25,7 +25,7 @@ subcollection: hpc-spectrum-symphony
 {: #retrieve-action-logs}
 
 1. To retrieve the logs for an action, such as generate a plan, apply a plan, and destroy resources using {{site.data.keyword.bplong}} Python APIs, create a Python file and provide a name of your choice, for example, `schematics_logs_api.py`.
-2. Copy and paste the [Retrieve {{site.data.keyword.bpshort}} workspace action details using Python API](/docs/ibm-spectrum-symphony?topic=ibm-spectrum-symphony-retrieve-action-logs#example-request-retrieve-action-logs) example request into your Python file.
+2. Copy and paste the Retrieve {{site.data.keyword.bpshort}} workspace action details using Python API example request into your Python file.
 3. Change the following parameters as part of the request:
    * Replace the `authenticator = IAMAuthenticator('<ibm-api-key>')` variable with your {{site.data.keyword.cloud_notm}} API key.
    * Change the API endpoint to the endpoint mentioned in this link according to the location where you want your {{site.data.keyword.bpshort}} workspace to reside, for example, `schematics_service.set_service_url('https://us.schematics.cloud.ibm.com')`.
@@ -103,5 +103,3 @@ DEBUG:urllib3.connectionpool:https://us.schematics.cloud.ibm.com:443 "GET /v1/wo
 INFO:root:Completed Retrieving the Schematic logs
 ```
 {: screen}
-
-

@@ -65,7 +65,7 @@ ibmcloud schematics logs --id <WORKSPACE_ID>
 {: #next-steps-generate-plan-cli}
 {: cli}
 
-After you have successfully generated a plan, you can begin [Applying a plan](/docs/ibm-spectrum-symphony?topic=ibm-spectrum-symphony-applying-plan#apply-plan-cli) to deploy your {{site.data.keyword.cloud_notm}} resources to build a {{site.data.keyword.symphony_full_notm}} cluster instance.
+After you have successfully generated a plan, you can begin [Applying a plan](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-applying-plan&interface=cli#apply-plan-cli) to deploy your {{site.data.keyword.cloud_notm}} resources to build a {{site.data.keyword.symphony_full_notm}} cluster instance.
 
 ## Generating a plan using the API
 {: #generate-plan-api}
@@ -153,4 +153,4 @@ INFO:root:Completed Generating Schematic Plan
 {: #next-steps-generate-plan-api}
 {: api}
 
-After you have successfully generated a plan, you can begin [Applying a plan](/docs/ibm-spectrum-symphony?topic=ibm-spectrum-symphony-applying-plan#apply-plan-api) to deploy your {{site.data.keyword.cloud_notm}} resources to build a {{site.data.keyword.symphony_full_notm}} cluster instance.
+After you have successfully generated a plan, you can begin [Applying a plan](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-applying-plan&interface=api#apply-plan-api) to deploy your {{site.data.keyword.cloud_notm}} resources to build a {{site.data.keyword.symphony_full_notm}} cluster instance.
