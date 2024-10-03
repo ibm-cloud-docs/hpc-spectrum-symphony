@@ -32,7 +32,7 @@ subcollection: hpc-spectrum-symphony
 {: troubleshoot}
 {: support}
 
-You are getting error when trying to join Lone Symphony cluster with SMC.
+You are getting error while trying to join Lone Symphony cluster with SMC.
 {: tsSymptoms}
 
 ```text
@@ -52,7 +52,7 @@ This error happens when:
 To make the outbound connection: 
 {: tsResolve}
 
-- check whether in lone symphony cluster enabled outbound as `<ego:EnvironmentVariable name="SMC_PROXY_INBOUND_CONNECTION">Y</ego:EnvironmentVariable>` in SMCP.xml
+- check whether in lone symphony cluster enabled outbound as `<ego:EnvironmentVariable name="SMC_PROXY_INBOUND_CONNECTION">Y</ego:EnvironmentVariable>` in `SMCP.xml`
 - If SMCP service is down in lone symphony cluster, run command `egosh service start SMCP` to start SMCP service
 - If network connection is not happening, check whether you added an SMC cidr block in the Lone symphony cluster security group or vice versa.
 

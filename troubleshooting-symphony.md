@@ -38,7 +38,7 @@ subcollection: hpc-spectrum-symphony
 You didn't provide the correct GitHub token, or you didn't provide a GitHub token altogether.
 {: tsCauses}
 
-Provide a [GitHub token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token){: external} and check to see whether the correct GitHub token has been provided in the `github_token` parameter in the created workspace API.
+Provide a [GitHub token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token){: external} and check to see whether the correct GitHub token is provided in the `github_token` parameter in the created workspace API.
 {: tsResolve}
 
 ## Why is IBM Cloud Schematics not able to clone the public GitHub repo?
@@ -83,7 +83,7 @@ Contact your account administrator and get assigned with the manager role on the
 You don't have the required access to get any VPC resources provisioned. 
 {: tsCauses}
 
-Contact your account administrator and get all of the required accesses. For more information, see [Required permissions](/docs/vpc?topic=vpc-resource-authorizations-required-for-api-and-cli-calls).
+Contact your account administrator and get all the required accesses. For more information, see [Required permissions](/docs/vpc?topic=vpc-resource-authorizations-required-for-api-and-cli-calls).
 {: tsResolve}
 
 ## Why is IBM Cloud Schematics not able to provision the cluster and fails with an error that the provided name is not unique? 
@@ -111,7 +111,7 @@ VPC resource names must be unique. If a resource exists with the same name, you 
 Deprovision the existing resource and try again.
 {: tsResolve}
 
-## Why is IBM Cloud Schematics not able to provision the cluster while using a custom image?
+## Why is IBM Cloud Schematics not able to provision the cluster using a custom image?
 {: #troubleshoot-topic-7}
 {: troubleshoot}
 {: support}
@@ -128,12 +128,12 @@ The custom image that is used for one of the virtual server instances isn't pres
 If you are using a custom image for any of your virtual server instances, ensure that the custom image is available in the target region and zone and is accessible by the account and API key that is used to provision the cluster.
 {: tsResolve}
 
-## Why am I receiving an error for my refresh token?
+## Why does refresh token occur?
 {: #troubleshoot-topic-8}
 {: troubleshoot}
 {: support}
 
-You are receiving a refresh token error in the **generate a plan**, **apply a plan**, and **destroy resources** requests: `Error: The provided Refresh Token is invalid. Please provide a proper refresh token for Terraform to run the configuration. Code: 400`
+You are receiving a refresh token error in the generate a plan, apply a plan, and destroy resources requests: `Error: The provided Refresh Token is invalid. Please provide a proper refresh token for Terraform to run the configuration. Code: 400`
 {: tsSymptoms}
 
 You didn't provide the correct refresh token, or you didn't provide a refresh token altogether.
@@ -164,7 +164,7 @@ You need to destroy your existing resources and try applying the change again. Y
 You are receiving the following error when you try to generate or apply a plan on {{site.data.keyword.bpshort}} workspace: `failed due to "Error: No SSH Key found with name <KEY_NAME>".`
 {: tsSymptoms}
 
-Terraform could not find the given SSH key names that are provided by you.
+Terraform might not find the given SSH key names that are provided by you.
 {: tsCauses}
 
 1. Check whether the given SSH key is present in the current region where the cluster is being provisioned. If the given SSH key is not present, create the SSH key in the current region.
