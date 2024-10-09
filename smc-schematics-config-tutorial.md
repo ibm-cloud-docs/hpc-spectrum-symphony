@@ -52,7 +52,7 @@ Adding SMC involves:
 ## Architecture diagram
 {: #smc-arch-diagram}
 
-![Architecture diagram](images/SMC-arch-diagram-Multi-Region.drawio.svg){: caption="Figure 1. Architecture diagram zones and regions" caption-side="bottom"}
+![Architecture diagram](images/SMC-arch-diagram-Multi-Region.drawio.svg){: caption="Architecture diagram zones and regions" caption-side="bottom"}
 
 ## Before you begin
 {: #smc-b4-begin}
