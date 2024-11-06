@@ -1,0 +1,41 @@
+{
+    "version": 2,
+    "title": "IBM Spectrum Symphony",
+    "introduction": "Find useful information to learn about IBM Spectrum Symphony.",
+    "product_page": "https://www.ibm.com/products/analytics-workload-management",
+    "section_topics": {
+      "links": [
+        {
+          "title": "Getting started with IBM Spectrum Symphony",
+          "href": "/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-getting-started-tutorial&interface=cli"
+        },
+        {
+          "title": "About the IBM Spectrum Symphony",
+          "href": "/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-about-spectrum-symphony&interface=cli"
+        },
+        {
+          "title": "Integrating OpenLDAP with IBM Spectrum Symphony",
+          "href": "/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-integrate-openldap-spectrum-symphony&interface=cli"
+        },
+        {
+          "title": "Symphony Rolling Upgrade",
+          "href": "/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-symphony-rolling-upgrade&interface=cli"
+        },
+        {
+          "title": "IBM Spectrum Symphony FAQs",
+          "href": "/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-spectrum-symphony-faqs&interface=cli"
+        }
+      ]
+    },
+    "section_highlights": [
+      {
+        "title": "IBM Spectrum Symphony",
+        "description": "IBM Spectrum Symphony allows you to deploy high-performance computing (HPC) clusters by using IBM Spectrum Symphony as HPC scheduling software.",
+        "href": "/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-about-spectrum-symphony&interface=cli",
+        "type": "training"
+      }
+    ],
+    "section_updates": {
+      "view_more": "/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-release-notes"
+    }
+  }
