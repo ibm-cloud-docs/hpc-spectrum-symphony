@@ -31,7 +31,7 @@
       {
         "title": "IBM Spectrum Symphony",
         "description": "IBM Spectrum Symphony allows you to deploy high-performance computing (HPC) clusters by using IBM Spectrum Symphony as HPC scheduling software.",
-        "href": "/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-about-spectrum-symphony",
+        "href": "https://test.cloud.ibm.com/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-about-spectrum-symphony",
         "type": "training"
       }
     ],
