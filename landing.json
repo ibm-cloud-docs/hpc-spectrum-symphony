@@ -7,23 +7,23 @@
       "links": [
         {
           "title": "Getting started with IBM Spectrum Symphony",
-          "href": "/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-getting-started-tutorial&interface=cli"
+          "href": "/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-getting-started-tutorial"
         },
         {
           "title": "About the IBM Spectrum Symphony",
-          "href": "/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-about-spectrum-symphony&interface=cli"
+          "href": "/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-about-spectrum-symphony"
         },
         {
           "title": "Integrating OpenLDAP with IBM Spectrum Symphony",
-          "href": "/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-integrate-openldap-spectrum-symphony&interface=cli"
+          "href": "/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-integrate-openldap-spectrum-symphony"
         },
         {
           "title": "Symphony Rolling Upgrade",
-          "href": "/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-symphony-rolling-upgrade&interface=cli"
+          "href": "/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-symphony-rolling-upgrade"
         },
         {
           "title": "IBM Spectrum Symphony FAQs",
-          "href": "/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-spectrum-symphony-faqs&interface=cli"
+          "href": "/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-spectrum-symphony-faqs"
         }
       ]
     },
@@ -31,7 +31,7 @@
       {
         "title": "IBM Spectrum Symphony",
         "description": "IBM Spectrum Symphony allows you to deploy high-performance computing (HPC) clusters by using IBM Spectrum Symphony as HPC scheduling software.",
-        "href": "/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-about-spectrum-symphony&interface=cli",
+        "href": "/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-about-spectrum-symphony",
         "type": "training"
       }
     ],
