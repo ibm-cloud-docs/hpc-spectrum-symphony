@@ -87,7 +87,4 @@ Before you can access the {{site.data.keyword.symphony_short}} cluster managemen
 
 6. To access the GUI, enter the default login credentials: username is `Admin` and password is `Admin`.
 
-For more information on how to use the Symphony GUI, see [Accessing the cluster management console](https://www.ibm.com/docs/en/spectrum-symphony/7.3.1?topic=cluster-accessing-management-console#accessing_PMC){: external}.
-
-
-
+For more information on how to use the Symphony GUI, see [Accessing the cluster management console](https://www.ibm.com/docs/en/spectrum-symphony/7.3.2?topic=cluster-accessing-management-console){: external}.

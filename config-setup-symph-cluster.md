@@ -6,7 +6,7 @@ lastupdated: "2023-12-18"
 
 keywords: 
 
-subcollection: spectrum-symphony
+subcollection:  hpc-spectrum-symphony
 
 ---
 
@@ -23,7 +23,7 @@ subcollection: spectrum-symphony
 {:api: .ph data-hd-interface='api'}
 {:table: .aria-labeledby="caption"}
 
-#  Enabling User Management for IBM Spectrum Symphony using Windows Active Directory
+# Enabling User Management for IBM Spectrum Symphony using Windows Active Directory
 {: #integrate-scale-ad-auth-tut}    
 
 ## Introduction
@@ -319,7 +319,7 @@ Join a Symphony Cluster node that is hosted on RHEL 8.4 OS to an AD domain using
     - Updates the Pluggable Authentication Module (PAM) configuration files in the /etc/pam.d/ directory. 
     - Starts the winbind service and enables the service to start when the system boots. 
 
-9.  (Optional) Set an alternative ID mapping back end or customized ID mapping settings in the /etc/samba/smb.conf file. For more information, see the [Understanding and configuring Samba ID mapping](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/deploying_different_types_of_servers/assembly_using-samba-as-a-server_deploying-different-types-of-servers). 
+9.  (Optional) Set an alternative ID mapping back end or customized ID mapping settings in the /etc/samba/smb.conf file. For more information, see the [Understanding and configuring Samba ID mapping](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/deploying_different_types_of_servers/assembly_using-samba-as-a-server_deploying-different-types-of-servers). 
 
 10.  Edit the `/etc/krb5.conf` file and add this section:
 
