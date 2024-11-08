@@ -35,7 +35,7 @@ The Terraform-based templates can be found in this public [GitHub repository](ht
 
 Cluster nodes that are deployed with this offering include {{site.data.keyword.symphony_full_notm}} 7.3.2 Advanced Edition. See the following for a summary of the features associated with each edition: [{{site.data.keyword.symphony_full_notm}} editions](https://www.ibm.com/docs/en/spectrum-symphony/7.3.1?topic=foundations-spectrum-symphony-editions){: external}.
 
-If the cluster uses {{site.data.keyword.scale_short}} storage, the storage nodes include {{site.data.keyword.scale_full_notm}} 5.2.0.1 software. For more information, see the [{{site.data.keyword.scale_full_notm}}](https://www.ibm.com/docs/en/storage-scale/5.2.1){: external} product documentation.
+If the cluster uses {{site.data.keyword.scale_short}} storage, the storage nodes include {{site.data.keyword.scale_full_notm}} 5.2.1.1 software. For more information, see the [{{site.data.keyword.scale_full_notm}}](https://www.ibm.com/docs/en/storage-scale/5.2.1){: external} product documentation.
 
 ## What locations are available for deploying VPC resources?
 {: #locations-vpc-resources}
