@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2024-09-06"
+lastupdated: "2024-11-14"
 
 keywords: IBM Spectrum Symphony release notes
 
@@ -23,6 +23,28 @@ content-type: release-note
 The following new features and changes to {{site.data.keyword.symphony_full}} are available.
 {: shortdesc}
 
+## November 2024
+{: #hpc-spectrum-symphony-nov24}
+
+### 21 November 2024
+{: #hpc-spectrum-symphony-nov2124}
+{: release-note}
+
+Support for Symphony 7.3.2 fix patches.
+:   The {{site.data.keyword.symphony_full_notm}} version 7.3.2 offering is available for 64-bit Linux x86 and Windows platforms. The patches installed that are: Build601706, Build602082, Build602143, Build602148, Build602149, Build602158, Build602161, Build602162, Build602163, Build602185, Build602225.
+
+Updated the Spectrum Scale version from 5.2.0.1 to 5.2.1.1.
+:   The Storage Scale product version was updated from 5.2.0.1 to 5.2.1.1
+
+Updated Spectrum Symphony Windows worker image.
+:   Spectrum Symphony Windows worker image is updated with Build602163, Build602210 fix patches.
+
+File Storage for VPC support.
+:   {{site.data.keyword.cloud}} File Storage for VPC is a zonal file storage offering that provides NFS-based file storage services. You can create the file shares in an availability zone within a region. You can share them with multiple virtual server instances within the same zone in your region.
+
+File share support for Windows worker nodes using Cloud Object Storage service.
+:   {{site.data.keyword.cloud}} File Storage for VPC integrates with Cloud Object Storage to provide a compatible file storage solution. This setup allows Windows instances to access file shares efficiently within the VPC environment.
+
 ## September 2024
 {: #hpc-spectrum-symphony-sep24}
 
@@ -34,8 +56,7 @@ Support for Symphony 7.3.2 fix patches.
 :   The {{site.data.keyword.symphony_full_notm}} version 7.3.2 offering is available for 64-bit Linux x86 and Windows platforms. The patches installed that are: Build602125, Build602100, Build602094, Build602071, Build602061, Build602068, Build602039.
 
 Updated the Spectrum Scale version from 5.1.9.3 to 5.2.0.1.
-
-:  The Storage Scale product version was updated from 5.1.9.3 to 5.2.0.1.
+:   The Storage Scale product version was updated from 5.1.9.3 to 5.2.0.1.
 
 Updated Spectrum Symphony Windows worker image.
 :   Spectrum Symphony Windows worker image is updated with Build602052 fix patch.
