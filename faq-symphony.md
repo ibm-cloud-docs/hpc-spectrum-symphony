@@ -165,13 +165,13 @@ No, adding the same permitted network (for example, VPC) to two DNS zones of the
 {: #file-storages-for-vpc-profiles}
 {: faq}
 
-{{site.data.keyword.filestorage_vpc_full_notm}} is a zonal file storage offering that provides NFS-based file storage services. You create file share mounts from a subnet in an availability zone within a region. You can also share them with multiple virtual server instances within the same zone within a vpc. {{site.data.keyword.spectrum_full_notm}} supports the use of [dp2 profiles](/docs/vpc?topic=vpc-file-storage-profiles&interface=ui#dp2-profile).
+{{site.data.keyword.filestorage_vpc_full_notm}} is a zonal file storage offering that provides NFS-based file storage services. You create file share mounts from a subnet in an availability zone within a region. You can also share them with multiple virtual server instances within the same zone within a vpc. {{site.data.keyword.symphony_full_notm}} supports the use of [dp2 profiles](/docs/vpc?topic=vpc-file-storage-profiles&interface=ui#dp2-profile).
 
 ## Can you specify the total IOPS (input or output operations per second) for a file share when deploying an {{site.data.keyword.spectrum_short}} cluster?
 {: #iops-cluster}
 {: faq}
 
-Yes, when you deploy an {{site.data.keyword.spectrum_full_notm}} cluster, you can [choose the required IOPS value appropriate for your file share size](/docs/vpc?topic=vpc-file-storage-profiles&interface=ui#fs-tiers).
+Yes, when you deploy an {{site.data.keyword.symphony_full_notm}} cluster, you can [choose the required IOPS value appropriate for your file share size](/docs/vpc?topic=vpc-file-storage-profiles&interface=ui#fs-tiers).
 
 ## How to share data, packages, or applications with {{site.data.keyword.spectrum_short}} compute nodes?
 {: #shares}
