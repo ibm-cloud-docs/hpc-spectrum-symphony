@@ -161,19 +161,19 @@ Yes, the solution supports the use of a custom resolver that is already associat
 
 No, adding the same permitted network (for example, VPC) to two DNS zones of the same name is not allowed as mentioned [here](/docs/dns-svcs?topic=dns-svcs-managing-permitted-networks&interface=ui#adding-permitted-networks-ui). Therefore, when you select values for `vpc_scale_storage_dns_domain` and `vpc_worker_dns_domain`, ensure that they are unique and that there are no DNS zones that use either of those names that are already associated with the VPC that you might have specified in `vpc_name`.
 
-## What file storage for {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) profiles are supported for the {{site.data.keyword.spectrum_full_notm}} cluster shared storage?
+## What file storage for {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) profiles are supported for the {{site.data.keyword.symphony_full_notm}} cluster shared storage?
 {: #file-storages-for-vpc-profiles}
 {: faq}
 
 {{site.data.keyword.filestorage_vpc_full_notm}} is a zonal file storage offering that provides NFS-based file storage services. You create file share mounts from a subnet in an availability zone within a region. You can also share them with multiple virtual server instances within the same zone within a vpc. {{site.data.keyword.symphony_full_notm}} supports the use of [dp2 profiles](/docs/vpc?topic=vpc-file-storage-profiles&interface=ui#dp2-profile).
 
-## Can you specify the total IOPS (input or output operations per second) for a file share when deploying an {{site.data.keyword.spectrum_short}} cluster?
+## Can you specify the total IOPS (input or output operations per second) for a file share when deploying an {{site.data.keyword.symphony_full_notm}} cluster?
 {: #iops-cluster}
 {: faq}
 
 Yes, when you deploy an {{site.data.keyword.symphony_full_notm}} cluster, you can [choose the required IOPS value appropriate for your file share size](/docs/vpc?topic=vpc-file-storage-profiles&interface=ui#fs-tiers).
 
-## How to share data, packages, or applications with {{site.data.keyword.spectrum_short}} compute nodes?
+## How to share data, packages, or applications with {{site.data.keyword.symphony_full_notm}} compute nodes?
 {: #shares}
 {: faq}
 
