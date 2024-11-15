@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-05-17"
+  years: 2023, 2024
+lastupdated: "2024-11-15"
 
 keywords: 
 
@@ -160,3 +160,21 @@ Yes, the solution supports the use of a custom resolver that is already associat
 {: faq}
 
 No, adding the same permitted network (for example, VPC) to two DNS zones of the same name is not allowed as mentioned [here](/docs/dns-svcs?topic=dns-svcs-managing-permitted-networks&interface=ui#adding-permitted-networks-ui). Therefore, when you select values for `vpc_scale_storage_dns_domain` and `vpc_worker_dns_domain`, ensure that they are unique and that there are no DNS zones that use either of those names that are already associated with the VPC that you might have specified in `vpc_name`.
+
+## What file storage for {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) profiles are supported for the {{site.data.keyword.spectrum_full_notm}} cluster shared storage?
+{: #file-storages-for-vpc-profiles}
+{: faq}
+
+{{site.data.keyword.filestorage_vpc_full_notm}} is a zonal file storage offering that provides NFS-based file storage services. You create file share mounts from a subnet in an availability zone within a region. You can also share them with multiple virtual server instances within the same zone across multiple VPCs. {{site.data.keyword.spectrum_full_notm}} supports the use of [dp2 profiles](/docs/vpc?topic=vpc-file-storage-profiles&interface=ui#dp2-profile).
+
+## Can you specify the total IOPS (input or output operations per second) for a file share when deploying an {{site.data.keyword.spectrum_short}} cluster?
+{: #iops-cluster}
+{: faq}
+
+Yes, when you deploy an {{site.data.keyword.spectrum_short}} cluster, you can [choose the required IOPS value appropriate for your file share size](/docs/vpc?topic=vpc-file-storage-profiles&interface=ui#fs-tiers).
+
+## How to share data, packages, or applications with {{site.data.keyword.spectrum_short}} compute nodes?
+{: #shares}
+{: faq}
+
+{{site.data.keyword.filestorage_vpc_full_notm}} with two file shares (`/mnt/binaries` or `/mnt/data`), and up to five file shares, is provisioned to be accessible by both {{site.data.keyword.spectrum_short}} management and compute nodes. To copy to a file share, SSH to the {{site.data.keyword.spectrum_short}} management node and use your file copy of choice (such as scp, rsync, or IBM Aspera) to the appropriate file share.

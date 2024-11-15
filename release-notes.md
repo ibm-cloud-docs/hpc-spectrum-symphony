@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2024-11-14"
+lastupdated: "2024-11-15"
 
 keywords: IBM Spectrum Symphony release notes
 
@@ -40,7 +40,7 @@ Updated Spectrum Symphony Windows worker image.
 :   Spectrum Symphony Windows worker image is updated with Build602163, Build602210 fix patches.
 
 File Storage for VPC support.
-:   {{site.data.keyword.cloud}} File Storage for VPC is a zonal file storage offering that provides NFS-based file storage services. You can create the file shares in an availability zone within a region. You can share them with multiple virtual server instances within the same zone in your region.
+:   {{site.data.keyword.cloud}} File Storage for VPC is a zonal file storage offering that provides NFS-based file storage services. You can create file shares in an availability zone within a region. You can share them with multiple virtual server instances within the same zone in your region.
 
 File share support for Windows worker nodes using Cloud Object Storage service.
 :   {{site.data.keyword.cloud}} File Storage for VPC integrates with Cloud Object Storage to provide a compatible file storage solution. This setup allows Windows instances to access file shares efficiently within the VPC environment.
