@@ -165,16 +165,16 @@ No, adding the same permitted network (for example, VPC) to two DNS zones of the
 {: #file-storages-for-vpc-profiles}
 {: faq}
 
-{{site.data.keyword.filestorage_vpc_full_notm}} is a zonal file storage offering that provides NFS-based file storage services. You create file share mounts from a subnet in an availability zone within a region. You can also share them with multiple virtual server instances within the same zone across multiple VPCs. {{site.data.keyword.spectrum_full_notm}} supports the use of [dp2 profiles](/docs/vpc?topic=vpc-file-storage-profiles&interface=ui#dp2-profile).
+{{site.data.keyword.filestorage_vpc_full_notm}} is a zonal file storage offering that provides NFS-based file storage services. You create file share mounts from a subnet in an availability zone within a region. You can also share them with multiple virtual server instances within the same zone within a vpc. {{site.data.keyword.spectrum_full_notm}} supports the use of [dp2 profiles](/docs/vpc?topic=vpc-file-storage-profiles&interface=ui#dp2-profile).
 
 ## Can you specify the total IOPS (input or output operations per second) for a file share when deploying an {{site.data.keyword.spectrum_short}} cluster?
 {: #iops-cluster}
 {: faq}
 
-Yes, when you deploy an {{site.data.keyword.spectrum_short}} cluster, you can [choose the required IOPS value appropriate for your file share size](/docs/vpc?topic=vpc-file-storage-profiles&interface=ui#fs-tiers).
+Yes, when you deploy an {{site.data.keyword.spectrum_full_notm}} cluster, you can [choose the required IOPS value appropriate for your file share size](/docs/vpc?topic=vpc-file-storage-profiles&interface=ui#fs-tiers).
 
 ## How to share data, packages, or applications with {{site.data.keyword.spectrum_short}} compute nodes?
 {: #shares}
 {: faq}
 
-{{site.data.keyword.filestorage_vpc_full_notm}} with two file shares (`/mnt/binaries` or `/mnt/data`), and up to five file shares, is provisioned to be accessible by both {{site.data.keyword.spectrum_short}} management and compute nodes. To copy to a file share, SSH to the {{site.data.keyword.spectrum_short}} management node and use your file copy of choice (such as scp, rsync, or IBM Aspera) to the appropriate file share.
+{{site.data.keyword.filestorage_vpc_full_notm}} with two file shares (`/mnt/vpcstorage/tools` or `/mnt/vpcstorage/data`), and up to five file shares, is provisioned to be accessible by both Spectrum Symphony management and compute nodes. To copy to a file share, SSH to the Spectrum Symphony management node and use your file copy of choice (such as scp, rsync, or IBM Aspera) to the appropriate file share.
