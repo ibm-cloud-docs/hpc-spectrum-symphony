@@ -14,8 +14,8 @@
           "href": "/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-about-spectrum-symphony"
         },
         {
-          "title": "Integrating OpenLDAP with IBM Spectrum Symphony",
-          "href": "/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-integrate-openldap-spectrum-symphony"
+          "title": "Enabling User Management for IBM Spectrum Symphony using Windows Active Directory",
+          "href": "/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-integrate-scale-ad-auth-tut"
         },
         {
           "title": "Symphony Rolling Upgrade",
