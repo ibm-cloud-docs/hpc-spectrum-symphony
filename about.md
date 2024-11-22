@@ -41,4 +41,4 @@ The offering enables initial {{site.data.keyword.symphony_short}}-based HPC clus
 
 The following diagram depicts a {{site.data.keyword.symphony_short}} cluster that uses NFS for shared storage. For a view of a cluster that uses Spectrum Scale, see the [Using Spectrum Scale storage](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-using-spectrum-scale-storage) section.
 
-![Architecture diagram](images/hpccluster-sym-schematics-architecture.png){: caption="Architecture diagram of an {{site.data.keyword.symphony_full_notm}} cluster on {{site.data.keyword.cloud_notm}}" caption-side="bottom"}
+![Architecture diagram](images/hpccluster-sym-schematics-architecture.svg){: caption="Architecture diagram of an {{site.data.keyword.symphony_full_notm}} cluster on {{site.data.keyword.cloud_notm}}" caption-side="bottom"}
