@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-11-15"
+lastupdated: "2024-11-22"
 
 keywords: 
 
@@ -178,3 +178,18 @@ Yes, when you deploy an {{site.data.keyword.symphony_full_notm}} cluster, you ca
 {: faq}
 
 {{site.data.keyword.filestorage_vpc_full_notm}} with two file shares (`/mnt/vpcstorage/tools` or `/mnt/vpcstorage/data`), and up to five file shares, is provisioned to be accessible by both Spectrum Symphony management and compute nodes. To copy to a file share, SSH to the Spectrum Symphony management node and use your file copy of choice (such as scp, rsync, or IBM Aspera) to the appropriate file share.
+
+## How file sharing is implemented on Symphony nodes?
+{: #nodes}
+{: faq}
+
+File sharing is implemented on Symphony nodes as follows:
+
+* RHEL Symphony Nodes
+    * IBM Cloud® VPC File Storage is used to support file sharing.
+    * Files are mounted on all RHEL nodes in the cluster according to the specifications defined in the `custom_file_shares` variable.
+
+* Windows Worker Nodes
+    * File sharing is implemented using integration with Cloud Object Storage (COS).
+
+For more information, refer to the [IBM HPC Spectrum Symphony Deployment Values](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-deployment-values) documentation.
