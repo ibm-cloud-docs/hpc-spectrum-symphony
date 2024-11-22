@@ -49,7 +49,7 @@ Updated Spectrum Symphony Windows worker image.
 :   Spectrum Symphony Windows worker image is updated with Build602163, Build602210 fix patches.
 
 Supports Windows operating system versions 2016 and 2022.
-:   Spectrum Symphony Windows worker image supports Windows 2022 and Windows 2016 versions.
+:   Spectrum Symphony Windows worker image supports Windows 2016 and Windows 2022 versions.
 
 ## September 2024
 {: #hpc-spectrum-symphony-sep24}
