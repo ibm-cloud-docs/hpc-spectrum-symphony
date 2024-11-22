@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2024
 
-lastupdated: "2024-09-06"
+lastupdated: "2024-11-22"
 
 keywords: IBM Spectrum Symphony release notes
 
@@ -20,8 +20,36 @@ content-type: release-note
 # Release notes
 {: #release-notes}
 
-In this document you learn about the latest release updates to {{site.data.keyword.symphony_full}} that are grouped by date.
+The following new features and changes to {{site.data.keyword.symphony_full}} are available.
 {: shortdesc}
+
+## November 2024
+{: #hpc-spectrum-symphony-nov24}
+
+### 22 November 2024
+{: #hpc-spectrum-symphony-nov2224}
+{: release-note}
+
+File Storage for VPC support.
+:   {{site.data.keyword.cloud}} File Storage for VPC is a zonal file storage offering that provides NFS-based file storage services. You can create file shares in an availability zone within a region. You can share them with multiple Symphony cluster nodes within the same zone in your region.
+
+File share support for Windows worker nodes using Cloud Object Storage service.
+:   Windows worker nodes using Cloud Object Storage (COS) provides a compatible file storage solution that integrates efficiently within the VPC environment, enabling Windows instances to access file shares effectively.
+
+Support for Symphony 7.3.2 fix patches.
+:   The {{site.data.keyword.symphony_full_notm}} version 7.3.2 offering is available for 64-bit Linux x86 and Windows platforms. The patches installed that are: Build601706, Build602082, Build602143, Build602148, Build602149, Build602158, Build602161, Build602162, Build602163, Build602185, Build602225.
+
+Updated the Spectrum Scale version from 5.2.0.1 to 5.2.1.1.
+:   The Storage Scale product version was updated from 5.2.0.1 to 5.2.1.1
+
+Updated Spectrum Symphony and Storage Scale custom images.
+:   Spectrum Symphony and Storage Scale custom images were updated to use RHEL 8.10 instead of RHEL 8.8.
+
+Updated Spectrum Symphony Windows worker image.
+:   Spectrum Symphony Windows worker image is updated with Build602163, Build602210 fix patches.
+
+Supports Windows operating system versions 2016 and 2022.
+:   Spectrum Symphony Windows worker image supports Windows 2016 and Windows 2022 versions.
 
 ## September 2024
 {: #hpc-spectrum-symphony-sep24}
@@ -31,11 +59,10 @@ In this document you learn about the latest release updates to {{site.data.keywo
 {: release-note}
 
 Support for Symphony 7.3.2 fix patches.
-:   The {{site.data.keyword.symphony_full_notm}} version 7.3.2 offering is available for 64-bit Linux x86 and Windows platforms. The patches installed are: Build602125, Build602100, Build602094, Build602071, Build602061, Build602068, Build602039.
+:   The {{site.data.keyword.symphony_full_notm}} version 7.3.2 offering is available for 64-bit Linux x86 and Windows platforms. The patches installed that are: Build602125, Build602100, Build602094, Build602071, Build602061, Build602068, Build602039.
 
 Updated the Spectrum Scale version from 5.1.9.3 to 5.2.0.1.
-
-:  The Storage Scale product version was updated from 5.1.9.3 to 5.2.0.1.
+:   The Storage Scale product version was updated from 5.1.9.3 to 5.2.0.1.
 
 Updated Spectrum Symphony Windows worker image.
 :   Spectrum Symphony Windows worker image is updated with Build602052 fix patch.
@@ -50,7 +77,7 @@ Updated Spectrum Symphony Windows worker image.
 Support for Symphony 7.3.2 build601860 fix patch.
 :   The {{site.data.keyword.symphony_full_notm}} 7.3.2 Fix 601860 offering is available for 64-bit Linux x86 and Windows platforms. This update addresses security vulnerabilities in {{site.data.keyword.symphony_full_notm}} and should be installed on top of your existing version 7.3.2 Fix 601711 installation. While it is not mandatory, but applying Fix 601860 is recommended for optimal security. You can also apply other fixes on top of {{site.data.keyword.symphony_full_notm}} 7.3.2 Fix 601711 without applying Fix 601860.
 
-Along with build601860 patch, 16 more patches are updated and they are available in [change log](https://github.com/IBM-Cloud/hpc-cluster-symphony/blob/master/CHANGELOG.md) md file.
+Along with build601860 patch, 16 more patches are updated and they are available in the [change log](https://github.com/IBM-Cloud/hpc-cluster-symphony/blob/master/CHANGELOG.md) md file.
 
 Updated the Spectrum Scale version from 5.1.9.0 to 5.1.9.3.
 :   The Storage Scale product version was updated from 5.1.9.0 to 5.1.9.3.
@@ -59,17 +86,17 @@ Updated Spectrum Symphony and Storage Scale custom images.
 :   Spectrum Symphony and Storage Scale custom images are RHEL 8.8.
 
 Updated Spectrum Symphony Windows worker image.
-:   Spectrum Symphony Windows worker image was updated to Symphony 7.3.2 and also have Build601860 fix patch.
+:   Spectrum Symphony Windows worker image was updated to Symphony 7.3.2 and also has Build601860 fix patch.
 
-## Dec 2023
+## December 2023
 {: #hpc-spectrum-symphony-dec23}
 
-### 7 Dec 2023
+### 7 December 2023
 {: #hpc-spectrum-symphony-dec0723}
 {: release-note}
 
 Support for Symphony 7.3.2 Build601711 fix patch.
-:   The IBM Spectrum Symphony 7.3.2 Fix 601711 offering is available for 64-bit Linux x86 is a mandatory fix that contains various fixes and enhancements, and includes Fix 601349 released in November 2022.
+:   The IBM Spectrum Symphony 7.3.2 Fix 601711 offering available for 64-bit Linux x86 is a mandatory fix that contains various fixes and enhancements, and includes Fix 601349 released in November 2022.
 
 Spectrum Scale version has been updated from 5.1.7.0 to 5.1.9.0.
 :   The Storage Scale product version was updated from 5.1.7.0 to 5.1.9.0.
@@ -88,10 +115,10 @@ Update Spectrum Symphony windows worker image
 {: release-note}
 
 Spectrum multicluster (SMC) support
-:   The initial release of Spectrum multicluster (SMC), which connects multiple {{site.data.keyword.symphony_full_notm}} clusters into a federation cluster, is now available. You can use SMC to redirect {{site.data.keyword.symphony_full_notm}} sessions to non-busy clusters, deploy and manage service packages, and monitor workload and resources.
+:   The initial release of Spectrum multicluster (SMC), which connects multiple {{site.data.keyword.symphony_full_notm}} clusters into a federation cluster, is now available. You can use SMC to redirect {{site.data.keyword.symphony_full_notm}} sessions to nonbusy clusters, deploy and manage service packages, and monitor workload and resources.
 
 Documentation enhancement: Integrating OpenLDAP with {{site.data.keyword.symphony_full_notm}}
-:   The newly added [Integrating OpenLDAP with {{site.data.keyword.symphony_full_notm}}](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-integrate-openldap-spectrum-symphony) tutorial walks you through the steps involved in configuring {{site.data.keyword.symphony_full_notm}} to use OpenLDAP as the primary directory service for user authentication. 
+:   The newly added [Integrating OpenLDAP with {{site.data.keyword.symphony_full_notm}}](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-integrate-openldap-spectrum-symphony) tutorial walks you through the steps that are involved in configuring {{site.data.keyword.symphony_full_notm}} to use OpenLDAP as the primary directory service for user authentication. 
 
 ## 30 May 2023
 {: #hpc-spectrum-symphony-may3023}
@@ -113,7 +140,7 @@ Custom image support
 :   {{site.data.keyword.scale_short}} product version was updated from 5.1.5.1 to 5.1.7.0.
 
 Support automated public gateway creation when one is not associated with the subnets of an existing VPC
-:   When you choose to use an existing VPC, the automation associates the public gateway with all of the subnets if it is already part of the VPC. If the public gateway is not part of the VPC, then it creates a new public gateway and associates it with all subnets to allow internet access from the cluster nodes.
+:   When you choose to use an existing VPC, the automation associates the public gateway with all the subnets if it is already part of the VPC. If the public gateway is not part of the VPC, then it creates a new public gateway and associates it with all subnets to allow internet access from the cluster nodes.
 
 DNS functionality support
 :   Introduced use of DNS custom resolver for name resolution in place of static hostname to IP address mapping.
@@ -168,7 +195,7 @@ Bug fix
 :   Code fixes were applied to address an issue that was seen in regions where instance storage profiles are not available even though {{site.data.keyword.scale_short}} is not selected as the storage option.
 
 Updated RHEL stock image
-:   Made an update to use a RHEL 8.6 stock image instead of a RHEL 8.2 stock image for the login node and the NFS storage node.
+:   Made an update to use an RHEL 8.6 stock image instead of an RHEL 8.2 stock image for the login node and the NFS storage node.
 
 ## August 2022
 {: #hpc-spectrum-symphony-aug22}
@@ -188,7 +215,7 @@ Bug fix
 {: release-note}
 
 Security update and enhancements
-:   This release provides fixes for the Polkit Local Privilege Escalation Vulnerability (CVE-2021-4034) and for the Spring Framework Vulnerability (CVE-2022-22965) within the RHEL 8.4 based custom image accessible by the solution. This release also removes the earlier Polkit mitigation implemented through changes to the post-provisioning scripts. The RHEL 8.4 custom image replaces the RHEL 8.2 image that was provided in the previous release. In addition, changes in the code now allow creation of compute nodes in the cluster by Host Factory on VPC resource groups other than the default group. And, security group rules have been added to provide more secure access to the cluster by allowing SSH from only specific nodes.
+:   This release provides fixes for the Polkit Local Privilege Escalation Vulnerability (CVE-2021-4034) and for the Spring Framework Vulnerability (CVE-2022-22965) within the RHEL 8.4 based custom image accessible by the solution. This release also removes the earlier Polkit mitigation that is implemented through changes to the post-provisioning scripts. The RHEL 8.4 custom image replaces the RHEL 8.2 image that was provided in the previous release. In addition, changes in the code now allow creation of compute nodes in the cluster by Host Factory on VPC resource groups other than the default group. And, security group rules have been added to provide more secure access to the cluster by allowing SSH from only specific nodes.
 
 ## January 2022
 {: #hpc-spectrum-symphony-jan22}
@@ -222,7 +249,7 @@ Security update
 {: release-note}
 
 Dedicated hosts and additional improvements
-:   You now have the option to use dedicated hosts for static worker nodes in addition to having an enhanced `ssh_command` output and hyperthreading by default. For more information, see [Using dedicated hosts](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-using-dedicated-hosts). Further improvements include an update of the stock images that are used for login and storage nodes to RHEL 8.2 and clean up of entitlement and location input properties. Parallelism is now supported in {{site.data.keyword.bpshort}} `destroy` operations to help overall performance, and due to a bug fix, you can now avoid the Terraform warning regarding interpolation.
+:   You now have the option to use dedicated hosts for static worker nodes in addition to having an enhanced `ssh_command` output and hyperthreading by default. For more information, see [Using dedicated hosts](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-using-dedicated-hosts). Further improvements include an update of the stock images that are used for login and storage nodes to RHEL 8.2 and clean up of entitlement and location input properties. Parallelism is now supported in {{site.data.keyword.bpshort}} `destroy` operations to help overall performance, and due to a bug fix, you can now avoid the Terraform warning regarding the interpolation.
 
 ## October 2021
 {: #hpc-spectrum-symphony-oct21}

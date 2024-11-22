@@ -41,18 +41,18 @@ subcollection: hpc-spectrum-symphony
     ```shell
     # egosh user logon -u Admin -x Admin
     ```
-4.  Generate SMCP xml file.
+4.  Generate an SMCP xml file.
 
     ```shell
     # egosh service view SMCP -p
     ```
 
-5.  Edit SMCP xml file to set proxy into listen mode, so the proxy expects an inbound connection.
+5.  Edit the SMCP xml file to set the proxy into listen mode so that the proxy expects an inbound connection.
 
     ```shell
     # vi SMCP.xml
     ```
-6.  After SMCP.xml file opens in editor, replace MANUAL with AUTOMATIC in sc:ControlPolicy block and add environmental variable in second block of sc:ActivityDescription as <ego:EnvironmentVariable name="SMC_PROXY_INBOUND_CONNECTION">Y</ego:EnvironmentVariable>. 
+6.  After the SMCP.xml file opens in the editor, replace MANUAL with AUTOMATIC in the sc:ControlPolicy block and add an environmental variable in the second block of sc:ActivityDescription as <ego:EnvironmentVariable name="SMC_PROXY_INBOUND_CONNECTION">Y</ego:EnvironmentVariable>. 
     ```http
     <?xml version="1.0" encoding="UTF-8"?>
     <sc:ServiceDefinition xmlns:sc="http://www.platform.com/ego/2005/05/schema/sc" xmlns:ego="http://www.platform.com/ego/2005/05/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.platform.com/ego/2005/05/schema/sc ../sc.xsd http://www.platform.com/ego/2005/05/schema ../ego.xsd" ServiceName="SMCP">
@@ -137,7 +137,7 @@ subcollection: hpc-spectrum-symphony
         # egosh service list -ll | grep SMCP
         ```
 
-10. Check status of SMCP Service, whether proxy inbound rule connection active.
+10. Check the status of SMCP Service, whether proxy inbound rule connection is active.
 
         ```shell
         # egosh service view | grep SMC

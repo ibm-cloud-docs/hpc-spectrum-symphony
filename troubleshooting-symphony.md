@@ -38,7 +38,7 @@ subcollection: hpc-spectrum-symphony
 You didn't provide the correct GitHub token, or you didn't provide a GitHub token altogether.
 {: tsCauses}
 
-Provide a [GitHub token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token){: external} and check to see whether the correct GitHub token has been provided in the `github_token` parameter in the create workspace API.
+Provide a [GitHub token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens){: external} and check to see whether the correct GitHub token is provided in the `github_token` parameter in the created workspace API.
 {: tsResolve}
 
 ## Why is IBM Cloud Schematics not able to clone the public GitHub repo?
@@ -63,34 +63,13 @@ Do not provide a GitHub token, and check to see whether the GitHub token was pro
 {: troubleshoot}
 {: support}
 
-{{site.data.keyword.bpshort}} isn't able to create a workspace, and you are seeing the following error message: `You don't have the required to create a workspace in any resource groups. You must be assigned the manager role on the {{site.data.keyword.bpshort}} service in at least one resource group. Contact your account administrator for access.`
+{{site.data.keyword.bpshort}} is not able to create a workspace, and you are seeing the following error message: `You don't have the required to create a workspace in any resource groups. You must be assigned the manager role on the {{site.data.keyword.bpshort}} service in at least one resource group. Contact your account administrator for access.`
 {: tsSymptoms}
 
 You don't have the required access to create a workspace in any resource groups. You must be assigned the manager role on the {{site.data.keyword.bpshort}} service in at least one resource group.
 {: tsCauses}
 
 Contact your account administrator and get assigned with the manager role on the {{site.data.keyword.bpshort}} service in at least one resource group.
-{: tsResolve}
-
-## Why is IBM Cloud Schematics not able to provision the cluster and fails with an error message for the `symphony_license_confirmation` variable?
-{: #troubleshoot-topic-4}
-{: troubleshoot}
-{: support}
-
-{{site.data.keyword.bpshort}} isn't able to provision the cluster, and you are seeing the following error message: `Error: Invalid value for variable "symphony_license_confirmation"`
-{: tsSymptoms}
-
-You entered a value other than "true" for the property `symphony_license_confirmation`.
-{: tsCauses}
-
-The property `symphony_license_confirmation` only accepts "true" as a valid value. A "true" value indicates that you have agreed to one of the following two conditions:
-
-1. If you are deploying a production cluster, you have confirmed with your business team that you have enough licenses to deploy the {{site.data.keyword.spectrum_full_notm}} on {{site.data.keyword.cloud_notm}} and that these licenses are covered for use under the International Program License Agreement (IPLA).
-2. You are deploying an evaluation cluster with {{site.data.keyword.spectrum_full_notm}} on {{site.data.keyword.cloud_notm}} and agree to abide by the International License Agreement for Evaluation of Program (ILAE).
-
-IBM terms of software use for both IPLA and ILAE can be found [here](https://www-03.ibm.com/software/sla/sladb.nsf/sla/bla){: external}.
-
-After you agree to one of the two conditions, update the property value to "true" and try again.
 {: tsResolve}
 
 ## Why is IBM Cloud Schematics not able to provision the cluster and fails with an authorization error?
@@ -104,7 +83,7 @@ After you agree to one of the two conditions, update the property value to "true
 You don't have the required access to get any VPC resources provisioned. 
 {: tsCauses}
 
-Contact your account administrator and get all of the required accesses. For more information, see [Required permissions](/docs/vpc?topic=vpc-resource-authorizations-required-for-api-and-cli-calls).
+Contact your account administrator and get all the required accesses. For more information, see [Required permissions](/docs/vpc?topic=vpc-resource-authorizations-required-for-api-and-cli-calls).
 {: tsResolve}
 
 ## Why is IBM Cloud Schematics not able to provision the cluster and fails with an error that the provided name is not unique? 
@@ -132,7 +111,7 @@ VPC resource names must be unique. If a resource exists with the same name, you 
 Deprovision the existing resource and try again.
 {: tsResolve}
 
-## Why is IBM Cloud Schematics not able to provision the cluster while using a custom image?
+## Why is IBM Cloud Schematics not able to provision the cluster using a custom image?
 {: #troubleshoot-topic-7}
 {: troubleshoot}
 {: support}
@@ -149,12 +128,12 @@ The custom image that is used for one of the virtual server instances isn't pres
 If you are using a custom image for any of your virtual server instances, ensure that the custom image is available in the target region and zone and is accessible by the account and API key that is used to provision the cluster.
 {: tsResolve}
 
-## Why am I receiving an error for my refresh token?
+## Why does refresh token occur?
 {: #troubleshoot-topic-8}
 {: troubleshoot}
 {: support}
 
-You are receiving a refresh token error in the **generate a plan**, **apply a plan**, and **destroy resources** requests: `Error: The provided Refresh Token is invalid. Please provide a proper refresh token for Terraform to run the configuration. Code: 400`
+You are receiving a refresh token error in the generate a plan, apply a plan, and destroy resources requests: `Error: The provided Refresh Token is invalid. Please provide a proper refresh token for Terraform to run the configuration. Code: 400`
 {: tsSymptoms}
 
 You didn't provide the correct refresh token, or you didn't provide a refresh token altogether.
@@ -185,7 +164,7 @@ You need to destroy your existing resources and try applying the change again. Y
 You are receiving the following error when you try to generate or apply a plan on {{site.data.keyword.bpshort}} workspace: `failed due to "Error: No SSH Key found with name <KEY_NAME>".`
 {: tsSymptoms}
 
-Terraform could not find the given SSH key names that are provided by you.
+Terraform might not find the given SSH key names that are provided by you.
 {: tsCauses}
 
 1. Check whether the given SSH key is present in the current region where the cluster is being provisioned. If the given SSH key is not present, create the SSH key in the current region.
@@ -212,7 +191,7 @@ Ensure that your cluster prefix is no longer than 10 characters.
 {: troubleshoot}
 {: support}
 
-The `symA` requester might release a compute node virtual machine while the workload is still in progress. This happens when the property `return_idle_only` is set to true and the immediate return policy `symA` is unable to get the allocation for this host, and therefore assumes it has no allocation. This issue happens if there are only a few tasks remaining for the monitored applications. For more information, see [Updating idle time before worker nodes are removed](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-update-idle-time&interface=api).
+The `symA` requester might release a compute node virtual machine while the workload is still in progress. This happens when the property `return_idle_only` is set to true and the immediate return policy `symA` is unable to get the allocation for this host, and therefore assumes that it has no allocation. This issue happens if there are only a few tasks remaining for the monitored applications. For more information, see [Updating idle time before worker nodes are removed](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-update-idle-time&interface=api).
 
 
 ## Incorrect provider configuration values do not result in an error
@@ -240,7 +219,7 @@ You are receiving the following error messages during the creation of any specif
 * `Error: timeout while waiting for state to become 'done, ' (last state: 'provisioning', timeout: 10m0s)`
 {: tsSymptoms}
 
-While {{site.data.keyword.bpshort}} deploys the infrastructure resources, it authenticates with {{site.data.keyword.cloud_notm}} through API calls. If there are too many requests through the API to the cloud environment, {{site.data.keyword.bpshort}} won't be able to authenticate and could error out with the authentication error.
+While {{site.data.keyword.bpshort}} deploys the infrastructure resources, it authenticates with {{site.data.keyword.cloud_notm}} through API calls. If there are too many requests through the API to the cloud environment, {{site.data.keyword.bpshort}} will not be able to authenticate and might error out with the authentication error.
 {: tsCauses}
 
 To fix either issue (resource failing due to authentication error or the timeout error), destroy the resources from the {{site.data.keyword.bpshort}} workspace and retry deploying the resources. 
@@ -257,7 +236,7 @@ You are receiving the following error messages when the Ansible provisioner trie
 * `Error: Failed to connect to the host via ssh: Connection timed out during banner exchange", "unreachable`
 {: tsSymptoms}
 
-While {{site.data.keyword.bpshort}} deploys the infrastructure resources, the automation code is configured with a few Ansible playbooks, which are required to set up the {{site.data.keyword.scale_short}} function on the virtual server instance nodes with the help fo the Ansible provisioner. When the Ansible provisioner tries to SSH to these nodes to se the {{site.data.keyword.scale_short}} feature, the nodes go to an `unreachable` state. 
+While {{site.data.keyword.bpshort}} deploys the infrastructure resources, the automation code is configured with a few Ansible playbooks, which are required to set up the {{site.data.keyword.scale_short}} function on the virtual server instance nodes with the help of the Ansible provisioner. When the Ansible provisioner tries to SSH to these nodes to se the {{site.data.keyword.scale_short}} feature, the nodes go to an `unreachable` state. 
 {: tsCauses}
 
 To fix the issue, you can:
@@ -290,7 +269,7 @@ You need to check whether the provided image name has any spaces and if that ima
 You are receiving the following error when you try to apply a plan to your workspace: `Apply failed due to "code : cannot_start_capacity : message : Can't start instance because resource capacity is unavailable.`
 {: tsSymptoms}
 
-During the apply plan process, Terraform initiates the virtual server instance provisioning or bare metal server process based on the selected deployment values. If there is a resource capacity issue or a quota issue from the region where you are trying to deploy, the resources won't provision as expected.
+During the apply plan process, Terraform initiates the virtual server instance provisioning or bare metal server process based on the selected deployment values. If there is a resource capacity issue or a quota issue from the region where you are trying to deploy, the resources will not provision as expected.
 {: tsCauses}
 
 You need to talk to the administrator of the account to increase the quota for the specific region, or you can try to clean up all of the unwanted resources that are associated with the cloud infrastructure. If you clean up unwanted resources, you might free up space for the deployment to process.
@@ -426,4 +405,3 @@ After all the infrastructure-related resources are up and running, the Ansible c
 
 After a failed deployment, clean up all resources. During a subsequent attempt, use a new cluster prefix to avoid any name collisions with resources from the previous failed attempt. If the issue continues to occur, open an issue with {{site.data.keyword.cloud_notm}} Support.
 {: tsResolve}
-

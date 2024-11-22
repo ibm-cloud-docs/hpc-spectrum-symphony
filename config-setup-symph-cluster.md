@@ -6,7 +6,7 @@ lastupdated: "2023-12-18"
 
 keywords: 
 
-subcollection: spectrum-symphony
+subcollection:  hpc-spectrum-symphony
 
 ---
 
@@ -23,7 +23,7 @@ subcollection: spectrum-symphony
 {:api: .ph data-hd-interface='api'}
 {:table: .aria-labeledby="caption"}
 
-#  Enabling User Management for IBM Spectrum Symphony using Windows Active Directory
+# Enabling User Management for IBM Spectrum Symphony using Windows Active Directory
 {: #integrate-scale-ad-auth-tut}    
 
 ## Introduction
@@ -122,7 +122,7 @@ Verify that Active Directory and DNS are configured correctly by checking:
 
    Open "Server Manager", and in the "Dashboard", confirm "Active Directory Users and Computers" and "DNS" are listed under "Tools", indicating successful installation of the Active Directory and DNS management tools.
    
-2. Start **Active Directory Users and Computers** to manage user accounts, groups, and organizational units (OUs) within the domain.
+2. Start Active Directory Users and Computers to manage user accounts, groups, and organizational units (OUs) within the domain.
 3. Access DNS Manager to manage DNS zones and records for the domain.
 4. On a client system within the same network, configure the DNS settings to point to the IP address of the newly promoted domain controller.
 5.  Attempt to join the client system to the "POCDOMAIN.LOCAL" domain. A successful connection confirms proper DNS resolution and functional Active Directory domain services.
@@ -139,7 +139,7 @@ Creating user groups and users in the "pocdomain.local" Active Directory domain 
 
     a. Log in to the Windows Server with administrative privileges.
 
-    b. Click **Start** and search for "Active Directory Users and Computers."
+    b. Click Start and search for "Active Directory Users and Computers."
 
     c. Start the "Active Directory Users and Computers" management console.
 
@@ -147,13 +147,13 @@ Creating user groups and users in the "pocdomain.local" Active Directory domain 
 
     a. In the ADUC console, navigate to the Organizational Unit (OU) within the "pocdomain.local" domain where you want to create the user group.
 
-    b. Right-click on the OU and select **New** and then **Group**.
+    b. Right-click on the OU and select New and then Group.
 
-    c. In the New Object - Group dialog box, enter **Symphony-group** as the Group name.
+    c. In the New Object - Group dialog box, enter Symphony-group as the Group name.
 
     d. Choose the Group scope (for example, Global) and Group type (for example, Security).
 
-    e. Click **OK** to create the ***Symphony-group*** user group.
+    e. Click OK to create the ***Symphony-group*** user group.
 
 3. Create a User ***Symphonyuser01***:
 
@@ -177,24 +177,24 @@ Creating user groups and users in the "pocdomain.local" Active Directory domain 
 
       * Account is disabled: By default, the account is enabled. If you want to create the user account in a disabled state, clear this option.
 
-    d. Click **Next** to continue through any additional wizard steps.
+    d. Click Next to continue through any additional wizard steps.
 
-    e. Review the information entered, and click **Finish** to create the new user "Symphonyuser01."
+    e. Review the information entered, and click Finish to create the new user "Symphonyuser01."
 
 4.  Add "Symphonyuser01" to "Symphony-group" User Group:
 
     a. In the ADUC console, locate the ***Symphony-group*** user group that you created earlier.
 
-    b. Right-click on the ***Symphony-group*** user group and select **Properties**.
-    c.  In the **Properties** dialog box, go to the **Members** tab.
+    b. Right-click on the ***Symphony-group*** user group and select Properties**.
+    c.  In the Properties dialog box, go to the **Members** tab.
 
-    d. Click **Add** and then enter ***Symphonyuser01*** in the **Enter the object names to select** field.
+    d. Click Add and then enter ***Symphonyuser01*** in the **Enter the object names to select** field.
 
-    e. Click **Check Names** to validate the username.
+    e. Click Check Names to validate the username.
 
-    f. Click **OK** to add "Symphonyuser01" to the "Symphony-group" user group.
+    f. Click OK to add "Symphonyuser01" to the "Symphony-group" user group.
 
-    g.  Click **Apply** and then **OK** to save the changes.
+    g.  Click Apply and then **OK** to save the changes.
 
 
 ## Step 3 - Integrating Symphony Cluster running on RHEL 8.4 based Systems Directly to AD using Samba Winbind
@@ -260,7 +260,7 @@ Join a Symphony Cluster node that is hosted on RHEL 8.4 OS to an AD domain using
     addc1.POCDomain.local is the AD server FQDN name
     {: note}
 
-3. Update the DNS entries in `/etc/resolv.conf` file using:  
+3. Update the DNS entries in `/etc/resolv.conf` file by using:
 
     ```
     sudo nmcli connection modify "System eth0" ipv4.dns "10.243.0.41" ipv4.ignore-auto-dns yes
@@ -319,7 +319,7 @@ Join a Symphony Cluster node that is hosted on RHEL 8.4 OS to an AD domain using
     - Updates the Pluggable Authentication Module (PAM) configuration files in the /etc/pam.d/ directory. 
     - Starts the winbind service and enables the service to start when the system boots. 
 
-9.  (Optional) Set an alternative ID mapping back end or customized ID mapping settings in the /etc/samba/smb.conf file. For more information, see the [Understanding and configuring Samba ID mapping](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/deploying_different_types_of_servers/assembly_using-samba-as-a-server_deploying-different-types-of-servers). 
+9.  (Optional) Set an alternative ID mapping back end or customized ID mapping settings in the /etc/samba/smb.conf file. For more information, see the [Understanding and configuring Samba ID mapping](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/deploying_different_types_of_servers/assembly_using-samba-as-a-server_deploying-different-types-of-servers). 
 
 10.  Edit the `/etc/krb5.conf` file and add this section:
 
@@ -451,6 +451,7 @@ To provide root user permissions to AD users of "POCDOMAIN.LOCAL" domain on a Li
 {: important}
 
 ## Step 4 - Configuring setup on the Symphony cluster side
+{: #configure-symphony-cluster-side}
 
 Following are the steps to configure Kerberos Authentication on Linux Hosts for {{site.data.keyword.symphony_full_notm}} Integration with Active Directory:
 
@@ -563,4 +564,6 @@ Following are the steps to configure Kerberos Authentication on Linux Hosts for 
     ```
 
 ## Conclusion
+{: #conclusion}
+
 This guide serves as a vital resource for system administrators looking to seamlessly integrate {{site.data.keyword.symphony_full_notm}} with Active Directory within the {{site.data.keyword.cloud_notm}} environment. Addressing prerequisites and delivering step-by-step instructions, it ensures readiness for both Active Directory and RHEL systems that are deployed on IBM Virtual Servers. From installing Active Directory on Windows Server 2019 to configuring Kerberos authentication, the guide provides administrators with a reliable reference to achieve efficient user management and access control for {{site.data.keyword.symphony_full_notm}} within the {{site.data.keyword.cloud_notm}} infrastructure.

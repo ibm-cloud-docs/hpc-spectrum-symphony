@@ -26,22 +26,22 @@ subcollection: hpc-spectrum-symphony
 # Generating a plan
 {: #generate-plan}
 
-After you've created your workspace, you need to generate a plan to validate all of the configuration properties.
+After you have created your workspace, you need to generate a plan to validate all the configuration properties.
 
 ## Generating a plan using the UI
 {: #generate-plan-ui}
 {: ui}
 
 1. In the {{site.data.keyword.cloud}} console, after the workspace is created, you can review the properties and the variables that are associated with that workspace by using the _Settings_ tab. Make sure to update the following required parameters: `api_key`, `ssh_key_name`, `ibm_customer_number`, and `zone`.
-2. After you review all of the values and make any applicable changes, click **Generate plan**. 
-3. When you click **Generate plan**, a new log is generated that can be viewed in the Jobs tab by clicking **Jobs**. 
-4. Review the log file for any errors, fix the properties, and regenerate the plan by clicking **Generate plan** again.
+2. After you review all the values and make any applicable changes, click Generate plan. 
+3. When you click Generate plan, a new log is generated that can be viewed in the Jobs tab by clicking Jobs. 
+4. Review the log file for any errors, fix the properties, and regenerate the plan by clicking Generate plan again.
 
 ## Next steps
 {: #next-steps-generate-ui}
 {: ui}
 
-After you've successfully generated a plan, you can begin [Applying a plan](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-applying-plan&interface=ui#apply-plan-ui) to deploy your {{site.data.keyword.cloud_notm}} resources to build a {{site.data.keyword.symphony_full_notm}} cluster instance.
+After you have successfully generated a plan, you can begin [Applying a plan](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-applying-plan&interface=ui#apply-plan-ui) to deploy your {{site.data.keyword.cloud_notm}} resources to build a {{site.data.keyword.symphony_full_notm}} cluster instance.
 
 ## Generating a plan using the CLI
 {: #generate-plan-cli}
@@ -54,7 +54,7 @@ ibmcloud schematics plan --id <WORKSPACE_ID>
 ```
 {: pre}
 
-You can view the log file to look for errors or confirm that the action was completed successfully. You might need to run this command multiple times to track the outcome of the command until it's completed.
+You can view the log file to look for errors or confirm that the action was completed successfully. You might need to run this command multiple times to track the outcome of the command until it is completed.
 
 ```sh
 ibmcloud schematics logs --id <WORKSPACE_ID>
@@ -65,7 +65,7 @@ ibmcloud schematics logs --id <WORKSPACE_ID>
 {: #next-steps-generate-plan-cli}
 {: cli}
 
-After you've successfully generated a plan, you can begin [Applying a plan](/docs/ibm-spectrum-symphony?topic=ibm-spectrum-symphony-applying-plan#apply-plan-cli) to deploy your {{site.data.keyword.cloud_notm}} resources to build a {{site.data.keyword.symphony_full_notm}} cluster instance.
+After you have successfully generated a plan, you can begin [Applying a plan](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-applying-plan&interface=cli#apply-plan-cli) to deploy your {{site.data.keyword.cloud_notm}} resources to build a {{site.data.keyword.symphony_full_notm}} cluster instance.
 
 ## Generating a plan using the API
 {: #generate-plan-api}
@@ -153,4 +153,4 @@ INFO:root:Completed Generating Schematic Plan
 {: #next-steps-generate-plan-api}
 {: api}
 
-After you've successfully generated a plan, you can begin [Applying a plan](/docs/ibm-spectrum-symphony?topic=ibm-spectrum-symphony-applying-plan#apply-plan-api) to deploy your {{site.data.keyword.cloud_notm}} resources to build a {{site.data.keyword.symphony_full_notm}} cluster instance.
+After you have successfully generated a plan, you can begin [Applying a plan](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-applying-plan&interface=api#apply-plan-api) to deploy your {{site.data.keyword.cloud_notm}} resources to build a {{site.data.keyword.symphony_full_notm}} cluster instance.

@@ -35,9 +35,9 @@ Before you perform the actions to destroy the resources, you must first ensure t
 {: #destroy-resources-ui}
 {: ui}
 
-1. In the {{site.data.keyword.cloud_notm}} console on the **Schematics > Workspaces** page, select **Actions > Destroy** to delete all of the related VPC resources that were deployed as part of that workspace.
+1. In the {{site.data.keyword.cloud_notm}} console on the Schematics > Workspaces page, select Actions > Destroy to delete all the related VPC resources that were deployed as part of that workspace.
 2. If you select the option to destroy resources, decide whether you want to destroy all of them. This action cannot be undone. 
-3. Confirm the action by entering the workspace name in the text box and click **Destroy**.
+3. Confirm the action by entering the workspace name in the text box and click Destroy.
 
 ## Destroying resources using the CLI
 {: #deleting-resources-cli}
@@ -63,7 +63,7 @@ You can monitor the log files to view the deletion progress of all {{site.data.k
    * Replace your {{site.data.keyword.cloud_notm}} key to the `authenticator = IAMAuthenticator('<ibm-api-key>')` variable.
    * Change the API endpoint to the endpoint mentioned in [API endpoints](https://cloud.ibm.com/apidocs/schematics?code=python#api-endpoints){: external} according to the location that you want your {{site.data.keyword.bpshort}} workspace to reside, for example, `schematics_service.set_service_url('https://us.schematics.cloud.ibm.com')`.
 4. Inside the `schematics_service.destroy_workspace_command` function, provide the following parameters:
-   * Provide the workspace ID that you generated in the [Creating a workspace](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-creating-workspace&interface=api) task, for example, `us-south.workspace.Terraform-Schematics-Python-Workspace.b3bbc9f5`.
+   * Provide the workspace ID that you generated in the [Creating a workspace](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-creating-workspace&interface=api) task, for example `us-south.workspace.Terraform-Schematics-Python-Workspace.b3bbc9f5`.
    * Export your {{site.data.keyword.cloud_notm}} API key by using the following command:
   
     ```sh
@@ -79,7 +79,7 @@ You can monitor the log files to view the deletion progress of all {{site.data.k
     {: pre}
 
 5. Run the Python script by using `python3 <python-file-name>` to destroy the resources that you created in the {{site.data.keyword.bpshort}} workspace in the {{site.data.keyword.cloud_notm}}.
-6. You get an activity ID in the response if the parameters passed as part of the request are valid. You should be able to see that the resources are deleted in the {{site.data.keyword.bpshort}} workspace that you created in the {{site.data.keyword.cloud_notm}} console. If you don’t get a successful response, the error response contains the errors that you need to resolve. Resolve those errors and run the script until you are able to get a valid response and destroy the resources.
+6. You get an activity ID in the response if the parameters passed as part of the request are valid. You must be able to see that the resources are deleted in the {{site.data.keyword.bpshort}} workspace that you created in the {{site.data.keyword.cloud_notm}} console. If you don’t get a successful response, the error response contains the errors that you need to resolve. Resolve those errors and run the script until you are able to get a valid response and destroy the resources.
 7. If you want to check the logs of the action, see [Retrieving action logs with {{site.data.keyword.bpshort}} API](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-retrieve-action-logs) to retrieve the logs. The response contains the status of the action, and it appears in either a `COMPLETED` or `FAILED` state.
 
 ### Example Python request
@@ -134,4 +134,3 @@ DEBUG:urllib3.connectionpool:https://us.schematics.cloud.ibm.com:443 "PUT /v1/wo
 INFO:root:Completed Deletion of Schematic Resources
 ```
 {: screen}
-

@@ -59,6 +59,6 @@ With theses variables, ten cx2-48x96 instances are provisioned as static compute
 ## Dedicated host for VPC
 {: #how-to-configure}
 
-![Dedicated host](images/0964a980-4233-11ec-8279-e2f89e370e2f.png){: caption="Figure 1. Dedicated host for VPC {{site.data.keyword.cloud_notm}}" caption-side="bottom"}
+![Dedicated host](images/0964a980-4233-11ec-8279-e2f89e370e2f.png){: caption="Dedicated host for VPC {{site.data.keyword.cloud_notm}}" caption-side="bottom"}
 
 The ``spread`` placement policy tries to evenly distribute worker nodes and so symphony-demo-dh-1 and symphony-demo-dh-2 consumed 144 vCPUs (48 * 3 VSIs), and symphony-demo-dh-3 and symphony-demo-dh-4 consumed 96 vCPUs (48 * 2 VSIs). If you used the pack placement, it would allocate three VSIs on three dedicated hosts and one VSI on the fourth dedicated host.
