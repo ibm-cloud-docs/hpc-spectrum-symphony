@@ -19,6 +19,7 @@ toc:
       id: tutorial
       topics:
       - config-setup-symph-cluster.md
+      - setting-symphony-cluster.md
   - navgroup: 
       id: howto
       topics:
