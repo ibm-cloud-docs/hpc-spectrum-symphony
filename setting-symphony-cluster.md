@@ -200,6 +200,6 @@ If you want to set up a hybrid connectivity environment by using VPN, see the in
 {: #dns-zones-custom-resolvers}
 {: step}
 
- If you leave the `dns_instance_id` deployment input value as null, the deployment process creates a new DNS service instance ID in the respective DNS zone. Alternatively, provide an existing [IBM Cloud® DNS Service instance ID](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-dns-custom-resolvers) for the `dns_instance_id` deployment input value.
-
-If you leave the `dns_custom_resolver_id` deployment input value as null, the deployment process creates a new VPC and enables a new custom resolver for your cluster. Alternatively, to create custom DNS resolvers with an existing VPC, provide the resolver ID for the `dns_custom_resolver_id` deployment input value. For more information, see [DNS custom resolvers for your IBM Spectrum Symphony cluster](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-dns-custom-resolvers).
+Use the variable `vpc_worker_dns_domain` to specify the DNS domain name for the worker cluster. If this variable is left empty, a DNS zone will be created with the default domain name (for example, dnsscale.com). For the Scale Storage cluster, the IBM Cloud DNS Services domain variable to be used is `vpc_scale_storage_dns_domain`.
+When `spectrum_scale_enabled` is set to true, the values of `vpc_worker_dns_domain` and `vpc_scale_storage_dns_domain` must not be the same.
+{: note}

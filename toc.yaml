@@ -19,7 +19,6 @@ toc:
           label: Integrating existing infrastructure resources
           topics:
           - vpc-lsf.md
-          - dns-service-instances.md
   - navgroup:
       id: tutorial
       topics:
