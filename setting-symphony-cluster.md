@@ -6,7 +6,7 @@ lastupdated: "2024-12-24"
 
 keywords: architecture overview, cluster access, symphony cluster
 content-type: tutorial
-services: virtual-servers, vpc, loadbalancer-service
+services: virtual-servers, vpc, loadbalancer-service, fileshare, dns
 account-plan: paid
 completion-time: 60m
 subcollection: hpc-spectrum-symphony
@@ -142,7 +142,7 @@ To access your HPC cluster, complete the following steps:
 
 2. Copy `ssh-command` to access your cluster.
 
-    * `ssh -J root@ip-jumphost root@ip-managementhos`
+    * `ssh -J root@ip-jumphost root@ip-managementhost`
 
     * The `ip-jumphost` is public, while the `ip-managementhostis` not.
 
@@ -186,7 +186,7 @@ The following example shows `worker_node_min_count=2` and `worker_node_max_count
      
     You can see that now one node is added to your cluster:
 
-    ![Two worker nodes](images/autoscaling.png){: caption="Five worker nodes added"}
+    ![Two worker nodes](images/autoscaling.png){: caption="One worker node added"}
 
 5. The node that created by the auto scaling function are destroyed automatically after 1 hour of not being used.
 
