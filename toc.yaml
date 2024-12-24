@@ -15,6 +15,11 @@ toc:
       - about.md
       - deployment-values.md
       - release-notes.md
+      - topicgroup:
+          label: Integrating existing infrastructure resources
+          topics:
+          - vpc-lsf.md
+          - dns-service-instances.md
   - navgroup:
       id: tutorial
       topics:

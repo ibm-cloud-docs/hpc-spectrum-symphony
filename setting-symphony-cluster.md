@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2024
-lastupdated: "2024-12-23"
+lastupdated: "2024-12-24"
 
 keywords: architecture overview, cluster access, symphony cluster
 content-type: tutorial
@@ -26,7 +26,7 @@ subcollection: hpc-spectrum-symphony
 {:new_window: target="_blank"}
 {:step: data-tutorial-type='step'}
 
-# Setting up an IBM Spectrum Symphony cluster
+# Setting up an {{site.data.keyword.symphony_full_notm}} cluster
 {: #using-hpc-cluster} 
 {: toc-content-type="tutorial"} 
 {: toc-services="virtual-servers, vpc, loadbalancer-service"} 
@@ -89,7 +89,7 @@ Complete the following steps to create your API key:
 
 Complete the following steps to create and configure an HPC cluster from the {{site.data.keyword.cloud_notm}} catalog:
 
-1. In the {{site.data.keyword.cloud_notm}} catalog, search for _HPC_ or _Spectrum Symphony_, and then select IBM Spectrum Symphony. 
+1. In the {{site.data.keyword.cloud_notm}} catalog, search for _HPC_ or _Spectrum Symphony_, and then select {{site.data.keyword.symphony_full_notm}}. 
 
     ![HPC Cluster solution page](images/sym_catalog.png){: caption="HPC cluster solution page"}
 
@@ -104,12 +104,12 @@ See the following table for a list of parameters that you can configure for your
 
 | Parameter | Description |
 | --------- | ----------- |
-| `cluster_prefix` | Prefix that is used to name the Spectrum Symphony cluster and IBM Cloud resources that are provisioned to build the Spectrum Symphony cluster instance. You cannot create more than one instance of the Symphony cluster with the same name. Make sure that the name is unique.|
+| `cluster_prefix` | Prefix that is used to name the {{site.data.keyword.symphony_full_notm}} cluster and IBM Cloud resources that are provisioned to build the {{site.data.keyword.symphony_full_notm}} cluster instance. You cannot create more than one instance of the Symphony cluster with the same name. Make sure that the name is unique.|
 | `custom_file_shares` | Mount points and sizes in GB and IOPS range of file shares that can be used to customize shared file storage layout. Provide the details for up to 5 shares. Each file share size in GB supports different range of IOPS. For more information, see [file share IOPS value](https://cloud.ibm.com/docs/vpc?topic=vpc-file-storage-profiles&interface=ui). |
 | `hyperthreading_enabled` | Setting this to true will enable hyper-threading in the worker nodes of the cluster(default). Otherwise, hyper-threading will be disabled. |
-| `image_name` | Name of the custom image that you want to use to create virtual server instances in your IBM Cloud account to deploy the IBM Spectrum Symphony cluster. By default, the automation uses a base image with additional software packages mentioned [here](/docs/hpc-spectrum-symphony#create-custom-image). If you would like to include your application-specific binary files, follow the instructions in [Planning for custom images](/docs/vpc?topic=vpc-planning-custom-images) to create your own custom image and use that to build the IBM Spectrum Symphony cluster through this offering. |
+| `image_name` | Name of the custom image that you want to use to create virtual server instances in your IBM Cloud account to deploy the {{site.data.keyword.symphony_full_notm}} cluster. By default, the automation uses a base image with additional software packages mentioned [here](/docs/hpc-spectrum-symphony#create-custom-image). If you would like to include your application-specific binary files, follow the instructions in [Planning for custom images](/docs/vpc?topic=vpc-planning-custom-images) to create your own custom image and use that to build the {{site.data.keyword.symphony_full_notm}} cluster through this offering. |
 | `management_node_count` | Number of management nodes. This is the total number of primary, secondary and management nodes. There will be one Primary, one Secondary and the rest of the nodes will be management nodes. Enter a value in the range 1 - 10. |
-| `region` | IBM Cloud zone name within the selected region where the Spectrum Symphony cluster should be deployed. [Learn more](/docs/vpc?topic=vpc-creating-a-vpc-in-a-different-region&interface=cli#get-zones-using-the-cli).|
+| `region` | IBM Cloud zone name within the selected region where the {{site.data.keyword.symphony_full_notm}} cluster should be deployed. [Learn more](/docs/vpc?topic=vpc-creating-a-vpc-in-a-different-region&interface=cli#get-zones-using-the-cli).|
 | `resource_group` |Resource group name from your IBM Cloud account where the VPC resources should be deployed. Note: Do not modify the "Default" value if you would like to use the auto-scaling capability. For additional information on resource groups, see [Managing resource groups](/docs/account?topic=account-rgs&interface=ui). |
 | `vpc_name` | Name of an existing VPC in which the cluster resources will be deployed. If no value is given, then a new VPC will be provisioned for the cluster. [Learn more](https://cloud.ibm.com/docs/vpc). |
 | `vpn_enabled` | Set the value as true to deploy a VPN gateway for VPC in the cluster. |
@@ -152,7 +152,7 @@ To access your HPC cluster, complete the following steps:
 {: #hpc-cluster-auto-scaling}
 {: step}
 
-You have a minimum number of worker nodes (`worker_node_min_count`). This is the number of worker nodes that are provisioned at the time the cluster is created. However, you can use a maximum number of worker nodes that should be added to the Spectrum Symphony cluster defined by `worker_node_max_count`. This is to limit the number of machines that can be added to Spectrum Symphony cluster when the auto scaling configuration is used. This property can be used to manage the cost associated with Spectrum Symphony cluster instance.
+You have a minimum number of worker nodes (`worker_node_min_count`). This is the number of worker nodes that are provisioned at the time the cluster is created. However, you can use a maximum number of worker nodes that should be added to the Spectrum Symphony cluster defined by `worker_node_max_count`. This is to limit the number of machines that can be added to Spectrum Symphony cluster when the auto scaling configuration is used. This property can be used to manage the cost associated with {{site.data.keyword.symphony_full_notm}} cluster instance.
 
 The following example shows `worker_node_min_count=2` and `worker_node_max_count=2`.
 
@@ -166,12 +166,12 @@ The following example shows `worker_node_min_count=2` and `worker_node_max_count
 
     Example output:
 
-    ![Two worker nodes](images/original_workernodes.png){: caption="Two worker nodes"}
+    ![Two worker nodes](images/static_worker_nodes.png){: caption="Two worker nodes"}
 
-2. To try the auto scaling function, run a job that requires more than two nodes. For example, this job requires five jobs to sleep for 10 seconds:
+2. To try the auto scaling function, run a job that requires more than two nodes. For example, this job requires 10 jobs:
 
     ```
-    bsub -n 5 -R "span[ptile=1]" sleep 10
+    symping -m 10
     ```
     {: pre}
 
@@ -180,33 +180,21 @@ The following example shows `worker_node_min_count=2` and `worker_node_max_count
 4. After a minute, check the nodes by running the following command:
 
     ```
-    bhosts -w
+    egosh resource list -ll
     ```
     {: pre}
      
-    You can see that now five nodes were added to your cluster:
+    You can see that now one node is added to your cluster:
 
     ![Two worker nodes](images/autoscaling.png){: caption="Five worker nodes added"}
 
-5. The difference of nodes created by the auto scaling function are destroyed automatically after 10 minutes of not being used.
+5. The node that created by the auto scaling function are destroyed automatically after 1 hour of not being used.
 
 ## Set up hybrid connectivity (Optional)
 {: #optional-hybrid-connectivity}
 {: step}
 
-If you want to set up a hybrid connectivity environment by using VPN, see the instructions [Installing a VPN to an HPC cluster](/docs/ibm-spectrum-lsf?topic=ibm-spectrum-lsf-install-vpn-hpc-cluster).
-
-If you would like to use Direct Link, see the instructions for [Installing Direct Link to an HPC cluster](/docs/ibm-spectrum-lsf?topic=ibm-spectrum-lsf-installing-direct-link-cluster).
-
-## Using OpenLDAP with IBM Spectrum LSF
-{: #using-openladap-spectrum-lsf}
-{: step}
-
-If you want to know more about OpenLDAP with {{site.data.keyword.spectrum_full_notm}}, see About OpenLDAP with IBM Spectrum LSF](/docs/ibm-spectrum-lsf?topic=ibm-spectrum-lsf-integrate-openldap-spectrum-lsf).
-
-During deployment, you enable OpenLDAP with your {{site.data.keyword.spectrum_full_notm}} cluster by setting the `enable_ldap`,`ldap_basedns`, `ldap_server`, `ldap_admin_password`, `ldap_user_name`, and `ldap_user_password` deployment input values.
-
-If you want to know more about integrating OpenLDAP with your {{site.data.keyword.spectrum_full_notm}} cluster, see [Integrating OpenLDAP with your IBM Spectrum LSF cluster](/docs/ibm-spectrum-lsf?topic=ibm-spectrum-lsf-integrating-openldap).
+If you want to set up a hybrid connectivity environment by using VPN, see the instructions [Installing a VPN to an HPC cluster](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-install-vpn-hpc-cluster).
 
 ## Create DNS zones and DNS custom resolver
 {: #dns-zones-custom-resolvers}
@@ -215,10 +203,3 @@ If you want to know more about integrating OpenLDAP with your {{site.data.keywor
  If you leave the `dns_instance_id` deployment input value as null, the deployment process creates a new DNS service instance ID in the respective DNS zone. Alternatively, provide an existing [IBM Cloud® DNS Service instance ID](/docs/ibm-spectrum-lsf?topic=ibm-spectrum-lsf-dns-custom-resolvers) for the `dns_instance_id` deployment input value.
 
 If you leave the `dns_custom_resolver_id` deployment input value as null, the deployment process creates a new VPC and enables a new custom resolver for your cluster. Alternatively, to create custom DNS resolvers with an existing VPC, provide the resolver ID for the `dns_custom_resolver_id` deployment input value. For more information, see [DNS custom resolvers for your IBM Spectrum LSF cluster](/docs/ibm-spectrum-lsf?topic=ibm-spectrum-lsf-dns-custom-resolvers#custom-resolvers).
-
-## Using IBM Key Protect instances to manage data encryption
-{: #key-protect-encryption}
-{: step}
-
-To manage the data encryption to your virtual server instances, use the IBM Key Protect instance through {{site.data.keyword.spectrum_full_notm}} cluster. For more information on Key Protect and encryption keys, see [IBM® Key Protect and encryption keys](/docs/ibm-spectrum-lsf?topic=ibm-spectrum-lsf-key-protect).
-
