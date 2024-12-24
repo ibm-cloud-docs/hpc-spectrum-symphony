@@ -32,7 +32,7 @@ subcollection: hpc-spectrum-symphony
 {: toc-services="virtual-servers, vpc, loadbalancer-service, fileshare, dns"} 
 {: toc-completion-time="60m"}
 
-## Architecture overview and IBM file share setup
+## Architecture overview and IBM fileshare setup
 {: #sym-cluster-architecture-overview}
 
 The HPC cluster consists of a login node, 1 - 3 Symphony management nodes, and a number of Symphony worker nodes.
@@ -166,7 +166,7 @@ The following example shows `worker_node_min_count=2` and `worker_node_max_count
 
     Example output:
 
-    ![Two worker nodes](images/static_worker_nodes.png){: caption="Two worker nodes"}
+    ![Two static worker nodes](images/static_worker_nodes.png){: caption="Two worker nodes"}
 
 2. To try the auto scaling function, run a job that requires more than two nodes. For example, this job requires 10 jobs:
 
@@ -184,9 +184,9 @@ The following example shows `worker_node_min_count=2` and `worker_node_max_count
     ```
     {: pre}
      
-    You can see that now one node is added to your cluster:
+    You can see that one node is added to your cluster:
 
-    ![Two worker nodes](images/autoscaling.png){: caption="One worker node added"}
+    ![One dynamic worker node](images/autoscaling.png){: caption="One worker node added"}
 
 5. The node that created by the auto scaling function are destroyed automatically after 1 hour of not being used.
 
