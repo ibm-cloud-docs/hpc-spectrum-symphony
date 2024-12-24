@@ -201,5 +201,6 @@ If you want to set up a hybrid connectivity environment by using VPN, see the in
 {: step}
 
 Use the variable `vpc_worker_dns_domain` to specify the DNS domain name for the worker cluster. If this variable is left empty, a DNS zone will be created with the default domain name (for example, dnsscale.com). For the Scale Storage cluster, the IBM Cloud DNS Services domain variable to be used is `vpc_scale_storage_dns_domain`.
+
 When `spectrum_scale_enabled` is set to true, the values of `vpc_worker_dns_domain` and `vpc_scale_storage_dns_domain` must not be the same.
 {: note}
