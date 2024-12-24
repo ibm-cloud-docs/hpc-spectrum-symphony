@@ -29,7 +29,7 @@ subcollection: hpc-spectrum-symphony
 # Setting up an {{site.data.keyword.symphony_full_notm}} cluster
 {: #using-hpc-cluster} 
 {: toc-content-type="tutorial"} 
-{: toc-services="virtual-servers, vpc, loadbalancer-service"} 
+{: toc-services="virtual-servers, vpc, loadbalancer-service, fileshare, dns"} 
 {: toc-completion-time="60m"}
 
 ## Architecture overview and IBM file share setup
