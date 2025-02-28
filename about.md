@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2023, 2024
-lastupdated: "2024-11-22"
+  years: 2024, 2025
+lastupdated: "2025-02-28"
 
-keywords: 
+keywords:
 
-subcollection: hpc-spectrum-symphony
+subcollection: symphony
 
 ---
 
@@ -18,6 +18,8 @@ subcollection: hpc-spectrum-symphony
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:step: data-tutorial-type='step'}
+{:table: .aria-labeledby="caption"}
 
 # About the IBM Spectrum Symphony
 {: #about-spectrum-symphony}
