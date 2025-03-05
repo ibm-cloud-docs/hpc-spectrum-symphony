@@ -49,6 +49,7 @@ Create an SHH key in your {{site.data.keyword.cloud_notm}} account. This is your
 
 ## Choose between IBM-managed or customer-managed encryption
 {: #cust-encryption}
+{: step}
 
 By default, VPC volumes and file shares are encrypted with IBM-managed encryption. However, you can opt for customer-managed encryption per your security requirements. Customer-managed encryption uses your root key, which gives you complete control over your data. You can provision or import existing encrypted keys by using {{site.data.keyword.keymanagementservicefull_notm}}.
 
