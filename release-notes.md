@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2022, 2024
+  years: 2022, 2025
 
-lastupdated: "2024-11-22"
+lastupdated: "2025-03-05"
 
 keywords: IBM Spectrum Symphony release notes
 
