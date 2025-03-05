@@ -8,10 +8,10 @@ toc:
     path: hpc-spectrum-symphony
     label: IBM Spectrum Symphony
   entries:
-  - navgroup: 
+  - navgroup:
       id: learn
       topics:
-      - getting-started.md 
+      - getting-started.md
       - about.md
       - deployment-values.md
       - release-notes.md
@@ -19,19 +19,20 @@ toc:
           label: Integrating existing infrastructure resources
           topics:
           - vpc-lsf.md
+          - kms-encrypyption-keys.md
   - navgroup:
       id: tutorial
       topics:
       - config-setup-symph-cluster.md
       - setting-symphony-cluster.md
-  - navgroup: 
+  - navgroup:
       id: howto
       topics:
-      - topicgroup: 
+      - topicgroup:
           label: Setting up the CLI and API
-          topics: 
+          topics:
           - setting-up-cli.md
-          - setting-up-api.md 
+          - setting-up-api.md
       - creating-workspace.md
       - generating-plan.md
       - applying-plan.md
@@ -79,11 +80,11 @@ toc:
       - how-to-apply-fixes-on-existing-cluster.md
       - topicgroup:
           label: Hybrid connectivity
-          topics: 
+          topics:
           - install-vpn-hpc-cluster.md
   - navgroup:
       id: help
-      topics: 
+      topics:
       - topicgroup:
            label: FAQs
            topics:

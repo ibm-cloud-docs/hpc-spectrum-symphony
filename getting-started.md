@@ -4,7 +4,7 @@ copyright:
   years: 2021, 2024
 lastupdated: "2024-06-21"
 
-keywords: 
+keywords:
 
 subcollection: hpc-spectrum-symphony
 
@@ -46,6 +46,26 @@ Generate an API key for your {{site.data.keyword.cloud_notm}} account where the 
 {: step}
 
 Create an SHH key in your {{site.data.keyword.cloud_notm}} account. This is your SSH key that you use to access the Symphony cluster. For more information, see [Managing SSH keys](/docs/vpc?topic=vpc-managing-ssh-keys).
+
+## Choose between IBM-managed or customer-managed encryption
+{: #cust-encryption}
+
+By default, VPC volumes and file shares are encrypted with IBM-managed encryption. However, you can opt for customer-managed encryption per your security requirements. Customer-managed encryption uses your root key, which gives you complete control over your data. You can provision or import existing encrypted keys by using {{site.data.keyword.keymanagementservicefull_notm}}.
+
+If you decide to use customer-managed encryption, complete the following steps before you deploy your {{site.data.keyword.symphony_short}} architecture:
+
+1. [Provision an instance of Key Protect](/docs/key-protect?topic=key-protect-provision#provision-gui).
+2. [Create or import key](/docs/key-protect?topic=key-protect-getting-started-tutorial#get-started-keys).
+3. [Authorize access between](/docs/vpc?topic=vpc-vpc-encryption-planning#byok-volumes-prereqs):
+    * Cloud Block Storage and the key management service
+    * File Storage for VPC and the key management service
+4. Gather information for the following boot volume encryption deployment values (you provide this information when you deploy your {{site.data.keyword.symphony_short}} architecture):
+    * `enable_customer_managed_encryption`: Gives you toggling options.
+    * `kms_instance_id`: Instance ID of the Key Protect instance that you create.
+    * `kms_key_name`: Name of the KMS key that you create
+
+Customer-managed encryption applies only to the bastion, login, and management nodes. The compute nodes are still IBM-managed.
+{: note}
 
 ## Create custom images
 {: #create-custom-image}

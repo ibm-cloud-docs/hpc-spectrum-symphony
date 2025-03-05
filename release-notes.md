@@ -23,6 +23,25 @@ content-type: release-note
 The following new features and changes to {{site.data.keyword.symphony_full}} are available.
 {: shortdesc}
 
+## March 2025
+{: #hpc-spectrum-symphony-mar25}
+
+### 31 March 2025
+{: #hpc-spectrum-symphony-mar3125}
+{: release-note}
+
+IBM Cloud Flow Logs for VPC
+:   IBM Cloud Flow Logs for VPC enable the collection, storage, and presentation of information about the Internet Protocol (IP) traffic that is going to and from the network interfaces within your Virtual Private Cloud (VPC).
+
+Key Management Service (KMS)
+:   The KMS in IBM Cloud Private helps to keep the data secure. It integrates with user-owned Hardware Security Modules (HSM). A `root` key is used for envelope encryption to secure the data encryption keys used inside your applications.
+
+Support for Symphony 7.3.2 fix patches
+:   The IBM Spectrum Symphony version 7.3.2 offering is available for 64-bit Linux x86 and Windows platforms. The patches installed are Build602225, Build602237, Build602244, Build602259, Build602274, Build602300, Build602294, Build602288 and so on.
+
+Updated the Spectrum Scale version from 5.2.1.1 to 5.2.2.1
+:   The Storage Scale product version was updated from 5.2.1.1 to 5.2.2.1
+
 ## November 2024
 {: #hpc-spectrum-symphony-nov24}
 
@@ -30,25 +49,25 @@ The following new features and changes to {{site.data.keyword.symphony_full}} ar
 {: #hpc-spectrum-symphony-nov2224}
 {: release-note}
 
-File Storage for VPC support.
+File Storage for VPC support
 :   {{site.data.keyword.cloud}} File Storage for VPC is a zonal file storage offering that provides NFS-based file storage services. You can create file shares in an availability zone within a region. You can share them with multiple Symphony cluster nodes within the same zone in your region.
 
-File share support for Windows worker nodes using Cloud Object Storage service.
+File share support for Windows worker nodes using Cloud Object Storage service
 :   Windows worker nodes using Cloud Object Storage (COS) provides a compatible file storage solution that integrates efficiently within the VPC environment, enabling Windows instances to access file shares effectively.
 
-Support for Symphony 7.3.2 fix patches.
+Support for Symphony 7.3.2 fix patches
 :   The {{site.data.keyword.symphony_full_notm}} version 7.3.2 offering is available for 64-bit Linux x86 and Windows platforms. The patches installed that are: Build601706, Build602082, Build602143, Build602148, Build602149, Build602158, Build602161, Build602162, Build602163, Build602185, Build602225.
 
-Updated the Spectrum Scale version from 5.2.0.1 to 5.2.1.1.
+Updated the Spectrum Scale version from 5.2.0.1 to 5.2.1.1
 :   The Storage Scale product version was updated from 5.2.0.1 to 5.2.1.1
 
-Updated Spectrum Symphony and Storage Scale custom images.
+Updated Spectrum Symphony and Storage Scale custom images
 :   Spectrum Symphony and Storage Scale custom images were updated to use RHEL 8.10 instead of RHEL 8.8.
 
-Updated Spectrum Symphony Windows worker image.
+Updated Spectrum Symphony Windows worker image
 :   Spectrum Symphony Windows worker image is updated with Build602163, Build602210 fix patches.
 
-Supports Windows operating system versions 2016 and 2022.
+Supports Windows operating system versions 2016 and 2022
 :   Spectrum Symphony Windows worker image supports Windows 2016 and Windows 2022 versions.
 
 ## September 2024
@@ -58,13 +77,13 @@ Supports Windows operating system versions 2016 and 2022.
 {: #hpc-spectrum-symphony-sep0624}
 {: release-note}
 
-Support for Symphony 7.3.2 fix patches.
+Support for Symphony 7.3.2 fix patches
 :   The {{site.data.keyword.symphony_full_notm}} version 7.3.2 offering is available for 64-bit Linux x86 and Windows platforms. The patches installed that are: Build602125, Build602100, Build602094, Build602071, Build602061, Build602068, Build602039.
 
-Updated the Spectrum Scale version from 5.1.9.3 to 5.2.0.1.
+Updated the Spectrum Scale version from 5.1.9.3 to 5.2.0.1
 :   The Storage Scale product version was updated from 5.1.9.3 to 5.2.0.1.
 
-Updated Spectrum Symphony Windows worker image.
+Updated Spectrum Symphony Windows worker image
 :   Spectrum Symphony Windows worker image is updated with Build602052 fix patch.
 
 ## June 2024
@@ -74,18 +93,18 @@ Updated Spectrum Symphony Windows worker image.
 {: #hpc-spectrum-symphony-june2124}
 {: release-note}
 
-Support for Symphony 7.3.2 build601860 fix patch.
+Support for Symphony 7.3.2 build601860 fix patch
 :   The {{site.data.keyword.symphony_full_notm}} 7.3.2 Fix 601860 offering is available for 64-bit Linux x86 and Windows platforms. This update addresses security vulnerabilities in {{site.data.keyword.symphony_full_notm}} and should be installed on top of your existing version 7.3.2 Fix 601711 installation. While it is not mandatory, but applying Fix 601860 is recommended for optimal security. You can also apply other fixes on top of {{site.data.keyword.symphony_full_notm}} 7.3.2 Fix 601711 without applying Fix 601860.
 
 Along with build601860 patch, 16 more patches are updated and they are available in the [change log](https://github.com/IBM-Cloud/hpc-cluster-symphony/blob/master/CHANGELOG.md) md file.
 
-Updated the Spectrum Scale version from 5.1.9.0 to 5.1.9.3.
+Updated the Spectrum Scale version from 5.1.9.0 to 5.1.9.3
 :   The Storage Scale product version was updated from 5.1.9.0 to 5.1.9.3.
 
-Updated Spectrum Symphony and Storage Scale custom images.
+Updated Spectrum Symphony and Storage Scale custom images
 :   Spectrum Symphony and Storage Scale custom images are RHEL 8.8.
 
-Updated Spectrum Symphony Windows worker image.
+Updated Spectrum Symphony Windows worker image
 :   Spectrum Symphony Windows worker image was updated to Symphony 7.3.2 and also has Build601860 fix patch.
 
 ## December 2023
@@ -95,17 +114,17 @@ Updated Spectrum Symphony Windows worker image.
 {: #hpc-spectrum-symphony-dec0723}
 {: release-note}
 
-Support for Symphony 7.3.2 Build601711 fix patch.
+Support for Symphony 7.3.2 Build601711 fix patch
 :   The IBM Spectrum Symphony 7.3.2 Fix 601711 offering available for 64-bit Linux x86 is a mandatory fix that contains various fixes and enhancements, and includes Fix 601349 released in November 2022.
 
-Spectrum Scale version has been updated from 5.1.7.0 to 5.1.9.0.
+Spectrum Scale version has been updated from 5.1.7.0 to 5.1.9.0
 :   The Storage Scale product version was updated from 5.1.7.0 to 5.1.9.0.
 
 Updated Spectrum Symphony and Storage Scale custom images
 :   Spectrum Symphony and Storage Scale custom images were updated to use RHEL 8.8 instead of RHEL 8.6.
 
-Update Spectrum Symphony windows worker image 
-:   Spectrum Symphony windows worker image to Symphony 7.3.2 and also have Build601711 fix patch. 
+Update Spectrum Symphony windows worker image
+:   Spectrum Symphony windows worker image to Symphony 7.3.2 and also have Build601711 fix patch.
 
 ## May 2023
 {: #hpc-spectrum-symphony-may23}
@@ -118,7 +137,7 @@ Spectrum multicluster (SMC) support
 :   The initial release of Spectrum multicluster (SMC), which connects multiple {{site.data.keyword.symphony_full_notm}} clusters into a federation cluster, is now available. You can use SMC to redirect {{site.data.keyword.symphony_full_notm}} sessions to nonbusy clusters, deploy and manage service packages, and monitor workload and resources.
 
 Documentation enhancement: Integrating OpenLDAP with {{site.data.keyword.symphony_full_notm}}
-:   The newly added [Integrating OpenLDAP with {{site.data.keyword.symphony_full_notm}}](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-integrate-openldap-spectrum-symphony) tutorial walks you through the steps that are involved in configuring {{site.data.keyword.symphony_full_notm}} to use OpenLDAP as the primary directory service for user authentication. 
+:   The newly added [Integrating OpenLDAP with {{site.data.keyword.symphony_full_notm}}](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-integrate-openldap-spectrum-symphony) tutorial walks you through the steps that are involved in configuring {{site.data.keyword.symphony_full_notm}} to use OpenLDAP as the primary directory service for user authentication.
 
 ## 30 May 2023
 {: #hpc-spectrum-symphony-may3023}
@@ -195,7 +214,7 @@ Bug fix
 :   Code fixes were applied to address an issue that was seen in regions where instance storage profiles are not available even though {{site.data.keyword.scale_short}} is not selected as the storage option.
 
 Updated RHEL stock image
-:   Made an update to use an RHEL 8.6 stock image instead of an RHEL 8.2 stock image for the login node and the NFS storage node.
+:   Updated to use RHEL 8.6 stock image instead of an RHEL 8.2 stock image for the login node and NFS storage node.
 
 ## August 2022
 {: #hpc-spectrum-symphony-aug22}

@@ -4,7 +4,7 @@ copyright:
   years: 2023, 2024
 lastupdated: "2024-11-22"
 
-keywords: 
+keywords:
 
 subcollection: hpc-spectrum-symphony
 
@@ -129,7 +129,7 @@ In some regions, dedicated hosts have a limitation on the number of virtual serv
 {: #security-group-default-value}
 {: faq}
 
-For security reasons, {{site.data.keyword.scale_short}} does not allow you to provide a default value that would allow network traffice from any external device. Instead, you can provide the address of your user system (for example, by using https://ipv4.icanhazip.com/) or a range of multiple IP addresses. 
+For security reasons, {{site.data.keyword.scale_short}} does not allow you to provide a default value that would allow network traffice from any external device. Instead, you can provide the address of your user system (for example, by using https://ipv4.icanhazip.com/) or a range of multiple IP addresses.
 
 ## Does the Spectrum Symphony offering support multiple key pairs to establish SSH to all the nodes?
 {: #multiple-key-pair-support}
@@ -193,3 +193,12 @@ File sharing is implemented on Symphony nodes as follows:
     * File sharing is implemented using integration with Cloud Object Storage (COS).
 
 For more information, refer to the [IBM HPC Spectrum Symphony Deployment Values](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-deployment-values) documentation.
+
+## Is Key Management Services (KMS) enabled by default with {{site.data.keyword.symphony_full_notm}}?
+{: #kms}
+{: faq}
+
+Yes, the {{site.data.keyword.symphony_full_notm}} deployment process automatically includes KMS encryption for the infrastructure resources. This automation is handled by the `key_protect value` for the `key_management` deployment input value.
+If you already have an existing KMS key name, you can provide that during cluster deployment in the `kms_instance_name` deployment input value.
+If KMS is not needed, set the `key_management` deployment input value as null.
+For more about KMS encryption for your {{site.data.keyword.symphony_full_notm}} cluster, see [IBM® Key Protect and encryption keys].
