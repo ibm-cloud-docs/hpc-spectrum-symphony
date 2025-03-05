@@ -201,4 +201,4 @@ For more information, refer to the [IBM HPC Spectrum Symphony Deployment Values]
 Yes, the {{site.data.keyword.symphony_full_notm}} deployment process automatically includes KMS encryption for the infrastructure resources. This automation is handled by the `key_protect value` for the `key_management` deployment input value.
 If you already have an existing KMS key name, you can provide that during cluster deployment in the `kms_instance_name` deployment input value.
 If KMS is not needed, set the `key_management` deployment input value as null.
-For more about KMS encryption for your {{site.data.keyword.symphony_full_notm}} cluster, see [IBM® Key Protect and encryption keys].
+For more about KMS encryption for your {{site.data.keyword.symphony_full_notm}} cluster, see [IBM® Key Protect and encryption keys](/docs-draft/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-key-protect).
