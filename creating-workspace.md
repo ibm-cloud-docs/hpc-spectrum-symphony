@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2021, 2023
+  years: 2021, 2025
 lastupdated: "2023-01-30"
 
-keywords: 
+keywords:
 
 subcollection: hpc-spectrum-symphony
 
@@ -34,7 +34,7 @@ With {{site.data.keyword.bplong}} workspaces, you can manage the Terraform-based
 {: ui}
 
 1. Log in to the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog){: external} by using your unique credentials.
-2. In the _Software_ section, select **Compute** and then select the **{{site.data.keyword.symphony_full_notm}}** tile. 
+2. In the _Software_ section, select **Compute** and then select the **{{site.data.keyword.symphony_full_notm}}** tile.
 3. In the _Configure your workspace_ section:
     * Specify the **Name** for your {{site.data.keyword.bpshort}} workspace
     * Select Resource group.
@@ -55,7 +55,7 @@ After you have successfully created a workspace, you can begin [Generating a pla
 {: #before-you-begin-creating-cli}
 {: cli}
 
-Before you get started, make sure that you've completed the prerequisites found in [Setting up the {{site.data.keyword.bplong_notm}} CLI](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-setting-up-cli&interface=cli). 
+Before you get started, make sure that you've completed the prerequisites found in [Setting up the {{site.data.keyword.bplong_notm}} CLI](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-setting-up-cli&interface=cli).
 
 ## Creating a workspace using the CLI
 {: #create-workspace-cli}
@@ -120,7 +120,7 @@ To provision or modify {{site.data.keyword.cloud_notm}} resources, you can run t
 {: #next-steps-create-cli}
 {: cli}
 
-After you have successfully created a workspace, you can begin [Generating a plan](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-generate-plan&interface=cli) to validate all the configuration properties. 
+After you have successfully created a workspace, you can begin [Generating a plan](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-generate-plan&interface=cli) to validate all the configuration properties.
 
 ## Before you begin
 {: #before-you-begin-creating-api}
@@ -323,4 +323,4 @@ INFO:root:Completed Creating Schematic Workspace
 {: #next-steps-create-api}
 {: api}
 
-After you have successfully created a workspace, you can begin [Generating a plan](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-generate-plan&interface=api) to validate all the configuration properties. 
+After you have successfully created a workspace, you can begin [Generating a plan](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-generate-plan&interface=api) to validate all the configuration properties.

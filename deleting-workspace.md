@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2021, 2022
+  years: 2021, 2025
 lastupdated: "2022-04-06"
 
-keywords: 
+keywords:
 
 subcollection: hpc-spectrum-symphony
 
@@ -55,28 +55,28 @@ You can monitor the log files to view the deletion progress of your workspace.
 
 1. To delete a workspace by using the {{site.data.keyword.bplong_notm}} Python APIs, create a Python file and provide a name of your choice, for example, `schematics_delete_workspace.py`.
 2. Copy and paste the [Delete a workspace using {{site.data.keyword.bpshort}} Python API](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-deleting-workspace&interface=api#example-request-delete-workspace) example request to your Python file.
-3. Change the following parameters as part of the request: 
+3. Change the following parameters as part of the request:
     * Replace your {{site.data.keyword.cloud_notm}} key to the `authenticator = IAMAuthenticator('<ibm-api-key>')` variable.
     * Change the API endpoint to the endpoint mentioned in [API endpoints](https://cloud.ibm.com/apidocs/schematics?code=python#api-endpoints){: external} according to the location that you want your {{site.data.keyword.bpshort}} workspace to reside, for example, `schematics_service.set_service_url('https://us.schematics.cloud.ibm.com')`.
 4. Inside the `schematics_service.delete_workspace` function, provide the following parameters:
     * Provide the workspace ID that you generated in the [Creating a workspace](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-creating-workspace&interface=api) task, for example `us-south.workspace.Terraform-Schematics-Python-Workspace.b3bbc9f5`.
     * Export your {{site.data.keyword.cloud_notm}} API key by using the following command:
-        
+
         ```sh
-        export IBMCLOUD_API_KEY =”<ibm-cloud-api-key>” 
+        export IBMCLOUD_API_KEY =”<ibm-cloud-api-key>”
         ```
         {: pre}
 
     * Run the following curl command to create a refresh token:
-    
+
         ```sh
-        curl -X POST "https://iam.cloud.ibm.com/identity/token" -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=urn:ibm:params:oauth:grant-type:apikey&apikey=$IBMCLOUD_API_KEY" -u bx:bx 
+        curl -X POST "https://iam.cloud.ibm.com/identity/token" -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=urn:ibm:params:oauth:grant-type:apikey&apikey=$IBMCLOUD_API_KEY" -u bx:bx
         ```
         {: pre}
 
     If you want to destroy the resources as well as delete the workspace, then set the `destroy_resources` parameter value to `True`. In this case, the resources are deleted first, and then the workspace is deleted.
     {: note}
-    
+
     If you want to delete the workspace but not the resources, then remove the `destroy_resources` parameter completely or set the `destroy_resources` parameter to `False`. If resources are already deleted, and if the `destroy_resources` parameter value is set to `True`, then the RESOURCE DELETE action is in the FAILED state.
     {: note}
 

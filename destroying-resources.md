@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2021, 2022
+  years: 2021, 2025
 lastupdated: "2022-04-06"
 
-keywords: 
+keywords:
 
 subcollection: hpc-spectrum-symphony
 
@@ -36,7 +36,7 @@ Before you perform the actions to destroy the resources, you must first ensure t
 {: ui}
 
 1. In the {{site.data.keyword.cloud_notm}} console on the Schematics > Workspaces page, select Actions > Destroy to delete all the related VPC resources that were deployed as part of that workspace.
-2. If you select the option to destroy resources, decide whether you want to destroy all of them. This action cannot be undone. 
+2. If you select the option to destroy resources, decide whether you want to destroy all of them. This action cannot be undone.
 3. Confirm the action by entering the workspace name in the text box and click Destroy.
 
 ## Destroying resources using the CLI
@@ -65,12 +65,12 @@ You can monitor the log files to view the deletion progress of all {{site.data.k
 4. Inside the `schematics_service.destroy_workspace_command` function, provide the following parameters:
    * Provide the workspace ID that you generated in the [Creating a workspace](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-creating-workspace&interface=api) task, for example `us-south.workspace.Terraform-Schematics-Python-Workspace.b3bbc9f5`.
    * Export your {{site.data.keyword.cloud_notm}} API key by using the following command:
-  
+
     ```sh
-    export IBMCLOUD_API_KEY =”<ibm-cloud-api-key>” 
+    export IBMCLOUD_API_KEY =”<ibm-cloud-api-key>”
     ```
     {: pre}
-  
+
    * Run the following curl command to create a refresh token:
 
     ```sh

@@ -1,9 +1,9 @@
 ---
 copyright:
-  years: 2023
+  years: 2023, 2025
 lastupdated: "2023-05-03"
 
-keywords: 
+keywords:
 
 subcollection: hpc-spectrum-symphony
 
@@ -30,7 +30,7 @@ subcollection: hpc-spectrum-symphony
 
     ``` shell
     # ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -L 18443:localhost:8443 -J root@149.81.166.184 root@10.241.0.6
-    ``` 
+    ```
 2.  Change to the `/tmp` directory.
 
     ```shell
@@ -52,7 +52,7 @@ subcollection: hpc-spectrum-symphony
     ```shell
     # vi SMCP.xml
     ```
-6.  After the SMCP.xml file opens in the editor, replace MANUAL with AUTOMATIC in the sc:ControlPolicy block and add an environmental variable in the second block of sc:ActivityDescription as <ego:EnvironmentVariable name="SMC_PROXY_INBOUND_CONNECTION">Y</ego:EnvironmentVariable>. 
+6.  After the SMCP.xml file opens in the editor, replace MANUAL with AUTOMATIC in the sc:ControlPolicy block and add an environmental variable in the second block of sc:ActivityDescription as <ego:EnvironmentVariable name="SMC_PROXY_INBOUND_CONNECTION">Y</ego:EnvironmentVariable>.
     ```http
     <?xml version="1.0" encoding="UTF-8"?>
     <sc:ServiceDefinition xmlns:sc="http://www.platform.com/ego/2005/05/schema/sc" xmlns:ego="http://www.platform.com/ego/2005/05/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.platform.com/ego/2005/05/schema/sc ../sc.xsd http://www.platform.com/ego/2005/05/schema ../ego.xsd" ServiceName="SMCP">
@@ -110,13 +110,13 @@ subcollection: hpc-spectrum-symphony
         <ego:EnvironmentVariable name="SMC_PLUGIN_REPORT_INTERVAL">60</ego:EnvironmentVariable>
         <ego:EnvironmentVariable name="WORKLOAD_SMC_PLUGIN_REPORT_INTERVAL">5</ego:EnvironmentVariable>
         <ego:EnvironmentVariable name="SMC_AGENT_MAX_LOG_PER_HOST">60</ego:EnvironmentVariable>
-        <ego:EnvironmentVariable name="SMC_PROXY_INBOUND_CONNECTION">Y</ego:EnvironmentVariable> 
+        <ego:EnvironmentVariable name="SMC_PROXY_INBOUND_CONNECTION">Y</ego:EnvironmentVariable>
         <ego:WorkingDirectory>${EGO_CONFDIR}/../../soam/work</ego:WorkingDirectory>
         <ego:Umask>0022</ego:Umask>
         <ego:Rlimit name="NOFILE" type="soft">12800</ego:Rlimit>
         </ego:ActivitySpecification>
         </sc:ActivityDescription>
-    </sc:ServiceDefinition> 
+    </sc:ServiceDefinition>
     ```
 
 7.  Modify the SMCP config file.

@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2021, 2022
+  years: 2021, 2025
 lastupdated: "2022-04-06"
 
-keywords: 
+keywords:
 
 subcollection: hpc-spectrum-symphony
 
@@ -26,7 +26,7 @@ subcollection: hpc-spectrum-symphony
 # Applying a plan
 {: #applying-plan}
 
-When you apply a plan, the {{site.data.keyword.cloud}} resources are deployed to build a {{site.data.keyword.symphony_full_notm}} cluster instance on your {{site.data.keyword.cloud_notm}} account with your specific choice of configuration properties. 
+When you apply a plan, the {{site.data.keyword.cloud}} resources are deployed to build a {{site.data.keyword.symphony_full_notm}} cluster instance on your {{site.data.keyword.cloud_notm}} account with your specific choice of configuration properties.
 
 ## Applying a plan using the UI
 {: #apply-plan-ui}
@@ -82,12 +82,12 @@ After the plan is successfully applied, it generates an `sshcommand` in the _Out
 4. Inside the `schematics_service.apply_workspace_command` function, provide the following parameters:
    * Provide the workspace ID that you generated in the [Creating a workspace](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-creating-workspace) task, for example, `us-south.workspace.Terraform-Schematics-Python-Workspace.b3bbc9f5`.
    * Export your {{site.data.keyword.cloud_notm}} API key by using the following command:
-  
+
     ```shell
     export IBMCLOUD_API_KEY =”<ibm-cloud-api-key>”
     ```
-    {: pre} 
-    
+    {: pre}
+
    * Run the following curl command to create a refresh token:
 
     ```curl
@@ -151,4 +151,3 @@ DEBUG:urllib3.connectionpool:https://us.schematics.cloud.ibm.com:443 "PUT /v1/wo
 INFO:root:Completed Applying Schematic Plan
 ```
 {: screen}
-

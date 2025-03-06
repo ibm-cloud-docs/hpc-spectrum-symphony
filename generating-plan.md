@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2021, 2023
+  years: 2021, 2025
 lastupdated: "2023-01-26"
 
-keywords: 
+keywords:
 
 subcollection: hpc-spectrum-symphony
 
@@ -33,8 +33,8 @@ After you have created your workspace, you need to generate a plan to validate a
 {: ui}
 
 1. In the {{site.data.keyword.cloud}} console, after the workspace is created, you can review the properties and the variables that are associated with that workspace by using the _Settings_ tab. Make sure to update the following required parameters: `api_key`, `ssh_key_name`, `ibm_customer_number`, and `zone`.
-2. After you review all the values and make any applicable changes, click Generate plan. 
-3. When you click Generate plan, a new log is generated that can be viewed in the Jobs tab by clicking Jobs. 
+2. After you review all the values and make any applicable changes, click Generate plan.
+3. When you click Generate plan, a new log is generated that can be viewed in the Jobs tab by clicking Jobs.
 4. Review the log file for any errors, fix the properties, and regenerate the plan by clicking Generate plan again.
 
 ## Next steps
@@ -79,13 +79,13 @@ After you have successfully generated a plan, you can begin [Applying a plan](/d
 4. Inside the `schematics_service.plan_workspace_command` function, provide the following parameters:
    * Provide the workspace ID that you created in the [Create a workspace](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-creating-workspace&interface=api) task or from the {{site.data.keyword.cloud_notm}} console for {{site.data.keyword.bpshort}}, for example, `us-south.workspace.Terraform-Schematics-Python-Workspace.b3bbc9f5`.
    * Export your {{site.data.keyword.cloud_notm}} API key by using the following command:
-  
+
     ```sh
     export IBMCLOUD_API_KEY =”<ibm-cloud-api-key>”
     ```
     {: pre}
 
-   *  Run the following curl command to create a refresh token: 
+   *  Run the following curl command to create a refresh token:
 
     ```sh
     curl -X POST "https://iam.cloud.ibm.com/identity/token" -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=urn:ibm:params:oauth:grant-type:apikey&apikey=$IBMCLOUD_API_KEY" -u bx:bx

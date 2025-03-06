@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2024
+  years: 2024, 2025
 lastupdated: "2024-12-24"
 
 keywords: vpc, symphony

@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2022, 2023
+  years: 2022, 2025
 lastupdated: "2023-12-18"
 
-keywords: 
+keywords:
 
 subcollection:  hpc-spectrum-symphony
 
@@ -24,7 +24,7 @@ subcollection:  hpc-spectrum-symphony
 {:table: .aria-labeledby="caption"}
 
 # Enabling User Management for IBM Spectrum Symphony using Windows Active Directory
-{: #integrate-scale-ad-auth-tut}    
+{: #integrate-scale-ad-auth-tut}
 
 ## Introduction
 {: #scale-ad-auth-intro}
@@ -89,7 +89,7 @@ For this procedure you need:
    powershell code
    # Install the Active Directory Domain Services Role and DNS Server Role
     Install-WindowsFeature -Name AD-Domain-Services, DNS -IncludeManagementTools
-    ``` 
+    ```
 
 3. Promote the Server to a Domain Controller with Integrated DNS by running these PowerShell commands:
 
@@ -102,7 +102,7 @@ For this procedure you need:
    # Configure and promote the server as a domain controller with integrated DNS
    Install-ADDSForest -DomainName $DomainName -SafeModeAdministratorPassword  $SafeModePassword -DomainMode Win2019 -ForestMode Win2019 -InstallDNS
    ```
- 
+
    Example values:
    *  Domain Name: POCDOMAIN.LOCAL
    *  DSRM Password: MySecureDSRMpwd2023!
@@ -121,7 +121,7 @@ Verify that Active Directory and DNS are configured correctly by checking:
 1. Verify Active Directory Management
 
    Open "Server Manager", and in the "Dashboard", confirm "Active Directory Users and Computers" and "DNS" are listed under "Tools", indicating successful installation of the Active Directory and DNS management tools.
-   
+
 2. Start Active Directory Users and Computers to manage user accounts, groups, and organizational units (OUs) within the domain.
 3. Access DNS Manager to manage DNS zones and records for the domain.
 4. On a client system within the same network, configure the DNS settings to point to the IP address of the newly promoted domain controller.
@@ -234,12 +234,12 @@ For enabling RC4 support in RHEL, the steps differ depending on the RHEL version
 
 ### Joining Symphony cluster with Symphony cluster node
 {: #procedure-ad-samba}
- 
-Samba Winbind is an alternative to the System Security Services Daemon (SSSD) for connecting a Red Hat Enterprise Linux (RHEL) system with Active Directory (AD). This section describes how to join an RHEL system to an AD domain by using realmd to configure Samba Winbind. 
+
+Samba Winbind is an alternative to the System Security Services Daemon (SSSD) for connecting a Red Hat Enterprise Linux (RHEL) system with Active Directory (AD). This section describes how to join an RHEL system to an AD domain by using realmd to configure Samba Winbind.
 
 Join a Symphony Cluster node that is hosted on RHEL 8.4 OS to an AD domain using Samba Winbind and `realmd`:
 
-1. Install and update the following packages: 
+1. Install and update the following packages:
 
     ```
     # yum install realmd oddjob-mkhomedir oddjob samba-winbind-clients \
@@ -299,27 +299,27 @@ Join a Symphony Cluster node that is hosted on RHEL 8.4 OS to an AD domain using
     Address: 10.243.0.41
     ```
 
-6.  If your Active Directory requires the deprecated RC4 encryption type for Kerberos authentication, enable support for these ciphers in RHEL: 
+6.  If your Active Directory requires the deprecated RC4 encryption type for Kerberos authentication, enable support for these ciphers in RHEL:
 
     `# update-crypto-policies --set DEFAULT:AD-SUPPORT`
 
     After you run this command, it updates the crypto policies and asks to reboot the system.
 
-7.  Back up the existing /etc/samba/smb.conf Samba configuration file: 
+7.  Back up the existing /etc/samba/smb.conf Samba configuration file:
 
     `# mv /etc/samba/smb.conf /etc/samba/smb.conf.bak`
 
-8.  Join the RHEL 8.x host to the Active Directory domain. As mentioned in the example to join a domain named POCDOMAIN.LOCAL: 
+8.  Join the RHEL 8.x host to the Active Directory domain. As mentioned in the example to join a domain named POCDOMAIN.LOCAL:
 
     `# realm join --membership-software=samba --client-software=winbind POCDOMAIN.LOCAL`
 
-    When you use this command, the realm utility automatically: 
-    - Creates a /etc/samba/smb.conf file for a membership in the pocdomain.local domain. 
-    - Adds the winbind module for user and group lookups to the /etc/nsswitch.conf file. 
-    - Updates the Pluggable Authentication Module (PAM) configuration files in the /etc/pam.d/ directory. 
-    - Starts the winbind service and enables the service to start when the system boots. 
+    When you use this command, the realm utility automatically:
+    - Creates a /etc/samba/smb.conf file for a membership in the pocdomain.local domain.
+    - Adds the winbind module for user and group lookups to the /etc/nsswitch.conf file.
+    - Updates the Pluggable Authentication Module (PAM) configuration files in the /etc/pam.d/ directory.
+    - Starts the winbind service and enables the service to start when the system boots.
 
-9.  (Optional) Set an alternative ID mapping back end or customized ID mapping settings in the /etc/samba/smb.conf file. For more information, see the [Understanding and configuring Samba ID mapping](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/deploying_different_types_of_servers/assembly_using-samba-as-a-server_deploying-different-types-of-servers). 
+9.  (Optional) Set an alternative ID mapping back end or customized ID mapping settings in the /etc/samba/smb.conf file. For more information, see the [Understanding and configuring Samba ID mapping](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/deploying_different_types_of_servers/assembly_using-samba-as-a-server_deploying-different-types-of-servers).
 
 10.  Edit the `/etc/krb5.conf` file and add this section:
 
@@ -365,31 +365,31 @@ If you installed the samba package to share directories and printers, enable and
 ### Verification steps
 {: #verification-steps}
 
-1.  Display AD users details, such as the AD administrator account in the AD domain. For example: 
+1.  Display AD users details, such as the AD administrator account in the AD domain. For example:
 
     ```
     # getent passwd " POCDOMAIN\administrator"
     POCDOMAIN\administrator:*:2000500:2000513::/home/administrator@POCDOMAIN:/bin/bash
     ```
-2.  Query the members of the domain users group in the AD domain: 
-    
+2.  Query the members of the domain users group in the AD domain:
+
     ```
     # getent group " POCDOMAIN\Domain Users"
     POCDOMAIN\domain users:x:2000513:
     ```
 
-3.  (Optional) Verify that you can use domain users and groups when you set permissions on files and directories. For example, to set the owner of the /srv/samba/example.txt file to AD\administrator and the group to AD\Domain Users: 
+3.  (Optional) Verify that you can use domain users and groups when you set permissions on files and directories. For example, to set the owner of the /srv/samba/example.txt file to AD\administrator and the group to AD\Domain Users:
 
     ```
     # sudo chown "POCDOMAIN\administrator":"POCDOMAIN\Domain Users" example.txt
     ```
 
-4.  Verify that Kerberos authentication works as expected. On the AD domain member, obtain a ticket for the administrator@POCDOMAIN.LOCAL principal: 
+4.  Verify that Kerberos authentication works as expected. On the AD domain member, obtain a ticket for the administrator@POCDOMAIN.LOCAL principal:
     ```
     # kinit administrator@POCDOMAIN.LOCAL
     ```
 
-5.  Display the cached Kerberos ticket: 
+5.  Display the cached Kerberos ticket:
 
     ```
     # klist
@@ -401,7 +401,7 @@ If you installed the samba package to share directories and printers, enable and
 		renew until 12/18/2023 08:26:23
 
     ```
-6.  Display the available domains: 
+6.  Display the available domains:
 
     ```
 	#realm list
@@ -418,13 +418,13 @@ If you installed the samba package to share directories and printers, enable and
 	  required-package: samba-winbind
 	  required-package: samba-common-tools
 	  login-formats: POCDOMAIN\%U
-	  login-policy: allow-any-login 
+	  login-policy: allow-any-login
 	#wbinfo --all-domains
 	BUILTIN
 	AD-CLIENT
-	POCDOMAIN 
+	POCDOMAIN
     ```
-Additional resources - If you do not want to use the deprecated RC4 ciphers, you can enable the AES encryption type in AD. 
+Additional resources - If you do not want to use the deprecated RC4 ciphers, you can enable the AES encryption type in AD.
 
 ### To provide root user permissions to Active Directory (AD) users
 {: #provide-root-permission}
@@ -460,17 +460,17 @@ Following are the steps to configure Kerberos Authentication on Linux Hosts for 
     Log in to any management host in the cluster by using the cluster administrator credentials.
 
     ```
-    #Example 
-    egosh user logon –u Admin –x Admin 
+    #Example
+    egosh user logon –u Admin –x Admin
     ```
 
     Run the following commands to gracefully shut down the cluster:
 
     ```
-    #Example 
-    soamcontrol app disable all 
-    egosh service stop all 
-    egosh ego shutdown all 
+    #Example
+    soamcontrol app disable all
+    egosh service stop all
+    egosh ego shutdown all
     ```
 
 2. Modify Security Configuration on Management Hosts:
@@ -479,28 +479,28 @@ Following are the steps to configure Kerberos Authentication on Linux Hosts for 
     Set EGO_SEC_PLUGIN to "sec_ego_gsskrb."
 
     ```
-    #Example 
-    EGO_SEC_PLUGIN=sec_ego_gsskrb 
+    #Example
+    EGO_SEC_PLUGIN=sec_ego_gsskrb
     ```
 
     Set EGO_SEC_CONF to specify the plug-in's configuration:
 
     ```
-    #Example 
+    #Example
     EGO_SEC_CONF="/EGOShare/kernel/conf,600,ERROR,/opt/EGO/kernel/log"
     ```
 
     Set EGO_SEC_KRB_SERVICENAME to the Kerberos principal for the authentication server:
 
     ```
-    #Example 
-    EGO_SEC_KRB_SERVICENAME=symphonyuser03 
+    #Example
+    EGO_SEC_KRB_SERVICENAME=symphonyuser03
     ```
 
     Create or modify the $EGO_CONFDIR/sec_ego_gsskrb.conf file with the provided parameters:
 
     ```
-    #Example 
+    #Example
     REALM=POCDomain.local
     KRB5_KTNAME=/etc/krb5.keytab
     KERBEROS_ADMIN=egoadmin
@@ -509,9 +509,9 @@ Following are the steps to configure Kerberos Authentication on Linux Hosts for 
     KRB5_KTNAME=/etc/krb5.keytab
     The KRB5_KTNAME parameter designates the absolute path to the keytab file. This file contains keys for the service principal that is used in Kerberos authentication. Here, the path is set to "/etc/krb5.keytab," ensuring that the necessary keys are retrieved for authentication.
     {: note}
-    
+
     KERBEROS_ADMIN=egoadmin
-    The KERBEROS_ADMIN parameter specifies the Kerberos principal that maps to the user name of the built-in cluster administrator (Admin). 
+    The KERBEROS_ADMIN parameter specifies the Kerberos principal that maps to the user name of the built-in cluster administrator (Admin).
     In this configuration, it is set to "hpcegoadmin." This principal is significant for administrative tasks within the {{site.data.keyword.symphony_full_notm}} cluster and is used for authenticating as the cluster administrator.
     {: note}
 
@@ -524,17 +524,17 @@ Following are the steps to configure Kerberos Authentication on Linux Hosts for 
     Once configurations are applied across hosts, start the cluster and enable applications by using the following commands:
 
     ```
-    #Example 
-    egosh ego start 
-    soamcontrol app enable appName 
+    #Example
+    egosh ego start
+    soamcontrol app enable appName
     ```
 5. Log on to Cluster Management Host.
 
     From a management host in the POCDomain.local realm, log in as the Admin user by using the egosh command-line. Enter the password of the Kerberos principal defined in the KERBEROS_ADMIN parameter.
 
     ```
-    #Example 
-    egosh user logon –u Admin –x passwordegoadmin 
+    #Example
+    egosh user logon –u Admin –x passwordegoadmin
     ```
 
 6. Add AD Users (If Required)
@@ -542,7 +542,7 @@ Following are the steps to configure Kerberos Authentication on Linux Hosts for 
     If the ENABLE_AD_USERS_MANAGE parameter in the `$EGO_CONFDIR/sec_ego_gsskrb.conf` file on Linux management hosts was set to 'N,' use the egosh user add command to add AD users to {{site.data.keyword.symphony_full_notm}}. Provide any random string as the password; it will not be used for user logon.
 
     ```
-    #Example egosh user add –u ad1tester –x 111 
+    #Example egosh user add –u ad1tester –x 111
     ```
 
 7. Assign Roles to Users
@@ -550,8 +550,8 @@ Following are the steps to configure Kerberos Authentication on Linux Hosts for 
     Assign roles to the user accounts by using the egosh user assignrole command. For example, to assign the consumer admin role to ad1tester and ad2tester:
 
     ```
-    #Example 
-    egosh user assignrole –u ad1tester –r CONSUMER_ADMIN –p /SymTesting/Symping73.2 
+    #Example
+    egosh user assignrole –u ad1tester –r CONSUMER_ADMIN –p /SymTesting/Symping73.2
     ```
 
 8. Login as an AD user
@@ -559,8 +559,8 @@ Following are the steps to configure Kerberos Authentication on Linux Hosts for 
     Log in as an AD user by using the egosh command line. For example, to log in as ad1tester:
 
     ```
-    #Example 
-    egosh user logon –u ad1tester –x passwordad1tester 
+    #Example
+    egosh user logon –u ad1tester –x passwordad1tester
     ```
 
 ## Conclusion

@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2021, 2022
+  years: 2021, 2025
 lastupdated: "2022-03-04"
 
-keywords: 
+keywords:
 
 subcollection: hpc-spectrum-symphony
 
@@ -28,7 +28,7 @@ subcollection: hpc-spectrum-symphony
 
 Dedicated hosts enable you to deploy your virtual server instances on single-tenant compute hosts. Workloads under dedicated hosts can avoid noisy neighbor issues (for example, performance interference due to other users' workloads) that they might encounter on public virtual server instances. When you use a dedicated host, you are billed by the usage of the host, not vCPUs or RAM associated with your virtual instances.
 
-This offering can deploy static compute nodes on dedicated hosts. The number of dedicated hosts and the profile names for dedicated hosts are calculated from `worker_node_min_count` and `worker_node_instance_type`. 
+This offering can deploy static compute nodes on dedicated hosts. The number of dedicated hosts and the profile names for dedicated hosts are calculated from `worker_node_min_count` and `worker_node_instance_type`.
 
 Symphony still dynamically provisions compute nodes as public instances and dedicated hosts are used only for static compute nodes provisioned at the time that the cluster is created.
 {: note}
