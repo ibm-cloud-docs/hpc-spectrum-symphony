@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-03-05"
+lastupdated: "2025-03-06"
 
 keywords:
 
@@ -39,7 +39,7 @@ Use an {{site.data.keyword.keymanagementservicelong_notm}} instance regardless o
 Automatically encrypt infrastructure resources through {{site.data.keyword.keymanagementservicelong_notm}} for your {{site.data.keyword.symphony_full_notm}}. To enable this feature for your cluster, always keep the `enable_customer_managed_encryption` deployment input value as **true**. The deployment process creates an {{site.data.keyword.keymanagementservicelong_notm}} instance and a specific key to encrypt these resources:
 
 * {{site.data.keyword.block_storage_is_full}} (Cloud Block Storage)
-* {{site.data.keyword.filestorage_vpc_full}}
+* {{site.data.keyword.cloud}} File Share
 * {{site.data.keyword.cos_full}}
 
 If the value for `enable_customer_managed_encryption` is set as false, then the deployment process does not automatically create {{site.data.keyword.keymanagementservicelong_notm}} instances or keys and all infrastructure resources are encrypted through provider-managed encryption.

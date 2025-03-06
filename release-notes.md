@@ -37,7 +37,7 @@ Key Management Service (KMS)
 :   The KMS in IBM Cloud Private helps to keep the data secure. It integrates with user-owned Hardware Security Modules (HSM). A `root` key is used for envelope encryption to secure the data encryption keys used inside your applications.
 
 Support for Symphony 7.3.2 fix patches
-:   The IBM Spectrum Symphony version 7.3.2 offering is available for 64-bit Linux x86 and Windows platforms. The patches installed are Build602225, Build602237, Build602244, Build602259, Build602274, Build602300, Build602294, Build602288 and so on.
+:   The {{site.data.keyword.symphony_full_notm}} version 7.3.2 offering is available for 64-bit Linux x86 and Windows platforms. The patches installed are Build602225, Build602237, Build602244, Build602259, Build602274, Build602300, Build602294, Build602288 and so on.
 
 Updated the Spectrum Scale version from 5.2.1.1 to 5.2.2.1
 :   The Storage Scale product version was updated from 5.2.1.1 to 5.2.2.1
@@ -115,7 +115,7 @@ Updated Spectrum Symphony Windows worker image
 {: release-note}
 
 Support for Symphony 7.3.2 Build601711 fix patch
-:   The IBM Spectrum Symphony 7.3.2 Fix 601711 offering available for 64-bit Linux x86 is a mandatory fix that contains various fixes and enhancements, and includes Fix 601349 released in November 2022.
+:   The {{site.data.keyword.symphony_full_notm}} 7.3.2 Fix 601711 offering available for 64-bit Linux x86 is a mandatory fix that contains various fixes and enhancements, and includes Fix 601349 released in November 2022.
 
 Spectrum Scale version has been updated from 5.1.7.0 to 5.1.9.0
 :   The Storage Scale product version was updated from 5.1.7.0 to 5.1.9.0.
