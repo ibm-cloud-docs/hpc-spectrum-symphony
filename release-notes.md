@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2025
 
-lastupdated: "2025-03-05"
+lastupdated: "2025-03-07"
 
 keywords: IBM Spectrum Symphony release notes
 
@@ -30,8 +30,8 @@ The following new features and changes to {{site.data.keyword.symphony_full}} ar
 {: #hpc-spectrum-symphony-mar3125}
 {: release-note}
 
-IBM Cloud Flow Logs for VPC
-:   IBM Cloud Flow Logs for VPC enable the collection, storage, and presentation of information about the Internet Protocol (IP) traffic that is going to and from the network interfaces within your Virtual Private Cloud (VPC).
+IBM Cloud VPC Flow Logs
+:   IBM Cloud VPC Flow Logs enable the collection, storage, and presentation of information about the Internet Protocol (IP) traffic that is going to and from the network interfaces within your Virtual Private Cloud (VPC).
 
 Key Management Service (KMS)
 :   The KMS in IBM Cloud Private helps to keep the data secure. It integrates with user-owned Hardware Security Modules (HSM). A `root` key is used for envelope encryption to secure the data encryption keys used inside your applications.
