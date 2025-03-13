@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-03-07"
+lastupdated: "2025-03-13"
 
 keywords:
 
@@ -39,7 +39,6 @@ The following deployment values can be used to configure the {{site.data.keyword
 | `existing_cos_instance_guid` | GUID of the COS instance to create a flow log collector. | No | None |
 | `existing_storage_bucket_name` | Name of the COS bucket to collect VPC flow logs. | No | None |
 | `hyperthreading_enabled` | Setting this to true, enables hyper-threading in the worker nodes of the cluster (default). Otherwise, hyper-threading is disabled. | No | true |
-| `ibm_customer_number` | Comma-separated list of the IBM Customer Number(s) (ICN) that is used for the Bring Your Own License (BYOL) entitlement check. For more information on how to find your ICN, see [What is my IBM Customer Number (ICN)?](https://www.ibm.com/support/pages/what-my-ibm-customer-number-icn){: external}. | Yes | None |
 | `image_name` | Name of the custom image that you want to use to create virtual server instances in your {{site.data.keyword.Bluemix_notm}} account to deploy the {{site.data.keyword.symphony_full_notm}} cluster. By default, the automation uses a base image with additional software packages mentioned [here](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-getting-started-tutorial). If you would like to include your application-specific binary files, follow the instructions in [Planning for custom images](/docs/vpc?topic=vpc-planning-custom-images) to create your own custom image and use that to build the {{site.data.keyword.symphony_full_notm}} cluster through this offering. | No | `hpcc-symp732-scale5211-rhel810-v1` |
 | `is_flow_log_collector_active` | Indicates whether the collector is active. If false, this collector is created in inactive mode. | No | true |
 | `kms_instance_id` | Unique identifier of the Key Protect instance associated with the Key Management Service. The ID can be found under the details of the KMS, see [View key-protect ID](/docs/key-protect?topic=key-protect-retrieve-instance-ID&interface=ui). | No | None |
