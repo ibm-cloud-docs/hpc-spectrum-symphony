@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-14"
 
 keywords:
 
@@ -24,12 +24,12 @@ subcollection: symphony
 # About the IBM Spectrum Symphony
 {: #about-spectrum-symphony}
 
-{{site.data.keyword.symphony_full_notm}} allows you to deploy high-performance computing (HPC) clusters by using {{site.data.keyword.symphony_full_notm}} as HPC scheduling software. This offering uses open source Terraform-based automation to provision and configure {{site.data.keyword.vpc_short}} resources. With simple steps to define configuration properties and use automated deployment, you can build your own HPC cluster in minutes by using your choice of an Intel x86 based [VPC virtual server instance profile type](/docs/vpc?topic=vpc-profiles&interface=ui) for the worker nodes in the cluster. {{site.data.keyword.symphony_full_notm}} also enables configuration for auto scaling so that the clusters can automatically add and remove worker nodes based on workload demand. It helps to take full advantage of consumption-based pricing and pay for cloud resources only when they are needed.
+{{site.data.keyword.symphony_full_notm}} allows you to deploy high-performance computing (HPC) clusters by using {{site.data.keyword.symphony_full_notm}} as HPC scheduling software. This offering uses open source Terraform-based automation to provision and configure {{site.data.keyword.vpc_short}} resources. With simple steps to define configuration properties and use automated deployment, you can build your own Spectrum Symphony cluster in minutes by using your choice of an Intel x86 based [VPC virtual server instance profile type](/docs/vpc?topic=vpc-profiles&interface=ui) for the worker nodes in the cluster. {{site.data.keyword.symphony_full_notm}} also enables configuration for auto scaling so that the clusters can automatically add and remove worker nodes based on workload demand. It helps to take full advantage of consumption-based pricing and pay for cloud resources only when they are needed.
 {: shortdesc}
 
 {{site.data.keyword.symphony_full_notm}} offers the option of a public virtual system, or virtual systems that are deployed on dedicated hosts, for static compute nodes only. The management nodes and dynamic compute nodes use public virtual systems only. The dedicated host option allows you to have systems that are assigned just for your workloads and avoids issues like a noisy neighbor. The deployment properties allow you to either "pack" or "spread". You can pack a dedicated host to full capacity before spilling to another instance or spread the virtual server instances evenly across all dedicated hosts.
 
-In addition, {{site.data.keyword.symphony_full_notm}} provides two shared storage options for you to manage your application data: File storage for VPC or Storage Scale. The Storage Scale option specifically works with static compute nodes only and allows you to deploy a high-performance file system with your HPC cluster.
+In addition, {{site.data.keyword.symphony_full_notm}} provides two shared storage options for you to manage your application data: File storage for VPC or Storage Scale. The Storage Scale option specifically works with static compute nodes only and allows you to deploy a high-performance file system with your Spectrum Symphony cluster.
 
 The IBM Cloud File Storage for VPC is used for file sharing. By default, there are two file share volumes; each is 100 GB. To change this configuration, [set the custom_file_shares deployment value](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-deployment-values). All the files that are shared across the symphony nodes are available on mount path `/mnt/symphony`.
 

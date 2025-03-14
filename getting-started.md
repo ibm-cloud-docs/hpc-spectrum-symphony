@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-03-14"
 
 keywords:
 
@@ -72,7 +72,7 @@ Customer-managed encryption applies only to the login, management, and static co
 {: #create-custom-image}
 {: step}
 
-The offering provides a default set of images that you can use for the nodes within your Symphony cluster. However, if you prefer to use your own custom images, documentation and scripts are provided to help you create them.
+The offering provides a default set of images that you can use for the nodes within your Spectrum Symphony cluster. However, if you prefer to use your own custom images, documentation and scripts are provided to help you create them.
 
 Worker Image: The default image that is specified in `image_name` acts as the worker image. This image is used to create the Symphony cluster nodes: management, management-candidates, and workers.
 
@@ -86,7 +86,7 @@ If you prefer to create the storage custom image with your own settings and conf
 {: #gather-spectrum-entitlement-information}
 {: step}
 
-The offering uses the Bring Your Own License (BYOL) model for Spectrum software when you deploy an HPC cluster on {{site.data.keyword.cloud_notm}}. This applies to {{site.data.keyword.symphony_full_notm}} in all cases and to IBM Spectrum Scale if you decide to use that for the HPC cluster storage instead of just NFS. Work with your business owners or license management team to make sure that your organization has procured enough licenses to deploy the HPC cluster using the Spectrum software. Failure to comply with licenses for production use of software is a violation of the [IBM International Program License Agreement](https://www.ibm.com/software/passportadvantage/programlicense.html){: external}.
+The offering uses the Bring Your Own License (BYOL) model for Spectrum software when you deploy an Spectrum Symphony cluster on {{site.data.keyword.cloud_notm}}. This applies to {{site.data.keyword.symphony_full_notm}} in all cases and to IBM Spectrum Scale if you decide to use that for the HPC cluster storage instead of just NFS. Work with your business owners or license management team to make sure that your organization has procured enough licenses to deploy the HPC cluster using the Spectrum software. Failure to comply with licenses for production use of software is a violation of the [IBM International Program License Agreement](https://www.ibm.com/software/passportadvantage/programlicense.html){: external}.
 
 The current solution no longer requires `ibm_customer_number`(ICN) for entitlement check before deploying the solution for non-production use. The solution is now available for use without ICN validation. Users can provision up to a maximum of 10 static worker nodes for evaluation or non-production use cases. If the number of worker nodes exceeds 10, it becomes the user responsibility to obtain the necessary entitlement check and licensing for those additional nodes in the production environment. For production use or for evaluating greater than 10 worker nodes, the user must purchase the necessary Symphony licenses. To purchase the license, go to [Purchasing licenses](https://www.ibm.com/docs/en/devops-test-embedded/9.0.0?topic=licenses-purchasing).
 {: important}

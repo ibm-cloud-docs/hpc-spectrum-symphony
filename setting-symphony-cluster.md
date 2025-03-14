@@ -1,8 +1,8 @@
 ---
 
-copyright: 
-  years: 2024
-lastupdated: "2024-12-24"
+copyright:
+  years: 2025
+lastupdated: "2025-03-14"
 
 keywords: architecture overview, cluster access, symphony cluster
 content-type: tutorial
@@ -27,15 +27,15 @@ subcollection: hpc-spectrum-symphony
 {:step: data-tutorial-type='step'}
 
 # Setting up an {{site.data.keyword.symphony_full_notm}} cluster
-{: #using-hpc-cluster} 
-{: toc-content-type="tutorial"} 
-{: toc-services="virtual-servers, vpc, loadbalancer-service, fileshare, dns"} 
+{: #using-hpc-cluster}
+{: toc-content-type="tutorial"}
+{: toc-services="virtual-servers, vpc, loadbalancer-service, fileshare, dns"}
 {: toc-completion-time="60m"}
 
 ## Architecture overview and IBM fileshare setup
 {: #sym-cluster-architecture-overview}
 
-The HPC cluster consists of a login node, 1 - 3 Symphony management nodes, and a number of Symphony worker nodes.
+The Spectrum Symphony cluster consists of a login node, 1 - 3 Symphony management nodes, and a number of Symphony worker nodes.
 
 * The login node is served as a jump host and it is the only node that has the public IP address. Other nodes have only private IP addresses and the only way to reach these nodes is through the login node. You can log in to the primary Symphony management host and do most of the operations from the Symphony management host. By default, lsfadmin is the only user ID created on the cluster. The SSH passwordless setup is configured between the Symphony management host and workers. You can reach any other worker node with the lsfadmin user ID from the Symphony primary.
 
@@ -43,7 +43,7 @@ The HPC cluster consists of a login node, 1 - 3 Symphony management nodes, and a
 
 * The {{site.data.keyword.cloud_notm}} File Storage for VPC is used for file sharing. By default, there are three file share volumes; each is 100 GB. To change this configuration, [set the custom_file_shares deployment value](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-deployment-values).
 
-* The HPC cluster solution provides a base custom image, which includes the Symphony installation. You can create your own custom image on top of the base image. For more information, see [Create custom image](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-getting-started-tutorial#create-custom-image). The image service on VPC provides a way for doing this. You can then specify the custom image that you want to use in Schematics for Symphony management nodes and worker nodes. The image that is used by the login node and the storage node is not configurable at the moment (CentOS 7 by default).
+* The Spectrum Symphony cluster solution provides a base custom image, which includes the Symphony installation. You can create your own custom image on top of the base image. For more information, see [Create custom image](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-getting-started-tutorial#create-custom-image). The image service on VPC provides a way for doing this. You can then specify the custom image that you want to use in Schematics for Symphony management nodes and worker nodes. The image that is used by the login node and the storage node is not configurable at the moment (CentOS 7 by default).
 
 ## Create SSH key
 {: #sym-ssh-key-creation-before}
@@ -51,7 +51,7 @@ The HPC cluster consists of a login node, 1 - 3 Symphony management nodes, and a
 
 Complete the following steps to create your SSH key:
 
-1. Generate an SSH key on your system by running the following command: 
+1. Generate an SSH key on your system by running the following command:
 
     ```
     ssh-keygen -t rsa
@@ -67,7 +67,7 @@ Complete the following steps to create your SSH key:
 1. Log in to the [{{site.data.keyword.cloud}} console](https://cloud.ibm.com/){: external} by using your unique credentials.
 2. From the dashboard, click **Menu icon ![Menu icon](../icons/icon_hamburger.svg) > VPC Infrastructure > SSH keys**.
 3. Click Create.
-4. Enter the SSH key name (for example, `po-ibm-ssh-key`), select the default resource group, add tags, and select the region. 
+4. Enter the SSH key name (for example, `po-ibm-ssh-key`), select the default resource group, add tags, and select the region.
 5. Copy and paste the public key into the _Public key_ field (the contents that you saved from `.ssh/id_rsa.pub`).
 6. Click Add SSH key.
 
@@ -87,13 +87,13 @@ Complete the following steps to create your API key:
 {: #hpc-cluster-creation}
 {: step}
 
-Complete the following steps to create and configure an HPC cluster from the {{site.data.keyword.cloud_notm}} catalog:
+Complete the following steps to create and configure an Spectrum Symphony cluster from the {{site.data.keyword.cloud_notm}} catalog:
 
-1. In the {{site.data.keyword.cloud_notm}} catalog, search for _HPC_ or _Spectrum Symphony_, and then select {{site.data.keyword.symphony_full_notm}}. 
+1. In the {{site.data.keyword.cloud_notm}} catalog, search for _HPC_ or _Spectrum Symphony_, and then select {{site.data.keyword.symphony_full_notm}}.
 
     ![HPC Cluster solution page](images/sym_catalog.png){: caption="HPC cluster solution page"}
 
-2. In the **Set the deployment values** section, supply the required values: `api_key`, `ibm_customer_number`, `remote_allowed_ips`, `ssh_key_name`, and `zone`. 
+2. In the **Set the deployment values** section, supply the required values: `api_key`, `ibm_customer_number`, `remote_allowed_ips`, `ssh_key_name`, and `zone`.
 
 3. After you confirm with the license agreement, you can use the default values for other parameters and click Install. The HPC cluster is created and completed within 5 minutes with the default configuration.
 
@@ -116,7 +116,7 @@ See the following table for a list of parameters that you can configure for your
 | `vpn_peer_address` | The peer public IP address to which the VPN will be connected.|
 | `vpn_peer_cidrs` | Comma separated list of peer CIDRs (e.g., 192.168.0.0/24) to which the VPN will be connected.|
 | `vpn_preshared_key` | The pre-shared key for the VPN. |
-{: caption="Parameter values" caption-side="top"} 
+{: caption="Parameter values" caption-side="top"}
 
 ### Parameters for auto scaling
 {: #hpc-cluster-auto-scaling-parameters}
@@ -125,18 +125,18 @@ You can set the following parameters for auto scaling:
 
 * `worker_node_min_count`: The minimum number of worker nodes that are provisioned at the time the cluster is created and remain running regardless of job demands in the cluster.
 
-* `worker_node_max_count`: The maximum number of worker nodes in your HPC cluster, which limits the number of machines that can be added to HPC cluster. Symphony auto scaling scales up the cluster to this number of nodes when needed for your workloads and scales back for keeping onlyworker_node_min_count workers when no job is in the queues.
+* `worker_node_max_count`: The maximum number of worker nodes in your Spectrum Symphony cluster, which limits the number of machines that can be added to HPC cluster. Symphony auto scaling scales up the cluster to this number of nodes when needed for your workloads and scales back for keeping onlyworker_node_min_count workers when no job is in the queues.
 
 ### Parameters for instance profiles
 {: #hpc-cluster-instance-profiles-deployment-parameters}
 
 You can control the instance profile for each instance type through the xxx_node_instance_type parameters. The management nodes are where the main Symphony daemons are running. You need to select ones with more compute power if you plan to run jobs by using 100+ nodes. The worker nodes are the ones where the workload execution takes place and the choice needs to be made according to the characteristic of workloads. The login instance is served as a jump host, so you can pick the smallest profile. For more information, see [Instance Profiles](/docs/vpc?topic=vpc-profiles&interface=ui).
 
-## Accessing the HPC cluster
+## Accessing the Spectrum Symphony cluster
 {: #hpc-cluster-access}
 {: step}
 
-To access your HPC cluster, complete the following steps:
+To access your Spectrum Symphony cluster, complete the following steps:
 
 1. Go to the **Menu icon ![Menu icon](../icons/icon_hamburger.svg) > Activity > Plan applied > View log**.
 
@@ -183,7 +183,7 @@ The following example shows `worker_node_min_count=2` and `worker_node_max_count
     egosh resource list -ll
     ```
     {: pre}
-     
+
     You can see that one node is added to your cluster:
 
     ![One dynamic worker node](images/autoscaling.png){: caption="One worker node added"}
