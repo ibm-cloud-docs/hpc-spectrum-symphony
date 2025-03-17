@@ -36,7 +36,7 @@ IBM Cloud VPC Flow Logs
 Key Management Service (KMS)
 :   The KMS in IBM Cloud Private helps to keep the data secure. It integrates with user-owned Hardware Security Modules (HSM). A `root` key is used for envelope encryption to secure the data encryption keys used inside your applications.
 
-IBM Customer Number (ICN) is not supported.
+IBM Customer Number (ICN) is not supported
 :   The current solution no longer requires `ibm_customer_number`(ICN) for entitlement check before deploying the solution for non-production use. The solution is now available for use without ICN validation. Users can provision up to a maximum of 10 static worker nodes for evaluation or non-production use cases. If the number of worker nodes exceeds 10, it becomes the user responsibility to obtain the necessary entitlement check and licensing for those additional nodes in the production environment. For production use or for evaluating greater than 10 worker nodes, the user must purchase the necessary Symphony licenses. To purchase the license, go to [Purchasing licenses](https://www.ibm.com/docs/en/devops-test-embedded/9.0.0?topic=licenses-purchasing).
 
 Support for Symphony 7.3.2 fix patches
