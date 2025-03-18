@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-03-14"
+lastupdated: "2025-03-18"
 
 keywords:
 
@@ -59,7 +59,7 @@ If you decide to use customer-managed encryption, complete the following steps b
 2. [Create or import key](/docs/key-protect?topic=key-protect-getting-started-tutorial#get-started-keys)
 3. [Authorize access between](/docs/vpc?topic=vpc-vpc-encryption-planning#byok-volumes-prereqs):
     * Cloud Block Storage and the key management service
-    * Cloud Block Storage and the File share service
+    * Cloud Block Storage and the file share service
 4. Gather information for the following boot volume encryption deployment values (you provide this information when you deploy your {{site.data.keyword.symphony_short}} architecture):
     * `enable_customer_managed_encryption`: Gives you toggling options.
     * `kms_instance_id`: Instance ID of the Key Protect instance that you create.
