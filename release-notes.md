@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2025
 
-lastupdated: "2025-03-17"
+lastupdated: "2025-03-19"
 
 keywords: IBM Spectrum Symphony release notes
 
@@ -143,7 +143,7 @@ Spectrum multicluster (SMC) support
 :   The initial release of Spectrum multicluster (SMC), which connects multiple {{site.data.keyword.symphony_full_notm}} clusters into a federation cluster, is now available. You can use SMC to redirect {{site.data.keyword.symphony_full_notm}} sessions to nonbusy clusters, deploy and manage service packages, and monitor workload and resources.
 
 Documentation enhancement: Integrating OpenLDAP with {{site.data.keyword.symphony_full_notm}}
-:   The newly added [Integrating OpenLDAP with {{site.data.keyword.symphony_full_notm}}](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-integrate-openldap-spectrum-symphony) tutorial walks you through the steps that are involved in configuring {{site.data.keyword.symphony_full_notm}} to use OpenLDAP as the primary directory service for user authentication.
+:   The newly added Integrating OpenLDAP with {{site.data.keyword.symphony_full_notm}} tutorial walks you through the steps that are involved in configuring {{site.data.keyword.symphony_full_notm}} to use OpenLDAP as the primary directory service for user authentication.
 
 ## 30 May 2023
 {: #hpc-spectrum-symphony-may3023}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2023-01-26"
+lastupdated: "2025-03-19"
 
 keywords:
 
@@ -32,7 +32,7 @@ After you have created your workspace, you need to generate a plan to validate a
 {: #generate-plan-ui}
 {: ui}
 
-1. In the {{site.data.keyword.cloud}} console, after the workspace is created, you can review the properties and the variables that are associated with that workspace by using the _Settings_ tab. Make sure to update the following required parameters: `api_key`, `ssh_key_name`, `ibm_customer_number`, and `zone`.
+1. In the {{site.data.keyword.cloud}} console, after the workspace is created, you can review the properties and the variables that are associated with that workspace by using the _Settings_ tab. Make sure to update the following required parameters: `api_key`, `ssh_key_name`, and `zone`.
 2. After you review all the values and make any applicable changes, click Generate plan.
 3. When you click Generate plan, a new log is generated that can be viewed in the Jobs tab by clicking Jobs.
 4. Review the log file for any errors, fix the properties, and regenerate the plan by clicking Generate plan again.
@@ -92,7 +92,7 @@ After you have successfully generated a plan, you can begin [Applying a plan](/d
     ```
     {: pre}
 
-5. Make sure to update the following required parameters: `api_key`, `ssh_key_name`, `ibm_customer_number`, and `zone`.
+5. Make sure to update the following required parameters: `api_key`, `ssh_key_name`, and `zone`.
 6. Run the Python script by using `python3 <python-file-name>` to generate a plan in the {{site.data.keyword.cloud_notm}}.
 7. You get an activity ID in the response if the parameters passed as part of the request are valid. You should be able to see the plan generating in the {{site.data.keyword.bpshort}} workspace that you created in the {{site.data.keyword.cloud_notm}} console. If you don’t get a successful response, the error response contains the errors that you need to resolve. Resolve those errors and run the script until you are able to get a valid response and generate a plan.
 8. If you want to check the logs of the action, see [Retrieving action logs with {{site.data.keyword.bpshort}} API](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-retrieve-action-logs) to retrieve the logs. The response contains the status of the action, and it appears in either a `COMPLETED` or `FAILED` state.

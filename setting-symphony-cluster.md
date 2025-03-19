@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-03-14"
+lastupdated: "2025-03-19"
 
 keywords: architecture overview, cluster access, symphony cluster
 content-type: tutorial
@@ -93,7 +93,7 @@ Complete the following steps to create and configure an Spectrum Symphony cluste
 
     ![HPC Cluster solution page](images/sym_catalog.png){: caption="HPC cluster solution page"}
 
-2. In the **Set the deployment values** section, supply the required values: `api_key`, `ibm_customer_number`, `remote_allowed_ips`, `ssh_key_name`, and `zone`.
+2. In the **Set the deployment values** section, supply the required values: `api_key`, `remote_allowed_ips`, `ssh_key_name`, and `zone`.
 
 3. After you confirm with the license agreement, you can use the default values for other parameters and click Install. The HPC cluster is created and completed within 5 minutes with the default configuration.
 
