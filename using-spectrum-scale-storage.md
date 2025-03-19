@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2022-03-04"
+lastupdated: "2025-03-19"
 
 keywords:
 
@@ -22,7 +22,7 @@ subcollection: hpc-spectrum-symphony
 # Using Spectrum Scale storage
 {: #using-spectrum-scale-storage}
 
-{{site.data.keyword.scale_full}} is a cluster file system that provides simultaneous access to a single file system from multiple compute nodes. In the {{site.data.keyword.symphony_full_notm}} offering, {{site.data.keyword.scale_short}} provides applications running in static compute cluster nodes with high-performance access to a shared data space. For more technical information, see the [{{site.data.keyword.scale_full_notm}}](https://www.ibm.com/docs/en/storage-scale/5.2.1){: external} product documentation.
+{{site.data.keyword.scale_full}} is a cluster file system that provides simultaneous access to a single file system from multiple compute nodes. In the {{site.data.keyword.symphony_full_notm}} offering, {{site.data.keyword.scale_short}} provides applications running in static compute cluster nodes with high-performance access to a shared data space. For more technical information, see the [{{site.data.keyword.scale_full_notm}}](https://www.ibm.com/docs/en/storage-scale/5.2.2){: external} product documentation.
 {: shortdesc}
 
 The {{site.data.keyword.symphony_full_notm}} offering uses [{{site.data.keyword.vpc_short}} virtual server instance profiles](/docs/vpc?topic=vpc-profiles&interface=ui) provisioned with [instance storage](/docs/vpc?topic=vpc-instance-storage) for the {{site.data.keyword.scale_short}} storage nodes. By virtue of being on instance storage, this storage option can be used for scratch data use cases. When a storage node virtual server instance is rebooted, the data is preserved. However, when the instance is deleted, the instance storage data is lost. There is no automatic replication to persistent storage, for example, {{site.data.keyword.cos_full_notm}}, that is provided in the current implementation but you can add it on your own if required.

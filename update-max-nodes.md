@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2022-03-09"
+lastupdated: "2025-03-19"
 
 keywords:
 
@@ -88,4 +88,4 @@ The changes take effect automatically. There is no need to restart the HostFacto
     ```
     {: pre}
 
-For more information, see [Dynamically updating host factory configuration](https://www.ibm.com/docs/en/spectrum-symphony/7.3.1?topic=bursting-dynamically-updating-host-factory-configuration){: external}.
+For more information, see [Dynamically updating host factory configuration](https://www.ibm.com/docs/en/spectrum-symphony/7.3.2?topic=bursting-dynamically-updating-host-factory-configuration){: external}.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2025
-lastupdated: "2023-05-02"
+lastupdated: "2025-03-19"
 
 keywords:
 content-type: tutorial
@@ -102,7 +102,7 @@ SMC supports combination of single smc_zone as ["us-east-1"] or double smc_zone 
     |sym_license_confirmation| Confirm your use of IBM Symphony Multi Cluster licenses. When you select 'true', you agreed to one of two conditions. 1. You are using the software in production and confirm you have sufficient licenses to cover your use under the International Program License Agreement (IPLA). 2. You are evaluating the software and agree to abide by the International License Agreement for Evaluation of Programs (ILAE). NOTE: Failure to comply with licenses for production use of software is a violation of the IBM International Program License Agreement. For more information, see[IBM International Program License Agreement](https://www.ibm.com/software/passportadvantage/programlicense.html).| string | n/a |
     |smc_zone |IBM Cloud zone name within the selected region where the Symphony Multi Cluster resources are deployed. SMC supports a combination of single smc_zone as ["us-east-1"] or double smc_zone as ["au-syd-3","eu-de-1"] or triple smc_zone as ["us-east-1","ca-tor-3","jp-tok-3"].| list(string) | n/a |
     |remote_allowed_ips |Comma-separated list of IP addresses that can access the Symphony Multi Cluster instance through an SSH interface. For security purposes, provide the public IP addresses assigned to the devices that are authorized to establish SSH connections (for example, "169.45.117.34"). To fetch the IP address of the device, use https://ipv4.icanhazip.com/. |list(string) | n/a |
-    {: caption}
+    {: caption="Parameters unique to your account and your deployment" caption-side="top"}
 
     Parameters that have default values that you might or might not need to update:
 
@@ -120,7 +120,7 @@ SMC supports combination of single smc_zone as ["us-east-1"] or double smc_zone 
     | secondary_candidate_cidr_block | IBM Cloud VPC address prefixes that are needed for VPC creation. Provide a CIDR address prefix for Secondary Candidate VPC creation. For more information, see [Bring your own subnet](https://cloud.ibm.com/docs/vpc?topic=vpc-configuring-address-prefixes). | string | "10.30.0.0/24"	|
     | smc_image_name | Name of the custom image that you want to use to create virtual server instances in your IBM Cloud account to deploy the IBM Symphony Multi Cluster. The default can or might not need to be changed, depending on your deployment. By default, the automation uses a base image with more software packages mentioned [here](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-getting-started-tutorial). To include your application-specific binary files, see [Planning for custom images](https://cloud.ibm.com/docs/vpc?topic=vpc-planning-custom-images) to create a custom image and use that image to build the IBM Symphony cluster through this offering. | string | "hpcc-symphony732-rhel86-smc-v1" |
     | smc_host_instance_type| Specify the virtual server instance profile type name to be used to create the Symphony Multi Cluster host. For more information, see [VPC profiles](https://cloud.ibm.com/docs/vpc?topic=vpc-profiles). | string | "bx2-4x16" |
-    {: caption}
+    {: caption="Parameters with default values that may or may not need to be updated" caption-side="top"}
 
 ## Generate a plan
 {: #smc-generate-plan-ui}

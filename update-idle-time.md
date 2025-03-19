@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2022-03-09"
+lastupdated: "2025-03-19"
 
 keywords:
 
@@ -32,7 +32,7 @@ The idle time behavior for Symphony host factory is controlled by three properti
 
 These three properties can be edited to guarantee the wanted behavior on idle time for worker nodes.
 
-For more information on this file configuration, see [symAreq_policy_config.json reference](https://www.ibm.com/docs/en/spectrum-symphony/7.3.1?topic=reference-symareq-policy-configjson){: external}.
+For more information on this file configuration, see [symAreq_policy_config.json reference](https://www.ibm.com/docs/en/spectrum-symphony/7.3.2?topic=factory-symareq-policy-configjson){: external}.
 {: note}
 
 The file can be found in: `/data/<CLUSTER>/sym731/hostfactory/conf/requestors/symAinst/symAinstreq_policy_config.json`. Replace `<CLUSTER>` value with the name of your cluster. The default value is `HPCCluster`. 

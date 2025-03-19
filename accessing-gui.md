@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2025
-lastupdated: "2023-07-26"
+lastupdated: "2025-03-19"
 
 keywords:
 
@@ -24,7 +24,7 @@ subcollection: hpc-spectrum-symphony
 # Accessing the GUI
 {: #accessing-gui}
 
-After the cluster setup is done, you can monitor the resources and status of the service directly from the {{site.data.keyword.scale_full_notm}} GUI for both the compute and storage clusters. For more information about the GUI, see [{{site.data.keyword.scale_full_notm}} GUI](https://www.ibm.com/docs/en/storage-scale/5.2.1?topic=reference-storage-scale-gui){: external}.
+After the cluster setup is done, you can monitor the resources and status of the service directly from the {{site.data.keyword.scale_full_notm}} GUI for both the compute and storage clusters. For more information about the GUI, see [{{site.data.keyword.scale_full_notm}} GUI](https://www.ibm.com/docs/en/storage-scale/5.2.2?topic=reference-storage-scale-gui){: external}.
 {: shortdesc}
 
 ## Before you begin
