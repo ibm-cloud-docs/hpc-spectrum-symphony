@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2025
-lastupdated: "2025-03-19"
+lastupdated: "2025-03-20"
 
 keywords:
 content-type: tutorial
@@ -99,7 +99,7 @@ SMC supports combination of single smc_zone as ["us-east-1"] or double smc_zone 
     |lone_vpc_region | The name of the IBM Cloud region where the existing Lone Symphony VPC, lone_vpc_name and lone_vpc_region must be in the same order (Examples: us-east, us-south, and so on). Note: lone_vpc_region support maximum of 3 existing_lone_vpc_region. For more information, see [Region and data center locations for resource deployment](https://cloud.ibm.com/docs/overview?topic=overview-locations).| list(string) | null |
     |ssh_key_name | Your {{site.data.keyword.Bluemix_notm}} SSH key name such as "smc-ssh-key" that is created in a specific region in {{site.data.keyword.Bluemix_notm}}. Mark it as sensitive to hide the SSH key in the {{site.data.keyword.Bluemix_notm}} console.|string | n/a |
     |api_key  | Your API key value. Mark it as sensitive to hide the API key in the {{site.data.keyword.Bluemix_notm}} console.| string | n/a |
-    |sym_license_confirmation| Confirm your use of IBM Symphony Multi Cluster licenses. When you select 'true', you agreed to one of two conditions. 1. You are using the software in production and confirm you have sufficient licenses to cover your use under the International Program License Agreement (IPLA). 2. You are evaluating the software and agree to abide by the International License Agreement for Evaluation of Programs (ILAE). NOTE: Failure to comply with licenses for production use of software is a violation of the IBM International Program License Agreement. For more information, see[IBM International Program License Agreement](https://www.ibm.com/software/passportadvantage/programlicense.html).| string | n/a |
+    |sym_license_confirmation| Confirm your use of IBM Symphony Multi Cluster licenses. When you select 'true', you agreed to one of two conditions. 1. You are using the software in production and confirm you have sufficient licenses to cover your use under the International Program License Agreement (IPLA). 2. You are evaluating the software and agree to abide by the International License Agreement for Evaluation of Programs (ILAE). NOTE: Failure to comply with licenses for production use of software is a violation of the IBM International Program License Agreement. For more information, see [IBM International Program License Agreement](https://www.ibm.com/software/passportadvantage/programlicense.html).| string | n/a |
     |smc_zone |IBM Cloud zone name within the selected region where the Symphony Multi Cluster resources are deployed. SMC supports a combination of single smc_zone as ["us-east-1"] or double smc_zone as ["au-syd-3","eu-de-1"] or triple smc_zone as ["us-east-1","ca-tor-3","jp-tok-3"].| list(string) | n/a |
     |remote_allowed_ips |Comma-separated list of IP addresses that can access the Symphony Multi Cluster instance through an SSH interface. For security purposes, provide the public IP addresses assigned to the devices that are authorized to establish SSH connections (for example, "169.45.117.34"). To fetch the IP address of the device, use https://ipv4.icanhazip.com/. |list(string) | n/a |
     {: caption="Parameters unique to your account and your deployment" caption-side="top"}
