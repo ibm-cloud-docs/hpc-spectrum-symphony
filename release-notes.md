@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2025
 
-lastupdated: "2025-03-19"
+lastupdated: "2025-03-21"
 
 keywords: IBM Spectrum Symphony release notes
 
@@ -26,8 +26,8 @@ The following new features and changes to {{site.data.keyword.symphony_full}} ar
 ## March 2025
 {: #hpc-spectrum-symphony-mar25}
 
-### 31 March 2025
-{: #hpc-spectrum-symphony-mar3125}
+### 27 March 2025
+{: #hpc-spectrum-symphony-mar2725}
 {: release-note}
 
 IBM Cloud VPC Flow Logs
