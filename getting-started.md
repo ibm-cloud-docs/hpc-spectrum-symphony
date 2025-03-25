@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-03-18"
+lastupdated: "2025-03-25"
 
 keywords:
 
@@ -47,13 +47,13 @@ Generate an API key for your {{site.data.keyword.cloud_notm}} account where the 
 
 Create an SHH key in your {{site.data.keyword.cloud_notm}} account. This is your SSH key that you use to access the Symphony cluster. For more information, see [Managing SSH keys](/docs/vpc?topic=vpc-managing-ssh-keys).
 
-## Choose between IBM-managed or customer-managed encryption
+## Choose between provider-managed or customer-managed encryption
 {: #cust-encryption}
 {: step}
 
-By default, VPC volumes and file shares are encrypted with IBM-managed encryption. However, you can opt for customer-managed encryption per your security requirements. Customer-managed encryption uses your root key, which gives you complete control over your data. You can provision or import existing encrypted keys by using {{site.data.keyword.keymanagementservicefull_notm}}.
+By default, VPC volumes and file shares are encrypted with provider-managed encryption. However, you can opt for customer-managed encryption per your security requirements. Customer-managed encryption uses your root key, which gives you complete control over your data. You can provision or import existing encrypted keys by using {{site.data.keyword.keymanagementservicefull_notm}}.
 
-If you decide to use customer-managed encryption, complete the following steps before you deploy your {{site.data.keyword.symphony_short}} architecture:
+If you decide to use customer-managed encryption, complete the following steps before you deploy your {{site.data.keyword.symphony_short}} cluster:
 
 1. [Provision an instance of Key Protect](/docs/key-protect?topic=key-protect-provision#provision-gui)
 2. [Create or import key](/docs/key-protect?topic=key-protect-getting-started-tutorial#get-started-keys)
@@ -65,7 +65,7 @@ If you decide to use customer-managed encryption, complete the following steps b
     * `kms_instance_id`: Instance ID of the Key Protect instance that you create.
     * `kms_key_name`: Name of the KMS key that you create
 
-Customer-managed encryption applies only to the login, management, and static compute nodes. The dynamic compute nodes are still IBM-managed.
+Customer-managed encryption applies only to the login, management, and static compute nodes. The dynamic compute nodes are still provider-managed.
 {: note}
 
 ## Create custom images
