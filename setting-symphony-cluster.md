@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-03-19"
+lastupdated: "2025-04-01"
 
 keywords: architecture overview, cluster access, symphony cluster
 content-type: tutorial
@@ -107,7 +107,7 @@ See the following table for a list of parameters that you can configure for your
 | `cluster_prefix` | Prefix that is used to name the {{site.data.keyword.symphony_full_notm}} cluster and IBM Cloud resources that are provisioned to build the {{site.data.keyword.symphony_full_notm}} cluster instance. You cannot create more than one instance of the Symphony cluster with the same name. Make sure that the name is unique.|
 | `custom_file_shares` | Mount points and sizes in GB and IOPS range of file shares that can be used to customize shared file storage layout. Provide the details for up to 5 shares. Each file share size in GB supports different range of IOPS. For more information, see [file share IOPS value](https://cloud.ibm.com/docs/vpc?topic=vpc-file-storage-profiles&interface=ui). |
 | `hyperthreading_enabled` | Setting this to true will enable hyper-threading in the worker nodes of the cluster(default). Otherwise, hyper-threading will be disabled. |
-| `image_name` | Name of the custom image that you want to use to create virtual server instances in your IBM Cloud account to deploy the {{site.data.keyword.symphony_full_notm}} cluster. By default, the automation uses a base image with additional software packages mentioned [here](/docs/hpc-spectrum-symphony#create-custom-image). If you would like to include your application-specific binary files, follow the instructions in [Planning for custom images](/docs/vpc?topic=vpc-planning-custom-images) to create your own custom image and use that to build the {{site.data.keyword.symphony_full_notm}} cluster through this offering. |
+| `image_name` | Name of the custom image that you want to use to create virtual server instances in your IBM Cloud account to deploy the {{site.data.keyword.symphony_full_notm}} cluster. By default, the automation uses a base image with additional software packages mentioned [here](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-getting-started-tutorial). If you would like to include your application-specific binary files, follow the instructions in [Planning for custom images](/docs/vpc?topic=vpc-planning-custom-images) to create your own custom image and use that to build the {{site.data.keyword.symphony_full_notm}} cluster through this offering. |
 | `management_node_count` | Number of management nodes. This is the total number of primary, secondary and management nodes. There will be one Primary, one Secondary and the rest of the nodes will be management nodes. Enter a value in the range 1 - 10. |
 | `region` | IBM Cloud zone name within the selected region where the {{site.data.keyword.symphony_full_notm}} cluster should be deployed. [Learn more](/docs/vpc?topic=vpc-creating-a-vpc-in-a-different-region&interface=cli#get-zones-using-the-cli).|
 | `resource_group` |Resource group name from your IBM Cloud account where the VPC resources should be deployed. Note: Do not modify the "Default" value if you would like to use the auto-scaling capability. For additional information on resource groups, see [Managing resource groups](/docs/account?topic=account-rgs&interface=ui). |
