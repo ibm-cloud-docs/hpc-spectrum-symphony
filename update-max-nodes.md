@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-03-09"
+  years: 2021, 2025
+lastupdated: "2025-03-19"
 
-keywords: 
+keywords:
 
 subcollection: hpc-spectrum-symphony
 
@@ -43,7 +43,7 @@ After you login to the console, complete the following steps to update the maxim
 4. Modify the values for following:
 
     a. ***maxNumber*** changes the maximum number of worker nodes. 
-  
+
     b. ***imageId*** changes the ID of the custom image.
 
     c. ***vmType*** changes the instance type. If you modify the instance type, you need to modify the corresponding values for ***ncpus*** and ***nram*** in the **attributes** section. For example, if you choose ``bx2-2x8``, this instance type has 2 VCPUs and 8GB of RAM. Since VCPUs includes hyper-threads, use VCPUs divided by 2, to get ***ncpus***. Set ncpus to 1 and nram to 8192.
@@ -68,7 +68,7 @@ The changes take effect automatically. There is no need to restart the HostFacto
 
 
     c.***vmType*** changes the instance type. If you modify the instance type, you will also need to modify the corresponding values for ***ncpus*** and ***nram*** in the **attributes** section. For example, if you choose ``bx2-2x8``, this instance type has 2 VCPUs and 8GB of RAM. Since VCPUs includes hyper-threads, use VCPUs divided by 2 to get ***ncpus***. Set ***ncpus*** to 1 and nram to 8192.
-    
+
     d. ***postProvisionFile*** changes the location  of the post provision script.
 
 
@@ -82,10 +82,10 @@ The changes take effect automatically. There is no need to restart the HostFacto
     egosh service stop HostFactory
     ```
     {: pre}
-    
+
     ```sh
     egosh service start HostFactory
     ```
     {: pre}
 
-For more information, see [Dynamically updating host factory configuration](https://www.ibm.com/docs/en/spectrum-symphony/7.3.1?topic=bursting-dynamically-updating-host-factory-configuration){: external}.
+For more information, see [Dynamically updating host factory configuration](https://www.ibm.com/docs/en/spectrum-symphony/7.3.2?topic=bursting-dynamically-updating-host-factory-configuration){: external}.

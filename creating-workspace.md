@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-01-30"
+  years: 2021, 2025
+lastupdated: "2025-03-19"
 
-keywords: 
+keywords:
 
 subcollection: hpc-spectrum-symphony
 
@@ -34,12 +34,12 @@ With {{site.data.keyword.bplong}} workspaces, you can manage the Terraform-based
 {: ui}
 
 1. Log in to the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog){: external} by using your unique credentials.
-2. In the _Software_ section, select **Compute** and then select the **{{site.data.keyword.symphony_full_notm}}** tile. 
+2. In the _Software_ section, select **Compute** and then select the **{{site.data.keyword.symphony_full_notm}}** tile.
 3. In the _Configure your workspace_ section:
     * Specify the **Name** for your {{site.data.keyword.bpshort}} workspace
     * Select Resource group.
     * Define any **Tags** that you want to associate with the resources provisioned through the offering. The tags can later be used to query the resources in the {{site.data.keyword.cloud_notm}} console.
-4. In the _Set the deployment values_ section, specify the values for the required properties: `api_key`, `ssh_key_name`, `ibm_customer_number`, and `zone`.
+4. In the _Set the deployment values_ section, specify the values for the required properties: `api_key`, `ssh_key_name`, and `zone`.
 5. Expand the _Optional deployment values_ section, and review it to determine whether you need to override any of the default values provided for the configuration properties.
 6. Review and accept the **{{site.data.keyword.symphony_full_notm}}** license terms and conditions in the order summary.
 7. Click Install. The {{site.data.keyword.bpshort}} workspace is created with the name that you specified. You can see the list of workspaces in _View the existing installations_. If the workspace creation is successful, the _Apply Plan_ action is started to trigger the deployment of the respective {{site.data.keyword.vpc_short}} resources in your {{site.data.keyword.cloud_notm}} account that are linked with the `api_key`. 
@@ -55,7 +55,7 @@ After you have successfully created a workspace, you can begin [Generating a pla
 {: #before-you-begin-creating-cli}
 {: cli}
 
-Before you get started, make sure that you've completed the prerequisites found in [Setting up the {{site.data.keyword.bplong_notm}} CLI](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-setting-up-cli&interface=cli). 
+Before you get started, make sure that you've completed the prerequisites found in [Setting up the {{site.data.keyword.bplong_notm}} CLI](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-setting-up-cli&interface=cli).
 
 ## Creating a workspace using the CLI
 {: #create-workspace-cli}
@@ -120,7 +120,7 @@ To provision or modify {{site.data.keyword.cloud_notm}} resources, you can run t
 {: #next-steps-create-cli}
 {: cli}
 
-After you have successfully created a workspace, you can begin [Generating a plan](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-generate-plan&interface=cli) to validate all the configuration properties. 
+After you have successfully created a workspace, you can begin [Generating a plan](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-generate-plan&interface=cli) to validate all the configuration properties.
 
 ## Before you begin
 {: #before-you-begin-creating-api}
@@ -201,10 +201,7 @@ template_source_data_request_model['variablestore'] = [
 "name": "ssh_key_name",
 "value": "sym-hpcc-key",
 },
-{
-"name": "ibm_customer_number",
-"value": "true"
-}]
+]
 
 template_repo_request_model = {}
 template_repo_request_model['url'] = 'https://github.com/IBM-Cloud/hpc-cluster-symphony'
@@ -288,7 +285,6 @@ INFO:root:Completed Creating Schematic Workspace
 "description": ""
 },
 {
-"name": "ibm_customer_number",
 "secure": false,
 "value": "true",
 "type": "",
@@ -323,4 +319,4 @@ INFO:root:Completed Creating Schematic Workspace
 {: #next-steps-create-api}
 {: api}
 
-After you have successfully created a workspace, you can begin [Generating a plan](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-generate-plan&interface=api) to validate all the configuration properties. 
+After you have successfully created a workspace, you can begin [Generating a plan](/docs/hpc-spectrum-symphony?topic=hpc-spectrum-symphony-generate-plan&interface=api) to validate all the configuration properties.

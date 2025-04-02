@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-07-26"
+  years: 2023, 2025
+lastupdated: "2025-03-19"
 
-keywords: 
+keywords:
 
 subcollection: hpc-spectrum-symphony
 
@@ -24,7 +24,7 @@ subcollection: hpc-spectrum-symphony
 # Accessing the GUI
 {: #accessing-gui}
 
-After the cluster setup is done, you can monitor the resources and status of the service directly from the {{site.data.keyword.scale_full_notm}} GUI for both the compute and storage clusters. For more information about the GUI, see [{{site.data.keyword.scale_full_notm}} GUI](https://www.ibm.com/docs/en/storage-scale/5.2.1?topic=reference-storage-scale-gui){: external}.
+After the cluster setup is done, you can monitor the resources and status of the service directly from the {{site.data.keyword.scale_full_notm}} GUI for both the compute and storage clusters. For more information about the GUI, see [{{site.data.keyword.scale_full_notm}} GUI](https://www.ibm.com/docs/en/storage-scale/5.2.2?topic=reference-storage-scale-gui){: external}.
 {: shortdesc}
 
 ## Before you begin
@@ -43,7 +43,7 @@ Before you begin accessing the {{site.data.keyword.scale_short}} GUI, review the
 
 To access the GUI, you need to gather the IP addresses of both the storage and compute nodes and the floating IP address that is attached to the login node.
 
-1. In the {{site.data.keyword.cloud}} console on the **Schematics > Workspaces** page, select your workspace. 
+1. In the {{site.data.keyword.cloud}} console on the **Schematics > Workspaces** page, select your workspace.
 2. Click Resources, and then in the list of Terraform resources, click the **primary** resource link, which opens a new window with a list of the virtual server instances that were provisioned.
 3. On the _Virtual server instances for VPC_ page, locate the IP address for `<prefix>-scale-storage-0`, which is the storage IP address that you need. Then locate the IP address for `<prefix>-primary-0`, which is the compute IP address that you need.
 4. In addition to these two IP addresses, pick up the floating IP address that is attached to the login node.

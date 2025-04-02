@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2021, 2022
+  years: 2021, 2025
 lastupdated: "2022-03-04"
 
-keywords: 
+keywords:
 
 subcollection: hpc-spectrum-symphony
 
@@ -23,7 +23,7 @@ subcollection: hpc-spectrum-symphony
 # Setting up the IBM Cloud Schematics API
 {: #setting-up-api}
 
-Before you begin using the {{site.data.keyword.bplong}} API to deploy {{site.data.keyword.symphony_full_notm}}, review and complete the following prerequisites: 
+Before you begin using the {{site.data.keyword.bplong}} API to deploy {{site.data.keyword.symphony_full_notm}}, review and complete the following prerequisites:
 
 1. Make sure that you have access to an {{site.data.keyword.cloud_notm}} account and that you generated an {{site.data.keyword.cloud_notm}} API key to authenticate to {{site.data.keyword.cloud_notm}}.
 2. If the GitHub repository that hosts the Terraform code is not public, generate a [personal GitHub access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens){: external} for authentication. If you are using the [public {{site.data.keyword.cloud_notm}} GitHub repository](https://github.com/IBM-Cloud/hpc-cluster-symphony){: external}, you do not need to complete this task.

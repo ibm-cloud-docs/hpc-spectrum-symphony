@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2023
+  years: 2023, 2025
 lastupdated: "2023-05-05"
 
-keywords: 
+keywords:
 
 subcollection: hpc-spectrum-symphony
 
@@ -20,7 +20,7 @@ subcollection: hpc-spectrum-symphony
 {:important: .important}
 {:faq: data-hd-content-type='faq'}
 
-# Symphony Multicluster (SMC) FAQs 
+# Symphony Multicluster (SMC) FAQs
 {: #smc-spectrum-symphony-faqs}
 
 ## Is it possible to submit jobs during a failover in-progress?
@@ -42,7 +42,7 @@ Yes, if SMC is not available for any reason, submitted jobs are scheduled in the
 
 No, the smc-zone parameter supports a maximum of 3 zones, entered as a list, for example, ["us-south-1","eu-gb-3","jp-tok-2"].
 
-## Does SMC allow there to be more than three existing VPCs or more than three existing regions for VPCs? 
+## Does SMC allow there to be more than three existing VPCs or more than three existing regions for VPCs?
 {: #lone-vpc-name-region-more-than-3}
 {: faq}
 

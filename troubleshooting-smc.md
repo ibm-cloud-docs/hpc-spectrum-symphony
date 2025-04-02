@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2023
+  years: 2023, 2025
 lastupdated: "2023-05-12"
 
-keywords: 
+keywords:
 
 subcollection: hpc-spectrum-symphony
 
@@ -37,7 +37,7 @@ You are getting error while trying to join Lone Symphony cluster with SMC.
 
 ```text
 [root@hpc-primary-smc]# smcadmin cluster list
-NAME     STATUS     MEMBERSHIP 
+NAME     STATUS     MEMBERSHIP
 lone       error      nonmember
 ```
 
@@ -49,7 +49,7 @@ This error happens when:
 - The network communication between SMC and lone symphony cluster is not communicable.
 - The VEMKD port that is used to SMC is not correct.
 
-To make the outbound connection: 
+To make the outbound connection:
 {: tsResolve}
 
 - check whether in lone symphony cluster enabled outbound as `<ego:EnvironmentVariable name="SMC_PROXY_INBOUND_CONNECTION">Y</ego:EnvironmentVariable>` in `SMCP.xml`
@@ -80,7 +80,7 @@ This error will not impact on adding a lone symphony cluster with SMC. Keep on a
 {: troubleshoot}
 {: support}
 
-After provisioning the SMC cluster, if you immediately try to logon on secondary nodes of SMC you see this message: 
+After provisioning the SMC cluster, if you immediately try to logon on secondary nodes of SMC you see this message:
 {: tsSymptoms}
 
 ```text

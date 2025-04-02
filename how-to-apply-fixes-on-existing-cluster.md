@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2021, 2022
+  years: 2021, 2025
 lastupdated: "2022-03-09"
 
-keywords: 
+keywords:
 
 subcollection: hpc-spectrum-symphony
 
@@ -33,9 +33,9 @@ Interim fixes for {{site.data.keyword.symphony_full_notm}} are available on [IBM
 
 - Install fixes, which include:
     -  checking the system, backing up the current files
-    
+
     -  deleting any files that the {{site.data.keyword.symphony_full_notm}} cluster no longer requires (these files might have been installed with {{site.data.keyword.symphony_full_notm}}, or applied during an {{site.data.keyword.symphony_full_notm}} fix)
-    
+
     - installing the specified fix packages on your existing {{site.data.keyword.symphony_full_notm}} cluster
 
     - Also, if the command detects a pre-script or post-script file within the fix package, it runs the scripts as necessary. These scripts can contain custom actions to be completed before or after applying the fix.
@@ -70,5 +70,5 @@ Use the `egoinstallfixes` command only on Linux hosts; to manage fixes on Window
 
 3. To view the installed and active components on your entire cluster, use the **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) System & Services > Software Components > Installed and Active Software Components** page within the cluster management console. For more information, see [Determining installed and active software components](https://www.ibm.com/docs/en/spectrum-symphony/7.3.2?topic=cluster-determining-installed-active-software-components){: external}.
 
-For more background information, see [Installing and configuring IBM Spectrum Symphony](https://www.ibm.com/docs/en/spectrum-symphony/7.3.1?topic=installation-configuration){: external}. 
+For more background information, see [Installing and configuring IBM Spectrum Symphony](https://www.ibm.com/docs/en/spectrum-symphony/7.3.1?topic=installation-configuration){: external}.
 {: note}

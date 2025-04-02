@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2021, 2022
+  years: 2021, 2025
 lastupdated: "2022-11-17"
 
-keywords: 
+keywords:
 
 subcollection: hpc-spectrum-symphony
 
@@ -23,7 +23,7 @@ subcollection: hpc-spectrum-symphony
 {:api: .ph data-hd-interface='api'}
 {:table: .aria-labeledby="caption"}
 
-# Accessing the Symphony GUI 
+# Accessing the Symphony GUI
 {: #gui-console}
 
 ## Before you begin
@@ -37,7 +37,7 @@ Before you begin accessing the {{site.data.keyword.symphony_short}} GUI, review 
 ## Configuring an SSH tunnel to the cluster to allow access
 {: #configuring-an-SSH-tunnel-to-the-cluster}
 
-Before you can access the {{site.data.keyword.symphony_short}} cluster management console, you need to configure an SSH tunnel to the cluster to allow access to the management console through a local browser instance. You can do this by configuring port forwarding on your local browser host. 
+Before you can access the {{site.data.keyword.symphony_short}} cluster management console, you need to configure an SSH tunnel to the cluster to allow access to the management console through a local browser instance. You can do this by configuring port forwarding on your local browser host.
 
 1. Run the following command to create the SSH tunnel:
 

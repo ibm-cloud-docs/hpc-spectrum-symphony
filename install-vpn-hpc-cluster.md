@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2021, 2022
+  years: 2021, 2025
 lastupdated: "2022-03-04"
 
-keywords: 
+keywords:
 
 subcollection: hpc-spectrum-symphony
 
@@ -51,7 +51,7 @@ ibmcloud schematics logs --id <WORKSPACE_ID>
 **Example response:**
 ```text
  2021/09/21 06:04:49 Terraform apply | Outputs:
- 2021/09/21 06:04:49 Terraform apply | 
+ 2021/09/21 06:04:49 Terraform apply |
  2021/09/21 06:04:49 Terraform apply | ssh_command = "ssh -J root@162.133.xxx.yy root@10.244.0.21"
  2021/09/21 06:04:49 Terraform apply | vpc_name = "symphony-test-vpc --  - raaa-lbbbbbbb-cccc-dddd-eeee-ffffffffffff"
  2021/09/21 06:04:49 Terraform apply | vpn_config_info = "IP: 162.133.aaa.bbb, CIDR: 10.244.0.16/28, UDP ports: 500, 4500"
