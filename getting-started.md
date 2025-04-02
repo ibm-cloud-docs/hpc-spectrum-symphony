@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-03-25"
+lastupdated: "2025-04-02"
 
 keywords:
 
@@ -26,9 +26,9 @@ subcollection: hpc-spectrum-symphony
 
 {{site.data.keyword.symphony_full}} enables customers to deploy HPC clusters that use {{site.data.keyword.symphony_full_notm}} as a scheduling software. The deployment is performed by using Terraform and {{site.data.keyword.bplong_notm}} as automation frameworks. The following steps outline the high-level flow of events that are performed:
 
-1. Create a workspace - with the Terraform code from {{site.data.keyword.bplong_notm}}. This step defines the set of configuration properties that are used to perform the automation.
-2. Generate a plan - to confirm whether the configuration properties are valid, so that when you run the Terraform code, all the resources are provisioned correctly. If the validation fails, fix the configuration properties and try again.
-3. Apply a plan - triggers the actual deployment of the {{site.data.keyword.cloud_notm}} resources to have an {{site.data.keyword.symphony_short}} cluster up and running by the time the deployment completes. If the deployment fails, identify the reason for failure, fix the problem, and try again. If a change is needed to the configuration properties, it might be better to generate a plan again.
+1. **Create a workspace** - with the Terraform code from {{site.data.keyword.bplong_notm}}. This step defines the set of configuration properties that are used to perform the automation.
+2. **Generate a plan** - to confirm whether the configuration properties are valid, so that when you run the Terraform code, all the resources are provisioned correctly. If the validation fails, fix the configuration properties and try again.
+3. **Apply a plan** - triggers the actual deployment of the {{site.data.keyword.cloud_notm}} resources to have an {{site.data.keyword.symphony_short}} cluster up and running by the time the deployment completes. If the deployment fails, identify the reason for failure, fix the problem, and try again. If a change is needed to the configuration properties, it might be better to generate a plan again.
 
 If you decide to deploy your {{site.data.keyword.symphony_full_notm}} cluster through the {{site.data.keyword.cloud_notm}} catalog, when you click Install, the Generate Plan action is skipped, and the steps go from **Create Workspace** to **Apply Plan** directly. You need to enter values in the catalog that work for your permissions and {{site.data.keyword.cloud_notm}} account. If the deployment fails, the {{site.data.keyword.bpshort}} UI can be used to fix the errors, and you can retry the Apply Plan step.
 {: note}
