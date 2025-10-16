@@ -65,14 +65,14 @@ toc:
       id: reference
       topics:
       - topicgroup:
-           label: IBM Cloud Schematics CLI
-           topics:
-            - link:
-                label: IBM Cloud Schematics CLI
-                href: https://cloud.ibm.com/docs/schematics?topic=schematics-schematics-cli-reference
-            - link:
-                label: CLI version history
-                href: https://cloud.ibm.com/docs/schematics?topic=schematics-schematics-relnotes
+          label: IBM Cloud Schematics CLI
+          topics:
+          - link:
+              label: IBM Cloud Schematics CLI
+              href: https://cloud.ibm.com/docs/schematics?topic=schematics-schematics-cli-reference
+          - link:
+              label: CLI version history
+              href: https://cloud.ibm.com/docs/schematics?topic=schematics-schematics-relnotes
       - link:
           label: IBM Cloud Schematics API
           href: https://cloud.ibm.com/apidocs/schematics
@@ -86,13 +86,13 @@ toc:
       id: help
       topics:
       - topicgroup:
-           label: FAQs
-           topics:
-           - faq-symphony.md
-           - faq-smc.md
+          label: FAQs
+          topics:
+          - faq-symphony.md
+          - faq-smc.md
       - topicgroup:
-           label: Troubleshooting
-           topics:
-            - troubleshooting-symphony.md
-            - troubleshooting-smc.md
+          label: Troubleshooting
+          topics:
+          - troubleshooting-symphony.md
+          - troubleshooting-smc.md
       - getting-help.md

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2022-03-09"
+lastupdated: "2025-10-16"
 
 keywords:
 
@@ -31,18 +31,18 @@ After you install or upgrade {{site.data.keyword.IBM}} {{site.data.keyword.symph
 
 Interim fixes for {{site.data.keyword.symphony_full_notm}} are available on [IBM Fix Central](https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=IBM%20Spectrum%20Computing&product=ibm/Other+software/IBM+Spectrum+Symphony&release=All&platform=All&function=all){: external} or by contacting your IBM Support representative. Typically, you download these interim fixes, then use the ``egoinstallfixes`` command to install and manage those fixes on Linux hosts in your cluster. The ``egoinstallfixes`` command enables you to complete the following tasks:
 
-- Install fixes, which include:
-    -  checking the system, backing up the current files
+* Install fixes, which include:
+    * checking the system, backing up the current files
 
-    -  deleting any files that the {{site.data.keyword.symphony_full_notm}} cluster no longer requires (these files might have been installed with {{site.data.keyword.symphony_full_notm}}, or applied during an {{site.data.keyword.symphony_full_notm}} fix)
+    * deleting any files that the {{site.data.keyword.symphony_full_notm}} cluster no longer requires (these files might have been installed with {{site.data.keyword.symphony_full_notm}}, or applied during an {{site.data.keyword.symphony_full_notm}} fix)
 
-    - installing the specified fix packages on your existing {{site.data.keyword.symphony_full_notm}} cluster
+    * installing the specified fix packages on your existing {{site.data.keyword.symphony_full_notm}} cluster
 
-    - Also, if the command detects a pre-script or post-script file within the fix package, it runs the scripts as necessary. These scripts can contain custom actions to be completed before or after applying the fix.
+    * Also, if the command detects a pre-script or post-script file within the fix package, it runs the scripts as necessary. These scripts can contain custom actions to be completed before or after applying the fix.
 
-- Check fix packages, without installing them. This preliminary check determines whether your existing cluster is compatible with the fix you want to install, verifies that the user account has appropriate permissions, and lists files that are overwritten by and added by the fix.
+* Check fix packages, without installing them. This preliminary check determines whether your existing cluster is compatible with the fix you want to install, verifies that the user account has appropriate permissions, and lists files that are overwritten by and added by the fix.
 
-- Roll back the most recent fix (either by fix package name or by build number) so that your host returns to its original state before installing the fix.
+* Roll back the most recent fix (either by fix package name or by build number) so that your host returns to its original state before installing the fix.
 
 Use the `egoinstallfixes` command only on Linux hosts; to manage fixes on Windows, refer to the readme file that is bundled with the fix you want to install.
 {: note}
